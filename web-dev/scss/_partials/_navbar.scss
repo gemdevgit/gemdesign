@@ -1,0 +1,64 @@
+// stylesheet for header area
+.gm-header-wrapper {
+    background: $clr-white;
+    padding: 10px 15px;
+}
+
+.gm-nav-wrapper {
+    .nav-item {
+        padding: 0 15px;
+    }
+    .nav-link {
+        color: $clr-black;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 4px 9px;
+        &.active, &:hover {
+            color: $clr-white;
+            background: rgb(0, 174, 255);
+            background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+            background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+            background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+            @include border-radius(6px);
+        }
+    }
+    .gm-header-search-btn {
+        padding: 0 10px;
+        margin-left: 25px;
+    }
+    .gm-search-icon {
+        color: $clr-green;
+        font-size: 1.7rem;
+    }
+}
+
+.gm-page-title-bar-wrapper {
+    min-height: 23rem;
+    color: $clr-white;
+    align-items: flex-end;
+    background: rgb(0, 174, 255);
+    background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    .gm-page-title {
+        font-size: 2rem;
+        font-weight: 600;
+        border-bottom: 3px solid;
+    }
+    .gm-title-breadcrumb {
+        font-size: 13px;
+        a {
+            color: $clr-white;
+        }
+        li:not(:last-child) {
+            &:after {
+                content: "\f105";
+                display: inline-block;
+                margin-left: .4rem;
+                font: normal normal normal 13px/1 FontAwesome;
+            }
+            margin-right: .3rem;
+        }
+    }
+}

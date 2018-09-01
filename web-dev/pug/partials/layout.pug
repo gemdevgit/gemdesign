@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+    block vars
+    head
+        title #{pageTitle}
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='../assets/bootstrap/css/bootstrap.min.css')
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+        link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700,800" )
+        link(rel='stylesheet', href="../css/main.css")
+    body
+    header.gm-header-wrapper.container-fluid
+        .row
+            .gm-logo-wrapper.col-md-4
+                a(href="#")
+                    img(src="../img/logo.png" alt="Gemteleversity")
+
+            .gm-nav-wrapper.col-md-8.float-right       
+                nav.navbar.navbar-expand-sm.sticky-top.float-right
+                    a.navbar-brand(href='#') 
+                    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+                        span.navbar-toggler-icon
+                    #collapsibleNavbar.collapse.navbar-collapse
+                        ul.navbar-nav
+                            li.nav-item
+                                a.nav-link.active(href='#') Home
+                            li.nav-item
+                                a.nav-link(href='#') Unedited Videos
+                            li.nav-item
+                                a.nav-link(href='#') ELearning
+                            li.nav-item
+                                a.nav-link(href='#') Faculty
+                            li.nav-item
+                                a.nav-link(href='#') About
+                            li.nav-item
+                                a.nav-link(href='#') Login
+                        button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0
+                            i.gm-search-icon.fa.fa-search
+                        form.form-inline.my-2.my-lg-0.d-none
+                            input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+                            button.btn.btn-outline-success.my-2.my-sm-0(type='submit')
+                                i.fa.fa-search
+
+
+
+
+    main.gm-content-wrapper
+        .gm-page-title-bar-wrapper.row
+            .col-md-4.offset-md-1
+                h1.gm-page-title #{pageTitle}
+                ul.gm-title-breadcrumb.list-inline
+                    li.list-inline-item
+                        a(href="home.html") Home
+
+                    li.list-inline-item
+                        span #{pageTitle}
+
+    footer.gm-footer-wrapper

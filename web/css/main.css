@@ -1,0 +1,66 @@
+/*--------------------------
+//Extends
+--------------------------------*/
+/*--------------------------
+// Mixins
+--------------------------------*/
+/*--------------------------
+// Website colors
+--------------------------------*/
+/*--------------------------
+// Website colors
+--------------------------------*/
+.gm-header-wrapper {
+  background: #fff;
+  padding: 10px 15px; }
+
+.gm-nav-wrapper .nav-item {
+  padding: 0 15px; }
+
+.gm-nav-wrapper .nav-link {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 9px; }
+  .gm-nav-wrapper .nav-link.active, .gm-nav-wrapper .nav-link:hover {
+    color: #fff;
+    background: #00aeff;
+    background: linear-gradient(to right, #00aeff 0%, #00aeff 48%, #40d5bb 100%);
+    border-radius: 6px; }
+
+.gm-nav-wrapper .gm-header-search-btn {
+  padding: 0 10px;
+  margin-left: 25px; }
+
+.gm-nav-wrapper .gm-search-icon {
+  color: #26C281;
+  font-size: 1.7rem; }
+
+.gm-page-title-bar-wrapper {
+  min-height: 23rem;
+  color: #fff;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  background: #00aeff;
+  background: linear-gradient(to right, #00aeff 0%, #00aeff 48%, #40d5bb 100%); }
+  .gm-page-title-bar-wrapper .gm-page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 3px solid; }
+  .gm-page-title-bar-wrapper .gm-title-breadcrumb {
+    font-size: 13px; }
+    .gm-page-title-bar-wrapper .gm-title-breadcrumb a {
+      color: #fff; }
+    .gm-page-title-bar-wrapper .gm-title-breadcrumb li:not(:last-child) {
+      margin-right: .3rem; }
+      .gm-page-title-bar-wrapper .gm-title-breadcrumb li:not(:last-child):after {
+        content: "\f105";
+        display: inline-block;
+        margin-left: .4rem;
+        font: normal normal normal 13px/1 FontAwesome; }
+
+body {
+  font-family: 'Raleway', sans-serif; }
+
+/*# sourceMappingURL=main.css.map */
