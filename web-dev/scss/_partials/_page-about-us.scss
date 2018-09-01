@@ -1,0 +1,62 @@
+.gm-about-us-wrapper {
+    font-size: .9rem;
+    line-height: 1.5rem;
+    color: $clr-text-grey;
+    h2.gm-page-sub-title {
+        font-weight: 600;
+        font-size: 2.0rem;
+        color: $clr-black;
+        &:after {
+            content: "";
+            display: block;
+            border-bottom: 5px solid $clr-blue;
+            margin: 1.2rem 26% 1.5rem 26%;
+        }
+    }
+    h3.page-sub-title {
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: $clr-black;
+        margin-bottom: 1.4rem;
+    }
+    .gm-doc-blocks {
+        margin-bottom: 4rem;
+        .gm-doc-block-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            .gm-doc-block {
+                margin-bottom: 30px;
+                .gm-doc-init {
+                    display: inline-block;
+                    color: $clr-white;
+                    font-size: 1.3rem;
+                    font-weight: normal;
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    padding-top: .8rem;
+                    margin-bottom: 5px;
+                    @include border-radius(50%);
+                    background: rgb(0, 174, 255);
+                    background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+                    background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+                    background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+                }
+                .gm-doc-name {
+                    font-size: 13px;
+                    font-weight: bold;
+                    color: $clr-black;
+                    line-height: 1;
+                }
+                .gm-doc-dtls {
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

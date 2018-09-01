@@ -1,7 +1,48 @@
-@import '_utilities/_mixins.scss';
-@import '_utilities/_variables.scss';
-@import '_utilities/_helper.scss';
+@import '_utilities/_mixins';
+@import '_utilities/_variables';
+@import '_utilities/_helper';
 @import '_partials/_navbar';
+@import '_partials/_footer';
+@import '_partials/_page-about-us';
+@import '_partials/_page-home';
 body {
     font-family: 'Raleway', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.gm-btn-light {
+    background: $clr-white;
+    color: $clr-blue;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.gm-bg-img {
+    background-size: cover;
+    background-position: center;
+    >img {
+        opacity: 0;
+    }
+}
+
+.gm-live-badge {
+    &:before {
+        content: "●";
+        color: $clr-red;
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.gm-badge-red {
+    background: $clr-red;
+    color: $clr-white;
+    padding: 2px 5px;
+    font-weight: 500;
+    font-size: 13px;
+    @include border-radius(3px);
 }

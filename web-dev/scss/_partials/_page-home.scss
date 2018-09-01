@@ -1,0 +1,81 @@
+.gm-home-slider-wrapper {
+    padding-top: 65px;
+    background: rgb(0, 174, 255);
+    background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    .gm-carousel {
+        .carousel-inner {}
+    }
+}
+
+.gm-carousel-controls {
+    display: flex;
+    justify-content: center;
+    color: $clr-white;
+    margin-top: 25px;
+    opacity: .9;
+    a {
+        color: $clr-white;
+        i {
+            font-size: 21px;
+        }
+    }
+    a:hover {
+        color: $clr-green;
+    }
+    .gm-carousel-indicators {
+        display: inline-block;
+        list-style: none;
+        margin: 0 5px 0 5px;
+        position: static;
+        li {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin: 0 5px;
+            background-color: $clr-white;
+            cursor: pointer;
+            @include border-radius(50%);
+            &.active, &:hover {
+                background: $clr-green;
+            }
+        }
+    }
+}
+
+.gm-home-content-wrapper {
+    margin-top: 30px;
+}
+
+.gm-notification-block-1 {
+    color: $clr-white;
+    background: rgb(4, 167, 247);
+    /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(4, 167, 247, 1) 0%, rgba(38, 193, 213, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(4, 167, 247, 1) 0%, rgba(38, 193, 213, 1) 100%);
+    background: linear-gradient(to right, rgba(4, 167, 247, 1) 0%, rgba(38, 193, 213, 1) 100%);
+    @include box-shadow(5px 6px 18px transparentize($clr-green, 0.7));
+    .gm-content-wrapper {
+        padding: 35px 30px;
+        .block-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .gm-btn-light {
+            float: right;
+            width: 145px;
+            i {
+                margin-left: 10px;
+                font-size: 22px;
+                line-height: 10px;
+                position: relative;
+                top: 3px;
+            }
+        }
+    }
+    .gm-live-badge {
+        @include position(absolute, auto, auto, 10px, 10px);
+    }
+}

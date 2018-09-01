@@ -6,36 +6,40 @@ html(lang='en')
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='stylesheet', href='../assets/bootstrap/css/bootstrap.min.css')
-        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+        link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
         link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700,800" )
         link(rel='stylesheet', href="../css/main.css")
     body
     header.gm-header-wrapper.container-fluid
         .row
-            .gm-logo-wrapper.col-md-4
+            .gm-logo-wrapper.col-lg-3.col-md-4.col-8
                 a(href="#")
-                    img(src="../img/logo.png" alt="Gemteleversity")
+                    img(src="../img/logo.png" alt="Gemteleversity")   
 
-            .gm-nav-wrapper.col-md-8.float-right       
-                nav.navbar.navbar-expand-sm.sticky-top.float-right
-                    a.navbar-brand(href='#') 
-                    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
-                        span.navbar-toggler-icon
-                    #collapsibleNavbar.collapse.navbar-collapse
-                        ul.navbar-nav
+            .gm-res-btn-wrapper.d-lg-none.d-flex
+                button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0
+                    i.gm-search-icon.fa.fa-search
+                button.gm-nav-btn.navbar-toggler.navbar-dark(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+                    span
+                    span
+                    span
+            .gm-nav-wrapper.col-lg-9.col-lg-8.float-right       
+                nav.navbar.navbar-expand-lg.sticky-top.float-right.mt-3.mt-lg-0
+                    #collapsibleNavbar.collapse.navbar-collapse.justify-content-md-end
+                        ul.navbar-nav.mr-lg-3
                             li.nav-item
-                                a.nav-link.active(href='#') Home
+                                a.nav-link(href='home.html')(class=(curnt_menu=='home')? 'active':'') Home
                             li.nav-item
-                                a.nav-link(href='#') Unedited Videos
+                                a.nav-link(href='ue-videos.html')(class=(curnt_menu=='ue-videos')? 'active':'') Unedited Videos
                             li.nav-item
-                                a.nav-link(href='#') ELearning
+                                a.nav-link(href='e-learning.html')(class=(curnt_menu=='e-learning')? 'active':'') ELearning
                             li.nav-item
-                                a.nav-link(href='#') Faculty
+                                a.nav-link(href='faculity.html')(class=(curnt_menu=='faculty')? 'active':'') Faculty
                             li.nav-item
-                                a.nav-link(href='#') About
+                                a.nav-link(href='about.html')(class=(curnt_menu=='about')? 'active':'') About
                             li.nav-item
-                                a.nav-link(href='#') Login
-                        button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0
+                                a.nav-link(href='javascript:;')(class=(curnt_menu=='login')? 'active':'') Login
+                        button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0.d-md-none.d-lg-inline-block
                             i.gm-search-icon.fa.fa-search
                         form.form-inline.my-2.my-lg-0.d-none
                             input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
@@ -46,14 +50,60 @@ html(lang='en')
 
 
     main.gm-content-wrapper
-        .gm-page-title-bar-wrapper.row
-            .col-md-4.offset-md-1
-                h1.gm-page-title #{pageTitle}
-                ul.gm-title-breadcrumb.list-inline
-                    li.list-inline-item
-                        a(href="home.html") Home
+        .gm-page-title-bar-wrapper.container-fluid.d-flex
+            .row.flex-grow-1
+                .col-md-4.offset-md-1
+                    h1.gm-page-title #{pageTitle}
+                    ul.gm-title-breadcrumb.list-inline
+                        li.list-inline-item
+                            a(href="home.html") Home
 
-                    li.list-inline-item
-                        span #{pageTitle}
+                        li.list-inline-item
+                            span #{pageTitle}
+        block pageContent
 
     footer.gm-footer-wrapper
+
+        .container
+            .row
+                .col-lg-7.col-md-8.col-sm-9
+                    ul.gm-footer-link.list-inline
+                        li.list-inline-item
+                            a(href='#') Home
+                        li.list-inline-item
+                            a(href='#') Unedited Videos
+                        li.list-inline-item
+                            a(href='#') ELearning
+                        li.list-inline-item
+                            a(href='#') Faculty
+                        li.list-inline-item
+                            a(href='#') About
+                        li.list-inline-item
+                            a(href='#') Login
+                    ul.gm-socl-links.list-inline
+                        li.list-inline-item
+                            a(href='#') 
+                                i.fa.fa-facebook
+                        li.list-inline-item
+                            a(href='#') 
+                                i.fa.fa-twitter
+                        li.list-inline-item
+                            a(href='#') 
+                                i.fa.fa-youtube-play
+                    p &#169; 2018 All rights reserved
+                    ul.gm-footer-link.list-inline
+                        li.list-inline-item
+                            a(href='#') Privacy policy
+                        li.list-inline-item
+                            a(href='#') Terms and Conditions
+
+
+                .col-lg-5.col-md-4.col-sm-3.text-sm-right
+                    .gm-footer-img-wrapper.d-inline-block.text-left
+                        div Powered  by:
+                        a(href="#") 
+                            img(src="../img/medikiti-logo-white.png" alt="")
+
+    script(src="../assets/jquery/jquery-3.3.1.min.js")
+    script(src="../assets/bootstrap/js/bootstrap.min.js")
+    block scripts
