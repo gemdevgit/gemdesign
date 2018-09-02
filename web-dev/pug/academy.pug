@@ -1,0 +1,128 @@
+extends partials/layout.pug
+block vars
+    -var pageTitle = "Unedited Videos"
+    -var curnt_menu = 'academy'
+    -var body_class = "gm-page-acadmy"
+block pageContent
+    .container
+        .row
+            aside.gm-sidebar-left.col-md-3.col-sm-4
+                header.gm-filter-header
+                    span.gm-filter-status Filters:
+                    span.gm-on ON
+                    a.gm-tools(href="javascript:;") Clear all
+                section.gm-filter-block
+                    h3.block-title-style-1 Topics
+                        a.gm-tools(href="javascript:;") Reset
+                    ul.gm-filter-list
+                        li.active
+                            span.gm-title Bariatric Surgery
+                            span.gm-count 8
+                        mixin list1(name,count)
+                            li
+                                span=name
+                                span.gm-count= count
+                        +list1('Colorectal Surgery', 12)
+                        +list1('Hepato-Pancreat',3)
+                        +list1('Hernia Surgery',3)
+                        +list1('Laparoscopic Cholecystect.',4)
+                        +list1('Proctocology',15)
+                        +list1('Upper GI Surgery',5)
+
+                section.gm-filter-block
+                    h3.block-title-style-1 Filters
+                        a.gm-tools(href="javascript:;") Reset
+                    ul.gm-filter-list
+                        li
+                            input#inlineCheckbox1.form-check-input(type='checkbox', value='option1')
+                            label.form-check-label(for='inlineCheckbox1') Bariatric Surgery
+                        li
+                            input#inlineCheckbox2.form-check-input(type='checkbox', value='option1')
+                            label.form-check-label(for='inlineCheckbox2') Colorectal Surgery
+                        li
+                            input#inlineCheckbox3.form-check-input(type='checkbox', value='option1')
+                            label.form-check-label(for='inlineCheckbox3') Hepato-Pancreat
+                        li
+                            input#inlineCheckbox3.form-check-input(type='checkbox', value='option1')
+                            label.form-check-label(for='inlineCheckbox3') Hernia Surgery
+                        li
+                            input#inlineCheckbox4.form-check-input(type='checkbox', value='option1')
+                            label.form-check-label(for='inlineCheckbox4') Laparoscopic Cholecystectom..
+                        li
+                            input#inlineCheckbox5.form-check-input(type='checkbox', value='option1' disabled)
+                            label.form-check-label(for='inlineCheckbox5') Proctocology
+                        li
+                            input#inlineCheckbox6.form-check-input(type='checkbox', value='option1' disabled)
+                            label.form-check-label(for='inlineCheckbox6') Upper GI Surgery
+
+                    
+            .col-md-9.col-sm-8
+                header.gm-videos-header
+                    .pull-right
+                        select(name="")
+                            option Sort by Date
+                            option Sort by Date
+                            option Sort by Date
+                    .clearfix
+                    
+                    h3.block-title-style-1 Collections
+                        span.gm-options View all 
+                    .gm-vdo-collection-wrapper.row
+                        
+                        .col-md-4.col-sm-3
+                            .gm-doc-card.card
+                                .gm-img-wrapper
+                                    span.gm-badge-black 56:21
+                                    span.gm-history
+                                        i.fa.fa-clock-o
+                                    img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
+                                .card-block
+                                    h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                                    .gm-reviews
+                                        i.gm-star-full.fa.fa-star
+                                        i.gm-star-full.fa.fa-star
+                                        i.gm-star-full.fa.fa-star
+                                        i.gm-star-full.fa.fa-star
+                                        i.gm-star-empty.fa.fa-star
+                                    .gm-meta-dtls
+                                        .gm-init P
+                                        .gm-dtls
+                                            h5.gm-user Dr. Parthasarathi R,MS
+                                            .gm-dates
+                                                span 28th Apr 
+                                                span 568 Views
+                        mixin doctorCard
+                            .col-md-4.col-sm-3
+                                .gm-doc-card.card
+                                    .gm-img-wrapper
+                                        span.gm-badge-black 56:21
+                                        img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
+                                    .card-block
+                                        h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                                        .gm-reviews
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-empty.fa.fa-star
+                                        .gm-meta-dtls
+                                            .gm-init P
+                                            .gm-dtls
+                                                h5.gm-user Dr. Parthasarathi R,MS
+                                                .gm-dates
+                                                    span 28th Apr 
+                                                    span 568 Views
+
+                        +doctorCard
+                        +doctorCard
+                        +doctorCard
+                        
+                    h3.block-title-style-1 Library
+                    .gm-vdo-collection-wrapper.row
+
+                        +doctorCard
+                        +doctorCard
+                        +doctorCard
+                        +doctorCard
+                        +doctorCard
+                        +doctorCard

@@ -1,0 +1,10 @@
+.gm-page-acadmy {
+    .gm-page-title-bar-wrapper {
+        &:before {
+            opacity: .1;
+            background: url('../img/header-bg-academy.png') no-repeat;
+            background-size: 81%;
+            background-position: center 40%;
+        }
+    }
+}

@@ -70,6 +70,7 @@ h2, h3, h4, h5, h6 {
 
 .gm-doc-card {
     padding: 15px;
+    margin-bottom: 30px;
     border: 1px solid transparentize($clr-text-grey, .8);
     @include border-radius(0);
     @include box-shadow(2px 3px 25px transparentize($clr-text-grey, 0.6));

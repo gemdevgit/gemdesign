@@ -88,6 +88,9 @@
 }
 
 .gm-notification-block-2 {
+    .gm-carousel {
+        width: 100%;
+    }
     .carousel-inner {
         @include border-radius(0);
         background: rgb(4, 167, 247);
@@ -128,6 +131,8 @@
 
 .gm-most-watched-list {
     padding: 0;
+    max-height: 325px;
+    overflow: auto;
     li {
         margin-bottom: 15px;
     }

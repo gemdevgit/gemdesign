@@ -14,7 +14,7 @@ html(lang='en')
     body
     header.gm-header-wrapper.container-fluid
         .row
-            .gm-logo-wrapper.col-lg-3.col-md-4.col-8
+            .gm-logo-wrapper.col-lg-3.col-lg-4.col-8
                 a(href="#")
                     img(src="../img/logo.png" alt="Gemteleversity")   
 
@@ -32,7 +32,7 @@ html(lang='en')
                             li.nav-item
                                 a.nav-link(href='home.html')(class=(curnt_menu=='home')? 'active':'') Home
                             li.nav-item
-                                a.nav-link(href='ue-videos.html')(class=(curnt_menu=='ue-videos')? 'active':'') Unedited Videos
+                                a.nav-link(href='academy.html')(class=(curnt_menu=='academy')? 'active':'') Unedited Videos
                             li.nav-item
                                 a.nav-link(href='e-learning.html')(class=(curnt_menu=='e-learning')? 'active':'') ELearning
                             li.nav-item
@@ -75,14 +75,14 @@ html(lang='en')
         .gm-home-content-wrapper
             .container
                 .row.mb-5
-                    .col-sm-7.col-md-8
+                    .col-md-7.col-lg-8.mb-sm-3.mb-md-0
                         .gm-notification-block-1
                             .row.no-gutters.h-100
-                                .gm-bg-img.col-sm-6.col-md-5(style="background-image:url(../img/placeholders/note-1.png)")
+                                .gm-bg-img.col-md-6.col-lg-5.col-sm-4(style="background-image:url(../img/placeholders/note-1.png)")
                                     .gm-live-badge
                                         span.gm-badge-red LIVE
                                     img(src="../img/placeholders/note-1.png")
-                                .col-sm-6.col-md-7.gm-content-wrapper
+                                .col-md-6.col-lg-7.col-sm-8.gm-content-wrapper
                                     h2.block-title
                                         small GEM OT
                                         br
@@ -94,7 +94,7 @@ html(lang='en')
                                         i.fa.fa-angle-right
 
 
-                    .col-sm-5.col-md-4
+                    .col-md-5.col-lg-4.mb-sm-3.mb-md-0
                         .gm-notification-block-2
                             .row.no-gutters
                                 #demo2.gm-carousel.carousel.slide(data-ride='carousel')
@@ -131,16 +131,36 @@ html(lang='en')
                                             i.fa.fa-angle-right
                         
                 .row.pt-3.mb-5
-                    .col-sm-7.col-md-8
+                    .col-md-7.col-lg-8
                         h3.block-title-style-1 Recent
                         .row
+                            .col-lg-4.col-md-6
+                                .gm-doc-card.card
+                                    .gm-img-wrapper
+                                        span.gm-badge-black 56:21
+                                        span.gm-history
+                                            i.fa.fa-clock-o
+                                        img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
+                                    .card-block
+                                        h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                                        .gm-reviews
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-empty.fa.fa-star
+                                        .gm-meta-dtls
+                                            .gm-init P
+                                            .gm-dtls
+                                                h5.gm-user Dr. Parthasarathi R,MS
+                                                .gm-dates
+                                                    span 28th Apr 
+                                                    span 568 Views
                             mixin doctorCard
-                                .col-md-4.col-sm-3
+                                .col-lg-4.col-md-6
                                     .gm-doc-card.card
                                         .gm-img-wrapper
-                                            span.gm-badge-black 56:21t
-                                            span.gm-history
-                                                i.fa.fa-clock-o
+                                            span.gm-badge-black 56:21
                                             img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
                                         .card-block
                                             h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
@@ -160,9 +180,8 @@ html(lang='en')
 
                             +doctorCard
                             +doctorCard
-                            +doctorCard
                             
-                    aside.col-sm-5.col-md-4
+                    aside.col-md-5.col-lg-4
                         h3.block-title-style-1 Most watched surgeries
                         ul.gm-most-watched-list
 
@@ -177,14 +196,16 @@ html(lang='en')
                             +list
                             +list
                             +list
-                .row.pt-3.mb-5
-                    .col-sm-7.col-md-8
+                            +list
+                            +list
+                .row.mb-5
+                    .col-md-7.col-lg-8
                         h3.block-title-style-1 Most Popular
                         .row
                             +doctorCard
                             +doctorCard
                             +doctorCard
-                    aside.col-sm-5.col-md-4                    
+                    aside.col-md-5.col-lg-4                    
                         .gm-notification-block-3.h-100
                             #demo3.gm-carousel.carousel.slide.h-100(data-ride='carousel')
                                 // The slideshow
@@ -212,7 +233,7 @@ html(lang='en')
 
         .container
             .row
-                .col-lg-7.col-md-8.col-sm-9
+                .col-lg-7.col-lg-8.col-md-9
                     ul.gm-footer-link.list-inline
                         li.list-inline-item
                             a(href='#') Home
@@ -244,7 +265,7 @@ html(lang='en')
                             a(href='#') Terms and Conditions
 
 
-                .col-lg-5.col-md-4.col-sm-3.text-sm-right
+                .col-lg-5.col-lg-4.col-md-3.text-sm-right
                     .gm-footer-img-wrapper.d-inline-block.text-left
                         div Powered  by:
                         a(href="#") 

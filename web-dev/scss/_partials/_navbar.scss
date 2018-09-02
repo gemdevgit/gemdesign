@@ -79,10 +79,26 @@
     color: $clr-white;
     align-items: flex-end;
     margin-bottom: 30px;
-    background: rgb(0, 174, 255);
-    background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
-    background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
-    background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        z-index: 0;
+        @include position(absolute, 0, 0, 0, 0);
+        background: rgb(0, 174, 255);
+        background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+        background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+        background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    }
+    &:before {
+        content: '';
+        display: block;
+        z-index: 1;
+        @include position(absolute, 0, 0, 0, 0);
+    }
+    .col-md-4 {
+        z-index: 2;
+    }
     .gm-page-title {
         font-size: 2rem;
         font-weight: 600;
