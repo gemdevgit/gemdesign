@@ -74,10 +74,10 @@ html(lang='en')
                             i.fa.fa-angle-right
         .gm-home-content-wrapper
             .container
-                .row
+                .row.mb-5
                     .col-sm-7.col-md-8
                         .gm-notification-block-1
-                            .row.no-gutters
+                            .row.no-gutters.h-100
                                 .gm-bg-img.col-sm-6.col-md-5(style="background-image:url(../img/placeholders/note-1.png)")
                                     .gm-live-badge
                                         span.gm-badge-red LIVE
@@ -97,11 +97,115 @@ html(lang='en')
                     .col-sm-5.col-md-4
                         .gm-notification-block-2
                             .row.no-gutters
-                                .gm-bg-img(style="background-image:url(../img/placeholders/note-1.png)")
-                                    .gm-live-badge
-                                        span LIVE
-                                    img(src="../img/placeholders/note-1.png")
-                                .gm-content-wrapper
+                                #demo2.gm-carousel.carousel.slide(data-ride='carousel')
+                                    // The slideshow
+                                    .carousel-inner
+                                        .carousel-item.active
+                                            .gm-img-wrapper.gm-bg-img(style="background-image:url(../img/placeholders/banner-4.png)")
+                                                .gm-upcoming.gm-badge-red Upcoming
+                                                img(src='../img/placeholders/banner-4.png', alt='Los Angeles')
+                                            .gm-caption
+                                                h3.block-title Watch laparoscopic &amp; robotic surgeries
+                                                p.block-dtls Tomorrow 9am to 11am
+                                                .gm-live-badge
+                                                    span.gm-badge-red LIVE
+
+
+                                        .carousel-item
+                                            .gm-img-wrapper.gm-bg-img(style="background-image:url(../img/placeholders/banner-5.png)")
+                                                .gm-upcoming.gm-badge-red Upcoming
+                                                img(src='../img/placeholders/banner-5.png', alt='Chicago')
+                                            .gm-caption
+                                                h3.block-title Watch laparoscopic &amp; robotic surgeries
+                                                p.block-dtls Tomorrow 9am to 11am
+                                                .gm-live-badge
+                                                    span.gm-badge-red LIVE
+
+                                    .gm-carousel-controls.gm-style-1
+                                        a.gm-carousel-prev(href='#demo2', data-slide='prev')
+                                            i.fa.fa-angle-left
+                                        ul.gm-carousel-indicators.carousel-indicators
+                                            li.active(data-target='#demo2', data-slide-to='0')
+                                            li(data-target='#demo2', data-slide-to='1')
+                                        a.gm-carousel-next(href='#demo2', data-slide='next')
+                                            i.fa.fa-angle-right
+                        
+                .row.pt-3.mb-5
+                    .col-sm-7.col-md-8
+                        h3.block-title-style-1 Recent
+                        .row
+                            mixin doctorCard
+                                .col-md-4.col-sm-3
+                                    .gm-doc-card.card
+                                        .gm-img-wrapper
+                                            span.gm-badge-black 56:21t
+                                            span.gm-history
+                                                i.fa.fa-clock-o
+                                            img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
+                                        .card-block
+                                            h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                                            .gm-reviews
+                                                i.gm-star-full.fa.fa-star
+                                                i.gm-star-full.fa.fa-star
+                                                i.gm-star-full.fa.fa-star
+                                                i.gm-star-full.fa.fa-star
+                                                i.gm-star-empty.fa.fa-star
+                                            .gm-meta-dtls
+                                                .gm-init P
+                                                .gm-dtls
+                                                    h5.gm-user Dr. Parthasarathi R,MS
+                                                    .gm-dates
+                                                        span 28th Apr 
+                                                        span 568 Views
+
+                            +doctorCard
+                            +doctorCard
+                            +doctorCard
+                            
+                    aside.col-sm-5.col-md-4
+                        h3.block-title-style-1 Most watched surgeries
+                        ul.gm-most-watched-list
+
+                            mixin list
+                                li.row.no-gutters
+                                    .gm-img-wrapper.col-4
+                                        img(src="../img/placeholders/banner-5.png").img-fluid
+                                    .gm-dtls-block.col-8
+                                        h4 Live from GEM OT (10-feb-18) 
+                                        .gm-subtitle laparoscopic acute cholecy...
+                                        .gm-desc Dr. Parthasarathi R,MS
+                            +list
+                            +list
+                            +list
+                .row.pt-3.mb-5
+                    .col-sm-7.col-md-8
+                        h3.block-title-style-1 Most Popular
+                        .row
+                            +doctorCard
+                            +doctorCard
+                            +doctorCard
+                    aside.col-sm-5.col-md-4                    
+                        .gm-notification-block-3.h-100
+                            #demo3.gm-carousel.carousel.slide.h-100(data-ride='carousel')
+                                // The slideshow
+                                .carousel-inner
+                                    .carousel-item.active.h-100
+                                        .gm-img-wrapper.gm-bg-img.h-100(style="background-image:url(../img/placeholders/banner-6.png)")
+                                            img(src='../img/placeholders/banner-4.png', alt='Los Angeles')
+
+
+                                    .carousel-item.h-100
+                                        .gm-img-wrapper.gm-bg-img.h-100(style="background-image:url(../img/placeholders/banner-6.png)")
+                                            img(src='../img/placeholders/banner-5.png', alt='Chicago')
+
+                                .gm-carousel-controls.gm-style-1
+                                    a.gm-carousel-prev(href='#demo3', data-slide='prev')
+                                        i.fa.fa-angle-left
+                                    ul.gm-carousel-indicators.carousel-indicators
+                                        li.active(data-target='#demo3', data-slide-to='0')
+                                        li(data-target='#demo3', data-slide-to='1')
+                                    a.gm-carousel-next(href='#demo3', data-slide='next')
+                                        i.fa.fa-angle-right
                         
 
     footer.gm-footer-wrapper

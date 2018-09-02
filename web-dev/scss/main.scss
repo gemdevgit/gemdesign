@@ -12,37 +12,3 @@ body {
 img {
     max-width: 100%;
 }
-
-.gm-btn-light {
-    background: $clr-white;
-    color: $clr-blue;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.gm-bg-img {
-    background-size: cover;
-    background-position: center;
-    >img {
-        opacity: 0;
-    }
-}
-
-.gm-live-badge {
-    &:before {
-        content: "●";
-        color: $clr-red;
-        display: inline-block;
-        margin-right: 5px;
-    }
-}
-
-.gm-badge-red {
-    background: $clr-red;
-    color: $clr-white;
-    padding: 2px 5px;
-    font-weight: 500;
-    font-size: 13px;
-    @include border-radius(3px);
-}

@@ -1,16 +1,150 @@
-/*--------------------------
-// Website colors
---------------------------------*/
+h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
 
-$clr-white: #fff;
-$clr-bg: #fff;
-$clr-black-base: #000;
-$clr-black: #333;
-$clr-primary: #333;
-$clr-grey: #ddd;
-$clr-grey-light: #eeeeee;
-$clr-grey-dark: #999999;
-$clr-border: #c2cad8;
-$clr-header-text: #a7b5c6;
-$clr-success: #36c6d3;
-$clr-green: #26C281;
+.gm-btn-light {
+    background: $clr-white;
+    color: $clr-blue;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.gm-bg-img {
+    background-size: cover;
+    background-position: center;
+    >img {
+        opacity: 0;
+    }
+}
+
+.gm-live-badge {
+    &:before {
+        content: "●";
+        color: $clr-red;
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.gm-badge-red, .gm-badge-black {
+    padding: 2px 5px;
+    font-weight: 500;
+    @include border-radius(3px);
+}
+
+.gm-badge-red {
+    background: $clr-red;
+    color: $clr-white;
+    font-size: 13px;
+}
+
+.gm-badge-black {
+    font-size: 12px;
+    color: $clr-white;
+    background: transparentize($clr-black, .1);
+}
+
+.block-title-style-1 {
+    color: $clr-text-grey-2;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    &:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 160px;
+        background: $clr-blue;
+        margin-top: 9px;
+    }
+}
+
+.gm-star-full {
+    color: $clr-blue;
+}
+
+.gm-star-empty {
+    color: transparentize($clr-text-grey, .5);
+}
+
+.gm-doc-card {
+    padding: 15px;
+    border: 1px solid transparentize($clr-text-grey, .8);
+    @include border-radius(0);
+    @include box-shadow(2px 3px 25px transparentize($clr-text-grey, 0.6));
+    .gm-badge-black {
+        @include position(absolute, auto, 10px, 10px, auto);
+    }
+    .gm-history {
+        color: $clr-white;
+        @include position(absolute, 10px, 10px, auto, auto);
+    }
+    .gm-img-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .gm-title {
+        color: $clr-black;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    .gm-meta-dtls {
+        margin-top: 15px;
+        display: flex;
+        .gm-init {
+            color: $clr-white;
+            font-size: 14px;
+            font-weight: 600;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            padding-top: 9px;
+            margin-bottom: 5px;
+            @include border-radius(50%);
+            background: rgb(0, 174, 255);
+            background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+            background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+            background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+            @include box-shadow(2px 3px 25px transparentize($clr-green, 0.6));
+        }
+        .gm-dtls {
+            padding-left: 10px;
+            color: $clr-text-grey;
+            .gm-user {
+                font-size: 13px;
+                margin-bottom: 2px;
+            }
+            .gm-dates {
+                font-size: 12px;
+                font-weight: 500;
+                span:not(:last-child) {
+                    &:after {
+                        content: "▪"
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gm-carousel-controls.gm-style-1 {
+    margin: 20px auto auto auto;
+    color: transparentize($clr-text-grey, .6);
+    .gm-carousel-indicators li:not(.active):not(:hover) {
+        background-color: transparentize($clr-text-grey, .6);
+    }
+    a:not(:hover) {
+        color: transparentize($clr-text-grey, .6);
+    }
+    .gm-carousel-indicators li {
+        width: 8px;
+        height: 8px;
+        font-size: 18px;
+        margin: 0 1px;
+    }
+    a i {
+        font-size: 18px;
+    }
+}

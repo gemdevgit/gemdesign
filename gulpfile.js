@@ -13,6 +13,8 @@ var runSequence = require('run-sequence');
 var webserver = require('gulp-webserver');
 var plumber = require('gulp-plumber');
 var notify = require("gulp-notify");
+var gulp = require('gulp'),
+cssbeautify = require('gulp-cssbeautify');
 //var removeHtmlComments = require('gulp-remove-html-comments');
 
 gulp.task('sass', function() {
@@ -56,7 +58,11 @@ gulp.task('browserSync', function() {
     })
 })
 
-
+gulp.task('css', function() {
+    return gulp.src('web/css/*.css')
+        .pipe(cssbeautify())
+        .pipe(gulp.dest('web/css/formatted'));
+});
 
 gulp.task('watch', ['browserSync', 'sass', 'pug'], function() {
     gulp.watch('web-dev/**/*.scss', ['sass']);
@@ -80,7 +86,7 @@ gulp.task('clean:web', function() {
 
 
 gulp.task('default', function(callback) {
-    runSequence(['sass', 'pug', 'browserSync', 'watch'],
+    runSequence(['sass', 'pug','css', 'watch', 'browserSync'],
         callback
     )
 })

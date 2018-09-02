@@ -29,7 +29,9 @@
     "run-sequence": "^1.2.2",
     "scsslint": "^0.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-cssbeautify": "^1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
