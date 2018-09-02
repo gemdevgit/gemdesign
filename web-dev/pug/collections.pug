@@ -1,8 +1,8 @@
 extends partials/layout.pug
 block vars
-    -var pageTitle = "Unedited Videos"
-    -var curnt_menu = 'academy'
-    -var body_class = "gm-page-acadmy"
+    -var pageTitle = "Elearning"
+    -var curnt_menu = 'collections'
+    -var body_class = ""
 block pageContent
     .container
         .row
@@ -86,7 +86,7 @@ block pageContent
                     
             .col-lg-9.col-md-8
                 header.gm-videos-header
-                    .pull-right.mb-3
+                    .pull-right
                         select(name="")
                             option Sort by Date
                             option Sort by Date
@@ -94,8 +94,7 @@ block pageContent
                     .clearfix
                     
                     h3.block-title-style-1 Collections
-                        span.gm-header-options View all 
-                            i.fa.fa-angle-right
+                        span.gm-options View all 
                     .gm-vdo-collection-wrapper.row
                         
                         .col-lg-4.col-md-5.col-sm-6

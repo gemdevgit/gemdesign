@@ -32,7 +32,7 @@ html(lang='en')
                             li.nav-item
                                 a.nav-link(href='academy.html')(class=(curnt_menu=='academy')? 'active':'') Unedited Videos
                             li.nav-item
-                                a.nav-link(href='e-learning.html')(class=(curnt_menu=='e-learning')? 'active':'') ELearning
+                                a.nav-link(href='collections.html')(class=(curnt_menu=='collections')? 'active':'') ELearning
                             li.nav-item
                                 a.nav-link(href='faculity.html')(class=(curnt_menu=='faculty')? 'active':'') Faculty
                             li.nav-item
@@ -60,6 +60,7 @@ html(lang='en')
 
                         li.list-inline-item
                             span #{pageTitle}
+        .gm-main-content-area
         block pageContent
 
     footer.gm-footer-wrapper
