@@ -107,19 +107,30 @@ block pageContent
                                     img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
                                 .card-block
                                     h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
-                                    .gm-reviews
+                                    .gm-reviews.mt-3
                                         i.gm-star-full.fa.fa-star
                                         i.gm-star-full.fa.fa-star
                                         i.gm-star-full.fa.fa-star
                                         i.gm-star-full.fa.fa-star
                                         i.gm-star-empty.fa.fa-star
                                     .gm-meta-dtls
-                                        .gm-init P
-                                        .gm-dtls
-                                            h5.gm-user Dr. Parthasarathi R,MS
-                                            .gm-dates
-                                                span 28th Apr 
-                                                span 568 Views
+                                        .gm-vdo-count  3 Videos
+                        mixin doctorCard2
+                            .col-lg-4.col-md-5.col-sm-6
+                                .gm-doc-card.card
+                                    .gm-img-wrapper
+                                        span.gm-badge-black 56:21
+                                        img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
+                                    .card-block
+                                        h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                                        .gm-reviews.mt-3
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-full.fa.fa-star
+                                            i.gm-star-empty.fa.fa-star
+                                        .gm-meta-dtls
+                                            .gm-vdo-count  3 Videos
                         mixin doctorCard
                             .col-lg-4.col-md-5.col-sm-6
                                 .gm-doc-card.card
@@ -142,9 +153,8 @@ block pageContent
                                                     span 28th Apr 
                                                     span 568 Views
 
-                        +doctorCard
-                        +doctorCard
-                        +doctorCard
+                        +doctorCard2
+                        +doctorCard2
                         
                     h3.block-title-style-1 Library
                     .gm-vdo-collection-wrapper.row

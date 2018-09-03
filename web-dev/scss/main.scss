@@ -6,8 +6,11 @@
 @import '_partials/_page-about-us';
 @import '_partials/_page-home';
 @import '_partials/_page-academy';
+@import '_partials/_page-clctn-dtls';
+@import '_partials/_page-videos';
 body {
     font-family: 'Raleway', sans-serif;
+    color: $clr-black;
     @include bpMin('1350px') {
         background: #f4f5f7;
         .gm-main-content-area {

@@ -10,6 +10,16 @@ h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.gm-btn-default {
+    background: $clr-white;
+    font-size: 13px;
+    font-weight: 600;
+    color: $clr-text-grey-2;
+    min-width: 150px;
+    text-align: center;
+    border: 1px solid transparentize($clr-text-grey, .5);
+}
+
 .gm-bg-img {
     background-size: cover;
     background-position: center;
@@ -62,6 +72,12 @@ h2, h3, h4, h5, h6 {
 
 .gm-star-full {
     color: $clr-blue;
+    background: rgb(0, 174, 255);
+    background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .gm-star-empty {
@@ -126,6 +142,11 @@ h2, h3, h4, h5, h6 {
                     }
                 }
             }
+        }
+        .gm-vdo-count {
+            font-size: 13px;
+            font-weight: 600;
+            color: $clr-text-grey;
         }
     }
 }

@@ -1,6 +1,8 @@
 doctype html
 html(lang='en')
     block vars
+        -var pageTitle = "Videos"
+        -var curnt_menu ="video"
     head
         title #{pageTitle}
         meta(charset='utf-8')
@@ -9,7 +11,7 @@ html(lang='en')
         link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
         link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700,800" )
         link(rel='stylesheet', href="../css/main.css")
-    body(class=body_class)
+    body.gm-page-videos
     header.gm-header-wrapper.container-fluid
         .row
             .gm-logo-wrapper.col-xl-3.col-lg-4.col-8
@@ -50,25 +52,47 @@ html(lang='en')
 
 
     main.gm-content-wrapper
-        .gm-page-title-bar-wrapper.container-fluid.d-flex
-            .row.flex-grow-1
-                .col-md-4.offset-md-1
-                    h1.gm-page-title #{pageTitle}
-                    ul.gm-title-breadcrumb.list-inline
-                        li.list-inline-item
-                            a(href="home.html") Home
-
-                        li.list-inline-item
-                            span #{pageTitle}
-                        block breadcrumb
+        .gm-video-slider-wrapper
+            .container
+                #demo.gm-video-carousel.carousel.slide(data-ride='carousel')
+                    // The slideshow
+                    .carousel-inner
+                        .carousel-item.active
+                            #player1.gm-video-player
+                        .carousel-item
+                            #player2.gm-video-player
+                        .carousel-item
+                            #player3.gm-video-player
+            .gm-video-carousel-controls
+                a.gm-carousel-prev.left.gm-carousel-control(href='#demo', data-slide='prev')
+                    i.gm-icon.fa.fa-angle-left
+                a.gm-carousel-next.right.gm-carousel-control(href='#demo', data-slide='next')
+                    i.gm-icon.fa.fa-angle-right
         .gm-main-content-area
-        block pageContent
+        .gm-home-content-wrapper
+            .container
+                .row
+                    .gm-video-discussion-wrapper.col-lg-9.col-md-8
+                        .gm-header
+                            a(href="#") 
+                                i.fa.fa-arrow-left
+                                | Go back
+                            h1.gm-video-title  Live from GEM OT (20 March '18): Laparoscopic Gastrectomy
+                            .gm-review-wrapper
+                                span.gm-left
+                                    i.fa.fa-star.gm-star-full
+                                    span.gm-ratings 3/5
+                                span.gm-right
+                                    a.gm-set-rating(href="javascript:;")
+                                        i.fa.fa-star.gm-star-empty
+                                        span RATE THIS 
 
+                    aside.col-lg-3.col-md-4
     footer.gm-footer-wrapper
 
         .container
             .row
-                .col-lg-7.col-md-8.col-sm-9
+                .col-lg-7.col-lg-8.col-md-9
                     ul.gm-footer-link.list-inline
                         li.list-inline-item
                             a(href='#') Home
@@ -100,7 +124,7 @@ html(lang='en')
                             a(href='#') Terms and Conditions
 
 
-                .col-lg-5.col-md-4.col-sm-3.text-sm-right
+                .col-lg-5.col-lg-4.col-md-3.text-sm-right
                     .gm-footer-img-wrapper.d-inline-block.text-left
                         div Powered  by:
                         a(href="#") 
@@ -108,4 +132,15 @@ html(lang='en')
 
     script(src="../assets/jquery/jquery-3.3.1.min.js")
     script(src="../assets/bootstrap/js/bootstrap.min.js")
-    block scripts
+    script(src="https://player.vimeo.com/api/player.js")
+    script.
+        var options = {
+            id: 59777392,
+            height:540,
+            loop: true
+        };
+
+        var player1 = new Vimeo.Player('player1', options);
+        var player2 = new Vimeo.Player('player2', options);
+        var player3 = new Vimeo.Player('player3', options);
+        

@@ -14,7 +14,7 @@ html(lang='en')
     body
     header.gm-header-wrapper.container-fluid
         .row
-            .gm-logo-wrapper.col-lg-3.col-lg-4.col-8
+            .gm-logo-wrapper.col-xl-3.col-lg-4.col-8
                 a(href="#")
                     img(src="../img/logo.png" alt="Gemteleversity")   
 
@@ -25,22 +25,22 @@ html(lang='en')
                     span
                     span
                     span
-            .gm-nav-wrapper.col-lg-9.col-lg-8.float-right       
+            .gm-nav-wrapper.col-xl-9.col-lg-8.float-right       
                 nav.navbar.navbar-expand-lg.sticky-top.float-right.mt-3.mt-lg-0
-                    #collapsibleNavbar.collapse.navbar-collapse.justify-content-md-end
+                    #collapsibleNavbar.collapse.navbar-collapse.justify-content-md-end.w-100
                         ul.navbar-nav.mr-lg-3
                             li.nav-item
-                                a.nav-link(href='home.html')(class=(curnt_menu=='home')? 'active':'') Home
+                                a.nav-link(href='home.html', class=(curnt_menu=='home')? 'active':'') Home
                             li.nav-item
-                                a.nav-link(href='academy.html')(class=(curnt_menu=='academy')? 'active':'') Unedited Videos
+                                a.nav-link(href='academy.html', class=(curnt_menu=='academy')? 'active':'') Unedited Videos
                             li.nav-item
-                                a.nav-link(href='collections.html')(class=(curnt_menu=='collections')? 'active':'') ELearning
+                                a.nav-link(href='collections.html', class=(curnt_menu=='collections')? 'active':'') ELearning
                             li.nav-item
-                                a.nav-link(href='faculity.html')(class=(curnt_menu=='faculty')? 'active':'') Faculty
+                                a.nav-link(href='faculity.html', class=(curnt_menu=='faculty')? 'active':'') Faculty
                             li.nav-item
-                                a.nav-link(href='about.html')(class=(curnt_menu=='about')? 'active':'') About
+                                a.nav-link(href='about.html', class=(curnt_menu=='about')? 'active':'') About
                             li.nav-item
-                                a.nav-link(href='javascript:;')(class=(curnt_menu=='login')? 'active':'') Login
+                                a.nav-link(href='javascript:;', class=(curnt_menu=='login')? 'active':'') Login
                         button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0.d-md-none.d-lg-inline-block
                             i.gm-search-icon.fa.fa-search
                         form.form-inline.my-2.my-lg-0.d-none
