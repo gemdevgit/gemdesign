@@ -28,6 +28,10 @@ h2, h3, h4, h5, h6 {
     }
 }
 
+.gm-circle {
+    @include border-radius(50%);
+}
+
 .gm-live-badge {
     &:before {
         content: "●";
@@ -55,7 +59,7 @@ h2, h3, h4, h5, h6 {
     background: transparentize($clr-black, .1);
 }
 
-.block-title-style-1 {
+.block-title-style-1, .block-title-style-2 {
     color: $clr-text-grey-2;
     font-size: 18px;
     font-weight: 500;
@@ -67,6 +71,12 @@ h2, h3, h4, h5, h6 {
         width: 160px;
         background: $clr-blue;
         margin-top: 9px;
+    }
+}
+
+.block-title-style-2 {
+    &:after {
+        width: 440px;
     }
 }
 
@@ -100,6 +110,12 @@ h2, h3, h4, h5, h6 {
     .gm-img-wrapper {
         position: relative;
         margin-bottom: 20px;
+        &.gm-bg-img.gm-circle {
+            width: 180px;
+            height: 180px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     .gm-title {
         color: $clr-black;
@@ -147,6 +163,29 @@ h2, h3, h4, h5, h6 {
             font-size: 13px;
             font-weight: 600;
             color: $clr-text-grey;
+        }
+    }
+    .gm-text {
+        font-size: 13px;
+        color: $clr-text-grey;
+    }
+    .gm-view-profile {
+        float: right;
+        color: $clr-black;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 30px;
+        &:hover {
+            text-decoration: none;
+        }
+        >span {
+            border-bottom: 3px solid $clr-blue;
+        }
+        i {
+            vertical-align: middle;
+            color: $clr-blue;
+            margin-left: 5px;
+            font-size: 18px;
         }
     }
 }

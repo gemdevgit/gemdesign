@@ -85,10 +85,7 @@
         display: block;
         z-index: 0;
         @include position(absolute, 0, 0, 0, 0);
-        background: rgb(0, 174, 255);
-        background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
-        background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
-        background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
+        @extend %titleGradient;
     }
     &:before {
         content: '';
@@ -98,6 +95,12 @@
     }
     .col-md-4 {
         z-index: 2;
+    }
+    .gm-back {
+        color: $clr-white;
+        .fa {
+            -webkit-text-stroke: 1px $clr-blue;
+        }
     }
     .gm-page-title {
         font-size: 2rem;

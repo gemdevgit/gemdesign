@@ -40,8 +40,7 @@
 }
 
 .gm-video-discussion-wrapper {
-    .gm-init{
-        
+    .gm-init {
         color: $clr-white;
         font-size: 18px;
         font-weight: 500;
@@ -49,7 +48,7 @@
         min-width: 50px;
         height: 50px;
         text-align: center;
-        padding-top: 9px;
+        padding-top: 14px;
         margin-bottom: 5px;
         @include border-radius(50%);
         background: rgb(0, 174, 255);
@@ -58,21 +57,20 @@
         background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
         @include box-shadow(2px 3px 25px transparentize($clr-green, 0.6));
     }
-    .gm-author-dtls{
+    .gm-author-dtls {
         flex-grow: 1;
         padding-left: 10px;
-        .gm-name{
+        .gm-name {
             font-weight: 700;
             font-size: 13px;
         }
-        .gm-date{
-            
+        .gm-date {
             font-weight: 500;
             font-size: 12px;
             color: $clr-text-grey;
         }
     }
-    .gm-video-title{
+    .gm-video-title {
         margin-top: 20px;
         font-size: 42px;
         font-weight: 600;
@@ -105,106 +103,105 @@
                     margin: 0 5px;
                 }
             }
-        }   
-
+        }
     }
-    hr.gm-header-seperator{
-        
+    hr.gm-header-seperator {
         display: block;
-        height:3px;
+        height: 3px;
         background: $clr-blue;
-        width:80%;
+        width: 80%;
         max-width: 445px;
         margin-left: 0;
         margin-bottom: 25px;
     }
-    .gm-video-meta-dtls{
-        .gm-title-block{
+    .gm-video-meta-dtls {
+        .gm-title-block {
             margin-bottom: 25px;
         }
-        .gm-video-desc{
+        .gm-video-desc {
             font-size: 14px;
             font-weight: 500;
             color: $clr-text-grey;
         }
     }
-    .gm-discussion-wrapper{
-        .gm-title{
+    .gm-discussion-wrapper {
+        .gm-title {
             font-size: 22px;
             padding-bottom: 10px;
             margin-bottom: 40px;
             border-bottom: 3px solid $clr-blue;
-            .gm-sub-title{
+            .gm-sub-title {
                 color: $clr-text-grey;
             }
         }
-        .gm-form-wrapper{
-            margin-bottom:40px;
+        .gm-form-wrapper {
+            margin-bottom: 40px;
         }
-        .gm-field-wrapper{
-            .gm-msg-input{
+        .gm-field-wrapper {
+            .gm-msg-input {
                 height: 130px;
             }
-            .gm-btn-wrapper{
-                button{
+            .gm-btn-wrapper {
+                button {
                     padding: 13px 20px;
                 }
-                .gm-seperator{
+                .gm-seperator {
                     font-size: 12px;
                     color: $clr-text-grey;
                     font-weight: 500;
-                    margin:0 15px;
+                    margin: 0 15px;
                 }
             }
         }
     }
-    .gm-comment-list-wrapper{
+    .gm-comment-list-wrapper {
         list-style: none;
         padding: 0;
-        ul{
+        ul {
             list-style: none;
             padding: 0;
             margin-top: 30px;
-
         }
         .gm-comment-wrapper:not(:last-child) {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
-        .gm-discussion-dtls{
-            .gm-author-dtls{
-                margin-bottom: 15px;
+        .gm-discussion-dtls {
+            padding-top: 10px;
+            .gm-author-dtls {
+                margin-bottom: 5px;
             }
-            .gm-comment{
+            .gm-comment {
                 font-size: 14px;
                 font-weight: 500;
-                color:$clr-text-grey-2;
+                color: $clr-text-grey-2;
                 padding-left: 10px;
             }
         }
     }
 }
-.gm-watch-list-block-wrapper{
-    .gm-watch-list-block{
+
+.gm-watch-list-block-wrapper {
+    .gm-watch-list-block {
         margin-bottom: 30px;
-        .gm-block-title{
-            margin:0 auto 10px auto;
+        .gm-block-title {
+            margin: 0 auto 10px auto;
             font-size: 14px;
             font-weight: 600;
         }
-        .gm-name{
+        .gm-name {
             font-size: 13px;
             font-weight: 600;
             color: $clr-text-grey;
         }
-        .gm-date{
-
+        .gm-date {
             font-size: 12px;
             font-weight: 500;
             color: $clr-text-grey;
         }
     }
 }
-.gm-back{
+
+.gm-back {
     font-size: 13px;
     color: $clr-text-grey-2;
     font-weight: 500;

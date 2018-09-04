@@ -1,12 +1,78 @@
 extends partials/layout.pug
 block vars
-    -var pageTitle = "In Progress"
-    -var curnt_menu = 'elearning'
-    -var body_class = "gm-page-colect-dtls"
-block breadcrumb
+    -var pageTitle = "Faculty"
+    -var curnt_menu = 'faculty'
+    -var body_class = "gm-page-faculty-dtls"
+    -var customTitleBar = true
+block TitleBarblock
+    a.gm-back(href="#") 
+        i.fa.fa-arrow-left
+        |  Go Back
+    h1.gm-page-title #{pageTitle}
+    ul.gm-title-breadcrumb.list-inline
     
-    li.list-inline-item
-        span Collection
+
+        li.list-inline-item
+            a(href="#") Home
+
+        li.list-inline-item
+            a(href="#") Faculty
+        li.list-inline-item
+            span Profile
+            
 block pageContent
     .container
-            
+        .row
+            .gm-profile-dtls-wrapper
+                figure.gm-img-wrapper.gm-bg-img.gm-circle(style="background-image:url('../img/placeholders/doc-3.png')")                    
+                    img.card-img-top(src='../img/placeholders/doc-3.png', alt='Card image cap')
+                .gm-profile-dtls.flex-grow-1    
+                    h3.gm-title Dr. C.Palanivelu
+                    h4.gm-sub-title MS, MCh, DNB, FACS, FRCS(Hon) Ed.
+                    h5.gm-designation Chairman GEM Hospital and Research Centre
+                    p Dr Palanivelu was first to introduce Iaparoscopic surgery in south India. He was instrumental in popularizing this new branch of medicine in India. He applied Iaparoscopic technique to all types of surgery including cancer surgery 
+
+                    h5.gm-section-title Awards: 
+                    p Dr BC Roy National Awardee under the category of development of specialty medicine namely laparoscopic surgery in 2006.
+                    p First Indian to win Silver Medal in the international Olympic minimal access surgery competition in 2009 in Phoenix USA. 
+                    a.gm-read-more(href="javascript:;") ... show more
+                .gm-button-block.mt-3.mt-md-0
+                    button.btn.gm-btn-default
+                        i.fa.fa-plus-circle 
+                        |  Follow
+
+        h3.block-title-style-2 6 Videos
+        .row.mb-3
+            mixin doctorCard
+                .col-lg-3.col-md-4.col-sm-6
+                    .gm-doc-card.card
+                        .gm-img-wrapper
+                            span.gm-badge-black 56:21
+                            img.card-img-top(src='../img/placeholders/doc-2.png', alt='Card image cap')
+                        .card-block
+                            h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                            .gm-reviews
+                                i.gm-star-full.fa.fa-star
+                                i.gm-star-full.fa.fa-star
+                                i.gm-star-full.fa.fa-star
+                                i.gm-star-full.fa.fa-star
+                                i.gm-star-empty.fa.fa-star
+                            .gm-meta-dtls
+                                .gm-init P
+                                .gm-dtls
+                                    h5.gm-user Dr. Parthasarathi R,MS
+                                    .gm-dates
+                                        span 28th Apr 
+                                        span 568 Views
+            +doctorCard
+            +doctorCard
+            +doctorCard
+            +doctorCard
+            +doctorCard
+            +doctorCard
+
+        h3.block-title-style-2 3 Collections
+        .row 
+            +doctorCard
+            +doctorCard
+            +doctorCard
