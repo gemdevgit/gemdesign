@@ -679,13 +679,46 @@ h2, h3, h4, h5, h6 {
     .gm-video-carousel-controls .gm-carousel-control .gm-icon:hover {
       color: #555657; }
 
+.gm-video-discussion-wrapper .gm-init {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 9px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  background: #00aeff;
+  background: linear-gradient(to right, #00aeff 0%, #00aeff 48%, #40d5bb 100%);
+  box-shadow: 2px 3px 25px rgba(64, 213, 187, 0.4); }
+
+.gm-video-discussion-wrapper .gm-author-dtls {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding-left: 10px; }
+  .gm-video-discussion-wrapper .gm-author-dtls .gm-name {
+    font-weight: 700;
+    font-size: 13px; }
+  .gm-video-discussion-wrapper .gm-author-dtls .gm-date {
+    font-weight: 500;
+    font-size: 12px;
+    color: #818283; }
+
+.gm-video-discussion-wrapper .gm-video-title {
+  margin-top: 20px;
+  font-size: 42px;
+  font-weight: 600; }
+
 .gm-video-discussion-wrapper .gm-review-wrapper {
   font-size: 14px;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  color: #818283; }
   .gm-video-discussion-wrapper .gm-review-wrapper .fa-star {
-    font-size: 22px;
-    line-height: 25px; }
+    font-size: 33px;
+    line-height: 33px; }
   .gm-video-discussion-wrapper .gm-review-wrapper > span {
     vertical-align: middle; }
     .gm-video-discussion-wrapper .gm-review-wrapper > span i {
@@ -702,20 +735,82 @@ h2, h3, h4, h5, h6 {
         display: inline-block;
         margin: 0 5px; }
 
-.gm-watch-list-block-wrapper .gm-watch-list-block .gm-block-title {
-  margin: 10px auto 15px auto;
+.gm-video-discussion-wrapper hr.gm-header-seperator {
+  display: block;
+  height: 3px;
+  background: #00aeff;
+  width: 80%;
+  max-width: 445px;
+  margin-left: 0;
+  margin-bottom: 25px; }
+
+.gm-video-discussion-wrapper .gm-video-meta-dtls .gm-title-block {
+  margin-bottom: 25px; }
+
+.gm-video-discussion-wrapper .gm-video-meta-dtls .gm-video-desc {
   font-size: 14px;
-  font-weight: 600; }
-
-.gm-watch-list-block-wrapper .gm-watch-list-block .gm-name {
-  font-size: 13px;
-  font-weight: 600;
-  color: #818283; }
-
-.gm-watch-list-block-wrapper .gm-watch-list-block .gm-date {
-  font-size: 12px;
   font-weight: 500;
   color: #818283; }
+
+.gm-video-discussion-wrapper .gm-discussion-wrapper .gm-title {
+  font-size: 22px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #00aeff; }
+  .gm-video-discussion-wrapper .gm-discussion-wrapper .gm-title .gm-sub-title {
+    color: #818283; }
+
+.gm-video-discussion-wrapper .gm-discussion-wrapper .gm-form-wrapper {
+  margin-bottom: 40px; }
+
+.gm-video-discussion-wrapper .gm-discussion-wrapper .gm-field-wrapper .gm-msg-input {
+  height: 130px; }
+
+.gm-video-discussion-wrapper .gm-discussion-wrapper .gm-field-wrapper .gm-btn-wrapper button {
+  padding: 13px 20px; }
+
+.gm-video-discussion-wrapper .gm-discussion-wrapper .gm-field-wrapper .gm-btn-wrapper .gm-seperator {
+  font-size: 12px;
+  color: #818283;
+  font-weight: 500;
+  margin: 0 15px; }
+
+.gm-video-discussion-wrapper .gm-comment-list-wrapper {
+  list-style: none;
+  padding: 0; }
+  .gm-video-discussion-wrapper .gm-comment-list-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px; }
+  .gm-video-discussion-wrapper .gm-comment-list-wrapper .gm-comment-wrapper:not(:last-child) {
+    margin-bottom: 30px; }
+  .gm-video-discussion-wrapper .gm-comment-list-wrapper .gm-discussion-dtls .gm-author-dtls {
+    margin-bottom: 15px; }
+  .gm-video-discussion-wrapper .gm-comment-list-wrapper .gm-discussion-dtls .gm-comment {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555657;
+    padding-left: 10px; }
+
+.gm-watch-list-block-wrapper .gm-watch-list-block {
+  margin-bottom: 30px; }
+  .gm-watch-list-block-wrapper .gm-watch-list-block .gm-block-title {
+    margin: 0 auto 10px auto;
+    font-size: 14px;
+    font-weight: 600; }
+  .gm-watch-list-block-wrapper .gm-watch-list-block .gm-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #818283; }
+  .gm-watch-list-block-wrapper .gm-watch-list-block .gm-date {
+    font-size: 12px;
+    font-weight: 500;
+    color: #818283; }
+
+.gm-back {
+  font-size: 13px;
+  color: #555657;
+  font-weight: 500; }
 
 body {
   font-family: 'Raleway', sans-serif;

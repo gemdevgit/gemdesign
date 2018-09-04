@@ -73,10 +73,10 @@ html(lang='en')
             .container
                 .row
                     .gm-video-discussion-wrapper.col-lg-9.col-md-8
-                        .gm-header
-                            a(href="#") 
+                        .gm-video-info.mb-5
+                            a.gm-back(href="#") 
                                 i.fa.fa-arrow-left
-                                | Go back
+                                |  Go back
                             h1.gm-video-title  Live from GEM OT (20 March '18): Laparoscopic Gastrectomy
                             .gm-review-wrapper
                                 span.gm-left
@@ -86,6 +86,68 @@ html(lang='en')
                                     a.gm-set-rating(href="javascript:;")
                                         i.fa.fa-star.gm-star-empty
                                         span RATE THIS 
+                            hr.gm-header-seperator
+                            .gm-video-meta-dtls
+                                .gm-title-block.row
+                                    .gm-user-block.col-sm-6.d-flex.align-items-center
+                                        .gm-init P
+                                        .gm-author-dtls
+                                            .gm-name Dr. Parthasarathi R,MS
+                                            .gm-date 
+                                                span Published on : 28th April 2018 
+                                                span 568 Views
+
+                                    .gm-share-block.col-sm-6.text-right
+                                        button.btn.btn-default.gm-btn-default.mr-3(disabled="disabled") 
+                                            i.fa.fa-clock-o       
+                                            | Watch later 
+                                        button.btn.btn-default.gm-btn-default
+                                            i.fa.fa-share-alt
+                                            | Share
+                                .gm-video-desc.col-12
+                                    | James Tan had two objectives when he was deciding what kind of surgery he should undergo to repair his leaky mitral valve, a part of the heart that normally pumps blood toward the body... 
+                                    a(href="javascript:;") show more
+                        .gm-discussion-wrapper
+                            h2.gm-title 03 Discussions  |  
+                                span.gm-sub-title My Questions
+                            form.gm-form-wrapper.d-flex
+                                .gm-init P
+                                .gm-field-wrapper.flex-grow-1.pl-3
+                                    textarea.form-control.gm-msg-input(placeholder="Post a comment or ask a question here !")
+                                    .gm-btn-wrapper.mt-3
+                                        button.btn.gm-btn-green POST A QUESTION
+                                        span.gm-seperator or
+                                        button.btn.gm-btn-green PUBLIC COMMENT
+                            ul.gm-comment-list-wrapper
+                            
+                                li.gm-comment-wrapper.d-flex
+                                    .gm-init P
+                                    .gm-discussion-dtls.flex-grow-1
+                                        .gm-author-dtls
+                                            .gm-name Dr. Parthasarathi R,MS
+                                            .gm-date on : 28th April 2018 
+                                        .gm-comment hey this is really great! what lens and cam did you guys use ?
+                                        ul                                           
+                                            li.gm-comment-wrapper.d-flex
+                                                .gm-init P
+                                                .gm-discussion-dtls.flex-grow-1
+                                                    .gm-author-dtls
+                                                        .gm-name Dr. Parthasarathi R,MS
+                                                        .gm-date on : 28th April 2018 
+                                                    .gm-comment hey this is really great! what lens and cam did you guys use ?
+                                mixin comment
+                                    li.gm-comment-wrapper.d-flex
+                                        .gm-init P
+                                        .gm-discussion-dtls.flex-grow-1
+                                            .gm-author-dtls
+                                                .gm-name Dr. Parthasarathi R,MS
+                                                .gm-date on : 28th April 2018 
+                                            .gm-comment hey this is really great! what lens and cam did you guys use ?
+                                +comment
+                                +comment
+                                +comment
+                                +comment
+
 
                     aside.col-lg-3.col-md-4
                         h3.block-title-style-1 Watch next
@@ -94,9 +156,9 @@ html(lang='en')
                                 .gm-watch-list-block
                                     figure
                                         img.img-fluid(src="../img/placeholders/watch-list-1.png")              
-                                        h4.gm-block-title Professional fellow program in management of diabetic foot-conditions (fmdf)
-                                        .gm-name Dr. Parthasarathi R,MS
-                                        .gm-date 28th April 2018
+                                    h4.gm-block-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                                    .gm-name Dr. Parthasarathi R,MS
+                                    .gm-date 28th April 2018
                             +block1
                             +block1
                             +block1
