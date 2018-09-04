@@ -67,6 +67,26 @@
                     margin: 0 5px;
                 }
             }
+        }   
+    }
+}
+.gm-watch-list-block-wrapper{
+    .gm-watch-list-block{
+        .gm-block-title{
+            margin:10px auto 15px auto;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .gm-name{
+            font-size: 13px;
+            font-weight: 600;
+            color: $clr-text-grey;
+        }
+        .gm-date{
+
+            font-size: 12px;
+            font-weight: 500;
+            color: $clr-text-grey;
         }
     }
 }

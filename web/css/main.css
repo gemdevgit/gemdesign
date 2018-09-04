@@ -702,6 +702,21 @@ h2, h3, h4, h5, h6 {
         display: inline-block;
         margin: 0 5px; }
 
+.gm-watch-list-block-wrapper .gm-watch-list-block .gm-block-title {
+  margin: 10px auto 15px auto;
+  font-size: 14px;
+  font-weight: 600; }
+
+.gm-watch-list-block-wrapper .gm-watch-list-block .gm-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #818283; }
+
+.gm-watch-list-block-wrapper .gm-watch-list-block .gm-date {
+  font-size: 12px;
+  font-weight: 500;
+  color: #818283; }
+
 body {
   font-family: 'Raleway', sans-serif;
   color: #0a161e; }

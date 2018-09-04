@@ -20,6 +20,16 @@ h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.gm-btn-default {
+    background: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555657;
+    min-width: 150px;
+    text-align: center;
+    border: 1px solid rgba(129, 130, 131, 0.5);
+}
+
 .gm-bg-img {
     background-size: cover;
     background-position: center;
@@ -72,6 +82,10 @@ h2, h3, h4, h5, h6 {
 
 .gm-star-full {
     color: #00aeff;
+    background: #00aeff;
+    background: linear-gradient(to right, #00aeff 0%, #00aeff 48%, #40d5bb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .gm-star-empty {
@@ -153,6 +167,12 @@ h2, h3, h4, h5, h6 {
 
 .gm-doc-card .gm-meta-dtls .gm-dtls .gm-dates span:not(:last-child):after {
     content: "▪";
+}
+
+.gm-doc-card .gm-meta-dtls .gm-vdo-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: #818283;
 }
 
 .gm-header-options {
@@ -790,8 +810,171 @@ h2, h3, h4, h5, h6 {
     background: linear-gradient(to right, #00aeff 0%, #00aeff 48%, #40d5bb 100%);
 }
 
+.gm-page-colect-dtls .gm-page-title-bar-wrapper:before {
+    opacity: .3;
+    background: url("../img/header-bg-clctn-dtls.png") no-repeat;
+    background-size: cover;
+    background-position: center 5%;
+}
+
+.gm-colect-dtls-header .gm-img-wrapper {
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
+}
+
+.gm-colect-dtls-header .gm-title-wrapper {
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+
+.gm-colect-dtls-header .gm-colect-title {
+    font-size: 18px;
+}
+
+.gm-colect-dtls-header .gm-review-wrapper {
+    font-size: 14px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.gm-colect-dtls-header .gm-review-wrapper .fa-star {
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.gm-colect-dtls-header .gm-review-wrapper > span {
+    vertical-align: middle;
+}
+
+.gm-colect-dtls-header .gm-review-wrapper > span i {
+    margin-right: 8px;
+}
+
+.gm-colect-dtls-header .gm-review-wrapper > span span, .gm-colect-dtls-header .gm-review-wrapper > span i {
+    vertical-align: middle;
+}
+
+.gm-colect-dtls-header .gm-review-wrapper > span .gm-set-rating {
+    color: #0a161e;
+}
+
+.gm-colect-dtls-header .gm-review-wrapper > span.gm-left {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid rgba(129, 130, 131, 0.5);
+}
+
+.gm-colect-dtls-header .gm-review-wrapper > span.gm-left:after {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.gm-page-videos .gm-video-slider-wrapper {
+    background: #1c1d21;
+    height: 540px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.gm-page-videos .gm-video-player iframe {
+    display: block;
+    margin: auto;
+}
+
+.gm-video-slider-wrapper {
+    position: relative;
+}
+
+.gm-video-carousel-controls .gm-carousel-control {
+    margin: auto;
+    width: 10%;
+    height: 80px;
+    max-width: 100px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+}
+
+.gm-video-carousel-controls .gm-carousel-control.right {
+    left: auto;
+    right: 0;
+}
+
+.gm-video-carousel-controls .gm-carousel-control .gm-icon {
+    font-size: 5rem;
+    color: #818283;
+    -webkit-text-stroke: 4px #1c1d21;
+}
+
+.gm-video-carousel-controls .gm-carousel-control .gm-icon:hover {
+    color: #555657;
+}
+
+.gm-video-discussion-wrapper .gm-review-wrapper {
+    font-size: 14px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.gm-video-discussion-wrapper .gm-review-wrapper .fa-star {
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.gm-video-discussion-wrapper .gm-review-wrapper > span {
+    vertical-align: middle;
+}
+
+.gm-video-discussion-wrapper .gm-review-wrapper > span i {
+    margin-right: 8px;
+}
+
+.gm-video-discussion-wrapper .gm-review-wrapper > span span, .gm-video-discussion-wrapper .gm-review-wrapper > span i {
+    vertical-align: middle;
+}
+
+.gm-video-discussion-wrapper .gm-review-wrapper > span .gm-set-rating {
+    color: #0a161e;
+}
+
+.gm-video-discussion-wrapper .gm-review-wrapper > span.gm-left {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid rgba(129, 130, 131, 0.5);
+}
+
+.gm-video-discussion-wrapper .gm-review-wrapper > span.gm-left:after {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.gm-watch-list-block-wrapper .gm-watch-list-block .gm-block-title {
+    margin: 10px auto 15px auto;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.gm-watch-list-block-wrapper .gm-watch-list-block .gm-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #818283;
+}
+
+.gm-watch-list-block-wrapper .gm-watch-list-block .gm-date {
+    font-size: 12px;
+    font-weight: 500;
+    color: #818283;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
+    color: #0a161e;
 }
 
 @media only screen and (min-width: 1350px) {

@@ -88,11 +88,25 @@ html(lang='en')
                                         span RATE THIS 
 
                     aside.col-lg-3.col-md-4
+                        h3.block-title-style-1 Watch next
+                        .gm-watch-list-block-wrapper
+                            mixin block1
+                                .gm-watch-list-block
+                                    figure
+                                        img.img-fluid(src="../img/placeholders/watch-list-1.png")              
+                                        h4.gm-block-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                                        .gm-name Dr. Parthasarathi R,MS
+                                        .gm-date 28th April 2018
+                            +block1
+                            +block1
+                            +block1
+                            +block1
+
     footer.gm-footer-wrapper
 
         .container
             .row
-                .col-lg-7.col-lg-8.col-md-9
+                .col-xl-7.col-lg-8.col-md-9
                     ul.gm-footer-link.list-inline
                         li.list-inline-item
                             a(href='#') Home
@@ -124,7 +138,7 @@ html(lang='en')
                             a(href='#') Terms and Conditions
 
 
-                .col-lg-5.col-lg-4.col-md-3.text-sm-right
+                .col-xl-5.col-lg-4.col-md-3.text-sm-right
                     .gm-footer-img-wrapper.d-inline-block.text-left
                         div Powered  by:
                         a(href="#") 

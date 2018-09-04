@@ -15,6 +15,8 @@ var plumber = require('gulp-plumber');
 var notify = require("gulp-notify");
 var gulp = require('gulp'),
 cssbeautify = require('gulp-cssbeautify');
+var scssPartials1 = ['web-dev/scss/_partials']
+var scssPartials2 = ['web-dev/scss/_utilities']
 //var removeHtmlComments = require('gulp-remove-html-comments');
 
 gulp.task('sass', function() {
@@ -29,8 +31,6 @@ gulp.task('sass', function() {
         // .pipe(recess.reporter())
         .pipe(sourcemaps.write(''))
         .pipe(gulp.dest('web/css'))
-		.pipe(sass({includePaths: ['web-dev/scss/_partials']}))
-		.pipe(sass({includePaths: ['web-dev/scss/_utilities']}))
         .pipe(browserSync.stream())
 });
 
@@ -67,6 +67,8 @@ gulp.task('css', function() {
 gulp.task('watch', ['browserSync', 'sass', 'pug'], function() {
     gulp.watch('web-dev/**/*.scss', ['sass']);
     gulp.watch('web-dev/**/*.pug', ['pug']);
+    gulp.watch(scssPartials1, ['scss']);
+    gulp.watch(scssPartials2, ['scss']);
     gulp.watch('web/*.html', function(){
         setTimeout(function(){
             browserSync.reload
