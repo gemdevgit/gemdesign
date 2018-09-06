@@ -18,7 +18,8 @@ html(lang='en')
                 a(href="#")
                     img(src="../img/logo.png" alt="Gemteleversity")   
 
-            .gm-res-btn-wrapper.d-lg-none.d-flex
+
+            .gm-res-btn-wrapper.d-lg-none.d-flex.align-items-center
                 button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0
                     i.gm-search-icon.fa.fa-search
                 button.gm-nav-btn.navbar-toggler.navbar-dark(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
@@ -31,8 +32,14 @@ html(lang='en')
                         ul.navbar-nav.mr-lg-3
                             li.nav-item
                                 a.nav-link(href='home.html', class=(curnt_menu=='home')? 'active':'') Home
-                            li.nav-item
-                                a.nav-link(href='academy.html', class=(curnt_menu=='academy')? 'active':'') Unedited Videos
+                            li.nav-item.dropdown
+                                a.nav-link(href='academy.html', class=(curnt_menu=='academy')? 'active':'',data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Unedited Videos
+                                ul.dropdown-menu(aria-labelledby="navbarDropdown")
+                                    li.dropdown-item
+                                        a.active.nav-link(href="#") Library
+                                    li.dropdown-item
+                                        a.nav-link(href="#") Collections
+
                             li.nav-item
                                 a.nav-link(href='collections.html', class=(curnt_menu=='collections')? 'active':'') ELearning
                             li.nav-item

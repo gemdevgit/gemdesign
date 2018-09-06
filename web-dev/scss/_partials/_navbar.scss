@@ -1,10 +1,11 @@
 // stylesheet for header area
 .gm-header-wrapper {
     background: $clr-white;
-    padding: 10px 15px;
 }
 
 .gm-logo-wrapper {
+    
+    padding:18px 15px 16px 15px;
     img {
         max-width: 100%;
     }
@@ -40,19 +41,20 @@
 }
 
 .gm-nav-wrapper {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
     .navbar {
         width: 100%;
+        padding: 20px 0 0 0;
     }
     .nav-item {
-        padding: 0 15px;
+        padding: 10px 15px 22px 15px;
     }
     .nav-link {
         color: $clr-black;
-        font-size: 1rem;
-        font-weight: 600;
-        text-transform: uppercase;
         padding: 4px 9px;
-        @include border-radius(6px);
+        @include border-radius(4px);
         @include transition(all .3s ease);
         @include box-shadow(1px 5px 4px transparentize($clr-white, 0.7));
         &.active, &:hover {
@@ -66,6 +68,60 @@
     }
     .gm-header-search-btn {
         padding: 0 10px;
+        position: relative;
+        top:-6px;
+    }
+    .dropdown:hover>.dropdown-menu{
+        display: block;
+    }
+    .dropdown-menu{
+        font-size: 13px;
+        padding: 0;
+        margin-top: 10px;
+        border:none;
+        .dropdown-item{
+            
+            background: none;
+            font-weight: bold;            
+            padding: 12px 15px;
+            .nav-link{
+                    
+                @include border-radius(4px);
+                &.active, &:hover {
+                    color: $clr-white;
+                    background: $clr-blue;
+                    @include box-shadow(none);
+                }
+            }
+        }
+        @include bpMin('992px') {
+            border: 1px solid rgba(0,0,0,.15);
+            @include border-radius(6px);
+            @include box-shadow(3px 5px 14px 0px  transparentize($clr-black, 0.9));
+            .dropdown-item {
+                border-bottom: 1px solid transparentize($clr-text-grey,.7);
+                
+    
+            }
+            &:after{
+                
+                content: '';
+                display: block;
+                height: 11px;
+                @include position(absolute,-11px,0,auto,0);
+                margin:auto;
+            }
+            &:before{
+                content: '';
+                display: inline-block;
+                border-style: solid;
+                border-width: 0 7px 7px 7px;
+                border-color: transparent transparent $clr-white transparent;
+                @include position(absolute,-7px,0,auto,0);
+                margin:auto;
+                width:7px;
+            }
+        }
     }
 }
 

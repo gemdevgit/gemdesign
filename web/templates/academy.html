@@ -13,14 +13,19 @@
   <header class="gm-header-wrapper container-fluid">
     <div class="row">
       <div class="gm-logo-wrapper col-xl-3 col-lg-4 col-8"><a href="#"><img src="../img/logo.png" alt="Gemteleversity"></a></div>
-      <div class="gm-res-btn-wrapper d-lg-none d-flex"><button class="gm-header-search-btn btn btn-link my-2 my-sm-0"><i class="gm-search-icon fa fa-search"></i></button><button class="gm-nav-btn navbar-toggler navbar-dark" type="button" data-toggle="collapse"
-          data-target="#collapsibleNavbar"><span></span><span></span><span></span></button></div>
+      <div class="gm-res-btn-wrapper d-lg-none d-flex align-items-center"><button class="gm-header-search-btn btn btn-link my-2 my-sm-0"><i class="gm-search-icon fa fa-search"></i></button><button class="gm-nav-btn navbar-toggler navbar-dark" type="button"
+          data-toggle="collapse" data-target="#collapsibleNavbar"><span></span><span></span><span></span></button></div>
       <div class="gm-nav-wrapper col-xl-9 col-lg-8 float-right">
         <nav class="navbar navbar-expand-lg sticky-top float-right mt-3 mt-lg-0">
           <div class="collapse navbar-collapse justify-content-md-end w-100" id="collapsibleNavbar">
             <ul class="navbar-nav mr-lg-3">
               <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link active" href="academy.html">Unedited Videos</a></li>
+              <li class="nav-item dropdown"><a class="nav-link active" href="academy.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Unedited Videos</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li class="dropdown-item"><a class="active nav-link" href="#">Library</a></li>
+                  <li class="dropdown-item"><a class="nav-link" href="#">Collections</a></li>
+                </ul>
+              </li>
               <li class="nav-item"><a class="nav-link" href="collections.html">ELearning</a></li>
               <li class="nav-item"><a class="nav-link" href="faculity-dtls.html">Faculty</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
