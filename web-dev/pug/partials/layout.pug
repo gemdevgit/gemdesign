@@ -44,7 +44,7 @@ html(lang='en')
                             li.nav-item
                                 a.nav-link(href='about.html', class=(curnt_menu=='about')? 'active':'') About
                             li.nav-item
-                                a.nav-link(href='javascript:;', class=(curnt_menu=='login')? 'active':'') Login
+                                a.nav-link.gm-toggle-login(href='javascript:;', class=(curnt_menu=='login')? 'active':'') Login
                         button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0.d-md-none.d-lg-inline-block
                             i.gm-search-icon.fa.fa-search
                         form.form-inline.my-2.my-lg-0.d-none
@@ -115,6 +115,8 @@ html(lang='en')
                         a(href="#") 
                             img(src="../img/medikiti-logo-white.png" alt="")
 
+    include _login.pug
     script(src="../assets/jquery/jquery-3.3.1.min.js")
     script(src="../assets/bootstrap/js/bootstrap.min.js")
+    script(src="../js/main.js")
     block scripts

@@ -29,7 +29,7 @@
               <li class="nav-item"><a class="nav-link" href="collections.html">ELearning</a></li>
               <li class="nav-item"><a class="nav-link" href="faculity-dtls.html">Faculty</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="javascript:;">Login</a></li>
+              <li class="nav-item"><a class="nav-link gm-toggle-login" href="javascript:;">Login</a></li>
             </ul><button class="gm-header-search-btn btn btn-link my-2 my-sm-0 d-md-none d-lg-inline-block"><i class="gm-search-icon fa fa-search"></i></button>
             <form class="form-inline my-2 my-lg-0 d-none"><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"><button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button></form>
           </div>
@@ -171,6 +171,34 @@
       </div>
     </div>
   </footer>
+  <div class="gm-login-wrapper">
+    <div class="gm-overlay-bg"></div>
+    <div class="gm-content-wrapper">
+      <div class="gm-header">
+        <h3 class="block-title-style-2">LOGIN<a class="gm-toggle-login" href="javascript:;"></a></h3>
+      </div>
+      <div class="gm-form-wrapper">
+        <form action="#">
+          <div class="form-group"><label for="exampleInputEmail1">Email address</label><input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="ex. John@email.com"></div>
+          <div class="form-group"><label for="exampleInputPassword1">Password</label><input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password"></div><button class="btn gm-btn-green gm-btn-submit" type="submit">LOGIN<i
+              class="fa fa-angle-right"></i></button>
+          <div class="gm-footer row">
+            <div class="col-sm-6"><label>Fogot password?</label><a href="#">Recover</a></div>
+            <div class="col-sm-6 text-right"><label for="">New to Gemtelversity?</label><a href="#">Create account</a></div>
+          </div>
+        </form>
+      </div>
+      <div class="gm-other-login-wrapper">
+        <div class="gm-sub-title text-center">- OR USE -</div><button class="btn gm-btn-default btn-lg btn-block">Login using Amasi membership</button>
+        <div class="row">
+          <div class="col-sm-6"> <button class="btn gm-btn-default btn-lg btn-block"> <i class="fa fa-google"></i>Login using Google</button></div>
+          <div class="col-sm-6"> <button class="btn gm-btn-default btn-lg btn-block"> <i class="fa fa-linkedin"></i>Login using Linkedin</button></div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
   <script src="../assets/jquery/jquery-3.3.1.min.js"></script>
   <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
 </html>

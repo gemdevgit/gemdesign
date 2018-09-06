@@ -1,0 +1,39 @@
+.gm-login-wrapper
+    .gm-overlay-bg
+    .gm-content-wrapper
+        .gm-header
+            h3.block-title-style-2 LOGIN
+                a.gm-toggle-login(href="javascript:;")
+        .gm-form-wrapper
+            form(action="#")
+                .form-group
+                    label(for='exampleInputEmail1') Email address
+                    input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='ex. John@email.com')
+                    
+                .form-group
+                    label(for='exampleInputPassword1') Password
+                    input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                button.btn.gm-btn-green.gm-btn-submit(type="submit") LOGIN
+                    i.fa.fa-angle-right
+                .gm-footer.row
+                    .col-sm-6
+                        label Fogot password?
+                        a(href="#") Recover
+                    .col-sm-6.text-right
+                        label(for="") New to Gemtelversity?
+                        a(href="#") Create account
+        .gm-other-login-wrapper
+            .gm-sub-title.text-center - OR USE -
+
+            button.btn.gm-btn-default.btn-lg.btn-block Login using Amasi membership
+            .row
+                .col-sm-6                
+                    button.btn.gm-btn-default.btn-lg.btn-block 
+                        i.fa.fa-google
+                        | Login using Google
+                .col-sm-6     
+                    button.btn.gm-btn-default.btn-lg.btn-block 
+                        i.fa.fa-linkedin
+                        | Login using Linkedin
+        hr
+                    

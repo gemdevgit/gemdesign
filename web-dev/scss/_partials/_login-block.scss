@@ -1,0 +1,111 @@
+.gm-login-wrapper {
+    .gm-overlay-bg {
+        opacity: 0;
+        @include transform(scale(0));
+        @include transition(all .3s ease);
+    }
+    .gm-content-wrapper {
+        @include transform(translate(630px, 0));
+        @include transition(transform .3s ease);
+    }
+}
+
+.gm-login-wrapper.active {
+    .gm-overlay-bg {
+        @include transform(scale(1));
+        background: transparentize($clr-black, .7);
+        z-index: 10000;
+        margin: auto;
+        opacity: 1;
+        @include position(fixed, 0, 0, 0, 0);
+    }
+    .gm-content-wrapper {
+        background: $clr-white;
+        z-index: 10001;
+        margin: auto;
+        width: 620px;
+        padding: 45px 40px 40px 60px;
+        height: 100vh;
+        overflow: auto;
+        @include transform(translate(0, 0));
+        @include position(fixed, 0, 0, 0, auto);
+        .block-title-style-2 {
+            &:after {
+                width: 365px;
+            }
+        }
+        .gm-toggle-login {
+            display: block;
+            float: right;
+            margin-right: -3px;
+            position: relative;
+            z-index: 1;
+            height: 40px;
+            top: -26px;
+            &:after, &:before {
+                content: '';
+                display: block;
+                background: $clr-black;
+                width: 35px;
+                height: 1px;
+                margin-top: 20px;
+                @include transform(rotate(45deg));
+            }
+            &:after {
+                margin-top: 0;
+                @include transform(rotate(-45deg));
+            }
+        }
+    }
+    .gm-form-wrapper {
+        padding-top: 15px;
+        .form-group {
+            margin-bottom: 25px;
+            label {
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .form-control {
+                font-size: 14px;
+                padding: 25px 15px;
+            }
+        }
+        .gm-btn-submit {
+            width: 180px;
+            text-align: center;
+            padding: 13px;
+            .fa {
+                font-size: 17px;
+                margin-left: 30px;
+            }
+        }
+        .gm-footer {
+            margin-top: 20px;
+            margin-bottom: 35px;
+            label, a {
+                font-weight: 500;
+                font-size: 13px;
+                display: block;
+                margin: 0;
+            }
+        }
+    }
+    .gm-other-login-wrapper {
+        .gm-sub-title {
+            color: opacify($clr-text-grey-2, .5);
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+        button {
+            padding: 15px 12px;
+        }
+        .row {
+            margin-top: 20px;
+        }
+    }
+    hr {
+        border-color: $clr-black;
+        margin: 45px -40px 0 -60px;
+    }
+}
