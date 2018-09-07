@@ -1,23 +1,26 @@
 .gm-login-wrapper {
+    display: none;
     .gm-overlay-bg {
         opacity: 0;
         @include transform(scale(0));
         @include transition(all .3s ease);
+        @include position(fixed, 0, 0, 0, 0);
     }
     .gm-content-wrapper {
         @include transform(translate(630px, 0));
         @include transition(transform .3s ease);
+        @include position(fixed, 0, 0, 0, auto);
     }
 }
 
 .gm-login-wrapper.active {
+    display: block;
     .gm-overlay-bg {
         @include transform(scale(1));
         background: transparentize($clr-black, .7);
         z-index: 10000;
         margin: auto;
         opacity: 1;
-        @include position(fixed, 0, 0, 0, 0);
     }
     .gm-content-wrapper {
         background: $clr-white;
@@ -28,7 +31,6 @@
         height: 100vh;
         overflow: auto;
         @include transform(translate(0, 0));
-        @include position(fixed, 0, 0, 0, auto);
         .block-title-style-2 {
             &:after {
                 width: 365px;
@@ -102,6 +104,13 @@
         }
         .row {
             margin-top: 20px;
+            .gm-btn-default {
+                .fa {
+                    margin-right: 20px;
+                    font-size: 20px;
+                    vertical-align: middle;
+                }
+            }
         }
     }
     hr {

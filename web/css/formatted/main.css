@@ -282,6 +282,29 @@ h2, h3, h4, h5, h6 {
     margin-left: 5px;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 1px 1px 5px #555657;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #40d5bb;
+    background: linear-gradient(to bottom, #40d5bb 0%, #1694d7 55%, #00aeff 100%);
+    box-shadow: 0px 9px 12px 0px rgba(129, 130, 131, 0.4);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: 2px 3px 25px rgba(129, 130, 131, 0);
+}
+
 .gm-header-wrapper {
     background: #fff;
 }
@@ -1291,6 +1314,136 @@ h2, h3, h4, h5, h6 {
 
 .gm-page-faculty-dtls .block-title-style-2 {
     margin-bottom: 40px;
+}
+
+.gm-login-wrapper .gm-overlay-bg {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.gm-login-wrapper .gm-content-wrapper {
+    transform: translate(630px, 0);
+    transition: transform 0.3s ease;
+}
+
+.gm-login-wrapper.active .gm-overlay-bg {
+    transform: scale(1);
+    background: rgba(10, 22, 30, 0.3);
+    z-index: 10000;
+    margin: auto;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.gm-login-wrapper.active .gm-content-wrapper {
+    background: #fff;
+    z-index: 10001;
+    margin: auto;
+    width: 620px;
+    padding: 45px 40px 40px 60px;
+    height: 100vh;
+    overflow: auto;
+    transform: translate(0, 0);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+}
+
+.gm-login-wrapper.active .gm-content-wrapper .block-title-style-2:after {
+    width: 365px;
+}
+
+.gm-login-wrapper.active .gm-content-wrapper .gm-toggle-login {
+    display: block;
+    float: right;
+    margin-right: -3px;
+    position: relative;
+    z-index: 1;
+    height: 40px;
+    top: -26px;
+}
+
+.gm-login-wrapper.active .gm-content-wrapper .gm-toggle-login:after, .gm-login-wrapper.active .gm-content-wrapper .gm-toggle-login:before {
+    content: '';
+    display: block;
+    background: #0a161e;
+    width: 35px;
+    height: 1px;
+    margin-top: 20px;
+    transform: rotate(45deg);
+}
+
+.gm-login-wrapper.active .gm-content-wrapper .gm-toggle-login:after {
+    margin-top: 0;
+    transform: rotate(-45deg);
+}
+
+.gm-login-wrapper.active .gm-form-wrapper {
+    padding-top: 15px;
+}
+
+.gm-login-wrapper.active .gm-form-wrapper .form-group {
+    margin-bottom: 25px;
+}
+
+.gm-login-wrapper.active .gm-form-wrapper .form-group label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.gm-login-wrapper.active .gm-form-wrapper .form-group .form-control {
+    font-size: 14px;
+    padding: 25px 15px;
+}
+
+.gm-login-wrapper.active .gm-form-wrapper .gm-btn-submit {
+    width: 180px;
+    text-align: center;
+    padding: 13px;
+}
+
+.gm-login-wrapper.active .gm-form-wrapper .gm-btn-submit .fa {
+    font-size: 17px;
+    margin-left: 30px;
+}
+
+.gm-login-wrapper.active .gm-form-wrapper .gm-footer {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.gm-login-wrapper.active .gm-form-wrapper .gm-footer label, .gm-login-wrapper.active .gm-form-wrapper .gm-footer a {
+    font-weight: 500;
+    font-size: 13px;
+    display: block;
+    margin: 0;
+}
+
+.gm-login-wrapper.active .gm-other-login-wrapper .gm-sub-title {
+    color: #555657;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.gm-login-wrapper.active .gm-other-login-wrapper button {
+    padding: 15px 12px;
+}
+
+.gm-login-wrapper.active .gm-other-login-wrapper .row {
+    margin-top: 20px;
+}
+
+.gm-login-wrapper.active hr {
+    border-color: #0a161e;
+    margin: 45px -40px 0 -60px;
 }
 
 body {
