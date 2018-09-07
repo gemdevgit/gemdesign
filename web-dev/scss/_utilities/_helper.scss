@@ -276,3 +276,7 @@ h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
     @include box-shadow(2px 3px 25px transparentize($clr-text-grey, 1));
 }
+
+body div ::-webkit-scrollbar {
+    width: 6px;
+}
