@@ -305,6 +305,10 @@ h2, h3, h4, h5, h6 {
     box-shadow: 2px 3px 25px rgba(129, 130, 131, 0);
 }
 
+body div ::-webkit-scrollbar {
+    width: 6px;
+}
+
 .gm-header-wrapper {
     background: #fff;
 }
@@ -1316,15 +1320,33 @@ h2, h3, h4, h5, h6 {
     margin-bottom: 40px;
 }
 
+.gm-login-wrapper {
+    display: none;
+}
+
 .gm-login-wrapper .gm-overlay-bg {
     opacity: 0;
     transform: scale(0);
     transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .gm-login-wrapper .gm-content-wrapper {
     transform: translate(630px, 0);
     transition: transform 0.3s ease;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+}
+
+.gm-login-wrapper.active {
+    display: block;
 }
 
 .gm-login-wrapper.active .gm-overlay-bg {
@@ -1333,11 +1355,6 @@ h2, h3, h4, h5, h6 {
     z-index: 10000;
     margin: auto;
     opacity: 1;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 
 .gm-login-wrapper.active .gm-content-wrapper {
@@ -1349,11 +1366,6 @@ h2, h3, h4, h5, h6 {
     height: 100vh;
     overflow: auto;
     transform: translate(0, 0);
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: auto;
 }
 
 .gm-login-wrapper.active .gm-content-wrapper .block-title-style-2:after {
@@ -1439,6 +1451,12 @@ h2, h3, h4, h5, h6 {
 
 .gm-login-wrapper.active .gm-other-login-wrapper .row {
     margin-top: 20px;
+}
+
+.gm-login-wrapper.active .gm-other-login-wrapper .row .gm-btn-default .fa {
+    margin-right: 20px;
+    font-size: 20px;
+    vertical-align: middle;
 }
 
 .gm-login-wrapper.active hr {

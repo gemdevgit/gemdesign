@@ -11,10 +11,16 @@
   </head>
   <body class="gm-page-acadmy"></body>
   <header class="gm-header-wrapper container-fluid">
+    <div class="gm-search-wrapper">
+      <div class="gm-input-wrapper">
+        <div class="gm-icon-wrapper"><i class="gm-search-icon fa fa-search"></i></div><input class="form-control gm-web-search" type="text">
+        <div class="gm-close-btn-wrapper gm-toggle-search"><a class="gm-close-icon" href="javacript:;"></a></div>
+      </div>
+    </div>
     <div class="row">
       <div class="gm-logo-wrapper col-xl-3 col-lg-4 col-8"><a href="#"><img src="../img/logo.png" alt="Gemteleversity"></a></div>
-      <div class="gm-res-btn-wrapper d-lg-none d-flex align-items-center"><button class="gm-header-search-btn btn btn-link my-2 my-sm-0"><i class="gm-search-icon fa fa-search"></i></button><button class="gm-nav-btn navbar-toggler navbar-dark" type="button"
-          data-toggle="collapse" data-target="#collapsibleNavbar"><span></span><span></span><span></span></button></div>
+      <div class="gm-res-btn-wrapper d-lg-none d-flex align-items-center"><button class="gm-header-search-btn btn btn-link my-2 my-sm-0 gm-toggle-search"><i class="gm-search-icon fa fa-search"></i></button><button class="gm-nav-btn navbar-toggler navbar-dark"
+          type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span></span><span></span><span></span></button></div>
       <div class="gm-nav-wrapper col-xl-9 col-lg-8 float-right">
         <nav class="navbar navbar-expand-lg sticky-top float-right mt-3 mt-lg-0">
           <div class="collapse navbar-collapse justify-content-md-end w-100" id="collapsibleNavbar">
@@ -30,8 +36,7 @@
               <li class="nav-item"><a class="nav-link" href="faculity-dtls.html">Faculty</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link gm-toggle-login" href="javascript:;">Login</a></li>
-            </ul><button class="gm-header-search-btn btn btn-link my-2 my-sm-0 d-md-none d-lg-inline-block"><i class="gm-search-icon fa fa-search"></i></button>
-            <form class="form-inline my-2 my-lg-0 d-none"><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"><button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button></form>
+            </ul><button class="gm-header-search-btn btn btn-link my-2 my-sm-0 d-none d-lg-inline-block gm-toggle-search"><i class="gm-search-icon fa fa-search"></i></button>
           </div>
         </nav>
       </div>
@@ -303,5 +308,6 @@
   </div>
   <script src="../assets/jquery/jquery-3.3.1.min.js"></script>
   <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/typeahead/bootstrap3-typeahead.min.js"></script>
   <script src="../js/main.js"></script>
 </html>
