@@ -13,6 +13,13 @@ html(lang='en')
         link(rel='stylesheet', href="../css/main.css")
     body.gm-page-videos
     header.gm-header-wrapper.container-fluid
+        .gm-search-wrapper
+            .gm-input-wrapper
+                .gm-icon-wrapper
+                    i.gm-search-icon.fa.fa-search
+                input.form-control.gm-web-search(type="text")
+                .gm-close-btn-wrapper.gm-toggle-search
+                    a.gm-close-icon(href="javacript:;")
         .row
             .gm-logo-wrapper.col-xl-3.col-lg-4.col-8
                 a(href="#")
@@ -20,7 +27,7 @@ html(lang='en')
 
 
             .gm-res-btn-wrapper.d-lg-none.d-flex.align-items-center
-                button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0
+                button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0.gm-toggle-search
                     i.gm-search-icon.fa.fa-search
                 button.gm-nav-btn.navbar-toggler.navbar-dark(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
                     span
@@ -48,12 +55,8 @@ html(lang='en')
                                 a.nav-link(href='about.html', class=(curnt_menu=='about')? 'active':'') About
                             li.nav-item
                                 a.nav-link.gm-toggle-login(href='javascript:;', class=(curnt_menu=='login')? 'active':'') Login
-                        button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0.d-md-none.d-lg-inline-block
+                        button.gm-header-search-btn.btn.btn-link.my-2.my-sm-0.d-none.d-lg-inline-block.gm-toggle-search
                             i.gm-search-icon.fa.fa-search
-                        form.form-inline.my-2.my-lg-0.d-none
-                            input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
-                            button.btn.btn-outline-success.my-2.my-sm-0(type='submit')
-                                i.fa.fa-search
 
 
 
@@ -217,6 +220,7 @@ html(lang='en')
     script(src="../assets/jquery/jquery-3.3.1.min.js")
     script(src="../assets/bootstrap/js/bootstrap.min.js")
     script(src="https://player.vimeo.com/api/player.js")
+    script(src="../assets/typeahead/bootstrap3-typeahead.min.js")
     script(src="../js/main.js")
     script.
         var options = {
