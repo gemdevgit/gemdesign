@@ -10,6 +10,19 @@
             @include border-radius(7px);
         }
     }
+    @include bpMax('991px') {
+        padding-top: 0;
+        >.container {
+            max-width: none;
+            padding: 0;
+        }
+        .gm-carousel {
+            padding: 0;
+            .gm-carousel-controls {
+                margin-top: -25px;
+            }
+        }
+    }
 }
 
 .gm-carousel-controls {
@@ -85,6 +98,23 @@
     .gm-live-badge {
         @include position(absolute, auto, auto, 10px, 10px);
     }
+    @include bpMax('991px') {
+        .gm-content-wrapper {
+            padding: 15px 10px;
+        }
+    }
+    @include bpMax('576px') {
+        margin-bottom: 30px;
+        .row {
+            display: block;
+        }
+        .gm-content-wrapper {
+            padding: 25px;
+        }
+        .gm-bg-img {
+            height: auto;
+        }
+    }
 }
 
 .gm-notification-block-2 {
@@ -127,6 +157,11 @@
         @include position(absolute, auto, 0, -35px, 0);
         margin: auto;
     }
+    @include bpMax('576px') {
+        .gm-img-wrapper {
+            height: 230px;
+        }
+    }
 }
 
 .gm-most-watched-list {
@@ -158,6 +193,9 @@
 
 .gm-notification-block-3 {
     .carousel-inner {
-        height: calc(100% - 50px)
+        height: calc(100% - 50px);
+        @include bpMax('768px') {
+            max-height: 280px;
+        }
     }
 }

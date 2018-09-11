@@ -6,7 +6,7 @@ block vars
 block pageContent
     .container
         .row
-            aside.gm-sidebar-left.col-lg-3.col-md-4
+            aside.gm-sidebar-left.gm-filter-wrapper.col-lg-3.col-md-4.d-none.d-md-block
                 header.gm-filter-header
                     span.gm-filter-status Filters: 
                         span.gm-on ON
@@ -86,6 +86,10 @@ block pageContent
                     
             .col-lg-9.col-md-8
                 header.gm-videos-header
+                    .pull-left.gm-filter-wrapper-sm.d-block.d-md-none
+                        span Use Filter:
+                        a.gm-filter-xs(href="#filterWrapper" data-toggle="modal")
+                            i.gm-filter.fa.fa-filter
                     .pull-right.mb-3
                         select(name="")
                             option Sort by Date
@@ -93,17 +97,33 @@ block pageContent
                             option Sort by Date
                     .clearfix
                     
-                    h3.block-title-style-1 Collections
-                        span.gm-header-options View all 
-                            i.fa.fa-angle-right
-                    .gm-vdo-collection-wrapper.row
-                        
+                h3.block-title-style-1 Collections
+                    span.gm-header-options View all 
+                        i.fa.fa-angle-right
+                .gm-vdo-collection-wrapper.row
+                    
+                    .col-lg-4.col-md-5.col-sm-6
+                        .gm-doc-card.card
+                            .gm-img-wrapper
+                                span.gm-badge-black 56:21
+                                span.gm-history
+                                    i.fa.fa-clock-o
+                                img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
+                            .card-block
+                                h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                                .gm-reviews.mt-3
+                                    i.gm-star-full.fa.fa-star
+                                    i.gm-star-full.fa.fa-star
+                                    i.gm-star-full.fa.fa-star
+                                    i.gm-star-full.fa.fa-star
+                                    i.gm-star-empty.fa.fa-star
+                                .gm-meta-dtls
+                                    .gm-vdo-count  3 Videos
+                    mixin doctorCard2
                         .col-lg-4.col-md-5.col-sm-6
                             .gm-doc-card.card
                                 .gm-img-wrapper
                                     span.gm-badge-black 56:21
-                                    span.gm-history
-                                        i.fa.fa-clock-o
                                     img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
                                 .card-block
                                     h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
@@ -115,57 +135,147 @@ block pageContent
                                         i.gm-star-empty.fa.fa-star
                                     .gm-meta-dtls
                                         .gm-vdo-count  3 Videos
-                        mixin doctorCard2
-                            .col-lg-4.col-md-5.col-sm-6
-                                .gm-doc-card.card
-                                    .gm-img-wrapper
-                                        span.gm-badge-black 56:21
-                                        img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
-                                    .card-block
-                                        h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
-                                        .gm-reviews.mt-3
-                                            i.gm-star-full.fa.fa-star
-                                            i.gm-star-full.fa.fa-star
-                                            i.gm-star-full.fa.fa-star
-                                            i.gm-star-full.fa.fa-star
-                                            i.gm-star-empty.fa.fa-star
-                                        .gm-meta-dtls
-                                            .gm-vdo-count  3 Videos
-                        mixin doctorCard
-                            .col-lg-4.col-md-5.col-sm-6
-                                .gm-doc-card.card
-                                    .gm-img-wrapper
-                                        span.gm-badge-black 56:21
-                                        img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
-                                    .card-block
-                                        h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
-                                        .gm-reviews
-                                            i.gm-star-full.fa.fa-star
-                                            i.gm-star-full.fa.fa-star
-                                            i.gm-star-full.fa.fa-star
-                                            i.gm-star-full.fa.fa-star
-                                            i.gm-star-empty.fa.fa-star
-                                        .gm-meta-dtls
-                                            .gm-init P
-                                            .gm-dtls
-                                                h5.gm-user Dr. Parthasarathi R,MS
-                                                .gm-dates
-                                                    span 28th Apr 
-                                                    span 568 Views
+                    mixin doctorCard
+                        .col-lg-4.col-md-5.col-sm-6
+                            .gm-doc-card.card
+                                .gm-img-wrapper
+                                    span.gm-badge-black 56:21
+                                    img.card-img-top(src='../img/placeholders/doc-1.png', alt='Card image cap')
+                                .card-block
+                                    h4.gm-title.card-title Professional fellow program in management of diabetic foot-conditions (fmdf)
+                                    .gm-reviews
+                                        i.gm-star-full.fa.fa-star
+                                        i.gm-star-full.fa.fa-star
+                                        i.gm-star-full.fa.fa-star
+                                        i.gm-star-full.fa.fa-star
+                                        i.gm-star-empty.fa.fa-star
+                                    .gm-meta-dtls
+                                        .gm-init P
+                                        .gm-dtls
+                                            h5.gm-user Dr. Parthasarathi R,MS
+                                            .gm-dates
+                                                span 28th Apr 
+                                                span 568 Views
 
-                        +doctorCard2
-                        +doctorCard2
+                    +doctorCard2
+                    +doctorCard2
+                    
+                h3.block-title-style-1 Library
+                .gm-vdo-collection-wrapper.row
+
+                    +doctorCard
+                    +doctorCard
+                    +doctorCard
+                    +doctorCard
+                    +doctorCard
+                    +doctorCard
+
+                .text-center
+                    button.btn.gm-btn-green LOAD MORE
+                        i.fa.fa-angle-down
+    #filterWrapper.modal(tabindex='-1', role='dialog')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Filter
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    #accordion.gm-filter-item-wrapper.gm-filter-wrapper
+                        .card
+                            #filterHeaderOne.card-header
+                                h5(data-toggle='collapse', data-target='#filterOne', aria-controls='filterOne')
+                                    | Topics
+                                    i.gm-arrow.fa.fa-angle-down
+                            #filterOne.collapse.show(aria-labelledby='filterOne', data-parent='#accordion')
+                                .card-body
+                                    section.gm-filter-block
+                                        .mb-3.clearfix
+                                            a.gm-tools(href="javascript:;") Reset
+                                        ul.gm-filter-list
+                                            li.active
+                                                span.gm-title Bariatric Surgery
+                                                span.gm-count 8
+                                            mixin list1(name,count)
+                                                li
+                                                    span.gm-title=name
+                                                    span.gm-count= count
+                                            +list1('Colorectal Surgery', 12)
+                                            +list1('Hepato-Pancreat',3)
+                                            +list1('Hernia Surgery',3)
+                                            +list1('Laparoscopic Cholecystect.',4)
+                                            +list1('Proctocology',15)
+                                            +list1('Upper GI Surgery',5)
+
+                        .card
+                            #filterHeaderTwo.card-header
+                                h5(data-toggle='collapse', data-target='#filterTwo', aria-controls='filterTwo')
+                                    | Filters
+                                    i.gm-arrow.fa.fa-angle-down
+                            #filterTwo.collapse(aria-labelledby='filterTwo', data-parent='#accordion')
+                                .card-body
+                                    section.gm-filter-block
+                                        .mb-3.clearfix
+                                            a.gm-tools(href="javascript:;") Reset
+                                        ul.gm-filter-list
+                                            li
+                                                label.gm-filter-checkbox.form-check-label(for='inlineCheckbox1')
+                                                    input#inlineCheckbox1(type='checkbox', value='option1')
+                                                    span.gm-checkbox
+                                                    | Bariatric Surgery
+                                            li
+                                                label.gm-filter-checkbox.form-check-label(for='inlineCheckbox2')
+                                                    input#inlineCheckbox2(type='checkbox', value='option1')
+                                                    span.gm-checkbox 
+                                                    | Colorectal Surgery
+                                            li
+                                                label.gm-filter-checkbox.form-check-label(for='inlineCheckbox3')
+                                                    input#inlineCheckbox3(type='checkbox', value='option1')
+                                                    span.gm-checkbox 
+                                                    | Hepato-Pancreat
+                                            li
+                                                label.gm-filter-checkbox.form-check-label(for='inlineCheckbox8') 
+                                                    input#inlineCheckbox8(type='checkbox', value='option1')
+                                                    span.gm-checkbox
+                                                    | Hernia SurgerySurgery
+                                            li
+                                                label.gm-filter-checkbox.form-check-label(for='inlineCheckbox4') 
+                                                    input#inlineCheckbox4(type='checkbox', value='option1')
+                                                    span.gm-checkbox
+                                                    | Laparoscopic Cholecystectom..
+                                            li
+                                                label.gm-filter-checkbox.form-check-label(for='inlineCheckbox5') 
+                                                    input#inlineCheckbox5(type='checkbox', value='option1' disabled)
+                                                    span.gm-checkbox
+                                                    | Proctocology
+                                            li
+                                                label.gm-filter-checkbox.form-check-label(for='inlineCheckbox6')
+                                                    input#inlineCheckbox6(type='checkbox', value='option1' disabled)
+                                                    span.gm-checkbox 
+                                                    | Upper GI Surgery
+                                    
+                        .card
+                            #filterHeaderThree.card-header
+                                h5(data-toggle='collapse', data-target='#filterThree', aria-controls='filterThree')
+                                    | Tags
+                                    i.gm-arrow.fa.fa-angle-down
+                            #filterThree.collapse(aria-labelledby='filterThree', data-parent='#accordion')
+                                .card-body
+                                    section.gm-filter-block
+                                        ul.gm-filter-list
+                                            mixin list2(name)
+                                                li
+                                                    a(href="#").gm-tagtitle=name
+                                            +list2('OT Archives')
+                                            +list2('Surgical Videos')
+                                            +list2('Uncut Video')
+                                            +list2('Video Lecture')
+                                            +list2('Diabetic')
+                                            +list2('Program')
+                                            +list2('IPA')
+
+                           
                         
-                    h3.block-title-style-1 Library
-                    .gm-vdo-collection-wrapper.row
-
-                        +doctorCard
-                        +doctorCard
-                        +doctorCard
-                        +doctorCard
-                        +doctorCard
-                        +doctorCard
-
-                    .text-center
-                        button.btn.gm-btn-green LOAD MORE
-                            i.fa.fa-angle-down
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') CLEAR
+                    button.btn.btn-primary(type='button') APPLY

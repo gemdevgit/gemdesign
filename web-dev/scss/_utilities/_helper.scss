@@ -197,9 +197,11 @@ h2, h3, h4, h5, h6 {
     color: $clr-black;
     margin-top: 5px;
     i {
-        color: $clr-blue;
+        color: $clr-green;
         margin-left: 5px;
-        font-size: 18px;
+        font-size: 22px;
+        position: relative;
+        top: 2px;
     }
     &:after {
         content: '';
@@ -279,4 +281,100 @@ h2, h3, h4, h5, h6 {
 
 body div ::-webkit-scrollbar {
     width: 6px;
+}
+
+
+/* doctor style 2 */
+
+.gm-doc-card-2 {
+    padding: 20px 20px 60px 20px;
+    margin-bottom: 30px;
+    border: 1px solid transparentize($clr-text-grey, .8);
+    @include border-radius(0);
+    @include box-shadow(2px 3px 25px transparentize($clr-text-grey, 0.6));
+    .gm-img-wrapper {
+        margin-bottom: 35px;
+        >img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .card-block {
+        min-height: 90px;
+    }
+    .gm-title {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .gm-sub-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: $clr-text-grey-2;
+    }
+    .gm-description {
+        color: $clr-text-grey;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .gm-meta-dtls {
+        padding: 0 20px 20px 20px;
+        @include position(absolute, auto, 0, 0, 0);
+        .gm-left-block {
+            float: left;
+            font-size: 13px;
+            font-weight: 600;
+            color: $clr-text-grey;
+            >span:not(:last-child) {
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 13px;
+                    width: 2px;
+                    background: transparentize($clr-text-grey, .3);
+                    margin: 0 5px;
+                }
+            }
+        }
+        .gm-right-block {
+            float: right;
+            >a {
+                font-size: 14px;
+                font-weight: 500;
+                color: $clr-black;
+                border-bottom: 2px solid $clr-green;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            i {
+                color: $clr-green;
+                font-size: 22px;
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.bootstrap-select {
+    font-weight: 500;
+    font-size: 14px;
+    .btn, .dropdown-menu {
+        font-weight: 500;
+        font-size: 14px;
+        background: $clr-white;
+    }
+}
+
+.gm-filter-wrapper-sm {
+    .gm-filter {
+        margin-left: 5px;
+        background: $clr-blue;
+        color: $clr-white;
+        padding: 3px 7px;
+        font-size: 18px;
+    }
 }

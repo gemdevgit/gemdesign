@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap-select/css/bootstrap-select.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700,800">
     <link rel="stylesheet" href="../css/main.css">
@@ -18,7 +19,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="gm-logo-wrapper col-xl-3 col-lg-4 col-8"><a href="#"><img src="../img/logo.png" alt="Gemteleversity"></a></div>
+      <div class="gm-logo-wrapper col-xl-3 col-lg-4 col-8"><a href="home.html"><img src="../img/logo.png" alt="Gemteleversity"></a></div>
       <div class="gm-res-btn-wrapper d-lg-none d-flex align-items-center"><button class="gm-header-search-btn btn btn-link my-2 my-sm-0 gm-toggle-search"><i class="gm-search-icon fa fa-search"></i></button><button class="gm-nav-btn navbar-toggler navbar-dark"
           type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span></span><span></span><span></span></button></div>
       <div class="gm-nav-wrapper col-xl-9 col-lg-8 float-right">
@@ -26,14 +27,9 @@
           <div class="collapse navbar-collapse justify-content-md-end w-100" id="collapsibleNavbar">
             <ul class="navbar-nav mr-lg-3">
               <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-              <li class="nav-item dropdown"><a class="nav-link active" href="academy.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Unedited Videos</a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li class="dropdown-item"><a class="active nav-link" href="#">Library</a></li>
-                  <li class="dropdown-item"><a class="nav-link" href="#">Collections</a></li>
-                </ul>
-              </li>
+              <li class="nav-item"><a class="nav-link active" href="academy.html">Unedited Videos</a></li>
               <li class="nav-item"><a class="nav-link" href="collections.html">ELearning</a></li>
-              <li class="nav-item"><a class="nav-link" href="faculity-dtls.html">Faculty</a></li>
+              <li class="nav-item"><a class="nav-link" href="faculty.html">Faculty</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link gm-toggle-login" href="javascript:;">Login</a></li>
             </ul><button class="gm-header-search-btn btn btn-link my-2 my-sm-0 d-none d-lg-inline-block gm-toggle-search"><i class="gm-search-icon fa fa-search"></i></button>
@@ -57,7 +53,7 @@
     <div class="gm-main-content-area"></div>
     <div class="container">
       <div class="row">
-        <aside class="gm-sidebar-left col-lg-3 col-md-4">
+        <aside class="gm-sidebar-left gm-filter-wrapper col-lg-3 col-md-4 d-none d-md-block">
           <header class="gm-filter-header"><span class="gm-filter-status">Filters: <span class="gm-on">ON</span><span class="gm-off d-none">OFF</span></span><a class="gm-clear-all" href="javascript:;">Clear all</a></header>
           <section class="gm-filter-block">
             <h3 class="block-title-style-1">Topics<a class="gm-tools" href="javascript:;">Reset</a></h3>
@@ -98,152 +94,229 @@
         </aside>
         <div class="col-lg-9 col-md-8">
           <header class="gm-videos-header">
+            <div class="pull-left gm-filter-wrapper-sm d-block d-md-none"><span>Use Filter:</span><a class="gm-filter-xs" href="#filterWrapper" data-toggle="modal"><i class="gm-filter fa fa-filter"></i></a></div>
             <div class="pull-right mb-3"><select name="">
                 <option>Sort by Date</option>
                 <option>Sort by Date</option>
                 <option>Sort by Date</option>
               </select></div>
             <div class="clearfix"></div>
-            <h3 class="block-title-style-1">Collections<span class="gm-header-options">View all <i class="fa fa-angle-right"></i></span></h3>
-            <div class="gm-vdo-collection-wrapper row">
-              <div class="col-lg-4 col-md-5 col-sm-6">
-                <div class="gm-doc-card card">
-                  <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><span class="gm-history"><i class="fa fa-clock-o"></i></span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
-                  <div class="card-block">
-                    <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
-                    <div class="gm-reviews mt-3"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
-                    <div class="gm-meta-dtls">
-                      <div class="gm-vdo-count"> 3 Videos</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-5 col-sm-6">
-                <div class="gm-doc-card card">
-                  <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
-                  <div class="card-block">
-                    <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
-                    <div class="gm-reviews mt-3"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
-                    <div class="gm-meta-dtls">
-                      <div class="gm-vdo-count"> 3 Videos</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-5 col-sm-6">
-                <div class="gm-doc-card card">
-                  <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
-                  <div class="card-block">
-                    <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
-                    <div class="gm-reviews mt-3"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
-                    <div class="gm-meta-dtls">
-                      <div class="gm-vdo-count"> 3 Videos</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h3 class="block-title-style-1">Library</h3>
-            <div class="gm-vdo-collection-wrapper row">
-              <div class="col-lg-4 col-md-5 col-sm-6">
-                <div class="gm-doc-card card">
-                  <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
-                  <div class="card-block">
-                    <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
-                    <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
-                    <div class="gm-meta-dtls">
-                      <div class="gm-init">P</div>
-                      <div class="gm-dtls">
-                        <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
-                        <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-5 col-sm-6">
-                <div class="gm-doc-card card">
-                  <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
-                  <div class="card-block">
-                    <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
-                    <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
-                    <div class="gm-meta-dtls">
-                      <div class="gm-init">P</div>
-                      <div class="gm-dtls">
-                        <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
-                        <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-5 col-sm-6">
-                <div class="gm-doc-card card">
-                  <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
-                  <div class="card-block">
-                    <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
-                    <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
-                    <div class="gm-meta-dtls">
-                      <div class="gm-init">P</div>
-                      <div class="gm-dtls">
-                        <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
-                        <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-5 col-sm-6">
-                <div class="gm-doc-card card">
-                  <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
-                  <div class="card-block">
-                    <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
-                    <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
-                    <div class="gm-meta-dtls">
-                      <div class="gm-init">P</div>
-                      <div class="gm-dtls">
-                        <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
-                        <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-5 col-sm-6">
-                <div class="gm-doc-card card">
-                  <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
-                  <div class="card-block">
-                    <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
-                    <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
-                    <div class="gm-meta-dtls">
-                      <div class="gm-init">P</div>
-                      <div class="gm-dtls">
-                        <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
-                        <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-5 col-sm-6">
-                <div class="gm-doc-card card">
-                  <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
-                  <div class="card-block">
-                    <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
-                    <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
-                    <div class="gm-meta-dtls">
-                      <div class="gm-init">P</div>
-                      <div class="gm-dtls">
-                        <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
-                        <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="text-center"><button class="btn gm-btn-green">LOAD MORE<i class="fa fa-angle-down"></i></button></div>
           </header>
+          <h3 class="block-title-style-1">Collections<span class="gm-header-options">View all <i class="fa fa-angle-right"></i></span></h3>
+          <div class="gm-vdo-collection-wrapper row">
+            <div class="col-lg-4 col-md-5 col-sm-6">
+              <div class="gm-doc-card card">
+                <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><span class="gm-history"><i class="fa fa-clock-o"></i></span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
+                <div class="card-block">
+                  <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
+                  <div class="gm-reviews mt-3"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
+                  <div class="gm-meta-dtls">
+                    <div class="gm-vdo-count"> 3 Videos</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6">
+              <div class="gm-doc-card card">
+                <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
+                <div class="card-block">
+                  <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
+                  <div class="gm-reviews mt-3"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
+                  <div class="gm-meta-dtls">
+                    <div class="gm-vdo-count"> 3 Videos</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6">
+              <div class="gm-doc-card card">
+                <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
+                <div class="card-block">
+                  <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
+                  <div class="gm-reviews mt-3"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
+                  <div class="gm-meta-dtls">
+                    <div class="gm-vdo-count"> 3 Videos</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="block-title-style-1">Library</h3>
+          <div class="gm-vdo-collection-wrapper row">
+            <div class="col-lg-4 col-md-5 col-sm-6">
+              <div class="gm-doc-card card">
+                <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
+                <div class="card-block">
+                  <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
+                  <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
+                  <div class="gm-meta-dtls">
+                    <div class="gm-init">P</div>
+                    <div class="gm-dtls">
+                      <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
+                      <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6">
+              <div class="gm-doc-card card">
+                <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
+                <div class="card-block">
+                  <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
+                  <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
+                  <div class="gm-meta-dtls">
+                    <div class="gm-init">P</div>
+                    <div class="gm-dtls">
+                      <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
+                      <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6">
+              <div class="gm-doc-card card">
+                <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
+                <div class="card-block">
+                  <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
+                  <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
+                  <div class="gm-meta-dtls">
+                    <div class="gm-init">P</div>
+                    <div class="gm-dtls">
+                      <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
+                      <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6">
+              <div class="gm-doc-card card">
+                <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
+                <div class="card-block">
+                  <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
+                  <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
+                  <div class="gm-meta-dtls">
+                    <div class="gm-init">P</div>
+                    <div class="gm-dtls">
+                      <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
+                      <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6">
+              <div class="gm-doc-card card">
+                <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
+                <div class="card-block">
+                  <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
+                  <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
+                  <div class="gm-meta-dtls">
+                    <div class="gm-init">P</div>
+                    <div class="gm-dtls">
+                      <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
+                      <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6">
+              <div class="gm-doc-card card">
+                <div class="gm-img-wrapper"><span class="gm-badge-black">56:21</span><img class="card-img-top" src="../img/placeholders/doc-1.png" alt="Card image cap"></div>
+                <div class="card-block">
+                  <h4 class="gm-title card-title">Professional fellow program in management of diabetic foot-conditions (fmdf)</h4>
+                  <div class="gm-reviews"><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-full fa fa-star"></i><i class="gm-star-empty fa fa-star"></i></div>
+                  <div class="gm-meta-dtls">
+                    <div class="gm-init">P</div>
+                    <div class="gm-dtls">
+                      <h5 class="gm-user">Dr. Parthasarathi R,MS</h5>
+                      <div class="gm-dates"><span>28th Apr </span><span>568 Views</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center"><button class="btn gm-btn-green">LOAD MORE<i class="fa fa-angle-down"></i></button></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="filterWrapper" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Filter</h5><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="gm-filter-item-wrapper gm-filter-wrapper" id="accordion">
+              <div class="card">
+                <div class="card-header" id="filterHeaderOne">
+                  <h5 data-toggle="collapse" data-target="#filterOne" aria-controls="filterOne">Topics<i class="gm-arrow fa fa-angle-down"></i></h5>
+                </div>
+                <div class="collapse show" id="filterOne" aria-labelledby="filterOne" data-parent="#accordion">
+                  <div class="card-body">
+                    <section class="gm-filter-block">
+                      <div class="mb-3 clearfix"><a class="gm-tools" href="javascript:;">Reset</a></div>
+                      <ul class="gm-filter-list">
+                        <li class="active"><span class="gm-title">Bariatric Surgery</span><span class="gm-count">8</span></li>
+                        <li><span class="gm-title">Colorectal Surgery</span><span class="gm-count">12</span></li>
+                        <li><span class="gm-title">Hepato-Pancreat</span><span class="gm-count">3</span></li>
+                        <li><span class="gm-title">Hernia Surgery</span><span class="gm-count">3</span></li>
+                        <li><span class="gm-title">Laparoscopic Cholecystect.</span><span class="gm-count">4</span></li>
+                        <li><span class="gm-title">Proctocology</span><span class="gm-count">15</span></li>
+                        <li><span class="gm-title">Upper GI Surgery</span><span class="gm-count">5</span></li>
+                      </ul>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="filterHeaderTwo">
+                  <h5 data-toggle="collapse" data-target="#filterTwo" aria-controls="filterTwo">Filters<i class="gm-arrow fa fa-angle-down"></i></h5>
+                </div>
+                <div class="collapse" id="filterTwo" aria-labelledby="filterTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    <section class="gm-filter-block">
+                      <div class="mb-3 clearfix"><a class="gm-tools" href="javascript:;">Reset</a></div>
+                      <ul class="gm-filter-list">
+                        <li><label class="gm-filter-checkbox form-check-label" for="inlineCheckbox1"><input id="inlineCheckbox1" type="checkbox" value="option1"><span class="gm-checkbox"></span>Bariatric Surgery</label></li>
+                        <li><label class="gm-filter-checkbox form-check-label" for="inlineCheckbox2"><input id="inlineCheckbox2" type="checkbox" value="option1"><span class="gm-checkbox"> </span>Colorectal Surgery</label></li>
+                        <li><label class="gm-filter-checkbox form-check-label" for="inlineCheckbox3"><input id="inlineCheckbox3" type="checkbox" value="option1"><span class="gm-checkbox"> </span>Hepato-Pancreat</label></li>
+                        <li><label class="gm-filter-checkbox form-check-label" for="inlineCheckbox8"> <input id="inlineCheckbox8" type="checkbox" value="option1"><span class="gm-checkbox"></span>Hernia SurgerySurgery</label></li>
+                        <li><label class="gm-filter-checkbox form-check-label" for="inlineCheckbox4"> <input id="inlineCheckbox4" type="checkbox" value="option1"><span class="gm-checkbox"></span>Laparoscopic Cholecystectom..</label></li>
+                        <li><label class="gm-filter-checkbox form-check-label" for="inlineCheckbox5"> <input id="inlineCheckbox5" type="checkbox" value="option1" disabled><span class="gm-checkbox"></span>Proctocology</label></li>
+                        <li><label class="gm-filter-checkbox form-check-label" for="inlineCheckbox6"><input id="inlineCheckbox6" type="checkbox" value="option1" disabled><span class="gm-checkbox"> </span>Upper GI Surgery</label></li>
+                      </ul>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="filterHeaderThree">
+                  <h5 data-toggle="collapse" data-target="#filterThree" aria-controls="filterThree">Tags<i class="gm-arrow fa fa-angle-down"></i></h5>
+                </div>
+                <div class="collapse" id="filterThree" aria-labelledby="filterThree" data-parent="#accordion">
+                  <div class="card-body">
+                    <section class="gm-filter-block">
+                      <ul class="gm-filter-list">
+                        <li><a class="gm-tagtitle" href="#">OT Archives</a></li>
+                        <li><a class="gm-tagtitle" href="#">Surgical Videos</a></li>
+                        <li><a class="gm-tagtitle" href="#">Uncut Video</a></li>
+                        <li><a class="gm-tagtitle" href="#">Video Lecture</a></li>
+                        <li><a class="gm-tagtitle" href="#">Diabetic</a></li>
+                        <li><a class="gm-tagtitle" href="#">Program</a></li>
+                        <li><a class="gm-tagtitle" href="#">IPA</a></li>
+                      </ul>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">CLEAR</button><button class="btn btn-primary" type="button">APPLY</button></div>
         </div>
       </div>
     </div>
@@ -307,7 +380,9 @@
     </div>
   </div>
   <script src="../assets/jquery/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/bootstrap-select/js/bootstrap-select.min.js"></script>
   <script src="../assets/typeahead/bootstrap3-typeahead.min.js"></script>
   <script src="../js/main.js"></script>
 </html>
