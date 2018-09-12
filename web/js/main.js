@@ -45,5 +45,6 @@
         },
     });
 
-    $('select').selectpicker();
+    $('select').selectpicker();    
+    $('[data-toggle="tooltip"]').tooltip()
 })();

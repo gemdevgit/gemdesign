@@ -144,6 +144,16 @@ h2, h3, h4, h5, h6 {
             background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
             @include box-shadow(2px 3px 25px transparentize($clr-green, 0.6));
         }
+        .gm-avatar{
+            img{
+
+                width:25px;
+                height: 25px;
+                object-fit: cover;
+                object-position: center;
+                @include border-radius(50%);
+            }
+        }
         .gm-dtls {
             padding-left: 10px;
             color: $clr-text-grey;
@@ -440,5 +450,38 @@ body div ::-webkit-scrollbar {
         color: $clr-white;
         padding: 3px 7px;
         font-size: 18px;
+    }
+}
+.tooltip-inner{
+    max-width: 245px;
+    width: 245px;
+}
+.gm-tooltip-doctors{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .gm-avatar{
+        display: inline-block;
+        vertical-align: middle;
+        img{
+
+            width:40px;
+            height: 40px;
+            object-fit: cover;
+            object-position: center;
+
+        }
+    }
+    .gm-dtls{
+        display: inline-block;
+        width:calc(100% - 45px);
+        text-align: left;
+        padding: 10px;
+        vertical-align: middle;
+        h5{
+            font-size: 13px;
+            color:$clr-white;
+            margin: 0;
+        }
     }
 }
