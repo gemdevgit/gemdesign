@@ -1329,9 +1329,11 @@ Search wrapper
     padding: 45px 40px 40px 60px;
     height: 100vh;
     overflow: auto;
+    max-width: 100%;
     transform: translate(0, 0); }
     .gm-login-wrapper.active .gm-content-wrapper .block-title-style-2:after {
-      width: 365px; }
+      width: 365px;
+      max-width: 80%; }
     .gm-login-wrapper.active .gm-content-wrapper .gm-toggle-login {
       display: block;
       float: right;
