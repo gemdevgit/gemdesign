@@ -1,201 +1,27 @@
-.gm-home-slider-wrapper {
-    padding-top: 65px;
-    background: rgb(0, 174, 255);
-    background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
-    background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
-    background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(0, 174, 255, 1) 48%, rgba(64, 213, 187, 1) 100%);
-    .gm-carousel {
-        padding-bottom: 25px;
-        .carousel-inner {
-            @include border-radius(7px);
-        }
-    }
-    @include bpMax('991px') {
-        padding-top: 0;
-        >.container {
-            max-width: none;
-            padding: 0;
-        }
-        .gm-carousel {
-            padding: 0;
-            .gm-carousel-controls {
-                margin-top: -25px;
-            }
-        }
-    }
-}
 
-.gm-carousel-controls {
-    display: flex;
-    justify-content: center;
-    color: $clr-white;
-    margin-top: 25px;
-    opacity: .9;
-    a {
-        color: $clr-white;
-        i {
-            font-size: 21px;
-        }
-    }
-    a:hover {
-        color: $clr-green;
-    }
-    .gm-carousel-indicators {
-        display: inline-block;
-        list-style: none;
-        margin: -1px 5px 0 5px;
-        position: static;
-        li {
-            width: 10px;
-            height: 10px;
-            display: inline-block;
-            margin: 0 5px;
-            background-color: $clr-white;
-            cursor: pointer;
-            @include border-radius(50%);
-            &.active, &:hover {
-                background: $clr-green;
-            }
-        }
-    }
+.br-home{
+    background-image: url('../img/landing-01.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-.gm-home-content-wrapper {
-    margin-top: 30px;
-}
-
-.gm-notification-block-1 {
-    color: $clr-white;
-    background: rgb(4, 167, 247);
-    height: 100%;
-    /* Old browsers */
-    background: -moz-linear-gradient(left, rgba(4, 167, 247, 1) 0%, rgba(38, 193, 213, 1) 100%);
-    background: -webkit-linear-gradient(left, rgba(4, 167, 247, 1) 0%, rgba(38, 193, 213, 1) 100%);
-    background: linear-gradient(to right, rgba(4, 167, 247, 1) 0%, rgba(38, 193, 213, 1) 100%);
-    @include box-shadow(5px 6px 18px transparentize($clr-green, 0.7));
-    .gm-bg-img {
-        height: 100%;
+.br-home-content-wrapper{
+    margin: auto;
+    text-align: center;        
+    height: 175px;
+    @include position(absolute,0,0,0,0);
+    .br-welcome-title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        font-size: 41px;
+        margin: auto  auto 30px auto ;
+        max-width:500px;
     }
-    .gm-content-wrapper {
-        padding: 35px 30px;
-        .block-title {
-            font-size: 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .gm-btn-light {
-            float: right;
-            width: 145px;
-            i {
-                margin-left: 10px;
-                font-size: 22px;
-                line-height: 10px;
-                position: relative;
-                top: 3px;
-            }
-        }
-    }
-    .gm-live-badge {
-        @include position(absolute, auto, auto, 10px, 10px);
-    }
-    @include bpMax('991px') {
-        .gm-content-wrapper {
-            padding: 15px 10px;
-        }
-    }
-    @include bpMax('576px') {
-        margin-bottom: 30px;
-        .row {
-            display: block;
-        }
-        .gm-content-wrapper {
-            padding: 25px;
-        }
-        .gm-bg-img {
-            height: auto;
-        }
-    }
-}
-
-.gm-notification-block-2 {
-    .gm-carousel {
-        width: 100%;
-    }
-    .carousel-inner {
-        @include border-radius(0);
-        background: rgb(4, 167, 247);
-        /* Old browsers */
-        background: -moz-linear-gradient(left, rgba(4, 167, 247, 1) 0%, rgba(38, 193, 213, 1) 100%);
-        background: -webkit-linear-gradient(left, rgba(4, 167, 247, 1) 0%, rgba(38, 193, 213, 1) 100%);
-        background: linear-gradient(to right, rgba(4, 167, 247, 1) 0%, rgba(38, 193, 213, 1) 100%);
-        @include box-shadow(5px 6px 18px transparentize($clr-green, 0.7));
-    }
-    .gm-caption {
-        padding: 20px;
-        color: $clr-white;
-        position: relative;
-    }
-    .block-title {
-        font-size: 14px;
-        text-transform: uppercase;
-    }
-    .block-dtls {
-        font-size: 13px;
-        font-weight: 500;
-    }
-    .gm-live-badge {
-        @include position(absolute, auto, 20px, 10px, auto);
-    }
-    .gm-upcoming {
-        @include position(absolute, auto, auto, 10px, 10px);
-    }
-    .gm-img-wrapper {
-        position: relative;
-        height: 140px;
-    }
-    .gm-carousel-controls {
-        @include position(absolute, auto, 0, -35px, 0);
-        margin: auto;
-    }
-    @include bpMax('576px') {
-        .gm-img-wrapper {
-            height: 230px;
-        }
-    }
-}
-
-.gm-most-watched-list {
-    padding: 0;
-    max-height: 325px;
-    overflow: auto;
-    li {
-        margin-bottom: 15px;
-    }
-    .gm-dtls-block {
-        padding-left: 15px;
-    }
-    h4 {
-        font-size: 14px;
-        color: $clr-text-grey-2;
-        margin-bottom: 1px;
-    }
-    .gm-subtitle {
-        font-size: 13px;
-        font-weight: 500;
-        margin-bottom: 5px;
-    }
-    .gm-desc {
-        color: $clr-text-grey;
-        font-size: 13px;
-        font-weight: 600;
-    }
-}
-
-.gm-notification-block-3 {
-    .carousel-inner {
-        height: calc(100% - 50px);
-        @include bpMax('768px') {
-            max-height: 280px;
+    .br-start-conference{
+        .br-input{
+            margin-right: 10px;
+            width:450px;
+            max-width:100%;
         }
     }
 }

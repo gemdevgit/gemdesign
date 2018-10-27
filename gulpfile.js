@@ -29,9 +29,7 @@ gulp.task('sass', function() {
         //     noOverqualifying: false
         // }))
         // .pipe(recess.reporter())
-        .pipe(prettify({
-            indent_size: 2
-        }))
+        .pipe(sass.sync({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(sourcemaps.write(''))
         .pipe(gulp.dest('web/css'))
         .pipe(browserSync.stream())
@@ -53,6 +51,7 @@ gulp.task('pug', function() {
 gulp.task('browserSync', function() {
     browserSync.init({
         injectChanges: true,
+		browser: "chrome",
         server: {
             baseDir: 'web',
             directory: true
