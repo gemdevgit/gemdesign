@@ -29,6 +29,9 @@ gulp.task('sass', function() {
         //     noOverqualifying: false
         // }))
         // .pipe(recess.reporter())
+        .pipe(prettify({
+            indent_size: 2
+        }))
         .pipe(sourcemaps.write(''))
         .pipe(gulp.dest('web/css'))
         .pipe(browserSync.stream())
@@ -57,13 +60,6 @@ gulp.task('browserSync', function() {
         ghostMode: false,
     })
 })
-
-gulp.task('css', function() {
-    return gulp.src('web/css/*.css')
-        .pipe(cssbeautify())
-        .pipe(gulp.dest('web/css/formatted'));
-});
-
 gulp.task('watch', ['browserSync', 'sass', 'pug'], function() {
     gulp.watch('web-dev/**/*.scss', ['sass']);
     gulp.watch('web-dev/**/*.pug', ['pug']);
@@ -88,7 +84,7 @@ gulp.task('clean:web', function() {
 
 
 gulp.task('default', function(callback) {
-    runSequence(['sass', 'pug','css', 'watch', 'browserSync'],
+    runSequence(['sass', 'pug', 'watch', 'browserSync'],
         callback
     )
 })
