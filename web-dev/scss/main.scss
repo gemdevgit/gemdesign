@@ -1,15 +1,14 @@
 @import '_utilities/_mixins';
 @import '_utilities/_variables';
 @import '_utilities/_helper';
-@import '_partials/_navbar';
-@import '_partials/_footer';
 @import '_partials/_page-home';
+@import '_partials/_page-inner';
+@import '_partials/_components';
 html,body{
     height:100%;
 }
 body {
     font-family: 'Lato', sans-serif;
-    color: $clr-white;
 }
 
 img {
@@ -48,6 +47,10 @@ img {
         font-family: 'Montserrat', sans-serif;
         font-weight: 100;
         padding-right: 25px;
+        color:$clr-grey;
+    }
+    .br-icon{
+        color: $clr-off-white;
     }
     .fa-chrome{
         padding-right: 25px;

@@ -22,20 +22,20 @@ h2, h3, h4, h5, h6 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 1px 1px 5px #555657;
+  box-shadow: inset 1px 1px 5px #838383;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #40d5bb;
   background: linear-gradient(to bottom, #40d5bb 0%, #1694d7 55%, #00aeff 100%);
-  box-shadow: 0px 9px 12px 0px rgba(129, 130, 131, 0.4);
+  box-shadow: 0px 9px 12px 0px rgba(131, 131, 131, 0.4);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  box-shadow: 2px 3px 25px rgba(129, 130, 131, 0);
+  box-shadow: 2px 3px 25px rgba(131, 131, 131, 0);
 }
 
 body div ::-webkit-scrollbar {
@@ -72,6 +72,7 @@ body div ::-webkit-scrollbar {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: #fff;
 }
 
 .br-home-content-wrapper {
@@ -99,13 +100,49 @@ body div ::-webkit-scrollbar {
   max-width: 100%;
 }
 
+.br-innerpage {
+  background-image: url("../img/meeting-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.br-innerpage .br-browser-support {
+  color: #393939;
+}
+
+.br-innerpage .br-browser-support .br-icon {
+  color: #e8e8e8;
+}
+
+.br-bg-left-btm {
+  background: url("../img/meeting-bg-left.png") no-repeat;
+  background-position: left bottom;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.br-bg-right-top {
+  background: url("../img/meeting-bg-right.png") no-repeat;
+  background-position: right top;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 0;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
   font-family: 'Lato', sans-serif;
-  color: #fff;
 }
 
 img {
@@ -151,6 +188,11 @@ img {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   padding-right: 25px;
+  color: #838383;
+}
+
+.br-browser-support .br-icon {
+  color: #e8e8e8;
 }
 
 .br-browser-support .fa-chrome {

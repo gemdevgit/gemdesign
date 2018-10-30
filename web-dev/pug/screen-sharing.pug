@@ -10,15 +10,22 @@ html(lang='en')
         link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300" rel="stylesheet" )
         link(rel='stylesheet', href="../css/main.css")
-    body.br-home
+    body.br-home(style="background-image:url(../img/landing-03.jpg)")
         header.br-page-header
             .br-logo-wrapper.text-center.text-sm-left
                 a(href="home.html")
                     img(src="../img/logo.png" alt="Gemteleversity")   
 
         main.br-home-content-wrapper
-            h1.br-welcome-title Lets your best   work shine through.
-            a(href="home-invite.html").btn.br-btn-outline START CONFERENCE
+            h1.br-welcome-title Better meetings 
+                |
+                br
+                | are just the beginning
+            form(action="#").br-start-conference.text-center
+                input.br-input.d-inline-block(type="text", placeholder="Your Name")
+                button.btn.br-btn-outline START CONFERENCE
+
+
         footer.br-pagefooter
             .row.align-items-center
                 .col-sm-6
@@ -30,5 +37,5 @@ html(lang='en')
                             | MON, 5 OCTOBER
                 .br-browser-support.col-sm-6.text-right
                     span AVAILABLE ON 
-                    i.br-icon.fa.fa-chrome
-                    i.br-icon.fa.fa-firefox
+                    i.fa.fa-chrome
+                    i.fa.fa-firefox

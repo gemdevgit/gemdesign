@@ -16,7 +16,7 @@ h2, h3, h4, h5, h6 {
 /* Track */
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 1px 1px 5px opacify($clr-text-grey-2, .2);
+    box-shadow: inset 1px 1px 5px opacify($clr-grey, .2);
 }
 
 
@@ -27,7 +27,7 @@ h2, h3, h4, h5, h6 {
     background: -moz-linear-gradient(top, rgba(64, 213, 187, 1) 0%, rgba(22, 148, 215, 1) 55%, rgba(0, 174, 255, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(64, 213, 187, 1) 0%, rgba(22, 148, 215, 1) 55%, rgba(0, 174, 255, 1) 100%);
     background: linear-gradient(to bottom, rgba(64, 213, 187, 1) 0%, rgba(22, 148, 215, 1) 55%, rgba(0, 174, 255, 1) 100%);
-    @include box-shadow(0px 9px 12px 0px transparentize($clr-text-grey, 0.6));
+    @include box-shadow(0px 9px 12px 0px transparentize($clr-grey, 0.6));
     border-radius: 10px;
 }
 
@@ -35,7 +35,7 @@ h2, h3, h4, h5, h6 {
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-    @include box-shadow(2px 3px 25px transparentize($clr-text-grey, 1));
+    @include box-shadow(2px 3px 25px transparentize($clr-grey, 1));
 }
 
 body div ::-webkit-scrollbar {
