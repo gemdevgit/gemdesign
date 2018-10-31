@@ -1,0 +1,32 @@
+.br-icon-video,
+.br-icon-audio,
+.br-icon-ellipsis,
+.br-icon-close{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    background:url('../img/sprite.png') no-repeat;
+}
+.br-icon-video{
+    background-position: -170px 0;
+    &:hover,&.active{
+        
+        background-position: -170px -29px;
+    }
+}
+.br-icon-audio{
+    background-position: -141px 0;
+    &:hover,&.active{
+        
+        background-position: -141px -29px;
+    }
+    
+}
+.br-icon-ellipsis{
+    background-position: -198px 0;
+    
+}
+.br-icon-close{
+    background-position: -113px 0;
+    
+}

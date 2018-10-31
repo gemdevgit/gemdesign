@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/bootstrap-select/css/bootstrap-select.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <body class="br-innerpage">
@@ -17,15 +17,29 @@
       <div class="br-logo-wrapper col-sm-7"><a href="home.html"><img src="../img/logo-black.png" alt="Gemteleversity"></a></div>
       <div class="br-browser-support col-sm-5 text-right"><span>AVAILABLE ON </span><i class="br-icon fa fa-chrome"></i><i class="br-icon fa fa-firefox"></i></div>
     </header>
-    <main class="br-inner-page-content"></main>
-    <div class="br-device-checking-wrapper col-md-10 col-offset-md-1">
-      <div class="row">
-        <div class="col-md7 col-sm-6">
-          <h1 class="br-welcome-title">Better meetings </h1>
+    <main class="br-inner-page-content">
+      <div class="br-device-checking-wrapper col-lg-10">
+        <div class="row">
+          <div class="col-lg-7 col-md-6 d-flex flex-column justify-content-center">
+            <h1 class="br-welcome-title">Make Every<br>Meeting Count.</h1><a class="br-link" href="conference-room.html">Start Meeting <i class="fa fa-angle-double-right"></i></a>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="br-device-checking-area"><video class="br-video" autoplay src="https://www.w3schools.com/tags/movie.ogg"></video>
+              <div class="br-footer text-center"><a class="br-icon-video" href="javascript:;"></a><a class="br-icon-audio active" href="javascript:;"></a><a class="br-icon-ellipsis" href="#modalCheckDevice" data-toggle="modal"></a></div>
+            </div>
+          </div>
         </div>
-        <div class="col-md5 col-sm-6"></div>
       </div>
-    </div>
+      <div class="modal fade" id="modalCheckDevice">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">CHECK YOUR DEVICE</h4><button class="br-icon-close close" type="button" data-dismiss="modal"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="br-pagefooter">
       <div class="row align-items-center">
         <div class="col-sm-6">
@@ -36,5 +50,7 @@
         </div>
       </div>
     </footer>
+    <script src="../assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

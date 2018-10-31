@@ -5,8 +5,29 @@ block vars
     -var body_class = "br-innerpage"
 
 block pageContent
-    .br-device-checking-wrapper.col-md-10.col-offset-md-1
+    .br-device-checking-wrapper.col-lg-10
         .row
-            .col-md7.col-sm-6
-                h1.br-welcome-title Better meetings 
-            .col-md5.col-sm-6
+            .col-lg-7.col-md-6.d-flex.flex-column.justify-content-center
+                h1.br-welcome-title Make Every
+                    br
+                    | Meeting Count.
+                a(href="conference-room.html").br-link Start Meeting 
+                    i.fa.fa-angle-double-right
+            .col-lg-5.col-md-6
+                .br-device-checking-area
+                    video.br-video( autoplay src="https://www.w3schools.com/tags/movie.ogg")
+                    .br-footer.text-center
+                        a(href="javascript:;").br-icon-video
+                        a(href="javascript:;").br-icon-audio.active
+                        a(href="#modalCheckDevice" data-toggle="modal" ).br-icon-ellipsis
+            
+
+    #modalCheckDevice.modal.fade
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h4.modal-title CHECK YOUR DEVICE
+                    button.br-icon-close(type="button" class="close" data-dismiss="modal")
+
+    
+
