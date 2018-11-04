@@ -6,7 +6,8 @@
 @import '_partials/_page-inner';
 @import '_partials/_components';
 html,body{
-    height:100%;
+    min-height:100%;
+    
 }
 body {
     font-family: 'Lato', sans-serif;

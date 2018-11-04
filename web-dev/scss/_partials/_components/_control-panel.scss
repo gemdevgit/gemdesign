@@ -1,0 +1,145 @@
+
+.br-conference-room-wrapper{
+    // .br-icon{        
+    //     display: inline-block;
+    //     width:30px;
+    //     height: 30px;
+    //     background:url('../img/sprite-controls.png') no-repeat;
+    // }
+}
+.br-control-panel{
+    margin-top:10px;
+    position: relative;
+    z-index: 2;
+    .br-control-list{
+        margin: 0 auto;
+        background: rgba(105, 105, 105, 0.45);
+        display: block;
+        width: 590px;
+        @include border-radius(25px 25px 25px 25px);
+        >li{
+            display: inline-block;
+            width:80px;
+            position: relative;
+            &:after{
+                color:$clr-white;
+                content: "";
+                display: block;
+                @include position(absolute,0,0,0,auto);
+                margin:auto;    
+                width: 1px;
+                background: rgba(255, 255, 255, 0.3803921568627451);
+                height: 26px;
+            }
+            &:last-of-type{
+                &:after{
+                    display: none;
+                }
+            }
+            >a{
+                display: block;
+                vertical-align: middle;
+                text-align: center;
+                padding: 9px 0px;
+            }
+
+        }
+    }
+    .br-drop-up{
+        background: rgba(113, 111, 111, 0.71);
+        color:$clr-white;
+        @include border-radius(29px 31px 38px 0px);
+        padding: 10px 10px;
+        a{
+            color: $clr-white;
+            font-size: 10px;
+            font-weight: 100;
+            >.br-icon{
+                width: 15px;
+                height: 15px;
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+            >span{
+                border-bottom: 1px solid rgba(160, 150, 150, 0.6);
+                display: inline-block;
+                width: calc(100% - 30px);
+            }
+        }
+    }
+}
+
+.br-control-list{
+    .br-icon{        
+        display: inline-block;
+        width:30px;
+        height: 30px;
+        background-image:url('../img/sprite-controls.png');
+        background-repeat:  no-repeat;
+    }
+    .br-ctrl-icon-msg{
+
+        background-position: 5px 0px;
+    }
+    .br-ctrl-icon-monitor{
+
+        background-position: -28px 0px;
+    }
+    .br-ctrl-icon-usr{
+
+        background-position: -56px 0px;
+    }
+    .br-ctrl-icon-cal{
+
+        background-position: -226px 3px;
+        background-color: #ff0054;
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        margin: 1px 0 -9px 0;
+        @include transition(all .5s ease);
+    }
+    .br-ctrl-icon-vdo{
+
+        background-position: -86px 0px;
+    }
+    .br-ctrl-icon-mic{
+
+        background-position: -114px 0px;
+    }
+    .br-ctrl-icon-more{
+
+        background-position: -141px 0px;
+    }
+    .br-ctrl-icon-more{
+
+        background-position: -141px 0px;
+    }
+    .br-full-screen{
+        
+        background-position: -291px -11px;
+    }
+    .br-settings{
+        
+        background-position: -318px -11px;
+    }
+    .br-info{
+        
+        background-position: -348px -11px;
+    }
+    .br-ctrl-call{
+        &:hover{
+            .br-ctrl-icon-cal{
+                @include box-shadow(2px 5px 16px 0px rgba(0, 0, 0, 0.51));
+            }
+        }
+    }
+    li:not(.no-hover){
+        &:hover,&.active{
+            >a>.br-icon{
+                background-position-y: -27px;
+            }
+        }
+
+    } 
+}

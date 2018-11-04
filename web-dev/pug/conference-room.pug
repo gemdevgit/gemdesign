@@ -1,0 +1,68 @@
+extends partials/layout.pug
+
+block vars
+    -var pageTitle = "Conference Room"
+    -var body_class = "br-innerpage"
+
+block pageContent
+    .br-conference-room-wrapper
+        //check css in video block scss
+        .br-confernce-user-lists
+            .br-user-wrapper    
+                .br-title John Doe
+                .br-overlay-wrapper.active
+                    a(href="javascript:;").br-icon.br-ctrl-icon-no-video
+                .br-video-wrapper
+                    video.br-video(src="../img/dummy.webm" autoplay)
+            mixin video
+                .br-user-wrapper    
+                    .br-video-wrapper
+                        .br-title John Doe
+                        .br-tools
+                            a(href="javascript:;").br-icon.br-ctrl-icon-no-video
+                            a(href="javascript:;").br-icon.br-ctrl-icon-no-audio
+
+                        video.br-video(src="../img/dummy.webm" autoplay)
+
+            +video
+            +video
+            +video
+        .br-control-panel
+            ul.br-control-list.list-inline
+                li
+                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                        i.br-icon.br-ctrl-icon-msg
+                li
+                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                        i.br-icon.br-ctrl-icon-monitor
+                li
+                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                        i.br-icon.br-ctrl-icon-usr
+                li.br-ctrl-call.no-hover
+                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                        i.br-icon.br-ctrl-icon-cal
+                li
+                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                        i.br-icon.br-ctrl-icon-vdo
+                li
+                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                        i.br-icon.br-ctrl-icon-mic
+                li.dropup(data-toggle="dropdown")
+                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                        i.br-icon.br-ctrl-icon-more
+                    ul.dropdown-menu.br-drop-up
+                        li.no-hover
+                            a(href="javascript:;")
+                                i.br-icon.br-full-screen
+                                span Full ccreen
+                        li.no-hover
+                            a(href="javascript:;")
+                                i.br-icon.br-settings
+                                span Settings
+                        li.no-hover
+                            a(href="javascript:;")
+                                i.br-icon.br-info
+                                span Help
+
+
+

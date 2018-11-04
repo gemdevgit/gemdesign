@@ -10,6 +10,11 @@
 .br-icon-video,
 .br-icon-audio,
 .br-icon-ellipsis,
+.br-icon-speaker,
+.br-icon-equalizer,
+.br-icon-no-audio,
+.br-icon-no-video,
+.br-icon-play,
 .br-icon-close {
   display: inline-block;
   width: 30px;
@@ -17,19 +22,19 @@
   background: url("../img/sprite.png") no-repeat;
 }
 
-.br-icon-video {
+.br-icon-no-video {
   background-position: -170px 0;
 }
 
-.br-icon-video:hover, .br-icon-video.active {
+.br-icon-no-video:hover, .br-icon-no-video.active {
   background-position: -170px -29px;
 }
 
-.br-icon-audio {
+.br-icon-no-audio {
   background-position: -141px 0;
 }
 
-.br-icon-audio:hover, .br-icon-audio.active {
+.br-icon-no-audio:hover, .br-icon-no-audio.active {
   background-position: -141px -29px;
 }
 
@@ -39,6 +44,26 @@
 
 .br-icon-close {
   background-position: -113px 0;
+}
+
+.br-icon-speaker {
+  background-position: -56px 0;
+}
+
+.br-icon-equalizer {
+  background-position: -83px 0;
+}
+
+.br-icon-audio {
+  background-position: -28px 0px;
+}
+
+.br-icon-video {
+  background-position: 0px 0;
+}
+
+.br-icon-play {
+  background-position: -227px 0;
 }
 
 h2, h3, h4, h5, h6 {
@@ -200,6 +225,20 @@ body div ::-webkit-scrollbar {
   font-weight: 400;
 }
 
+.br-device-checking-wrapper .br-link i {
+  position: relative;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.br-device-checking-wrapper .br-link:hover {
+  text-decoration: none;
+}
+
+.br-device-checking-wrapper .br-link:hover i {
+  left: 10px;
+}
+
 .br-device-checking-wrapper .br-device-checking-area {
   display: inline-block;
   background: #fff;
@@ -208,8 +247,10 @@ body div ::-webkit-scrollbar {
 }
 
 .br-device-checking-wrapper .br-video {
-  width: 345px;
-  height: 259px;
+  width: 365px;
+  height: 255px;
+  -o-object-fit: cover;
+  object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
 
@@ -217,8 +258,382 @@ body div ::-webkit-scrollbar {
   margin: 0 10px;
 }
 
+.br-modal {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.br-modal .modal-content {
+  border-radius: 15px;
+}
+
+.br-modal .modal-header {
+  border-radius: 15px 15px 0 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f1f1f1+1,ffffff+33 */
+  background: #f1f1f1;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(4deg, #f1f1f1 7%, white 52%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.br-modal .modal-header .br-icon-close {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  bottom: auto;
+  left: auto;
+}
+
+.br-modal .modal-title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.br-device-config-wrapper {
+  list-style: none;
+  padding: 0;
+}
+
+.br-device-config-wrapper .br-device {
+  margin-bottom: 15px;
+}
+
+.br-device-config-wrapper .br-device-dtls {
+  width: calc(100% - 130px);
+  padding-right: 30px;
+  padding-left: 15px;
+}
+
+.br-device-config-wrapper .br-device-dtls .br-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.br-device-config-wrapper .br-device-dtls .bootstrap-select {
+  min-width: 100%;
+  font-size: 13px;
+  font-weight: 300;
+  color: #1f1f1f;
+}
+
+.br-device-config-wrapper .br-device-dtls .bootstrap-select .dropdown-toggle {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+  font-weight: 300;
+  color: #1f1f1f;
+  border-radius: 0;
+}
+
+.br-device-config-wrapper .br-device-dtls .bootstrap-select .dropdown-toggle:after {
+  border-top-color: #ddd;
+}
+
+.br-device-config-wrapper .br-device-dtls .bootstrap-select .dropdown-toggle:focus {
+  outline: none;
+}
+
+.br-device-config-wrapper .br-device-dtls .bootstrap-select .dropdown-toggle .filter-option {
+  padding-left: 0;
+}
+
+.br-device-config-wrapper .br-device-dtls .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+  text-overflow: ellipsis;
+}
+
+.br-device-config-wrapper .br-device-dtls .bootstrap-select .dropdown-menu {
+  border-radius: 0;
+  max-width: 100%;
+}
+
+.br-device-config-wrapper .br-device-dtls .bootstrap-select .dropdown-menu .dropdown-item.active,
+.br-device-config-wrapper .br-device-dtls .bootstrap-select .dropdown-menu .dropdown-item:hover {
+  background-color: #c9c9c9;
+}
+
+.br-device-config-wrapper .br-device-dtls .bootstrap-select .dropdown-menu li a {
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.br-device-config-wrapper .br-preview {
+  width: 90px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.br-device-config-wrapper .br-preview .br-video {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.br-conference-room-wrapper {
+  width: 844px;
+  margin: 70px auto auto auto;
+}
+
+.br-confernce-user-lists {
+  font-size: 0;
+  margin: -11px;
+}
+
+.br-confernce-user-lists .br-user-wrapper {
+  display: inline-block;
+  width: 411px;
+  height: 222px;
+  position: relative;
+  overflow: hidden;
+  margin: 11px;
+  border-radius: 15px;
+}
+
+.br-confernce-user-lists .br-user-wrapper .br-title {
+  z-index: 2;
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  top: auto;
+  right: 10px;
+  bottom: 5px;
+  left: 10px;
+}
+
+.br-confernce-user-lists .br-user-wrapper .br-tools {
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1px 6px;
+  border: 3px solid rgba(185, 185, 185, 0.18);
+  border-radius: 20px 0 0 21px;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: auto;
+  left: auto;
+}
+
+.br-confernce-user-lists .br-user-wrapper .br-tools.active {
+  opacity: 1;
+}
+
+.br-confernce-user-lists .br-user-wrapper .br-tools .br-icon {
+  margin: 1px 5px;
+}
+
+.br-confernce-user-lists .br-user-wrapper .br-overlay-wrapper {
+  opacity: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.br-confernce-user-lists .br-user-wrapper .br-overlay-wrapper .br-icon {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1px 6px;
+  border: 3px solid rgba(185, 185, 185, 0.18);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 42px;
+  width: 42px;
+}
+
+.br-confernce-user-lists .br-user-wrapper .br-overlay-wrapper.active {
+  opacity: 1;
+}
+
+.br-confernce-user-lists .br-user-wrapper .br-video-wrapper {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.br-confernce-user-lists .br-user-wrapper .br-video-wrapper .br-video {
+  width: 100%;
+  max-height: 222px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.br-confernce-user-lists .br-user-wrapper:hover .br-overlay-wrapper, .br-confernce-user-lists .br-user-wrapper:hover .br-tools {
+  opacity: 1;
+}
+
+.br-confernce-user-lists .br-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/sprite-controls.png");
+  background-repeat: no-repeat;
+}
+
+.br-confernce-user-lists .br-ctrl-icon-no-video {
+  background-position: -167px 0px;
+}
+
+.br-confernce-user-lists .br-ctrl-icon-no-audio {
+  background-position: -200px 0px;
+}
+
+.br-control-panel {
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.br-control-panel .br-control-list {
+  margin: 0 auto;
+  background: rgba(105, 105, 105, 0.45);
+  display: block;
+  width: 590px;
+  border-radius: 25px 25px 25px 25px;
+}
+
+.br-control-panel .br-control-list > li {
+  display: inline-block;
+  width: 80px;
+  position: relative;
+}
+
+.br-control-panel .br-control-list > li:after {
+  color: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.380392);
+  height: 26px;
+}
+
+.br-control-panel .br-control-list > li:last-of-type:after {
+  display: none;
+}
+
+.br-control-panel .br-control-list > li > a {
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 9px 0px;
+}
+
+.br-control-panel .br-drop-up {
+  background: rgba(113, 111, 111, 0.71);
+  color: #fff;
+  border-radius: 29px 31px 38px 0px;
+  padding: 10px 10px;
+}
+
+.br-control-panel .br-drop-up a {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.br-control-panel .br-drop-up a > .br-icon {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.br-control-panel .br-drop-up a > span {
+  border-bottom: 1px solid rgba(160, 150, 150, 0.6);
+  display: inline-block;
+  width: calc(100% - 30px);
+}
+
+.br-control-list .br-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/sprite-controls.png");
+  background-repeat: no-repeat;
+}
+
+.br-control-list .br-ctrl-icon-msg {
+  background-position: 5px 0px;
+}
+
+.br-control-list .br-ctrl-icon-monitor {
+  background-position: -28px 0px;
+}
+
+.br-control-list .br-ctrl-icon-usr {
+  background-position: -56px 0px;
+}
+
+.br-control-list .br-ctrl-icon-cal {
+  background-position: -226px 3px;
+  background-color: #ff0054;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  margin: 1px 0 -9px 0;
+  transition: all 0.5s ease;
+}
+
+.br-control-list .br-ctrl-icon-vdo {
+  background-position: -86px 0px;
+}
+
+.br-control-list .br-ctrl-icon-mic {
+  background-position: -114px 0px;
+}
+
+.br-control-list .br-ctrl-icon-more {
+  background-position: -141px 0px;
+}
+
+.br-control-list .br-ctrl-icon-more {
+  background-position: -141px 0px;
+}
+
+.br-control-list .br-full-screen {
+  background-position: -291px -11px;
+}
+
+.br-control-list .br-settings {
+  background-position: -318px -11px;
+}
+
+.br-control-list .br-info {
+  background-position: -348px -11px;
+}
+
+.br-control-list .br-ctrl-call:hover .br-ctrl-icon-cal {
+  box-shadow: 2px 5px 16px 0px rgba(0, 0, 0, 0.51);
+}
+
+.br-control-list li:not(.no-hover):hover > a > .br-icon, .br-control-list li:not(.no-hover).active > a > .br-icon {
+  background-position-y: -27px;
+}
+
 html, body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {

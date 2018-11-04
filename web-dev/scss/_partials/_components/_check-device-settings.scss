@@ -15,7 +15,18 @@
         color:#212121;
         font-size: 19px;
         font-weight: 400;
+        i{
 
+            position: relative;
+            left:0;
+            @include transition(all .3s ease);
+        }
+        &:hover{
+            text-decoration: none;
+            i{
+                left: 10px; 
+            }
+        }
     }
     .br-device-checking-area{
         display: inline-block;
@@ -24,8 +35,9 @@
         @include box-shadow(2px 3px 12px 0px transparentize($clr-black,.6));
     }
     .br-video{
-        width:345px;
-        height: 259px;
+        width:365px;
+        height: 255px;
+        object-fit: cover;
         @include border-radius(8px 8px 0  0);
     }
     .br-footer{
@@ -34,4 +46,101 @@
         }
     }
 
+}
+.br-modal{
+    font-family: 'Montserrat', sans-serif;
+    .modal-content{
+        @include border-radius(15px);
+    }
+    .modal-header{
+        @include border-radius(15px 15px 0 0 );
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f1f1f1+1,ffffff+33 */
+        background: rgb(241,241,241); /* Old browsers */
+        background: -moz-linear-gradient(4deg, #f1f1f1 7%, white 52% ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(4deg, #f1f1f1 7%, white 52%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(4deg, #f1f1f1 7%, white 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+        .br-icon-close{
+            @include position(relative,10px,10px,auto,auto);
+        }
+    }
+    .modal-title{
+    
+        font-weight: 400;
+        font-size: 15px;
+    
+    }
+}
+.br-device-config-wrapper{
+    list-style: none;
+    padding: 0;
+    
+    .br-device{
+        margin-bottom: 15px;
+    }
+    .br-device-dtls{
+        width:calc(100% - 130px);
+        padding-right: 30px;
+        padding-left: 15px;
+        .br-title{
+            font-size: 14px;
+            font-weight: 400;
+            color: #000000;
+        }
+        .bootstrap-select{
+            min-width: 100%;
+            font-size: 13px;
+            font-weight: 300;
+            color: #1f1f1f;
+            .dropdown-toggle{
+                background: none;
+                border:none;
+                border-bottom: 1px solid #ddd;
+                font-size: 13px;
+                font-weight: 300;
+                color: #1f1f1f;
+                @include border-radius(0);
+                &:after{
+                    border-top-color: #ddd;
+                }
+                &:focus{
+                    outline: none;
+                }
+                .filter-option{
+                    padding-left: 0;
+                }
+                .filter-option-inner-inner{
+                    
+                text-overflow: ellipsis;
+                }
+            }
+            .dropdown-menu{                
+                @include border-radius(0);
+                max-width: 100%;
+                .dropdown-item.active, 
+                .dropdown-item:hover{
+                    background-color: #c9c9c9;
+                } 
+                li{
+                    a{
+                        white-space: pre;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+
+    }
+    .br-preview{
+        width:90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .br-video{
+            max-width: 100%;
+            @include border-radius(8px);
+        }
+    }
 }

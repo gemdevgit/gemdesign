@@ -1,20 +1,25 @@
 .br-icon-video,
 .br-icon-audio,
 .br-icon-ellipsis,
+.br-icon-speaker,
+.br-icon-equalizer,
+.br-icon-no-audio,
+.br-icon-no-video,
+.br-icon-play,
 .br-icon-close{
     display: inline-block;
     width:30px;
     height: 30px;
     background:url('../img/sprite.png') no-repeat;
 }
-.br-icon-video{
+.br-icon-no-video{
     background-position: -170px 0;
     &:hover,&.active{
         
         background-position: -170px -29px;
     }
 }
-.br-icon-audio{
+.br-icon-no-audio{
     background-position: -141px 0;
     &:hover,&.active{
         
@@ -29,4 +34,25 @@
 .br-icon-close{
     background-position: -113px 0;
     
+}
+.br-icon-speaker{
+
+    background-position: -56px 0;
+}
+.br-icon-equalizer{
+    
+    background-position: -83px 0;
+}
+
+.br-icon-audio{
+    
+    background-position: -28px 0px;
+}
+.br-icon-video{
+    
+    background-position: 0px 0;
+}
+.br-icon-play{
+    
+    background-position: -227px 0;
 }
