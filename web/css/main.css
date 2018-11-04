@@ -572,6 +572,7 @@ body div ::-webkit-scrollbar {
   height: 30px;
   background-image: url("../img/sprite-controls.png");
   background-repeat: no-repeat;
+  transition: all 0.5s ease;
 }
 
 .br-control-list .br-ctrl-icon-msg {

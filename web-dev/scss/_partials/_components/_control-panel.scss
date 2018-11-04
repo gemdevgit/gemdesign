@@ -76,6 +76,7 @@
         height: 30px;
         background-image:url('../img/sprite-controls.png');
         background-repeat:  no-repeat;
+        @include transition(all .5s ease);
     }
     .br-ctrl-icon-msg{
 
