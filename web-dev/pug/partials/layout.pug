@@ -8,7 +8,7 @@ html(lang='en')
         link(rel='stylesheet', href='../assets/bootstrap/css/bootstrap.min.css')
         link(rel='stylesheet', href='../assets/bootstrap-select/css/bootstrap-select.min.css')
         link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
-        link(href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400" rel="stylesheet" )
+        link(href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400,500" rel="stylesheet" )
         link(rel='stylesheet', href="../css/main.css")
     body(class=body_class)
         .br-bg-left-btm
@@ -41,5 +41,9 @@ html(lang='en')
         script(src='../assets/bootstrap-select/js/bootstrap-select.min.js')
         script(type="text/javascript").
             $(document).ready(function(){
-                $('.selectpicker')
+                $('.selectpicker').selectpicker();
+                $('a[data-toggle="action"]').on('click',function(){
+                    var target = $(this).data('target');
+                    $(target).toggleClass('active');
+                })
             })

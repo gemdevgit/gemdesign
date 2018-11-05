@@ -2,7 +2,7 @@ extends partials/layout.pug
 
 block vars
     -var pageTitle = "Conference Room"
-    -var body_class = "br-innerpage"
+    -var body_class = "br-innerpage br-conference-page"
 
 block pageContent
     .br-conference-room-wrapper
@@ -33,13 +33,13 @@ block pageContent
                     a(href="javascript:;" data-target="#message" data-toggle="action")
                         i.br-icon.br-ctrl-icon-msg
                 li
-                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                    a(href="javascript:;" data-target="#screen" data-toggle="action")
                         i.br-icon.br-ctrl-icon-monitor
                 li
-                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                    a(href="javascript:;" data-target="#invite" data-toggle="action")
                         i.br-icon.br-ctrl-icon-usr
                 li.br-ctrl-call.no-hover
-                    a(href="javascript:;" data-target="#message" data-toggle="action")
+                    a(href="javascript:;" data-target="#call" data-toggle="action")
                         i.br-icon.br-ctrl-icon-cal
                 li
                     a(href="javascript:;" data-target="#message" data-toggle="action")
@@ -64,5 +64,41 @@ block pageContent
                                 i.br-icon.br-info
                                 span Help
 
+    #invite.br-invite-user-wrapper
+        form(action="#").br-form.form-inline.flex-nowrap
+            input(type="text" value="https://www.abced.com/inviite.php?sadad").form-control
+            button(type="submit").btn.br-btn-copy Copy
+    #message.br-chat-wrapper
+        h3.br-title Chat
+        .br-icon-close
+        ul.br-msg-list.no-style
+            li
+                figure.br-avatar
+                    img(src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/flickr/8260117875_5ab9373bce_o.jpg?resize=600%2C401&ssl=1") 
+                .br-message-dtls
+                    h5.br-name John Doe
+                    .br-msg Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            li
+                figure.br-avatar
+                    img(src="https://briansmith.com/wp-content/uploads/2013/01/celebrity-portrait-photography.jpg") 
+                .br-message-dtls
+                    h5.br-name Aprila
+                    .br-msg It is a long established fact that a reader will be distracted by the readable content of a page
+            li
+                figure.br-avatar
+                    img(src="https://static.bhphotovideo.com/explora/sites/default/files/styles/960/public/briancolor.jpg?itok=ZVR85Ekm") 
+                .br-message-dtls
+                    h5.br-name John Doe
+                    .br-msg OK
 
+            li
+                figure.br-avatar
+                    img(src="https://phototalestudio.com/wp-content/uploads/2017/05/gainesville-portrait-photography-girls-and-planes7-1024x683.jpg") 
+                .br-message-dtls
+                    h5.br-name John Doe
+                    .br-msg OK
+
+        .br-submit-msg
+            textarea.form-control(placeholder="Type your message here") 
+            button.btn.br-btn Send
 
