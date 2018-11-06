@@ -1,9 +1,12 @@
-.br-conference-page{
-}
+
 .br-conference-room-wrapper{
     position: relative;
     width:844px;
     margin:70px auto auto auto;
+    min-height: calc(100vh - 111px);
+    display: flex;
+    padding-bottom: 65px;
+
 }
 .br-confernce-user-lists{
     font-size: 0;
@@ -94,5 +97,33 @@
         background-position: -200px 0px;
 
     }
+    &.right{
+        
+        width:235px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        @include position(fixed,70px,15px,45px,auto);
+        .br-user-wrapper{        
+            display: block;
+            width: auto;
+            height: 24%;
+        }
+    }
 
+}
+.br-screen-share-wrapper{
+    
+    background: green;
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+    overflow: hidden;
+    &.active{
+        display: flex;
+    }
+    .br-screen{
+        height:100%;
+        width:100%;
+    }
 }

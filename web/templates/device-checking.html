@@ -101,7 +101,16 @@
         $('a[data-toggle="action"]').on('click', function()
         {
           var target = $(this).data('target');
-          $(target).toggleClass('active');
+          console.log(target)
+          if (target == "#screen")
+          {
+            $(target).toggleClass('active');
+            $('.br-confernce-user-lists').toggleClass('right');
+          }
+          else
+          {
+            $(target).toggleClass('active');
+          }
         })
       })
     </script>

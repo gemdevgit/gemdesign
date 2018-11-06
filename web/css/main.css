@@ -379,14 +379,14 @@ body div ::-webkit-scrollbar {
   border-radius: 8px;
 }
 
-.br-conference-page {
-  position: relative;
-}
-
 .br-conference-room-wrapper {
   position: relative;
   width: 844px;
   margin: 70px auto auto auto;
+  min-height: calc(100vh - 111px);
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 65px;
 }
 
 .br-confernce-user-lists {
@@ -501,10 +501,53 @@ body div ::-webkit-scrollbar {
   background-position: -200px 0px;
 }
 
+.br-confernce-user-lists.right {
+  width: 235px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: fixed;
+  top: 70px;
+  right: 15px;
+  bottom: 45px;
+  left: auto;
+}
+
+.br-confernce-user-lists.right .br-user-wrapper {
+  display: block;
+  width: auto;
+  height: 24%;
+}
+
+.br-screen-share-wrapper {
+  background: green;
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.br-screen-share-wrapper.active {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.br-screen-share-wrapper .br-screen {
+  height: 100%;
+  width: 100%;
+}
+
 .br-control-panel {
   margin-top: 20px;
-  position: relative;
   z-index: 2;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .br-control-panel .br-control-list {
@@ -643,7 +686,8 @@ body div ::-webkit-scrollbar {
 .br-chat-wrapper {
   background: rgba(174, 174, 174, 0.61);
   width: 295px;
-  padding: 20px;
+  height: calc(100vh - 155px);
+  padding: 0;
   opacity: 0;
   border-radius: 20px 0 0 20px;
   z-index: -1;
@@ -660,12 +704,26 @@ body div ::-webkit-scrollbar {
   opacity: 1;
 }
 
+.br-chat-wrapper .br-chat-inner-wrapper {
+  position: relative;
+  padding-bottom: 350px;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding: 60px 20px 130px 20px;
+}
+
 .br-chat-wrapper .br-title {
   color: #fff;
   font-size: 23px;
   font-weight: 500;
   border-bottom: 1px solid #bdbdbd;
   margin-bottom: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: auto;
+  left: 10px;
 }
 
 .br-chat-wrapper .br-icon-close {
@@ -678,7 +736,6 @@ body div ::-webkit-scrollbar {
 
 .br-chat-wrapper .br-msg-list {
   list-style: none;
-  max-height: 335px;
   overflow: auto;
   padding: 0;
 }
@@ -725,6 +782,14 @@ body div ::-webkit-scrollbar {
   font-size: 11px;
   font-weight: 100;
   font-family: 'Lato', sans-serif;
+}
+
+.br-chat-wrapper .br-submit-msg {
+  position: absolute;
+  top: auto;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
 }
 
 .br-chat-wrapper .br-submit-msg > textarea {
