@@ -164,6 +164,7 @@ body div ::-webkit-scrollbar {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .br-innerpage .br-browser-support {
@@ -172,6 +173,11 @@ body div ::-webkit-scrollbar {
 
 .br-innerpage .br-browser-support .br-icon {
   color: #e8e8e8;
+}
+
+.br-inner-page-content {
+  position: relative;
+  min-height: 100vh;
 }
 
 .br-bg-left-btm {
@@ -382,7 +388,8 @@ body div ::-webkit-scrollbar {
 .br-conference-room-wrapper {
   position: relative;
   width: 844px;
-  margin: 70px auto auto auto;
+  margin: auto;
+  padding-top: 70px;
   min-height: calc(100vh - 111px);
   display: -ms-flexbox;
   display: flex;
@@ -485,6 +492,17 @@ body div ::-webkit-scrollbar {
   opacity: 1;
 }
 
+.br-confernce-user-lists {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
 .br-confernce-user-lists .br-icon {
   display: inline-block;
   width: 30px;
@@ -524,7 +542,7 @@ body div ::-webkit-scrollbar {
 
 .br-screen-share-wrapper {
   background: green;
-  width: 100%;
+  width: 98%;
   display: none;
   border-radius: 10px;
   overflow: hidden;
@@ -541,7 +559,6 @@ body div ::-webkit-scrollbar {
 }
 
 .br-control-panel {
-  margin-top: 20px;
   z-index: 2;
   position: absolute;
   top: auto;
@@ -693,7 +710,7 @@ body div ::-webkit-scrollbar {
   z-index: -1;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
-  top: 0;
+  top: 4vh;
   right: 0;
   bottom: 0;
   left: auto;
@@ -727,6 +744,7 @@ body div ::-webkit-scrollbar {
 }
 
 .br-chat-wrapper .br-icon-close {
+  cursor: pointer;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -820,7 +838,7 @@ body div ::-webkit-scrollbar {
   position: absolute;
   top: auto;
   right: 0;
-  bottom: 0;
+  bottom: 3vh;
   left: auto;
 }
 
@@ -885,10 +903,6 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-.br-inner-page-content {
-  position: relative;
 }
 
 .br-time-wrapper {

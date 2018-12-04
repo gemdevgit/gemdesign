@@ -9,7 +9,7 @@
   "dependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
-    "gulp": "^3.9.1",
+    "gulp": "3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean": "^0.3.2",
     "gulp-if": "^2.0.2",
@@ -25,6 +25,7 @@
     "gulp-watch": "^4.3.11",
     "gulp-watch-pug": "^1.0.0",
     "gulp-webserver": "^0.9.1",
+    "node-sass": "^4.10.0",
     "pug": "^2.0.0-beta11",
     "run-sequence": "^1.2.2",
     "scsslint": "^0.0.3"

@@ -3,7 +3,8 @@
     background-image: url('../img/meeting-bg.jpg');
     background-size:cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
+    min-height: 100vh;
     .br-browser-support{
         color: $clr-black-light;
         .br-icon{
@@ -12,6 +13,10 @@
     }
 }
 
+.br-inner-page-content{
+    position: relative;
+    min-height: 100vh;
+}
 .br-bg-left-btm{
     
     background:  url('../img/meeting-bg-left.png') no-repeat;

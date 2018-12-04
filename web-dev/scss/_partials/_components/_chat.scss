@@ -7,7 +7,7 @@
     border-radius: 20px 0 0 20px;
     z-index: -1;;
     font-family: 'Montserrat', sans-serif;
-    @include position(absolute,0,0,0,auto);
+    @include position(absolute,4vh,0,0,auto);
     &.active{
         z-index: 3;
         opacity: 1;
@@ -29,7 +29,7 @@
 
     }
     .br-icon-close{
-        
+        cursor: pointer;
         @include position(absolute,10px,10px,auto,auto);
     }
     .br-msg-list{

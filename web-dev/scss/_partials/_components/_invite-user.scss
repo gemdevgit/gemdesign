@@ -3,7 +3,7 @@
     width:0px;
     overflow: hidden;
     @include transition(width .3s ease);
-    @include position(absolute,auto,0,0,auto);
+    @include position(absolute,auto,0,3vh,auto);
     &.active{
         width:360px;
     }
