@@ -1,0 +1,25 @@
+
+.el-left-block{
+    .el-logo-wrapper{
+        @include position(absolute,50px,auto,auto,50px);
+    }
+    .el-signin-wrapper{
+        width:100%;
+        padding:0 125px;
+        .el-title{
+            color:$clr-blue-dark;
+            font-weight: 500;
+            font-size: 27px;
+            margin-bottom: 18px;
+        }
+        .el-help-block{
+            color:$clr-grey;
+            font-size: 13px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+    }
+}
+.el-right-block{
+    background: url('../img/bg-login.jpg');
+}
