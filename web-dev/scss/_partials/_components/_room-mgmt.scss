@@ -182,6 +182,57 @@
                     background-color: #ccc;
                 }
             }
+            &.el-room-10{
+                
+                .el-user-check{
+                    
+                    .el-checkmark{
+                        width: 40px;
+                        height: 40px;
+                        .el-icon{
+
+                            font-size: 23px;
+                            margin: 5px auto auto 5px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+            &.el-room-20{
+                
+                .el-user-check{
+                    
+                    .el-checkmark{
+                        width: 32px;
+                        height: 32px;
+                        .el-icon{
+                            font-size: 17px;
+                            margin: 4px auto auto 4px;
+                            width: 24px;
+                            height: 24px;
+                        
+                        }
+                    }
+                }
+            }
+            &.el-room-40{
+                
+                .el-user-check{
+                    width:calc((100%/2) - 2%);
+                    .el-checkmark{
+                        width: 28px;
+                        height: 28px;
+                        .el-icon{
+                            font-size: 14px;
+                            margin: 4px auto auto 4px;
+                            width: 21px;
+                            height: 21px;
+                        
+                        }
+                    }
+                }
+            }
         }
         .el-attende-status{
             font-family: 'Lato', sans-serif;

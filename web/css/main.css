@@ -913,6 +913,46 @@ body div ::-webkit-scrollbar {
   background-color: #ccc;
 }
 
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-10 .el-user-check .el-checkmark {
+  width: 40px;
+  height: 40px;
+}
+
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-10 .el-user-check .el-checkmark .el-icon {
+  font-size: 23px;
+  margin: 5px auto auto 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-20 .el-user-check .el-checkmark {
+  width: 32px;
+  height: 32px;
+}
+
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-20 .el-user-check .el-checkmark .el-icon {
+  font-size: 17px;
+  margin: 4px auto auto 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-40 .el-user-check {
+  width: calc((100%/2) - 2%);
+}
+
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-40 .el-user-check .el-checkmark {
+  width: 28px;
+  height: 28px;
+}
+
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-40 .el-user-check .el-checkmark .el-icon {
+  font-size: 14px;
+  margin: 4px auto auto 4px;
+  width: 21px;
+  height: 21px;
+}
+
 .el-dashboard-content-wrapper .el-room-config-wrapper .el-attende-status {
   font-family: 'Lato', sans-serif;
   font-size: 24px;

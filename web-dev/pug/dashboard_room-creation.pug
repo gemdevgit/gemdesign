@@ -43,7 +43,86 @@ block pageContent
                     .row
                         .col-md-6
                             h3.el-title Room Layout
-                            .el-room-layout-designs.el-room-60(id="room-60")
+                            .el-room-layout-designs.el-room-10.d-none(id="room-10")
+                                mixin cols(id)
+                                    - var price = Math.floor(Math.random() * (15 - 1300) + 1300)
+                                    .el-col-1
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_11"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                +cols(1)
+                                +cols(2)
+                                +cols(3)
+                                +cols(5)
+                                +cols(5)
+                                +cols(6)
+                                +cols(7)
+                                +cols(8)
+                                +cols(9)
+                                .el-col-2.text-center
+                                    .el-attende-status
+                                        |    1/10
+                                +cols(10)
+                            .el-room-layout-designs.el-room-20.d-none(id="room-20")
+                                mixin cols(id)
+                                    - var price = Math.floor(Math.random() * (15 - 1300) + 1300)
+                                    .el-col-1
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_11"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_12"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                +cols(1)
+                                +cols(2)
+                                +cols(3)
+                                +cols(5)
+                                +cols(5)
+                                +cols(6)
+                                +cols(7)
+                                +cols(8)
+                                +cols(9)
+                                .el-col-2.text-center
+                                    .el-attende-status
+                                        |    13/20
+                                +cols(10)
+                            .el-room-layout-designs.el-room-40(id="room-40")
+                                mixin cols(id)
+                                    - var price = Math.floor(Math.random() * (15 - 1300) + 1300)
+                                    .el-col-1
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_11"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_12"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_13"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_21"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                +cols(1)
+                                +cols(2)
+                                +cols(3)
+                                +cols(5)
+                                +cols(5)
+                                +cols(6)
+                                +cols(7)
+                                +cols(8)
+                                +cols(9)
+                                .el-col-2.text-center
+                                    .el-attende-status
+                                        |    13/40
+                                +cols(10)
+                            .el-room-layout-designs.el-room-60.d-none(id="room-60")
                                 mixin cols(id)
                                     - var price = Math.floor(Math.random() * (15 - 1300) + 1300)
                                     .el-col-1
@@ -148,3 +227,11 @@ block pageContent
                                 +list
 
                 
+block pageScript
+    script(type="text/javascript").
+        $('[data-toggle="room-config"]').on('click',function(){
+            $('.el-room-layout-designs').addClass('d-none');
+            $('.el-room-sizes a').removeClass('active');
+            $(this).addClass('active');
+            $('#'+$(this).attr('data-target')).removeClass('d-none');
+        });
