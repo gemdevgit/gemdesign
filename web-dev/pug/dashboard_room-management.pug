@@ -1,0 +1,74 @@
+extends partials/layout.pug
+block vars
+    -var pageTitle = "Dashboard Room Management"
+    -var body_class = ""
+    -var curnt_menu = ''
+    -var pageInnerTitle = 'Room Management'
+
+            
+block pageContent
+    .container-fluid
+        .row
+            .el-room-mgmt-wrapper.el-box.col-md-12
+                header.el-header
+                    .rl-tools
+                        .el-input-wrapper
+                            label.control-label No of Rooms:
+                            input(type="text" value="12")
+                        button.el-btn-add
+                            .el-icon &#xe002;
+                .el-room-list-wrapper.row.no-gutters
+                    .el-left-block.col-md-7
+                        .table-scrollable
+                            table.table
+                                thead
+                                    tr
+                                        th &nbsp;
+                                        th Room Name
+                                        th Room Code
+                                        th Room Capacity
+                                tbody
+                                    mixin tRow(id)
+                                        tr 
+                                            td 
+                                                span.el-status.el-active
+                                                figure.el-avatar
+                                                    img(src="../img/avatar.jpg")
+                                            td Room0 #{id} - SP Jain
+                                            td SPJGH3245
+                                            td 20
+                                    +tRow(1)
+                                    +tRow(23)
+                                    +tRow(4)
+                                    +tRow(5)
+                                    +tRow(6)
+                                    +tRow(71)
+                                    +tRow(8)
+
+                    .el-right-block.col-md-5
+                        .el-room-dtls-wrapper
+                            .tools
+                                button.el-btn-edit
+                                    .el-icon &#xe011;
+                                button.el-btn-add
+                                    .el-icon &#xe002;
+                            section.el-dtls
+                                figure.el-avatar
+                                    img(src="../img/avatar.jpg")
+                                    h3.el-room-title Room 07 - SP Jain
+                                    .el-room-code SPJR548X
+                                .el-link-wrapper.row
+                                    .col-md-4 Moderator Link      
+                                    .col-md-6
+                                        a(href="#") :  https://demo_moderator_link
+                                    .col-md-2                                        
+                                            button( class="btn btn-outline-primary  el-btn-outline-primary") Copy
+                                .el-btn-wrapper
+                                    
+                                    button( class="btn btn-outline-primary  el-btn-outline-default") View Report
+                                    button( class="btn btn-outline-danger  el-btn-outline-danger") Deactivate
+
+
+
+                
+                        

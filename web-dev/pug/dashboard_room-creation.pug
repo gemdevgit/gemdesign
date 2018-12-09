@@ -89,7 +89,7 @@ block pageContent
                                     .el-attende-status
                                         |    13/20
                                 +cols(10)
-                            .el-room-layout-designs.el-room-40(id="room-40")
+                            .el-room-layout-designs.el-room-40.d-none(id="room-40")
                                 mixin cols(id)
                                     - var price = Math.floor(Math.random() * (15 - 1300) + 1300)
                                     .el-col-1
@@ -122,7 +122,7 @@ block pageContent
                                     .el-attende-status
                                         |    13/40
                                 +cols(10)
-                            .el-room-layout-designs.el-room-60.d-none(id="room-60")
+                            .el-room-layout-designs.el-room-60(id="room-60")
                                 mixin cols(id)
                                     - var price = Math.floor(Math.random() * (15 - 1300) + 1300)
                                     .el-col-1
@@ -187,7 +187,7 @@ block pageContent
                                 textarea(placeholder="Name Lastname;user@gmail.com;1")
                                 .el-btn-wrapper
                                     span.el-help-block eg: Ian Philip;ian@philip.com;6
-                                    button( class="btn btn-primary pull-right el-btn-primary") Add MULTIPLE ATTENDEE
+                                    button( class="btn btn-primary pull-right el-btn-primary") ADD MULTIPLE ATTENDEE
                         .col-md-6
                             h3.el-title Add Bulk Attendee
                             .text-center.mt-5
