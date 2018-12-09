@@ -29,6 +29,7 @@
         }
     }
     .el-right-block{
-        background: url('../img/bg-login.jpg');
+        background: url('../img/bg-login.jpg') center;
+        background-size: cover;
     }
 }

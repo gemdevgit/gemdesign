@@ -65,7 +65,7 @@ body div ::-webkit-scrollbar {
   border: 2px solid #fff;
   margin-bottom: 15px;
   transition: all 1s ease;
-  box-shadow: 0px 0px 11px -3px #274a73;
+  box-shadow: 0px 0px 17px 4px rgba(187, 187, 187, 0.25);
 }
 
 .el-input-style-1 > .control-label {
@@ -91,7 +91,7 @@ body div ::-webkit-scrollbar {
 
 .el-input-style-1:focus-within {
   border: 2px solid #480fb9;
-  box-shadow: 0px 0px 11px -1px #274a73;
+  box-shadow: 0px 0px 17px 4px rgba(39, 74, 115, 0.4);
 }
 
 .el-input-style-2 {
@@ -234,13 +234,14 @@ body div ::-webkit-scrollbar {
 .btn {
   border-radius: 20px;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   padding: 6px 15px;
 }
 
 .el-btn-primary {
   background: #480fb9;
   min-width: 100px;
+  font-weight: 500;
 }
 
 @font-face {
@@ -377,7 +378,8 @@ body div ::-webkit-scrollbar {
 }
 
 .el-login .el-right-block {
-  background: url("../img/bg-login.jpg");
+  background: url("../img/bg-login.jpg") center;
+  background-size: cover;
 }
 
 .el-reset-pw .el-left-block .el-logo-wrapper {
@@ -414,7 +416,8 @@ body div ::-webkit-scrollbar {
 }
 
 .el-reset-pw .el-right-block {
-  background: url("../img/bg-reset-pw.jpg");
+  background: url("../img/bg-reset-pw.jpg") center;
+  background-size: cover;
 }
 
 .el-profile-wrapper .el-avatar-upload-wrapper figure {
@@ -913,9 +916,15 @@ body div ::-webkit-scrollbar {
   background-color: #ccc;
 }
 
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-10 .el-user-check {
+  height: 50px;
+}
+
 .el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-10 .el-user-check .el-checkmark {
   width: 40px;
   height: 40px;
+  right: 0;
+  bottom: 0;
 }
 
 .el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-10 .el-user-check .el-checkmark .el-icon {
@@ -923,6 +932,15 @@ body div ::-webkit-scrollbar {
   margin: 5px auto auto 5px;
   width: 30px;
   height: 30px;
+}
+
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-20 .el-col-1, .el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-20 .el-col-2 {
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-20 .el-user-check {
+  height: 35px;
 }
 
 .el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-20 .el-user-check .el-checkmark {
@@ -935,6 +953,10 @@ body div ::-webkit-scrollbar {
   margin: 4px auto auto 4px;
   width: 24px;
   height: 24px;
+}
+
+.el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-20 .el-attende-status {
+  margin-top: 0;
 }
 
 .el-dashboard-content-wrapper .el-room-config-wrapper .el-room-layout-designs.el-room-40 .el-user-check {
@@ -1077,7 +1099,134 @@ body div ::-webkit-scrollbar {
   }
 }
 
-html, body.el-login, body.el-reset-pw {
+.el-students-loby .el-left-block .el-logo-wrapper {
+  position: absolute;
+  top: 15px;
+  right: auto;
+  bottom: auto;
+  left: 50px;
+}
+
+.el-students-loby .el-left-block .el-page-title-block {
+  position: relative;
+  top: 45px;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper {
+  width: 100%;
+  padding: 0 125px;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-avatar-upload-wrapper figure {
+  width: 110px;
+  height: 110px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 1px solid #f3f3f3;
+  position: relative;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-avatar-upload-wrapper figure img {
+  border-radius: 50%;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-avatar-upload-wrapper .el-icon-camera {
+  background: #480fb9;
+  padding: 4px;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-avatar-upload-wrapper .el-icon-camera:hover {
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-profile-dtls .el-name {
+  color: #4d4c50;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-profile-dtls .el-email {
+  color: #4d4c50;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-region-wrapper {
+  margin: 0 -15px;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-region-wrapper > div {
+  width: calc(50% - 30px);
+  margin: 0 15px 5px 15px;
+  border-radius: 7px;
+  padding: 10px 15px;
+  transition: all 1s ease;
+  box-shadow: 0px 0px 17px 4px rgba(187, 187, 187, 0.25);
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-region-wrapper > div .el-label {
+  font-size: 8px;
+  font-weight: 300;
+  color: #afafaf;
+  margin-bottom: 0px;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-region-wrapper > div .el-selected {
+  font-weight: 300;
+  font-size: 12px;
+  color: #6c727a;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-title {
+  color: #274a73;
+  font-weight: 600;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .el-help-block {
+  color: #6c727a;
+  font-size: 10px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.el-students-loby .el-left-block .el-profile-dtls-wrapper .form-check-label, .el-students-loby .el-left-block .el-profile-dtls-wrapper .el-frgt-pw {
+  font-size: 10px;
+  font-weight: 300;
+  color: #6c727a;
+  line-height: 22px;
+  margin: 0;
+}
+
+.el-students-loby .el-right-block {
+  background: url("../img/bg-std-loby.jpg") center;
+  background-size: cover;
+}
+
+html, body.el-login, body.el-reset-pw, body.el-students-loby {
   height: 100%;
 }
 

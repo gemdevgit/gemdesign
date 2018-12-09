@@ -59,7 +59,7 @@ body div ::-webkit-scrollbar {
     border:2px solid $clr-white;
     margin-bottom: 15px;
     @include transition(all 1s ease);
-    @include box-shadow(0px 0px 11px -3px $clr-blue-dark);
+    @include box-shadow(0px 0px 17px 4px rgba(187, 187, 187, 0.25));
     >.control-label{
         font-size: 8px;
         color: #480fb9;
@@ -80,7 +80,7 @@ body div ::-webkit-scrollbar {
     }
     &:focus-within{
         border:2px solid $clr-blue;
-        @include box-shadow(0px 0px 11px -1px $clr-blue-dark);
+        @include box-shadow(0px 0px 17px 4px transparentize($clr-blue-dark,.6));
     }
 }
 .el-input-style-2{
@@ -196,12 +196,13 @@ body div ::-webkit-scrollbar {
 
     border-radius: 20px;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     padding:6px 15px;
 }
 .el-btn-primary{
     background: #480fb9;
     min-width: 100px;
+    font-weight: 500;
 
 }
 @font-face {

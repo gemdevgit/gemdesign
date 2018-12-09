@@ -183,12 +183,17 @@
                 }
             }
             &.el-room-10{
-                
-                .el-user-check{
+                .el-col-1{
                     
+                }
+                .el-user-check{
+                    height: 50px;
                     .el-checkmark{
                         width: 40px;
                         height: 40px;
+                        right: 0;
+                        bottom: 0;
+
                         .el-icon{
 
                             font-size: 23px;
@@ -201,7 +206,11 @@
             }
             &.el-room-20{
                 
+                .el-col-1,.el-col-2{
+                    align-items: center;
+                }
                 .el-user-check{
+                    height: 35px;
                     
                     .el-checkmark{
                         width: 32px;
@@ -214,6 +223,9 @@
                         
                         }
                     }
+                }
+                .el-attende-status{
+                    margin-top:0;
                 }
             }
             &.el-room-40{
