@@ -41,11 +41,23 @@ h2, h3, h4, h5, h6 {
 body div ::-webkit-scrollbar {
     width: 6px;
 }
+.el-dashboard{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f7f7+0,ffffff+44,ffffff+100 */
+    background: #f7f7f7; /* Old browsers */
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #ffffff 34%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#ffffff 34%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f7f7f7 0%,#ffffff 34%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    padding-top: 60px;
+    padding-left: 65px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .el-input-style-1{
     @include border-radius(7px);
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 0 20px;
     border:2px solid $clr-white;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     @include transition(all 1s ease);
     @include box-shadow(0px 0px 11px -3px $clr-blue-dark);
     >.control-label{
@@ -53,6 +65,8 @@ body div ::-webkit-scrollbar {
         color: #480fb9;
         font-weight: 300;
         margin-bottom: 0;
+        line-height: 1;
+        display: block;
         text-transform: uppercase;
     }
     >.form-control{
@@ -69,3 +83,218 @@ body div ::-webkit-scrollbar {
         @include box-shadow(0px 0px 11px -1px $clr-blue-dark);
     }
 }
+.el-input-style-2{
+    position: relative;
+    >.form-control{
+        border: none;
+        height: 30px;
+        padding:0 2px;
+        border-bottom: 1px solid $clr-grey-light;
+        margin-left: 5px;
+        @include border-radius(0);
+        &:focus{
+            outline: none;
+            @include box-shadow(none);
+        }
+    }
+    &:before{
+        content: ':';
+        font-weight: bold;
+        color: $clr-grey;
+        display: inline-block;
+        margin-right: 5px;
+        position: absolute;
+        left:0px;
+        top:2px;
+    }
+    &:after{
+        
+        content: '';
+        display: block;
+        height: 2px;
+        width:0;
+        background:$clr-blue;
+        @include transition(all .5s ease);
+        @include position(absolute,auto,15px,0,20px);
+    }
+    &:focus-within{
+        &:after{
+            width: calc( 100% - 30px);
+        }
+    }
+}
+.el-input-style-3{
+    position: relative;
+    margin-bottom: 15px;
+    font-family: 'Lato', sans-serif;
+    @include transition(all 1s ease);
+    >.control-label{
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        margin:0;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        margin-top:-15px;
+        position: relative;
+        top:-5px;
+        color: transparentize(#747474, .3);
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        margin:0;
+        font-size: 14px;
+        font-weight: 300;
+        margin-top:-15px;
+        text-align: center;
+        color: transparentize(#747474, .3);
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        margin:0;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        position: relative;
+        top:-5px;
+        color: transparentize(#747474, .3);
+    }
+    >.form-control{
+        border:0;
+        border-bottom: 1px solid #eeeeee;
+        padding: 0;
+        font-size: 14px;
+        @include border-radius(0);
+        height: 30px;
+        padding-top: 9px;
+        &:focus{
+            outline: none;
+            @include box-shadow(none);
+        }
+    }
+    
+    &:after{        
+        content: '';
+        display: block;
+        height: 2px;
+        width:0;
+        background:$clr-blue;
+        margin: auto;
+        @include transition(all .5s ease);
+        @include position(absolute,auto,0,0px,0);
+    }
+    &:focus-within{
+        >.control-label{
+            @include transform(scale(0));
+        }
+        &:after{
+            width: calc( 100%);
+        }
+    }
+}
+.btn{
+
+    border-radius: 20px;
+    text-align: center;
+    font-size: 13px;
+    padding:6px 15px;
+}
+.el-btn-primary{
+    background: #480fb9;
+    min-width: 100px;
+
+}
+@font-face {
+    font-family: 'fontello';
+    src: url('../assets/fontello/font/fontello.eot?43124503');
+    src: url('../assets/fontello/font/fontello.eot?43124503#iefix') format('embedded-opentype'),
+         url('../assets/fontello/font/fontello.woff?43124503') format('woff'),
+         url('../assets/fontello/font/fontello.ttf?43124503') format('truetype'),
+         url('../assets/fontello/font/fontello.svg?43124503#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+   
+   
+  .el-icon{
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin:0;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .el-box{
+      background: $clr-white;
+      padding: 10px;
+      @include box-shadow (0px 0px 30px 4px transparentize($clr-grey, .9));
+      @include border-radius(10px);
+  }
+  .el-link{
+      &:hover{
+
+        text-decoration: none;
+      }
+  }
+
+  .el-checkbox{
+
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .el-checkmark{
+        width:20px;
+        height: 20px;
+        background-color: $clr-white;
+        border:2px solid #ccc;;
+        @include border-radius(2px);
+        margin: auto;
+        @include position(absolute,0,auto,auto,0);
+
+        &:after{
+            
+            content: "";
+            display: none;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            @include position(absolute,2px,auto,auto,6px);
+        }
+    }
+    >input{
+        
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .el-checkmark{            
+            background-color: #2196F3;
+            &:after{
+                display: block;
+            }
+        }
+    }
+    &:hover input ~ .el-checkmark{        
+        background-color: #ccc;
+    }
+  }

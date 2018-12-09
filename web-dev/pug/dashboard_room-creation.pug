@@ -1,0 +1,150 @@
+extends partials/layout.pug
+block vars
+    -var pageTitle = "Dashboard account"
+    -var body_class = ""
+    -var curnt_menu = 'dc_ac'
+    -var pageInnerTitle = 'New Room'
+            
+block pageContent
+    .container-fluid
+        .row.flex-xl-nowrap
+            section.el-dashboard-sidebar.el-room-mgmt-sidebar
+                form
+                    section.el-avatar-upload-wrapper
+                        figure
+                            img(src="../img/avatar.jpg")
+                            a(href="javascript:;").el-icon.el-icon-camera &#xe002;
+                    section.el-form-controls
+                        .el-input-style-3.form-group.row
+                            input.form-control(type="text" placeholder="Room Name")
+                        .el-input-style-3.form-group.row
+                            input.form-control(type="text" placeholder="Moderator Name")
+                        .el-input-style-3.form-group.row
+                            input.form-control(type="text" placeholder="Moderator Email")
+                    section.el-room-capacity    
+                        h4.el-title Room Capacity
+                        ul.el-room-sizes
+                            li
+                                a(href="javascript:;" data-toggle="room-config" data-target="room-10") 10
+                                .el-border
+                            li
+                                a(href="javascript:;" data-toggle="room-config" data-target="room-20") 20
+                                .el-border
+                            li
+                                a(href="javascript:;" data-toggle="room-config" data-target="room-40") 40
+                                .el-border
+                            li
+                                a(href="javascript:;" data-toggle="room-config" data-target="room-60").active  60
+                                .el-border
+                    section.text-center.mt-4
+                        button( class="btn btn-primary el-btn-primary") CREATE ROOM
+            section.el-dashboard-content-wrapper
+                .el-room-config-wrapper.el-box
+                    .row
+                        .col-md-6
+                            h3.el-title Room Layout
+                            .el-room-layout-designs.el-room-60(id="room-60")
+                                mixin cols(id)
+                                    - var price = Math.floor(Math.random() * (15 - 1300) + 1300)
+                                    .el-col-1
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_11"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_12"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_13"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_21"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_22"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                        label.el-user-check
+                                            input(type="checkbox" id="chck_23"+id*price)
+                                            .el-checkmark
+                                                .el-icon &#xe006;
+                                +cols(1)
+                                +cols(2)
+                                +cols(3)
+                                +cols(5)
+                                +cols(5)
+                                +cols(6)
+                                +cols(7)
+                                +cols(8)
+                                +cols(9)
+                                .el-col-2.text-center
+                                    .el-attende-status
+                                        |    13/60
+                                +cols(10)
+                        .col-md-6
+                            h3.el-title Add Attendee
+                            .el-help-block.mb-4 Select a seat and insert data of each user :
+                            
+                            .form-group.row
+                                label.col-md-5.control-label Attendee Name
+                                .el-input-style-2.col-md-7
+                                    input.form-control(type="text")
+                            .form-group.row
+                                label.col-md-5.control-label Attendee E-mail
+                                .el-input-style-2.col-md-7
+                                    input.form-control(type="email")
+                            .form-group.row.my-4
+                                .col-md-8.offset-5                                    
+                                    button( class="btn btn-primary el-btn-primary") Add attendee
+                    hr.el-hr
+                    .row
+
+                        .col-md-6
+                            .el-multiple-attendee
+                                h3.el-title Add Multiple Attendee
+                                textarea(placeholder="Name Lastname;user@gmail.com;1")
+                                .el-btn-wrapper
+                                    span.el-help-block eg: Ian Philip;ian@philip.com;6
+                                    button( class="btn btn-primary pull-right el-btn-primary") Add MULTIPLE ATTENDEE
+                        .col-md-6
+                            h3.el-title Add Bulk Attendee
+                            .text-center.mt-5
+                                    button( class="btn btn-outline-primary  el-btn-outline-primary") UPLOAD BULK ATTENDEE
+                                    a(href="javascript:;").el-link.d-block.mt-3
+                                        .el-icon &#xe002;
+                                        |  Download Sample Excel
+
+                .el-attendee-list.my-5
+                    .table-scrollable
+                        table.table.text-center
+                            thead
+                                tr
+                                    th(width="10%") Seat No.
+                                    th Name
+                                    th E-mail ID
+                                    th Action
+                            tbody
+                                mixin list
+                                    tr
+                                        td 1
+                                        td.text-nowrap
+                                            figure.el-avatar
+                                                img(src="../img/avatar.jpg")
+                                            .el-title Annie Paul
+                                        td daniel_alexi@gmail.com
+                                        td 
+                                            button( class="btn btn-outline-primary  el-btn-outline-default") Edit
+                                            button( class="btn btn-outline-danger  el-btn-outline-danger") Delete
+                                +list
+                                +list
+                                +list
+                                +list
+                                +list
+                                +list
+                                +list
+                                +list
+
+                

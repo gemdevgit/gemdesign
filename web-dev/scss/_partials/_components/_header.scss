@@ -1,0 +1,63 @@
+
+.el-page-header{
+    background: $clr-white;
+    height: 60px;
+    @include position(fixed,0,0,auto,65px);
+    @include box-shadow(0px 0px 26px -3px transparentize($clr-grey, .5));
+    z-index: 100;
+    .el-left-block{        
+        margin:15px 20px 0 10px;
+        >.el-icon{
+            margin-right: 10px;
+        }
+    }
+    .el-right-block{        
+        margin:12px 30px 0 10px;
+    }
+    .el-dashboard-title{
+        color:#a684df;
+        font-size: 17px;
+        font-weight: normal;
+    }
+    .el-top-link{
+        list-style: none;
+        margin:0 -5px;
+        >li{
+            display: inline-block;
+            vertical-align: middle;
+            margin:0 5px;
+            width:33px;
+            height: 33px;
+            text-align: center;
+            line-height: 31px;
+            @include border-radius(50%);
+            >a{
+                display: inline-block;
+                width:33px;
+                height: 33px;
+                color: $clr-black-light;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            &.el-notification{
+                font-size: 22px;
+                &.el-unread{
+                    >a{
+                        position: relative;
+                        &::before{
+                            content: '•';
+                            color: red;
+                            line-height: 13px;
+                            font-size: 30px;
+                            @include position(absolute,-2px,4px,auto,auto);
+                        }
+                    }
+                }
+            }
+            &.active,&:hover{
+                background: $clr-grey-light;
+            }
+        }
+    }
+}

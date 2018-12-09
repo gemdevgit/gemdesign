@@ -4,9 +4,27 @@
 @import '_utilities/_helper';
 @import '_partials/_components';
 
-html,body{
+html,body.el-login,body.el-reset-pw{
     height: 100%;
 }
 body{
     font-family: 'Montserrat', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+
+.el-dashboard-sidebar{
+    background: $clr-white;
+    position: fixed;
+    z-index: 99;
+    padding: 30px;
+    height: calc(100vh - 60px);
+    width:320px;
+    @include box-shadow (-4px 0 13px 7px transparentize($clr-grey, .9));
+}
+.el-dashboard-content-wrapper{
+    width:calc(100% - 335px);
+    padding:20px;
+    margin-left:320px;
 }

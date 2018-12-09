@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard account</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap-select/css/bootstrap-select.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body class="el-dashboard">
+    <header class="el-page-header">
+      <div class="pull-left el-left-block">
+        <div class="el-icon">&#xe012;</div>
+        <h2 class="d-inline-block el-dashboard-title">New Room</h2>
+      </div>
+      <div class="pull-right el-right-block">
+        <ul class="el-top-link">
+          <li><a href="#">
+              <div class="el-icon">&#xe012;</div>
+            </a></li>
+          <li class="el-notification el-unread"><a href="#">
+              <div class="el-icon">&#xe014;</div>
+            </a></li>
+        </ul>
+      </div>
+    </header>
+    <aside class="el-page-sidebar">
+      <ul class="el-navbar">
+        <li><a href="javascript:;">
+            <figure class="el-nav-avatar"><img src="../img/avatar.jpg"></figure>
+          </a></li>
+        <li class="active"><a href="dashboard_account.html">
+            <div class="el-icon">&#xe010;</div>
+          </a></li>
+        <li><a href="dashboard_room-management.html">
+            <div class="el-icon">&#xe003;</div>
+          </a></li>
+        <li><a href="#">
+            <div class="el-icon">&#xe004;</div>
+          </a></li>
+        <li class="el-signout"><a href="#">
+            <div class="el-icon">&#xe013;</div>
+          </a></li>
+      </ul>
+    </aside>
+    <main class="el-page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+          <section class="el-dashboard-sidebar el-room-mgmt-sidebar">
+            <form>
+              <section class="el-avatar-upload-wrapper">
+                <figure><img src="../img/avatar.jpg"><a class="el-icon el-icon-camera" href="javascript:;">&#xe002;</a></figure>
+              </section>
+              <section class="el-form-controls">
+                <div class="el-input-style-3 form-group row"><input class="form-control" type="text" placeholder="Room Name"></div>
+                <div class="el-input-style-3 form-group row"><input class="form-control" type="text" placeholder="Moderator Name"></div>
+                <div class="el-input-style-3 form-group row"><input class="form-control" type="text" placeholder="Moderator Email"></div>
+              </section>
+              <section class="el-room-capacity">
+                <h4 class="el-title">Room Capacity</h4>
+                <ul class="el-room-sizes">
+                  <li><a href="javascript:;" data-toggle="room-config" data-target="room-10">10</a>
+                    <div class="el-border"></div>
+                  </li>
+                  <li><a href="javascript:;" data-toggle="room-config" data-target="room-20">20</a>
+                    <div class="el-border"></div>
+                  </li>
+                  <li><a href="javascript:;" data-toggle="room-config" data-target="room-40">40</a>
+                    <div class="el-border"></div>
+                  </li>
+                  <li><a class="active" href="javascript:;" data-toggle="room-config" data-target="room-60"> 60</a>
+                    <div class="el-border"></div>
+                  </li>
+                </ul>
+              </section>
+              <section class="text-center mt-4"><button class="btn btn-primary el-btn-primary">CREATE ROOM</button></section>
+            </form>
+          </section>
+          <section class="el-dashboard-content-wrapper">
+            <div class="el-room-config-wrapper el-box">
+              <div class="row">
+                <div class="col-md-6">
+                  <h3 class="el-title">Room Layout</h3>
+                  <div class="el-room-layout-designs el-room-60" id="room-60">
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_111228">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_121228">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_131228">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_211228">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_221228">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_231228">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_1146">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_1246">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_1346">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_2146">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_2246">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_2346">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_113732">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_123732">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_133732">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_213732">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_223732">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_233732">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_114005">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_124005">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_134005">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_214005">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_224005">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_234005">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_112520">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_122520">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_132520">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_212520">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_222520">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_232520">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_117758">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_127758">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_137758">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_217758">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_227758">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_237758">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_117987">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_127987">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_137987">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_217987">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_227987">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_237987">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_112256">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_122256">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_132256">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_212256">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_222256">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_232256">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_114050">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_124050">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_134050">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_214050">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_224050">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_234050">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                    <div class="el-col-2 text-center">
+                      <div class="el-attende-status"> 13/60</div>
+                    </div>
+                    <div class="el-col-1"><label class="el-user-check"><input type="checkbox" id="chck_1110950">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_1210950">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_1310950">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_2110950">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_2210950">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label><label class="el-user-check"><input type="checkbox" id="chck_2310950">
+                        <div class="el-checkmark">
+                          <div class="el-icon">&#xe006;</div>
+                        </div>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h3 class="el-title">Add Attendee</h3>
+                  <div class="el-help-block mb-4">Select a seat and insert data of each user :</div>
+                  <div class="form-group row"><label class="col-md-5 control-label">Attendee Name</label>
+                    <div class="el-input-style-2 col-md-7"><input class="form-control" type="text"></div>
+                  </div>
+                  <div class="form-group row"><label class="col-md-5 control-label">Attendee E-mail</label>
+                    <div class="el-input-style-2 col-md-7"><input class="form-control" type="email"></div>
+                  </div>
+                  <div class="form-group row my-4">
+                    <div class="col-md-8 offset-5"> <button class="btn btn-primary el-btn-primary">Add attendee</button></div>
+                  </div>
+                </div>
+              </div>
+              <hr class="el-hr">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="el-multiple-attendee">
+                    <h3 class="el-title">Add Multiple Attendee</h3><textarea placeholder="Name Lastname;user@gmail.com;1"></textarea>
+                    <div class="el-btn-wrapper"><span class="el-help-block">eg: Ian Philip;ian@philip.com;6</span><button class="btn btn-primary pull-right el-btn-primary">Add MULTIPLE ATTENDEE</button></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h3 class="el-title">Add Bulk Attendee</h3>
+                  <div class="text-center mt-5"><button class="btn btn-outline-primary  el-btn-outline-primary">UPLOAD BULK ATTENDEE</button><a class="el-link d-block mt-3" href="javascript:;">
+                      <div class="el-icon">&#xe002;</div> Download Sample Excel
+                    </a></div>
+                </div>
+              </div>
+            </div>
+            <div class="el-attendee-list my-5">
+              <div class="table-scrollable">
+                <table class="table text-center">
+                  <thead>
+                    <tr>
+                      <th width="10%">Seat No.</th>
+                      <th>Name</th>
+                      <th>E-mail ID</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td class="text-nowrap">
+                        <figure class="el-avatar"><img src="../img/avatar.jpg"></figure>
+                        <div class="el-title">Annie Paul</div>
+                      </td>
+                      <td>daniel_alexi@gmail.com</td>
+                      <td> <button class="btn btn-outline-primary  el-btn-outline-default">Edit</button><button class="btn btn-outline-danger  el-btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="text-nowrap">
+                        <figure class="el-avatar"><img src="../img/avatar.jpg"></figure>
+                        <div class="el-title">Annie Paul</div>
+                      </td>
+                      <td>daniel_alexi@gmail.com</td>
+                      <td> <button class="btn btn-outline-primary  el-btn-outline-default">Edit</button><button class="btn btn-outline-danger  el-btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="text-nowrap">
+                        <figure class="el-avatar"><img src="../img/avatar.jpg"></figure>
+                        <div class="el-title">Annie Paul</div>
+                      </td>
+                      <td>daniel_alexi@gmail.com</td>
+                      <td> <button class="btn btn-outline-primary  el-btn-outline-default">Edit</button><button class="btn btn-outline-danger  el-btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="text-nowrap">
+                        <figure class="el-avatar"><img src="../img/avatar.jpg"></figure>
+                        <div class="el-title">Annie Paul</div>
+                      </td>
+                      <td>daniel_alexi@gmail.com</td>
+                      <td> <button class="btn btn-outline-primary  el-btn-outline-default">Edit</button><button class="btn btn-outline-danger  el-btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="text-nowrap">
+                        <figure class="el-avatar"><img src="../img/avatar.jpg"></figure>
+                        <div class="el-title">Annie Paul</div>
+                      </td>
+                      <td>daniel_alexi@gmail.com</td>
+                      <td> <button class="btn btn-outline-primary  el-btn-outline-default">Edit</button><button class="btn btn-outline-danger  el-btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="text-nowrap">
+                        <figure class="el-avatar"><img src="../img/avatar.jpg"></figure>
+                        <div class="el-title">Annie Paul</div>
+                      </td>
+                      <td>daniel_alexi@gmail.com</td>
+                      <td> <button class="btn btn-outline-primary  el-btn-outline-default">Edit</button><button class="btn btn-outline-danger  el-btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="text-nowrap">
+                        <figure class="el-avatar"><img src="../img/avatar.jpg"></figure>
+                        <div class="el-title">Annie Paul</div>
+                      </td>
+                      <td>daniel_alexi@gmail.com</td>
+                      <td> <button class="btn btn-outline-primary  el-btn-outline-default">Edit</button><button class="btn btn-outline-danger  el-btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="text-nowrap">
+                        <figure class="el-avatar"><img src="../img/avatar.jpg"></figure>
+                        <div class="el-title">Annie Paul</div>
+                      </td>
+                      <td>daniel_alexi@gmail.com</td>
+                      <td> <button class="btn btn-outline-primary  el-btn-outline-default">Edit</button><button class="btn btn-outline-danger  el-btn-outline-danger">Delete</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="../assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

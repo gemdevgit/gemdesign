@@ -1,0 +1,313 @@
+.el-dashboard-sidebar{
+    
+    .el-avatar-upload-wrapper{
+        figure{
+            width:175px;
+            height: 175px;
+            object-fit: cover;
+            object-position: center;
+            padding:16px;
+            margin:10px auto 20px auto;
+            @include border-radius(50%);
+            border: 1px solid $clr-grey-light;
+            position: relative;
+            img{                
+                @include border-radius(50%);
+            }
+        }
+        .el-icon-camera{
+            background: $clr-blue;
+            padding: 4px;
+            width:25px;
+            height: 25px;
+            color: $clr-white;
+            text-decoration: none;
+            @include transition(all .5s ease);
+            @include border-radius(50%);
+            @include position(absolute,auto,10px,10px,auto);
+            &:hover{
+                width:28px;
+                height: 28px;
+                padding: 5px;
+            }
+        }
+    }
+    .el-form-controls{
+        padding: 10px 30px;
+    }
+    .el-room-capacity{
+        .el-title{
+            font-weight: 400;
+            color: #747474;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .el-room-sizes{
+            list-style: none;
+            padding: 0;
+            margin: 0 -15px 0 0;
+            text-align: center;
+            >li{
+                display: inline-block;
+                margin-right: 15px;
+                font-family: 'Lato', sans-serif;
+                position: relative;
+                padding: 6px;
+                a{
+                    font-size: 17px;
+                    color: $clr-blue;
+                    font-weight: 600;
+                    width:33px;
+                    height: 33px;
+                    border:1px solid $clr-blue;
+                    display: block;
+                    text-align: center;
+                    padding-top: 3px;
+                    @include border-radius(50%);
+                    &:hover{
+                        text-decoration: none;                   
+                    }
+                    &.active{
+                        background: $clr-blue;
+                        color: $clr-white;
+                    }
+                }
+                &:after{
+                    content:'';
+                    display: block;                    
+                    width:45px;
+                    height: 45px;
+                    border:2px dashed $clr-blue;
+                    @include border-radius(50%);
+                    @include position(absolute,0,0,0,0);
+                    z-index: -1;
+                    transition: all 2s linear;
+                    -webkit-animation-duration: 1s;
+                    animation-duration: 1s;
+                    -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                    -webkit-animation-iteration-count: 1;
+                    animation-iteration-count: 1;
+                }
+                &:hover{
+                    &:after{
+                        
+                        -webkit-animation-name: rotate-border;
+                        animation-name:rotate-border;
+                    }
+                }
+            }
+        }
+    } 
+}
+.el-dashboard-content-wrapper{
+
+    .el-room-config-wrapper{
+        padding: 22px;
+        .el-room-layout-designs{
+            font-size: 0;
+            margin: 0 10px;
+            vertical-align: top;
+            >.el-col-1,>.el-col-2{
+                padding: 4px 1px;
+                display: inline-flex;
+                height: 65px;
+                width:25%;
+                vertical-align: top;
+                flex-wrap: wrap;
+                align-content: space-between;
+                justify-content: space-between;
+            }
+            >.el-col-2{
+                width:50%;
+            }
+            .el-user-check{
+                
+                width: calc((100%/3) - 2%);
+                margin: 0 0 0 2%;
+                flex-grow: 1;
+                position: relative;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                height:25px;
+                flex-wrap: wrap;
+                .el-checkmark{
+                    display: block;
+                    width:25px;
+                    height: 25px;
+                    background-color: $clr-grey-light;
+                    @include border-radius(50%);
+                    margin: auto;
+                    @include position(absolute,0,auto,auto,0);
+                    .el-icon{
+                        display: none;
+                        font-size: 12px;
+                        background: $clr-grey;
+                        color: #fff;
+                        border-radius: 50%;
+                        width: 17px;
+                        height: 17px;
+                        padding-top: 3px;
+                        margin: 4px auto auto 4px;
+                    }
+                    &:after{
+                        display: none;
+                        width: 5px;
+                        height: 10px;
+                        @include position(absolute,2px,auto,auto,6px);
+                    }
+                }
+                >input{
+                    
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                    &:checked ~ .el-checkmark{            
+                        background: #b1b1b1;
+                        .el-icon{
+                            display: block;
+                        }
+                        &:after{
+                            display: block;
+                        }
+                    }
+                }
+                &:hover input ~ .el-checkmark{        
+                    background-color: #ccc;
+                }
+            }
+        }
+        .el-attende-status{
+            font-family: 'Lato', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #858585;
+            margin: 10px auto;
+        }
+        .el-title{
+            
+            font-size: 19px;
+            font-weight: 500;
+            color: #484848;
+            margin-bottom: 10px;
+        }
+        .el-help-block{
+            color:#b3b3b3;
+            font-family: 'Lato', sans-serif;
+            font-size: 13px;
+
+        }
+        .form-group{
+            
+            font-family: 'Lato', sans-serif;
+        }
+        .control-label{
+            color:#747474;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .el-multiple-attendee{
+            textarea{
+                width: 100%;
+                margin: 20px 30px 20px 10px;
+                @include border-radius(10px);
+                height:90px;
+                padding:8px 10px;
+                border:1px solid $clr-grey-light;
+            }
+            .el-help-block{
+                color:transparentize($clr-blue, .4);
+            }
+        }
+    }
+
+    .el-attendee-list{        
+        background: $clr-white;
+        overflow: hidden;
+        @include box-shadow (0px 0px 30px 4px transparentize($clr-grey, .9));
+        @include border-radius(25px 25px 10px 10px);
+
+
+        table{
+            font-family: 'Lato', sans-serif;
+            thead{
+                background: $clr-white;                
+                @include box-shadow (0px 0px 30px 4px transparentize($clr-grey, .9));
+                th{
+                    border:none;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: transparentize($color: #2b2b2b, $amount: .4)
+                }
+            }
+            tbody{
+                font-size: 14px;
+                font-weight: 300;
+                tr{
+                    &:first-child{
+                        td{
+
+                            border-top: none;
+                            padding-top: 20px;
+                        }
+                    }
+                    .el-avatar{
+                        height: 35px;
+                        width: 35px;
+                        object-fit: cover;
+                        object-position: center;
+                        overflow: hidden;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin: 0 10px 0 0;
+                        @include border-radius(50%);
+                    }
+                    .el-title{
+                        color:#656565;
+                        font-weight: 600;
+                        font-size: 15px;
+                        vertical-align: middle;
+                        display: inline-block;
+                    }
+                    .btn{
+                        font-size: 9px;                        
+                        font-family: 'Montserrat', sans-serif;
+                        padding:2px 10px;
+                        &.el-btn-outline-default{
+                            color:#00b4ff;
+                            border-color: #00b4ff;
+                            margin-right: 10px;
+
+                            &:hover{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }  
+}
+@-webkit-keyframes rotate-border {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(scale(360deg));
+    }
+}
+@keyframes rotate-border {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    }
+}

@@ -8,49 +8,48 @@ html(lang='en')
         link(rel='stylesheet', href='../assets/bootstrap/css/bootstrap.min.css')
         link(rel='stylesheet', href='../assets/bootstrap-select/css/bootstrap-select.min.css')
         link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
-        link(href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400,500" rel="stylesheet" )
+        link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet" )
+        link(href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" )
         link(rel='stylesheet', href="../css/main.css")
-    body(class=body_class)
-        .br-bg-left-btm
-        .br-bg-right-top
-        header.br-page-header.row
-            .br-logo-wrapper.col-sm-7
-                a(href="home.html")
-                    img(src="../img/logo-black.png" alt="Gemteleversity")   
-            .br-browser-support.col-sm-5.text-right
-                span AVAILABLE ON 
-                i.br-icon.fa.fa-chrome
-                i.br-icon.fa.fa-firefox
+    body.el-dashboard(class=body_class)
 
-        
-        main.br-inner-page-content(class=container_class)
+        header.el-page-header
+            .pull-left.el-left-block
+                .el-icon &#xe012;
+                h2.d-inline-block.el-dashboard-title #{pageInnerTitle}
+            .pull-right.el-right-block
+                ul.el-top-link
+                    li
+                        a(href="#")
+                            .el-icon &#xe012;
+                    li.el-notification.el-unread
+                        a(href="#")
+                            .el-icon &#xe014;
+                             
+
+        aside.el-page-sidebar
+            ul.el-navbar
+                li(class=(curnt_menu=='home')? 'active':'')
+                    a(href="javascript:;")
+                        figure.el-nav-avatar
+                            img(src="../img/avatar.jpg")
+                li(class=(curnt_menu=='dc_ac')? 'active':'')
+                    a(href="dashboard_account.html" )
+                        .el-icon &#xe010;
+                li(class=(curnt_menu=='home')? 'active':'')
+                    a(href="dashboard_room-management.html")
+                        .el-icon &#xe003;
+                li(class=(curnt_menu=='home')? 'active':'')
+                    a(href="#" )
+                        .el-icon &#xe004;
+                li.el-signout
+                    a(href="#" )
+                        .el-icon &#xe013;
+
+
+        main.el-page-content-wrapper
             block pageContent
 
-        footer.br-pagefooter
-            .row.align-items-center
-                .col-sm-6
-                    .br-date-time-wrapper
-                        .br-time-wrapper
-                            span.br-time   10:35 
-                            span.br-format am
-                        .br-date-wrapper
-                            | MON, 5 OCTOBER
         script(src="../assets/jquery/jquery-3.3.1.min.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous")
         script(src='../assets/bootstrap/js/bootstrap.min.js')
-        script(src='../assets/bootstrap-select/js/bootstrap-select.min.js')
-        script(type="text/javascript").
-            $(document).ready(function(){
-                $('.selectpicker').selectpicker();
-                $('a[data-toggle="action"]').on('click',function(){
-                    var target = $(this).data('target');
-                    console.log(target)
-                    if(target =="#screen"){
-                        $(target).toggleClass('active');
-                        $('.br-confernce-user-lists').toggleClass('right');
-                    }else{
-
-                        $(target).toggleClass('active');
-                    }
-                })
-            })
