@@ -1431,6 +1431,373 @@ body div ::-webkit-scrollbar {
   background-size: cover;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+}
+
+.el-videowall-wrapper {
+  height: 100%;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.el-videowall-wrapper div {
+  box-sizing: border-box;
+}
+
+.el-videowall-wrapper .el-col {
+  -ms-flex: 16.666667%;
+  flex: 16.666667%;
+  max-width: 16.666667%;
+  height: 100vh;
+}
+
+.el-videowall-wrapper .el-row-1 {
+  height: 33.333333vh;
+}
+
+.el-videowall-wrapper .el-row-2 {
+  height: 66.666667vh;
+}
+
+.el-chat-wrapper {
+  color: #fff;
+  padding: 2.5vw .5vw .5vw .5vw;
+  background: url("../img/bg-c1-r2.png") right bottom no-repeat #202c36;
+  position: relative;
+}
+
+.el-chat-wrapper h2.el-box-title {
+  font-size: .86vw;
+  margin-bottom: .6vw;
+  font-weight: 500;
+}
+
+.el-chat-wrapper .el-chat-list {
+  overflow: auto;
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0;
+  position: absolute;
+  top: 20.9%;
+  bottom: 2vh;
+  overflow: auto;
+  left: .34vw;
+  right: 0;
+}
+
+.el-chat-wrapper .el-chat-list .el-chat {
+  margin-bottom: .3vw;
+  clear: both;
+}
+
+.el-chat-wrapper .el-chat-list .el-chat:after {
+  content: '';
+  display: table;
+  clear: both;
+  float: none;
+  height: 0;
+}
+
+.el-chat-wrapper .el-chat-list .el-chat .el-avatar {
+  width: 2.4vw;
+  height: 2.4vw;
+  border: .2vw solid #1f2c35;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: left;
+  vertical-align: top;
+  position: relative;
+  z-index: 1;
+}
+
+.el-chat-wrapper .el-chat-list .el-chat .el-avatar > img {
+  height: 1.6vw;
+  width: 1.6vw;
+  border-radius: 50%;
+  border: .2vw solid #4328b3;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.el-chat-wrapper .el-chat-list .el-chat .el-msg-wrapper {
+  display: block;
+  float: left;
+  max-width: calc(100% - 2.5vw);
+  background: #25333e;
+  padding: .4vw .7vw  .3vw .9vw;
+  margin-left: -.4vw;
+  border-radius: .2vw .5vw .3vw .4vw;
+  font-family: 'Lato', sans-serif;
+}
+
+.el-chat-wrapper .el-chat-list .el-chat .el-msg-wrapper .el-name {
+  height: .4vw;
+  font-weight: 700;
+  font-size: .3vw;
+  margin-bottom: .2vw;
+}
+
+.el-chat-wrapper .el-chat-list .el-chat .el-msg-wrapper .el-msg {
+  font-weight: 300;
+  font-size: .35vw;
+}
+
+.el-chat-wrapper .el-chat-list .el-chat .el-msg-wrapper .el-time {
+  text-align: right;
+  color: #48525a;
+  margin-top: .1vw;
+  font-size: .27vw;
+  font-style: italic;
+}
+
+.el-raised-hands-wrapper {
+  position: relative;
+  color: #fff;
+  padding: 1.5vw .5vw .5vw .5vw;
+  background: url("../img/bg-c1-r3.png") left bottom no-repeat #2b2d5b;
+}
+
+.el-raised-hands-wrapper h2.el-box-title {
+  font-size: .86vw;
+  margin-bottom: .6vw;
+  font-weight: 500;
+}
+
+.el-raised-hands-wrapper .el-hands-list {
+  overflow: auto;
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0;
+  position: absolute;
+  top: 30.9%;
+  bottom: 2vh;
+  overflow: auto;
+  left: .34vw;
+  right: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.el-raised-hands-wrapper .el-hands-list > li {
+  display: block;
+  float: left;
+  width: 33.333333%;
+  padding: .3vw;
+  font-size: 0;
+  box-sizing: border-box;
+}
+
+.el-raised-hands-wrapper .el-hands-list > li .el-avatar {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.el-raised-hands-wrapper .el-hands-list > li .el-avatar img {
+  width: 1.5vw;
+  height: 1.5vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border: .2vw solid #4c27d5;
+  border-radius: 50%;
+}
+
+.el-raised-hands-wrapper .el-hands-list > li .el-avatar figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #ccdf48;
+  background: #4c27d5;
+  font-size: .3vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: center;
+  padding: .03vw .02vw;
+  box-sizing: border-box;
+  border-radius: 50%;
+  min-width: .6vw;
+  min-height: .6vw;
+  font-weight: bold;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.el-raised-hands-wrapper .el-hands-list > li .el-avatar-dtls {
+  display: inline-block;
+  width: calc(100% - 2vw);
+  font-size: .5vw;
+  vertical-align: middle;
+  font-weight: 300;
+  padding: .3vw;
+}
+
+.el-raised-hands-wrapper .el-hands-list > li .el-avatar-dtls .el-name {
+  font-size: .43vw;
+  margin-bottom: .1vw;
+}
+
+.el-raised-hands-wrapper .el-hands-list > li .el-avatar-dtls .el-time {
+  color: #6a6b85;
+  font-size: .25vw;
+}
+
+.el-user-video-wrapper {
+  height: 33.333333vh;
+}
+
+.el-user-video-wrapper .el-video-wrapper {
+  height: 33.333333vh;
+}
+
+.el-user-video-wrapper .el-video-wrapper img, .el-user-video-wrapper .el-video-wrapper video {
+  max-width: none;
+  height: 33.333333vh;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.el-user-video-wrapper.el-people-2 .el-people {
+  width: 50%;
+  height: 33.333333vh;
+  float: left;
+}
+
+.el-user-video-wrapper.el-people-4 .el-people {
+  width: 50%;
+  height: 16.666667vh;
+  float: left;
+}
+
+.el-user-video-wrapper.el-people-4 .el-people .el-video-wrapper {
+  height: 16.666667vh;
+}
+
+.el-user-video-wrapper.el-people-4 .el-people .el-video-wrapper img, .el-user-video-wrapper.el-people-4 .el-people .el-video-wrapper video {
+  height: 16.666667vh;
+}
+
+.el-user-video-wrapper.el-people-6 .el-people {
+  width: 33.333333%;
+  height: 16.666667vh;
+  float: left;
+}
+
+.el-user-video-wrapper.el-people-6 .el-people .el-video-wrapper {
+  height: 16.666667vh;
+}
+
+.el-user-video-wrapper.el-people-6 .el-people .el-video-wrapper img, .el-user-video-wrapper.el-people-6 .el-people .el-video-wrapper video {
+  height: 16.666667vh;
+}
+
+.el-room-dtls-wrapper {
+  background: #202c36;
+  color: #fff;
+  position: relative;
+  padding: .8vw .3vw .8vw .5vw;
+  height: 33.333333vh;
+}
+
+.el-room-dtls-wrapper h2.el-box-title {
+  font-size: .86vw;
+  margin-bottom: 1.6vw;
+  font-weight: 500;
+}
+
+.el-room-dtls-wrapper .el-attende-count {
+  width: 2.7vw;
+  height: 2.7vw;
+  border-radius: .2vw;
+  background: #25333e;
+  position: absolute;
+  right: .4vw;
+  top: .6vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.el-room-dtls-wrapper .el-attende-count .el-title {
+  font-weight: bold;
+  font-size: 1.4vw;
+  line-height: 1;
+}
+
+.el-room-dtls-wrapper .el-attende-count .el-help-block {
+  font-size: 0.3vw;
+  font-weight: bold;
+}
+
+.el-room-dtls-wrapper .el-session-dtls1 {
+  margin-bottom: 1.1vw;
+  margin-left: .3vw;
+}
+
+.el-room-dtls-wrapper .el-session-dtls1 .el-label {
+  color: #a9acae;
+  font-weight: normal;
+  font-size: .4vw;
+  margin-bottom: .3vw;
+}
+
+.el-room-dtls-wrapper .el-session-dtls1 .el-title {
+  width: 11.6vw;
+  height: .6vw;
+  font-size: .6vw;
+}
+
+.el-room-dtls-wrapper .el-session-dtls2 {
+  background: #2b2e5b;
+  padding: .4vw;
+  border-radius: .3vw;
+}
+
+.el-room-dtls-wrapper .el-session-dtls2 .el-label {
+  color: #a9acae;
+  font-weight: normal;
+  font-size: .4vw;
+  margin-bottom: .3vw;
+}
+
+.el-room-dtls-wrapper .el-session-dtls2 .el-timer {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  line-height: 1;
+}
+
+.el-polls-answerd-wrapper {
+  height: 33.333333vh;
+  background: url("../img/bg-c6-r3.png") right bottom no-repeat #202c36;
+}
+
 html, body.el-login, body.el-reset-pw, body.el-students-loby {
   height: 100%;
 }

@@ -8,3 +8,323 @@
 @import '_components/_room-creation';
 @import '_components/_students-lobby';
 // @import '_components/_check-device-settings';
+
+
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5{
+    margin-top:0;
+}
+.el-videowall-wrapper{
+    height:100%;
+    width:100%;
+    display: flex;
+    div{
+
+        box-sizing: border-box;
+    }
+    .el-col{
+        flex:16.666667%;
+        max-width: 16.666667%;
+        height: 100vh;
+    }
+    .el-row-1{
+        height:33.333333vh;
+    }
+    .el-row-2{
+        height:66.666667vh;
+    }
+}
+.el-chat-wrapper{
+    color:#fff;
+    padding:2.5vw .5vw .5vw .5vw;
+    background:url('../img/bg-c1-r2.png') right bottom no-repeat #202c36;
+    position: relative;
+    h2.el-box-title{
+        font-size: .86vw;
+        margin-bottom: .6vw;
+        font-weight: 500;
+    }
+    .el-chat-list{
+        overflow: auto;
+        list-style: none;
+        margin:0 0 0 0;
+        padding:0;position: absolute;
+        top: 20.9%;
+        bottom: 2vh;
+        overflow: auto;
+        left: .34vw;
+        right: 0;
+        .el-chat{
+            margin-bottom: .3vw;
+            clear: both;
+            &:after{
+                content: '';
+                display: table;
+                clear: both;
+                float: none;
+                height:0;
+            }
+            .el-avatar{
+                width:2.4vw;
+                height:2.4vw;
+                border:.2vw solid #1f2c35;
+                box-sizing: border-box;
+                border-radius: 50%;
+                margin:0;
+                padding: 0;
+                display: block;
+                float: left;
+                vertical-align: top;
+                position: relative;
+                z-index: 1;
+                >img{
+                    
+                    height: 1.6vw;
+                    width: 1.6vw;
+                    border-radius: 50%;
+                    border:.2vw solid #4328b3;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            .el-msg-wrapper{
+                display: block;
+                float: left;
+                max-width: calc(100% - 2.5vw);
+                background: #25333e;
+                padding: .4vw .7vw  .3vw .9vw;
+                margin-left: -.4vw;
+                border-radius: .2vw .5vw .3vw .4vw;
+                font-family: 'Lato', sans-serif;
+                .el-name{
+                    height:.4vw;
+                    font-weight: 700;
+                    font-size: .3vw;
+                    margin-bottom: .2vw;
+                }
+                .el-msg{                    
+                    font-weight: 300;
+                    font-size: .35vw;
+                }
+                .el-time{
+                    text-align: right;
+                    color: #48525a;
+                    margin-top: .1vw;
+                    font-size: .27vw;
+                    font-style:italic;
+                }
+            }
+        }
+    }
+}
+
+.el-raised-hands-wrapper{
+    position: relative;
+    color: #fff;
+    padding: 1.5vw .5vw .5vw .5vw;
+    background:url('../img/bg-c1-r3.png') left bottom no-repeat #2b2d5b;
+    h2.el-box-title{
+        font-size: .86vw;
+        margin-bottom: .6vw;
+        font-weight: 500;
+    }
+    .el-hands-list{
+        overflow: auto;
+        list-style: none;
+        margin:0 0 0 0;
+        padding:0;position: absolute;
+        top: 30.9%;
+        bottom: 2vh;
+        overflow: auto;
+        left: .34vw;
+        right: 0;
+        font-family: 'Lato', sans-serif;
+        >li{
+            display:block;
+            float: left;
+            width: 33.333333%;
+            padding:.3vw;
+            font-size: 0;
+            box-sizing: border-box;
+            .el-avatar{
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                margin:0;
+                img{
+                    width:1.5vw;
+                    height: 1.5vw;
+                    object-fit: cover;
+                    object-position: center;
+                    border:.2vw solid #4c27d5;
+                    border-radius: 50%;
+                }
+                figcaption{
+                    position: absolute;
+                    bottom: 0;
+                    left:0;
+                    color: #ccdf48;
+                    background: #4c27d5;
+                    font-size: .3vw;
+                    display: flex;
+                    align-content: center;
+                    text-align: center;
+                    padding: .03vw .02vw;
+                    box-sizing: border-box;
+                    border-radius: 50%;
+                    min-width: .6vw;
+                    min-height: .6vw;
+                    font-weight: bold;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .el-avatar-dtls{
+                display: inline-block;
+                width: calc(100% - 2vw);
+                font-size: .5vw;
+                vertical-align: middle;
+                font-weight: 300;
+                padding: .3vw;
+                .el-name{
+                    font-size: .43vw;
+                    margin-bottom: .1vw;
+                }
+                .el-time{
+                    color: #6a6b85;
+                    font-size: .25vw;
+                }
+            }
+        }
+    }
+    
+}
+.el-user-video-wrapper{
+    height:33.333333vh;
+    .el-video-wrapper{
+        
+        height:33.333333vh;
+        img,video{
+            max-width: none;            
+            height: 33.333333vh;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &.el-people-2{
+
+        .el-people{
+            width:50%;            
+            height:33.333333vh;
+            float: left;
+        }
+    }
+    &.el-people-4{
+
+        .el-people{
+            width:50%;            
+            height:16.666667vh;
+            float: left;
+            .el-video-wrapper{
+                height:16.666667vh;
+                img,video{                    
+                    height:16.666667vh;
+                }
+            }
+        }
+    }
+    &.el-people-6{
+
+        .el-people{
+            width:33.333333%;            
+            height:16.666667vh;
+            float: left;
+            .el-video-wrapper{
+                height:16.666667vh;
+                img,video{                    
+                    height:16.666667vh;
+                }
+            }
+        }
+    }
+}
+
+.el-room-dtls-wrapper{
+    background: #202c36;
+    color: #fff;
+    position: relative;
+    padding: .8vw .3vw .8vw .5vw; 
+    height:33.333333vh;
+    h2.el-box-title{
+        font-size: .86vw;
+        margin-bottom: 1.6vw;
+        font-weight: 500;
+    }
+    .el-attende-count{
+        width:2.7vw;
+        height:2.7vw;
+        border-radius: .2vw;
+        background: #25333e;
+        position: absolute;
+        right:.4vw;
+        top:.6vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        .el-title{
+            font-weight: bold;
+            font-size: 1.4vw;
+            line-height: 1;
+        }
+        .el-help-block{
+            font-size: 0.3vw;
+            font-weight: bold;
+        }
+    }
+    .el-session-dtls1{
+        margin-bottom: 1.1vw;
+        margin-left: .3vw;
+        .el-label{
+            color: #a9acae;
+            font-weight: normal;
+            font-size: .4vw;
+            margin-bottom: .3vw;
+        }
+        .el-title{
+            width:11.6vw;
+            height:.6vw;
+            font-size: .6vw;
+        }
+    }
+    .el-session-dtls2{
+        background: #2b2e5b;
+        padding:.4vw;
+        border-radius: .3vw;
+        .el-label{
+            color: #a9acae;
+            font-weight: normal;
+            font-size: .4vw;
+            margin-bottom: .3vw;
+        }
+        .el-timer{
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 1.5vw;
+            line-height: 1;
+        }
+    }
+}
+
+.el-polls-answerd-wrapper{
+    height:33.333333vh;
+    background:url('../img/bg-c6-r3.png') right bottom no-repeat #202c36;
+
+}
