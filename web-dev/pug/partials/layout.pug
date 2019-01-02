@@ -5,52 +5,56 @@ html(lang='en')
         title #{pageTitle}
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        link(rel='stylesheet', href='../assets/bootstrap/css/bootstrap.min.css')
-        link(rel='stylesheet', href='../assets/bootstrap-select/css/bootstrap-select.min.css')
-        link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400,500" rel="stylesheet" )
+        link(rel='stylesheet', href="../assets/fontello/css/fontello.css")
         link(rel='stylesheet', href="../css/main.css")
     body(class=body_class)
-        .br-bg-left-btm
-        .br-bg-right-top
-        header.br-page-header.row
-            .br-logo-wrapper.col-sm-7
-                a(href="home.html")
-                    img(src="../img/logo-black.png" alt="Gemteleversity")   
-            .br-browser-support.col-sm-5.text-right
-                span AVAILABLE ON 
-                i.br-icon.fa.fa-chrome
-                i.br-icon.fa.fa-firefox
-
-        
-        main.br-inner-page-content(class=container_class)
-            block pageContent
-
-        footer.br-pagefooter
-            .row.align-items-center
-                .col-sm-6
-                    .br-date-time-wrapper
-                        .br-time-wrapper
-                            span.br-time   10:35 
-                            span.br-format am
-                        .br-date-wrapper
-                            | MON, 5 OCTOBER
+        .ed-main-wrapper
+            .ed-left-col
+                header.ed-main-header
+                    .ed-logo-wrapper
+                        img(src="../img/logo.png")
+                    .ed-navbar-wrapper
+                        ul.ed-navbar-left.list-inline
+                            li
+                                a(href="javascript:;").icon-webconferencing
+                            li
+                                a(href="javascript:;").icon-webinar
+                            li
+                                a(href="javascript:;").icon-virtual-class
+                        ul.ed-navbar-right.list-inline
+                            li
+                                a(href="javascript:;").icon-content-library
+                            li
+                                a(href="javascript:;").icon-screenshare
+                            li
+                                a(href="javascript:;").icon-youtube
+                            li
+                                a(href="javascript:;").icon-fileshare
+                            li
+                                a(href="javascript:;").icon-chart-bar
+                            li
+                                a(href="javascript:;").icon-buzzer
+                            li.dropdown.caret
+                                a(href="javascript:;") ENG
+                                 
+                            li.dropdown
+                                a(href="javascript:;").icon-menu
+                main.ed-content-area
+                    block pageContent
+            .ed-right-col
+                header.ed-sidebar-header
+                    ul.list-inline
+                        li
+                            a(href="javascript:;").icon-session-info
+                        li
+                            a(href="javascript:;").icon-session-timer
+                        li
+                            a(href="javascript:;").icon-rec
+                        li
+                            a(href="javascript:;").icon-buzzer
+            footer.ed-footer
+                .ed-copyright Powered by
+                    img(src="../img/logo.png")
         script(src="../assets/jquery/jquery-3.3.1.min.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
-        script(src='../assets/bootstrap/js/bootstrap.min.js')
-        script(src='../assets/bootstrap-select/js/bootstrap-select.min.js')
         script(type="text/javascript").
-            $(document).ready(function(){
-                $('.selectpicker').selectpicker();
-                $('a[data-toggle="action"]').on('click',function(){
-                    var target = $(this).data('target');
-                    console.log(target)
-                    if(target =="#screen"){
-                        $(target).toggleClass('active');
-                        $('.br-confernce-user-lists').toggleClass('right');
-                    }else{
-
-                        $(target).toggleClass('active');
-                    }
-                })
-            })

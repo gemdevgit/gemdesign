@@ -1,0 +1,13 @@
+.ed-main-header{
+    .ed-logo-wrapper{
+        float: left;
+    }
+    .ed-navbar-wrapper{
+        float: right;
+        max-width: calc(100% - 150px);
+        text-align: right;
+        >ul{
+            display: inline-block;
+        }
+    }
+}
