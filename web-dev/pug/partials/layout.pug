@@ -40,19 +40,34 @@ html(lang='en')
                                  
                             li.dropdown
                                 a(href="javascript:;").icon-menu
+                    .clearfix
                 main.ed-content-area
                     block pageContent
             .ed-right-col
-                header.ed-sidebar-header
-                    ul.list-inline
-                        li
-                            a(href="javascript:;").icon-session-info
-                        li
-                            a(href="javascript:;").icon-session-timer
-                        li
-                            a(href="javascript:;").icon-rec
-                        li
-                            a(href="javascript:;").icon-buzzer
+                .ed-video-wrapper
+                    header.ed-header
+                        ul.list-inline
+                            li
+                                a(href="javascript:;").icon-session-info
+                            li
+                                a(href="javascript:;").icon-session-timer
+                            li
+                                a(href="javascript:;").icon-rec
+                            li
+                                a(href="javascript:;").icon-buzzer
+                    .ed-videos
+                        .ed-row.v3
+                            .ed-col
+                                video(src="../img/dummy.webm")
+                            .ed-col
+                                video(src="../img/dummy.webm")
+                            .ed-col
+                                video(src="../img/dummy.webm")
+                        .ed-row.v2
+                            .ed-col
+                                video(src="../img/dummy.webm")
+                            .ed-col
+                                video(src="../img/dummy.webm")
             footer.ed-footer
                 .ed-copyright Powered by
                     img(src="../img/logo.png")

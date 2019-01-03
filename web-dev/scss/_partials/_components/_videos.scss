@@ -1,0 +1,59 @@
+.ed-video-wrapper{
+    
+    border-radius: 10px;    
+    overflow: hidden;
+    background: #fff;
+    @include box-shadow(0 0 2px 2px #ddd);
+    .ed-header{
+        ul{
+            display: flex;
+            background: #fff;
+            height: 50px;
+            padding: 0 20px;
+            justify-content: space-between;
+            align-items: center;
+            a{
+                color: $clr-blue;
+                &.icon-rec{
+                    color: $clr-red;
+                }
+            }
+        }
+    }
+}
+
+.ed-videos{
+    display: flex;
+    flex-wrap: wrap;
+    .ed-row{
+        height: 15.5vh;
+        display: flex;
+        width:100%;
+        .ed-col{
+            display: block;
+            overflow: hidden;
+            video{
+
+                height: 15.5vh;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        &.v3{
+            .ed-col{
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 33.333333%;
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+        }
+        &.v2{
+            .ed-col{
+                -webkit-box-flex: 0;
+                -ms-flex: 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+}

@@ -19,7 +19,6 @@ body {
     flex-wrap: wrap;
     >div{
         -webkit-box-flex: 0;
-        border:1px solid red;
         height: calc(97vh - 80px);
         margin-bottom: 20px;
         &.ed-left-col{
@@ -27,6 +26,14 @@ body {
             -ms-flex: 0 0 73%;
             flex: 0 0 73%;
             max-width: 73%;
+            border-radius: 10px;
+            .ed-content-area{
+                border-radius:10px 0 10px 10px;
+                background: #fff;
+                height: calc(97vh - 150px);
+                @include box-shadow(0 0 2px 2px #ddd);
+
+            }
         }
         &.ed-right-col{
             
@@ -34,9 +41,6 @@ body {
             -ms-flex: 0 0 25%;
             flex: 0 0 25%;
             max-width: 25%;
-            border-radius: 10px;
-            background: #fff;
-            @include box-shadow(0 0 2px 2px #ddd);
         }
         
     }
