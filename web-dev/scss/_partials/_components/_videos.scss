@@ -3,7 +3,10 @@
     border-radius: 10px;    
     overflow: hidden;
     background: #fff;
-    @include box-shadow(0 0 2px 2px #ddd);
+    @extend %box-shadow-common;
+    height: 38%;
+    display: flex;
+    flex-direction: column;
     .ed-header{
         ul{
             display: flex;
@@ -25,18 +28,21 @@
 .ed-videos{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
     .ed-row{
-        height: 15.5vh;
         display: flex;
         width:100%;
+        flex: 1;
         .ed-col{
             display: block;
             overflow: hidden;
             video{
-
-                height: 15.5vh;
                 object-fit: cover;
                 object-position: center;
+                height: 100%;
+                width: 100%;
             }
         }
         &.v3{

@@ -4,7 +4,6 @@ html(lang='en')
     head
         title #{pageTitle}
         meta(charset='utf-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1')
         link(href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400,500" rel="stylesheet" )
         link(rel='stylesheet', href="../assets/fontello/css/fontello.css")
         link(rel='stylesheet', href="../css/main.css")
@@ -68,6 +67,44 @@ html(lang='en')
                                 video(src="../img/dummy.webm")
                             .ed-col
                                 video(src="../img/dummy.webm")
+                .ed-sidebar-block.ed-box
+                    header.ed-header-toggle
+                        .ed-join(target="join",data-toggle="chat")
+                            a(href="javascript:;").icon-participate
+                        .ed-join.active(target="public",data-toggle="chat")
+                            a(href="javascript:;").icon-chat
+                        .ed-join(target="personal",data-toggle="chat")
+                            a(href="javascript:;").icon-qestandansw
+                    section.ed-content-wrapper
+                        .ed-content
+                            .et-title-wrapper 
+                                .el-left.vcenter Private Chat
+                                .el-right.vcenter 
+                                    .vcenter Public Chat
+                                    .vcenter 
+                                        label.ed-switch
+                                            input(type="checkbox")
+                                            span.slider 
+                                    .vcenter 
+                                        a(href="javascript:;").ed-resize.icon-resize-full
+                            .ed-chat-wrapper
+                                ul.ed-chat-list    
+                                    mixin chat 
+                                        li.ed-chat
+                                            //- figure(src="../img/")
+                                            span.ed-avatar-title V
+                                            .ed-chat-content
+                                                .ed-user-title Raison ab
+                                                .ed-msg Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    +chat
+                                    +chat
+                                    +chat
+                                    +chat
+                                .ed-compose-chat
+                                    input(type="text").vcenter.ed-form-control
+                                    button.ed-btn.vcenter Send
+
+
             footer.ed-footer
                 .ed-copyright Powered by
                     img(src="../img/logo.png")

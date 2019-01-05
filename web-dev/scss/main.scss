@@ -7,7 +7,7 @@ html,body{
     
 }
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #f6f7fc;
 }
 .ed-main-wrapper{
@@ -31,7 +31,7 @@ body {
                 border-radius:10px 0 10px 10px;
                 background: #fff;
                 height: calc(97vh - 150px);
-                @include box-shadow(0 0 2px 2px #ddd);
+                @extend %box-shadow-common;
 
             }
         }
@@ -41,6 +41,7 @@ body {
             -ms-flex: 0 0 25%;
             flex: 0 0 25%;
             max-width: 25%;
+            position: relative;
         }
         
     }
