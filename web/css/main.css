@@ -199,6 +199,14 @@ body div ::-webkit-scrollbar {
   outline: none;
 }
 
+.ed-btn.link {
+  background: none;
+  color: #b5b5b5;
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+}
+
 .text-red {
   color: #ff0030;
 }
@@ -235,6 +243,35 @@ body div ::-webkit-scrollbar {
 .d-if {
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown > .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  box-shadow: 1px 4px 4px 1px rgba(221, 221, 221, 0.61);
+  min-width: 240px;
+  z-index: 999;
+  top: 100%;
+  left: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.dropdown.right > .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
 }
 
 .ed-main-header .ed-logo-wrapper {
@@ -483,7 +520,6 @@ body div ::-webkit-scrollbar {
 
 .ed-video-wrapper {
   border-radius: 10px;
-  overflow: hidden;
   background: #fff;
   height: 38%;
   display: -ms-flexbox;
@@ -493,24 +529,129 @@ body div ::-webkit-scrollbar {
   position: relative;
 }
 
-.ed-video-wrapper .ed-header ul {
+.ed-video-wrapper .ed-header > ul {
   display: -ms-flexbox;
   display: flex;
   background: #fff;
   height: 50px;
-  padding: 0 20px;
+  padding: 0;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-align: center;
-  align-items: center;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border-radius: 10px 10px 0 0;
 }
 
-.ed-video-wrapper .ed-header ul a {
+.ed-video-wrapper .ed-header > ul:hover {
+  background: #f8f8f8;
+}
+
+.ed-video-wrapper .ed-header > ul > li {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ed-video-wrapper .ed-header > ul > li:hover {
+  background: #fff;
+}
+
+.ed-video-wrapper .ed-header > ul > li a {
   color: #16b1e4;
 }
 
-.ed-video-wrapper .ed-header ul a.icon-rec {
+.ed-video-wrapper .ed-header > ul > li a.icon-rec {
   color: #f20000;
+}
+
+.ed-video-wrapper .ed-header > ul > li:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+.ed-video-wrapper .ed-header > ul > li:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-title {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 15px auto;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-notice {
+  font-size: 9px;
+  color: #808080;
+  line-height: 1.3;
+  margin: 30px auto 15px auto;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-btn-wrapper .ed-btn {
+  margin-bottom: 10px;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-session-title {
+  font-size: 15px;
+  color: #434343;
+  margin: 15px auto 10px auto;
+  font-weight: 500;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-author {
+  font-size: 10px;
+  color: #808080;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-time-wrapper {
+  margin: 15px auto;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-time-wrapper .ed-row {
+  margin: 0 15px 10px 15px;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-time-wrapper .ed-row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-time-wrapper .ed-row > div {
+  width: 50%;
+  float: left;
+  padding: 7px 15px;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-time-wrapper .ed-row > div.ed-col-right {
+  background: #f9f9f9;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-session-footer {
+  font-size: 11px;
+  font-family: 'Lato', sans-serif;
+  margin: 10px auto;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-session-footer a {
+  font-weight: bold;
+}
+
+.ed-video-wrapper .ed-header .ed-right-block-dropdown .ed-session-notice {
+  background: none;
+  color: #b5b5b5;
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .ed-video-wrapper .ed-video-footer {
@@ -555,6 +696,8 @@ body div ::-webkit-scrollbar {
   justify-content: center;
   -ms-flex: 1;
   flex: 1;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
 }
 
 .ed-videos .ed-row {

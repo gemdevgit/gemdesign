@@ -37,8 +37,56 @@
         <div class="ed-video-wrapper">
           <header class="ed-header">
             <ul class="list-inline">
-              <li><a class="icon-session-info" href="javascript:;"></a></li>
-              <li><a class="icon-session-timer" href="javascript:;"></a></li>
+              <li class="dropdown"><a class="icon-session-info" href="javascript:;"></a>
+                <div class="dropdown-menu ed-right-block-dropdown">
+                  <h4 class="ed-title text-center">Session info</h4>
+                  <div class="ed-timer-red" style="width:150px;height:150px;background:red;border-radius:50%;margin:15px auto;padding:10%;">Timer<div class="d-n">
+                      <div class="clock-canvas" id="canvas-hours"></div>
+                      <div class="clock-canvas" id="canvas-minutes"></div>
+                      <div class="clock-canvas" id="canvas-seconds"></div>
+                      <div class="clock-canvas" id="canvas-days"></div>
+                      <div class="ed-timer-value"><span class="clock-hours"></span><span class="clock-minutes"></span><span class="clock-seconds"></span></div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <div class="ed-session-title">Pitch Like A Pro!</div>
+                    <div class="ed-author">Dan Williams</div>
+                  </div>
+                  <div class="ed-time-wrapper">
+                    <div class="ed-row">
+                      <div class="ed-col-left">Started at</div>
+                      <div class="ed-col-right">12.24 PM</div>
+                    </div>
+                    <div class="ed-row">
+                      <div class="ed-col-left">Time Remaining</div>
+                      <div class="ed-col-right">00.02.15</div>
+                    </div>
+                    <div class="ed-row">
+                      <div class="ed-col-left">Duration</div>
+                      <div class="ed-col-right">1 hour</div>
+                    </div>
+                  </div>
+                  <div class="text-center ed-session-footer">Extend the Session by <a href="#">30 min</a></div>
+                  <div class="text-center ed-session-notice">or End Session</div>
+                </div>
+              </li>
+              <li class="dropdown"><a class="icon-session-timer" href="javascript:;"></a>
+                <div class="dropdown-menu ed-right-block-dropdown">
+                  <h4 class="ed-title text-center">Personal timer</h4>
+                  <div class="ed-timer-blue" style="width:150px;height:150px;background:blue;border-radius:50%;margin:15px auto;padding:10%;">Timer<div class="d-n">
+                      <div class="clock-canvas" id="canvas-hours"></div>
+                      <div class="clock-canvas" id="canvas-minutes"></div>
+                      <div class="clock-canvas" id="canvas-seconds"></div>
+                      <div class="clock-canvas" id="canvas-days"></div>
+                      <div class="ed-timer-value"><span class="clock-hours"></span><span class="clock-minutes"></span><span class="clock-seconds"></span></div>
+                    </div>
+                  </div>
+                  <div class="text-center ed-notice">This timer is ONLY visible by you<br>No other preseters can see this<br>countdown.</div>
+                  <div class="ed-btn-wrapper text-center"><button class="ed-btn">Set </button>
+                    <div><button class="ed-btn link">Cancel</button></div>
+                  </div>
+                </div>
+              </li>
               <li><a class="icon-rec" href="javascript:;"></a></li>
               <li><a class="icon-buzzer" href="javascript:;"></a></li>
             </ul>
@@ -138,7 +186,9 @@
         <div class="ed-copyright">Powered by<img src="../img/logo.png"></div>
       </footer>
     </div>
-    <script src="../assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../assets/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../assets/jquery-timer/demo/js/kinetic.js"></script>
+    <script src="../assets/jquery-timer/jquery.final-countdown.js"></script>
     <script src="../js/main.js"></script>
     <script type="text/javascript"></script>
   </body>

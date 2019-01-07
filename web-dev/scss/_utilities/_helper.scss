@@ -190,6 +190,13 @@ body div ::-webkit-scrollbar {
         box-shadow: none;
         outline: none;
     }
+    &.link{
+        background: none;
+        color: #b5b5b5;
+        font-family: 'Lato', sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+    }
 }
 .text-red{
     color:#ff0030;
@@ -217,4 +224,33 @@ body div ::-webkit-scrollbar {
 }
 .d-if{
     display: inline-flex;
+}
+.text-center{
+    text-align: center;
+}
+.dropdown{
+    position: relative;
+    >.dropdown-menu{
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow:1px 4px 4px 1px rgba(221, 221, 221, 0.61);
+        min-width: 240px;
+        z-index: 999;
+        top:100%;
+        left:0;
+        border-radius: 0 0 10px 10px;
+    }
+    &.right{
+        >.dropdown-menu{
+            left:auto;
+            right:0;
+        }
+    }
+    &:hover{
+
+        >.dropdown-menu{
+            display: block;
+        }
+    }
 }
