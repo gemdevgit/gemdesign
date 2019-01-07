@@ -42,6 +42,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a{
+    text-decoration: none;
+}
 
 .ed-circle {
     @include border-radius(50%);
@@ -187,4 +190,31 @@ body div ::-webkit-scrollbar {
         box-shadow: none;
         outline: none;
     }
+}
+.text-red{
+    color:#ff0030;
+}
+.text-green{
+    color:#00d683;
+}
+.text-blue{
+    color:#00b5f1;
+}
+.text-yellow{
+    color:#f19900;
+}
+.d-n{
+    display: none;
+}
+.d-b{
+    display: block;
+}
+.d-ib{
+    display: inline-block;
+}
+.d-f{
+    display: flex;
+}
+.d-if{
+    display: inline-flex;
 }

@@ -62,6 +62,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .ed-circle {
   border-radius: 50%;
 }
@@ -193,6 +197,44 @@ body div ::-webkit-scrollbar {
 .ed-btn:focus, .ed-btn:active {
   box-shadow: none;
   outline: none;
+}
+
+.text-red {
+  color: #ff0030;
+}
+
+.text-green {
+  color: #00d683;
+}
+
+.text-blue {
+  color: #00b5f1;
+}
+
+.text-yellow {
+  color: #f19900;
+}
+
+.d-n {
+  display: none;
+}
+
+.d-b {
+  display: block;
+}
+
+.d-ib {
+  display: inline-block;
+}
+
+.d-f {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-if {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .ed-main-header .ed-logo-wrapper {
@@ -448,6 +490,7 @@ body div ::-webkit-scrollbar {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
+  position: relative;
 }
 
 .ed-video-wrapper .ed-header ul {
@@ -468,6 +511,37 @@ body div ::-webkit-scrollbar {
 
 .ed-video-wrapper .ed-header ul a.icon-rec {
   color: #f20000;
+}
+
+.ed-video-wrapper .ed-video-footer {
+  position: absolute;
+  bottom: 0;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.7);
+  left: 0;
+  right: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.ed-video-wrapper .ed-video-footer a {
+  font-size: 16px;
+  color: #686868;
+  text-decoration: none;
+}
+
+.ed-video-wrapper .ed-video-footer a:hover {
+  color: #333;
+}
+
+.ed-video-wrapper:hover .ed-video-footer {
+  opacity: 1;
 }
 
 .ed-videos {
@@ -545,6 +619,7 @@ body div ::-webkit-scrollbar {
   text-align: center;
   border-right: 1px solid #efefef;
   padding: 10px;
+  cursor: pointer;
 }
 
 .ed-sidebar-block .ed-header-toggle > div.active {
@@ -557,6 +632,14 @@ body div ::-webkit-scrollbar {
 
 .ed-sidebar-block .ed-header-toggle > div:last-child {
   border: none;
+}
+
+.ed-sidebar-block .ed-content-wrapper .ed-content {
+  display: none;
+}
+
+.ed-sidebar-block .ed-content-wrapper .ed-content.active {
+  display: block;
 }
 
 .ed-sidebar-block .ed-content-wrapper .ed-content .et-title-wrapper {
@@ -673,6 +756,71 @@ body div ::-webkit-scrollbar {
 
 .ed-sidebar-block .ed-content-wrapper .ed-content .ed-chat-wrapper .ed-compose-chat .ed-btn {
   float: right;
+}
+
+.ed-sidebar-block .ed-content-wrapper .ed-content .ed-contact-list {
+  padding: 0 10px 0 15px;
+  max-height: 37vh;
+  overflow: auto;
+}
+
+.ed-sidebar-block .ed-content-wrapper .ed-content .ed-contact-list .ed-contact {
+  padding: 10px 0;
+  position: relative;
+}
+
+.ed-sidebar-block .ed-content-wrapper .ed-content .ed-contact-list .ed-contact .ed-avatar-title {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #16b1e4;
+  font-family: 'Lato', sans-serif;
+  width: 35px;
+  text-align: center;
+  height: 35px;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.ed-sidebar-block .ed-content-wrapper .ed-content .ed-contact-list .ed-contact .ed-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  color: #434343;
+  font-weight: 600;
+}
+
+.ed-sidebar-block .ed-content-wrapper .ed-content .ed-contact-list .ed-contact .ed-tools {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  padding: 0 10px 0 40px;
+  background: #fff;
+  z-index: 1;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+28,ffffff+100&0+0,1+28,1+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 28%, white 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */
+}
+
+.ed-sidebar-block .ed-content-wrapper .ed-content .ed-contact-list .ed-contact .ed-tools > a {
+  margin: 0 2px;
 }
 
 html, body {

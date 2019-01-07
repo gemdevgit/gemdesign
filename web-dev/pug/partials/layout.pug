@@ -67,16 +67,44 @@ html(lang='en')
                                 video(src="../img/dummy.webm")
                             .ed-col
                                 video(src="../img/dummy.webm")
+                    footer.ed-video-footer    
+                        a(href="javascript:;").icon-camera
+                        a(href="javascript:;").icon-mute
+                        a(href="javascript:;").icon-ddfdf
+                        a(href="javascript:;").icon-cog-alt
                 .ed-sidebar-block.ed-box
                     header.ed-header-toggle
-                        .ed-join(target="join",data-toggle="chat")
+                        .ed-join.active(target="contact",data-toggle="chat")
                             a(href="javascript:;").icon-participate
-                        .ed-join.active(target="public",data-toggle="chat")
+                        .ed-join(target="chat",data-toggle="chat")
                             a(href="javascript:;").icon-chat
-                        .ed-join(target="personal",data-toggle="chat")
+                        .ed-join(target="qa",data-toggle="chat")
                             a(href="javascript:;").icon-qestandansw
                     section.ed-content-wrapper
-                        .ed-content
+                        #contact.ed-content.active
+                            ul.ed-contact-list
+                                li.ed-contact 
+                                    span.vcenter.ed-avatar-title(style="background:magenta") E
+                                    span.vcenter.ed-title Edward Abraham
+                                    .ed-tools
+                                        a.text-red.icon-hand-rise(href="javascript:;")
+                                mixin contactList
+                                    li.ed-contact 
+                                        span.vcenter.ed-avatar-title A
+                                        span.vcenter.ed-title Angelina jollysa Francese
+                                        .ed-tools
+                                            a.text-green.icon-videocam(href="javascript:;")
+                                            a.text-red.icon-mic(href="javascript:;")
+                                            a.text-blue.icon-chaticon(href="javascript:;")
+                                            a.text-yellow.icon-cog-alt(href="javascript:;")
+                                +contactList
+                                +contactList
+                                +contactList
+                                +contactList
+                                +contactList
+                                +contactList
+                                +contactList
+                        #chat.ed-content
                             .et-title-wrapper 
                                 .el-left.vcenter Private Chat
                                 .el-right.vcenter 
@@ -103,7 +131,7 @@ html(lang='en')
                                 .ed-compose-chat
                                     input(type="text").vcenter.ed-form-control
                                     button.ed-btn.vcenter Send
-
+                        #qa.ed-content
 
             footer.ed-footer
                 .ed-copyright Powered by

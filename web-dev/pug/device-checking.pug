@@ -5,61 +5,61 @@ block vars
     -var body_class = "br-innerpage"
 
 block pageContent
-    .br-device-checking-wrapper.col-lg-10
-        .row
-            .col-lg-7.col-md-6.d-flex.flex-column.justify-content-center
-                h1.br-welcome-title Make Every
-                    br
-                    | Meeting Count.
-                a(href="conference-room.html").br-link Start Meeting 
-                    i.fa.fa-angle-double-right
-            .col-lg-5.col-md-6
-                .br-device-checking-area
-                    video.br-video( autoplay src="../img/dummy.webm")
-                    .br-footer.text-center
-                        a(href="javascript:;").br-icon-no-video
-                        a(href="javascript:;").br-icon-no-audio.active
-                        a(href="#modalCheckDevice" data-toggle="modal" ).br-icon-ellipsis
+    //- .br-device-checking-wrapper.col-lg-10
+    //-     .row
+    //-         .col-lg-7.col-md-6.d-flex.flex-column.justify-content-center
+    //-             h1.br-welcome-title Make Every
+    //-                 br
+    //-                 | Meeting Count.
+    //-             a(href="conference-room.html").br-link Start Meeting 
+    //-                 i.fa.fa-angle-double-right
+    //-         .col-lg-5.col-md-6
+    //-             .br-device-checking-area
+    //-                 video.br-video( autoplay src="../img/dummy.webm")
+    //-                 .br-footer.text-center
+    //-                     a(href="javascript:;").br-icon-no-video
+    //-                     a(href="javascript:;").br-icon-no-audio.active
+    //-                     a(href="#modalCheckDevice" data-toggle="modal" ).br-icon-ellipsis
             
 
-    #modalCheckDevice.br-modal.modal.fade
-        .modal-dialog
-            .modal-content
-                .modal-header
-                    h3.modal-title CHECK YOUR DEVICE
-                    button.br-icon-close(type="button" class="close" data-dismiss="modal")
-                .modal-body
-                    ul.br-device-config-wrapper
-                        li.br-device.d-flex
-                            .br-icon.br-icon-video
-                            .br-device-dtls
-                                h4.br-title Camera
-                                select.selectpicker(name="")
-                                    option HP Webcame 1300 (03f0: e 107)
-                                    option HP Webcame 1300 (03f0: e 107)
-                                    option HP Webcame 1300 (03f0: e 107)
-                            .br-preview.text-center
-                                video.br-video( autoplay src="../img/dummy.webm")
-                        li.br-device.d-flex
-                            .br-icon.br-icon-audio
-                            .br-device-dtls
-                                h4.br-title Microphone
-                                select.selectpicker(name="")
-                                    option Default - Microphone (realtech H1 1)
-                                    option Default - Microphone (realtech H1 1)
-                            .br-preview.text-center
-                                .br-icon-equalizer
+    //- #modalCheckDevice.br-modal.modal.fade
+    //-     .modal-dialog
+    //-         .modal-content
+    //-             .modal-header
+    //-                 h3.modal-title CHECK YOUR DEVICE
+    //-                 button.br-icon-close(type="button" class="close" data-dismiss="modal")
+    //-             .modal-body
+    //-                 ul.br-device-config-wrapper
+    //-                     li.br-device.d-flex
+    //-                         .br-icon.br-icon-video
+    //-                         .br-device-dtls
+    //-                             h4.br-title Camera
+    //-                             select.selectpicker(name="")
+    //-                                 option HP Webcame 1300 (03f0: e 107)
+    //-                                 option HP Webcame 1300 (03f0: e 107)
+    //-                                 option HP Webcame 1300 (03f0: e 107)
+    //-                         .br-preview.text-center
+    //-                             video.br-video( autoplay src="../img/dummy.webm")
+    //-                     li.br-device.d-flex
+    //-                         .br-icon.br-icon-audio
+    //-                         .br-device-dtls
+    //-                             h4.br-title Microphone
+    //-                             select.selectpicker(name="")
+    //-                                 option Default - Microphone (realtech H1 1)
+    //-                                 option Default - Microphone (realtech H1 1)
+    //-                         .br-preview.text-center
+    //-                             .br-icon-equalizer
                                 
-                        li.br-device.d-flex
-                            .br-icon.br-icon-speaker
-                            .br-device-dtls
-                                h4.br-title Speaker
-                                select.selectpicker(name="")
-                                    option Default - Speaker (realtech H1 1realtech H1 1realtech H1 1)
-                                    option Default - Speaker (realtech H1 1realtech H1 1realtech H1 1)
-                                    option Default - Speaker (realtech H1 1realtech H1 1realtech H1 1)
-                            .br-preview.text-center
-                                .br-icon-play
+    //-                     li.br-device.d-flex
+    //-                         .br-icon.br-icon-speaker
+    //-                         .br-device-dtls
+    //-                             h4.br-title Speaker
+    //-                             select.selectpicker(name="")
+    //-                                 option Default - Speaker (realtech H1 1realtech H1 1realtech H1 1)
+    //-                                 option Default - Speaker (realtech H1 1realtech H1 1realtech H1 1)
+    //-                                 option Default - Speaker (realtech H1 1realtech H1 1realtech H1 1)
+    //-                         .br-preview.text-center
+    //-                             .br-icon-play
 
     
 
