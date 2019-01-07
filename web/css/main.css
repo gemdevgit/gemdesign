@@ -624,7 +624,7 @@ body div ::-webkit-scrollbar {
   display: inline-block;
   max-width: calc(100% - 40px);
   background: #f4f4f4;
-  border-radius: 5px;
+  border-radius: 7px;
   padding: 10px;
 }
 
