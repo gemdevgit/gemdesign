@@ -7,23 +7,23 @@
                 $this.addClass('active');
                 $('#'+$this.attr('target')).addClass('active');
             })
+            $('select').select2({minimumResultsForSearch: -1});
 
-            $('.ed-timer-blue').final_countdown({
-                'start': 1546679960,
-                'end': 1546906639,
-                'now': 1546874408,
-                selectors: {
-                    value_seconds: '.clock-seconds',
-                    canvas_seconds: 'canvas-seconds',
-                    value_minutes: '.clock-minutes',
-                    canvas_minutes: 'canvas-minutes',
-                    value_hours: '.clock-hours',
-                    canvas_hours: 'canvas-hours',
-                    value_days: '.clock-days',
-                    canvas_days: 'canvas-days'
+            //.modal script
+            $('body').on('click','[data-toggle="modal"]',function(){
+                var $target = $($(this).attr('data-target'));
+                $target.fadeIn(500,function(){
+                    $target.addClass('in');
+                })
+            })
+            $('body').on('click','[data-dismiss="modal"]',function(){
+                var target = $(this).attr('data-target');
+                dismissModal(target)
+            })
 
-                }        
-            });
+            function dismissModal(target){
+                $(target).removeClass('in').fadeOut(500);
+            }
     })
     
 })();

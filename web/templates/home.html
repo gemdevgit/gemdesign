@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="../assets/fontello/css/fontello.css">
+    <link rel="stylesheet" href="../assets/select2/css/select2.min.css">
     <link rel="stylesheet" href="../css/main.css">
   </head>
-  <body class="br-innerpage">
+  <body>
     <div class="ed-main-wrapper">
       <div class="ed-left-col">
         <header class="ed-main-header">
@@ -102,16 +103,16 @@
               <div class="ed-col"><video src="../img/dummy.webm"></video></div>
             </div>
           </div>
-          <footer class="ed-video-footer"> <a class="icon-camera" href="javascript:;"></a><a class="icon-mute" href="javascript:;"></a><a class="icon-ddfdf" href="javascript:;"></a><a class="icon-cog-alt" href="javascript:;"></a></footer>
+          <footer class="ed-video-footer"> <a class="icon-camera" href="javascript:;"></a><a class="icon-mute" href="javascript:;"></a><a class="icon-ddfdf" href="javascript:;"></a><a class="icon-cog-alt" href="javascript:;" data-toggle="modal" data-target="#modalCheckingDevice"></a></footer>
         </div>
         <div class="ed-sidebar-block ed-box">
           <header class="ed-header-toggle">
-            <div class="ed-join active" target="contact" data-toggle="chat"><a class="icon-participate" href="javascript:;"></a></div>
-            <div class="ed-join" target="chat" data-toggle="chat"><a class="icon-chat" href="javascript:;"></a></div>
-            <div class="ed-join" target="qa" data-toggle="chat"><a class="icon-qestandansw" href="javascript:;"></a></div>
+            <div class="ed-join active" target="contact-list-wrapper" data-toggle="chat"><a class="icon-participate" href="javascript:;"></a></div>
+            <div class="ed-join" target="chat-wrapper" data-toggle="chat"><a class="icon-chat" href="javascript:;"></a></div>
+            <div class="ed-join" target="qa-wrapper" data-toggle="chat"><a class="icon-qestandansw" href="javascript:;"></a></div>
           </header>
           <section class="ed-content-wrapper">
-            <div class="ed-content active" id="contact">
+            <div class="ed-content active" id="contact-list-wrapper">
               <ul class="ed-contact-list">
                 <li class="ed-contact"> <span class="vcenter ed-avatar-title" style="background:magenta">E</span><span class="vcenter ed-title">Edward Abraham</span>
                   <div class="ed-tools"><a class="text-red icon-hand-rise" href="javascript:;"></a></div>
@@ -139,10 +140,10 @@
                 </li>
               </ul>
             </div>
-            <div class="ed-content" id="chat">
-              <div class="et-title-wrapper">
-                <div class="el-left vcenter">Private Chat</div>
-                <div class="el-right vcenter">
+            <div class="ed-content" id="chat-wrapper">
+              <div class="ed-title-wrapper">
+                <div class="ed-left vcenter">Private Chat</div>
+                <div class="ed-right vcenter">
                   <div class="vcenter">Public Chat</div>
                   <div class="vcenter"> <label class="ed-switch"><input type="checkbox"><span class="slider"> </span></label></div>
                   <div class="vcenter"> <a class="ed-resize icon-resize-full" href="javascript:;"></a></div>
@@ -178,7 +179,67 @@
                 <div class="ed-compose-chat"><input class="vcenter ed-form-control" type="text"><button class="ed-btn vcenter">Send</button></div>
               </div>
             </div>
-            <div class="ed-content" id="qa"></div>
+            <div class="ed-content" id="qa-wrapper">
+              <div class="ed-qa-wrapper">
+                <div class="ed-title-wrapper">
+                  <div class="ed-left vcenter">Open Questions</div>
+                  <div class="ed-right vcenter">
+                    <div class="vcenter">Answered </div>
+                    <div class="ed-tools vcenter"> <a class="vcenter icon-cog-alt" href="javascript:;"></a><a class="vcenter icon-resize-full" href="javascript:;"></a></div>
+                  </div>
+                </div>
+                <ul class="ed-aq-list">
+                  <li class="ed-qa">
+                    <div class="ed-avatar-title vcenter" style="background:orange">L</div>
+                    <div class="ed-msg-wrapper vcenter">
+                      <div class="ed-title">Laura Jennifer</div>
+                      <div class="ed-msg">What is singleton class and how can we make a class singleton?</div>
+                    </div>
+                    <footer class="ed-tools"><a class="text-green icon-videocam" href="javascript:;"></a><a class="text-blue icon-chaticon" href="javascript:;"></a><a class="text-red icon-mic ed-disabled" href="javascript:;"></a></footer>
+                  </li>
+                  <li class="ed-qa">
+                    <div class="ed-avatar-title vcenter">A</div>
+                    <div class="ed-msg-wrapper vcenter">
+                      <div class="ed-title">Annie Lore </div>
+                      <div class="ed-msg">What is singleton class and how can we make a class singleton?</div>
+                    </div>
+                    <footer class="ed-tools"><a class="text-green icon-videocam" href="javascript:;"></a><a class="text-blue icon-chaticon" href="javascript:;"></a><a class="text-red icon-mic" href="javascript:;"></a></footer>
+                  </li>
+                  <li class="ed-qa">
+                    <div class="ed-avatar-title vcenter">A</div>
+                    <div class="ed-msg-wrapper vcenter">
+                      <div class="ed-title">Annie Lore </div>
+                      <div class="ed-msg">What is singleton class and how can we make a class singleton?</div>
+                    </div>
+                    <footer class="ed-tools"><a class="text-green icon-videocam" href="javascript:;"></a><a class="text-blue icon-chaticon" href="javascript:;"></a><a class="text-red icon-mic" href="javascript:;"></a></footer>
+                  </li>
+                  <li class="ed-qa">
+                    <div class="ed-avatar-title vcenter">A</div>
+                    <div class="ed-msg-wrapper vcenter">
+                      <div class="ed-title">Annie Lore </div>
+                      <div class="ed-msg">What is singleton class and how can we make a class singleton?</div>
+                    </div>
+                    <footer class="ed-tools"><a class="text-green icon-videocam" href="javascript:;"></a><a class="text-blue icon-chaticon" href="javascript:;"></a><a class="text-red icon-mic" href="javascript:;"></a></footer>
+                  </li>
+                  <li class="ed-qa">
+                    <div class="ed-avatar-title vcenter">A</div>
+                    <div class="ed-msg-wrapper vcenter">
+                      <div class="ed-title">Annie Lore </div>
+                      <div class="ed-msg">What is singleton class and how can we make a class singleton?</div>
+                    </div>
+                    <footer class="ed-tools"><a class="text-green icon-videocam" href="javascript:;"></a><a class="text-blue icon-chaticon" href="javascript:;"></a><a class="text-red icon-mic" href="javascript:;"></a></footer>
+                  </li>
+                  <li class="ed-qa">
+                    <div class="ed-avatar-title vcenter">A</div>
+                    <div class="ed-msg-wrapper vcenter">
+                      <div class="ed-title">Annie Lore </div>
+                      <div class="ed-msg">What is singleton class and how can we make a class singleton?</div>
+                    </div>
+                    <footer class="ed-tools"><a class="text-green icon-videocam" href="javascript:;"></a><a class="text-blue icon-chaticon" href="javascript:;"></a><a class="text-red icon-mic" href="javascript:;"></a></footer>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -186,9 +247,50 @@
         <div class="ed-copyright">Powered by<img src="../img/logo.png"></div>
       </footer>
     </div>
+    <div class="ed-modal modal fade" id="modalCheckingDevice">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Media Settings</h3><button class="ed-icon-close close" type="button" data-target="#modalCheckingDevice" data-dismiss="modal">x</button>
+          </div>
+          <div class="modal-body">
+            <div class="ed-device-config-wrapper">
+              <div class="ed-left-col">
+                <div class="ed-preview text-center"><video class="ed-video" autoplay src="../img/dummy.webm"></video></div>
+                <div class="text-red ed-help-block">IMPORTANT: Make sure you see movement in the audio bar below STEP 2 to ensure your MIC is active.</div>
+              </div>
+              <div class="ed-right-col">
+                <div class="ed-form-group"><label class="ed-label">Browser</label><select class="selectpicker" name="">
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                  </select><a class="ed-icon text-green icon-mic" href="javascript:;"></a></div>
+                <div class="ed-form-group"><label class="ed-label">Choose Camera</label><select class="selectpicker" name="">
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                  </select><a class="ed-icon text-green icon-mic" href="javascript:;"></a></div>
+                <div class="ed-form-group"><label class="ed-label">Choose Mice</label><select class="selectpicker" name="">
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                  </select><a class="ed-icon text-green icon-mic" href="javascript:;"></a></div>
+                <div class="ed-form-group"><label class="ed-label">Choose Speaker<a class="text-green icon-mic" href="javascript:;"></a></label><select class="selectpicker" name="">
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                    <option>HP Webcame 1300 (03f0: e 107)</option>
+                  </select><a class="ed-icon text-red icon-mic" href="javascript:;"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="ed-form-group text-right"><button class="ed-btn">Save &amp; Continue</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="../assets/jquery/jquery-1.11.0.min.js"></script>
-    <script src="../assets/jquery-timer/demo/js/kinetic.js"></script>
-    <script src="../assets/jquery-timer/jquery.final-countdown.js"></script>
+    <script src="../assets/select2/js/select2.full.min.js"></script>
     <script src="../js/main.js"></script>
     <script type="text/javascript"></script>
   </body>

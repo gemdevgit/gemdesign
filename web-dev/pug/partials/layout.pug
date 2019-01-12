@@ -6,6 +6,7 @@ html(lang='en')
         meta(charset='utf-8')
         link(href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400,500" rel="stylesheet" )
         link(rel='stylesheet', href="../assets/fontello/css/fontello.css")
+        link(rel='stylesheet', href="../assets/select2/css/select2.min.css")
         link(rel='stylesheet', href="../css/main.css")
     body(class=body_class)
         .ed-main-wrapper
@@ -122,17 +123,17 @@ html(lang='en')
                         a(href="javascript:;").icon-camera
                         a(href="javascript:;").icon-mute
                         a(href="javascript:;").icon-ddfdf
-                        a(href="javascript:;").icon-cog-alt
+                        a(href="javascript:;" data-toggle="modal" data-target="#modalCheckingDevice").icon-cog-alt
                 .ed-sidebar-block.ed-box
                     header.ed-header-toggle
-                        .ed-join.active(target="contact",data-toggle="chat")
+                        .ed-join.active(target="contact-list-wrapper",data-toggle="chat")
                             a(href="javascript:;").icon-participate
-                        .ed-join(target="chat",data-toggle="chat")
+                        .ed-join(target="chat-wrapper",data-toggle="chat")
                             a(href="javascript:;").icon-chat
-                        .ed-join(target="qa",data-toggle="chat")
+                        .ed-join(target="qa-wrapper",data-toggle="chat")
                             a(href="javascript:;").icon-qestandansw
                     section.ed-content-wrapper
-                        #contact.ed-content.active
+                        #contact-list-wrapper.ed-content.active
                             ul.ed-contact-list
                                 li.ed-contact 
                                     span.vcenter.ed-avatar-title(style="background:magenta") E
@@ -155,10 +156,10 @@ html(lang='en')
                                 +contactList
                                 +contactList
                                 +contactList
-                        #chat.ed-content
-                            .et-title-wrapper 
-                                .el-left.vcenter Private Chat
-                                .el-right.vcenter 
+                        #chat-wrapper.ed-content
+                            .ed-title-wrapper 
+                                .ed-left.vcenter Private Chat
+                                .ed-right.vcenter 
                                     .vcenter Public Chat
                                     .vcenter 
                                         label.ed-switch
@@ -182,13 +183,51 @@ html(lang='en')
                                 .ed-compose-chat
                                     input(type="text").vcenter.ed-form-control
                                     button.ed-btn.vcenter Send
-                        #qa.ed-content
+                        #qa-wrapper.ed-content
+                            .ed-qa-wrapper
+                                .ed-title-wrapper 
+                                    .ed-left.vcenter Open Questions
+                                    .ed-right.vcenter 
+                                        .vcenter Answered 
+                                        .ed-tools.vcenter 
+                                            a(href="javascript:;").vcenter.icon-cog-alt
+                                            a(href="javascript:;").vcenter.icon-resize-full
+                                ul.ed-aq-list
+                                    li.ed-qa
+
+                                        .ed-avatar-title.vcenter(style="background:orange") L
+                                        .ed-msg-wrapper.vcenter
+                                            .ed-title Laura Jennifer
+                                            .ed-msg What is singleton class and how can we make a class singleton?
+                                        footer.ed-tools
+                                            
+                                            a.text-green.icon-videocam(href="javascript:;")
+                                            a.text-blue.icon-chaticon(href="javascript:;")
+                                            a.text-red.icon-mic.ed-disabled(href="javascript:;")
+                                    mixin qaList
+                                        li.ed-qa
+
+                                            .ed-avatar-title.vcenter A
+                                            .ed-msg-wrapper.vcenter
+                                                .ed-title Annie Lore 
+                                                .ed-msg What is singleton class and how can we make a class singleton?
+                                            footer.ed-tools
+                                                
+                                                a.text-green.icon-videocam(href="javascript:;")
+                                                a.text-blue.icon-chaticon(href="javascript:;")
+                                                a.text-red.icon-mic(href="javascript:;")
+                                    +qaList
+                                    +qaList
+                                    +qaList
+                                    +qaList
+                                    +qaList
+                                
 
             footer.ed-footer
                 .ed-copyright Powered by
                     img(src="../img/logo.png")
+        include _device-checking
         script(src="../assets/jquery/jquery-1.11.0.min.js")
-        script(src="../assets/jquery-timer/demo/js/kinetic.js")
-        script(src="../assets/jquery-timer/jquery.final-countdown.js")
+        script(src="../assets/select2/js/select2.full.min.js")
         script(src="../js/main.js")
         script(type="text/javascript").

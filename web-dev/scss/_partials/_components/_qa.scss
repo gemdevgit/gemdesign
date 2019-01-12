@@ -1,0 +1,109 @@
+
+#qa-wrapper{
+
+    .ed-title-wrapper{
+        background: #fff;
+        box-shadow: 0 7px 21px 5px rgba(221, 221, 221, 0.55);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 10px 5px 10px 20px;
+        .ed-left{
+            width:41%;
+            padding: 5px 0;
+            color: #d2d2d2;
+            border-right: 1px solid #ddd;
+        }
+        .ed-right{
+            color: $clr-black;
+            padding: 5px 0 5px 5px;
+            >div:not(:last-child){
+                margin-right: 5px;
+            }
+            .ed-resize{
+                color: $clr-green;
+            }
+        }
+    }
+    .ed-qa-wrapper{
+        position: relative;
+        .ed-aq-list{
+            max-height: 30vh;
+            overflow: auto;
+            padding: 30px 20px 50px 20px;
+
+        }
+        .ed-qa{
+            border-bottom: 1px solid #f5f5f5;
+            margin-bottom: 15px;
+            .ed-avatar-title{
+                display: inline-flex;
+                vertical-align: top;
+                font-size: 16px;
+                font-weight: 600;
+                color: #fff;
+                background: #16b1e4;
+                font-family: 'Lato', sans-serif;
+                width: 35px;
+                text-align: center;
+                height: 35px;
+                align-items: center;
+                border-radius: 50%;
+                justify-content: center;
+            }
+            .ed-msg-wrapper{
+                display: inline-block;
+                max-width: calc(100% - 40px);
+                background: #f4f4f4;
+                border-radius: 7px;
+                padding: 10px;
+                .ed-title{
+                    font-size: 11px;
+                    color: #7b7b7b;
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                    
+                }
+                .ed-msg{
+                    font-size: 11px;
+                    color: #7b7b7b;
+                    font-weight: 300;
+                    font-family: 'Lato', sans-serif;
+
+                }
+            }
+            .ed-tools{
+                text-align: right;
+                margin: 10px auto 5px auto;
+                font-size: 12px;
+                >a:not(:last-child){
+                    margin-right: 5px;
+                }
+            }
+        }
+        .ed-compose-chat{
+            background: #fff;
+            z-index: 1;
+            @include position(absolute,auto,0,0,0);
+            padding: 10px 20px 0 20px;
+            &:after{
+                content: '';
+                display: table;
+                clear: both;
+                float: none;
+            }
+            .ed-form-control{
+                background: #f3f3f3;
+                float: left;
+                width:190px;
+                max-width:calc(100% - 110px);
+                font-size: 10px;
+                font-weight: 300;
+                color: #9e9e9e;
+                padding: 10px 15px;
+            }
+            .ed-btn{
+                float: right;
+            }
+        }
+    }
+}    

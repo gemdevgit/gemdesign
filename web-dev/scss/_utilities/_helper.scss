@@ -45,7 +45,9 @@ table {
 a{
     text-decoration: none;
 }
-
+img,video{
+    max-width:100%;
+}
 .ed-circle {
     @include border-radius(50%);
 }
@@ -252,5 +254,20 @@ body div ::-webkit-scrollbar {
         >.dropdown-menu{
             display: block;
         }
+    }
+}
+.ed-disabled{
+    pointer-events: none;
+    cursor:not-allowed;
+    opacity: .35;
+}
+
+.select2.select2-container{
+    min-width: 100%;
+    border-radius: 0;
+    .select2-selection{
+        border:none;
+        border-radius: 0;
+        border-bottom: 1px solid #ccc;
     }
 }
