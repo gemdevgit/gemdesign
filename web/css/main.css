@@ -24,7 +24,7 @@
   display: block;
 }
 
-.modal:after {
+.modal > .modal-backdrop {
   content: '';
   display: block;
   overflow: hidden;
@@ -36,6 +36,21 @@
   background: rgba(0, 0, 0, 0.4);
   margin: auto;
   z-index: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.modal > .modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal > .modal-backdrop.fade.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
 }
 
 .modal-open .modal {
@@ -46,7 +61,6 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px;
   z-index: 100;
 }
 
@@ -61,28 +75,12 @@
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
 }
 
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  background-color: #000;
-}
-
-.modal-backdrop.fade {
-  opacity: 0;
-}
-
-.modal-backdrop.fade.in {
-  filter: alpha(opacity=50);
-  opacity: .5;
-}
-
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header.shadow {
+  box-shadow: 0 7px 21px 5px rgba(221, 221, 221, 0.55);
 }
 
 .modal-header .close {
@@ -96,7 +94,7 @@
 
 .modal-body {
   position: relative;
-  padding: 15px;
+  padding: 25px 15px 15px 15px;
 }
 
 .modal-footer {
@@ -137,10 +135,15 @@
 @media (min-width: 768px) {
   .modal-dialog {
     width: 710px;
-    margin: 30px auto;
   }
   .modal-content {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 450px) {
+  .modal-dialog.modal-sm {
+    width: 385px;
   }
 }
 
@@ -444,6 +447,7 @@ body div ::-webkit-scrollbar {
 .select2.select2-container .select2-selection {
   border: none;
   border-radius: 0;
+  outline: none;
   border-bottom: 1px solid #ccc;
 }
 
@@ -1153,6 +1157,97 @@ body div ::-webkit-scrollbar {
 
 .ed-contact-list .ed-contact .ed-tools > a {
   margin: 0 2px;
+}
+
+.ed-modal-meeting-info-wrapper {
+  margin: 5px 13px;
+}
+
+.ed-modal-meeting-info-wrapper .ed-row {
+  margin: 0;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.ed-modal-meeting-info-wrapper .ed-row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.ed-modal-meeting-info-wrapper .ed-row > div {
+  float: left;
+}
+
+.ed-modal-meeting-info-wrapper .ed-row > div.ed-col-left {
+  width: 43%;
+  color: #0095cc;
+  font-weight: 600;
+  font-size: 13px;
+  position: relative;
+}
+
+.ed-modal-meeting-info-wrapper .ed-row > div.ed-col-left:after {
+  content: ':';
+  right: 15px;
+  display: block;
+  position: absolute;
+  top: 0;
+  color: #7b7b7b;
+}
+
+.ed-modal-meeting-info-wrapper .ed-row > div.ed-col-right {
+  width: 57%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7b7b7b;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 5px;
+}
+
+.ed-modal-session-info-wrapper {
+  text-align: center;
+}
+
+.ed-modal-session-info-wrapper figure {
+  margin: 10px auto 20px auto;
+}
+
+.ed-modal-session-info-wrapper .ed-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0095cc;
+  margin-bottom: 15px;
+}
+
+.ed-modal-session-info-wrapper .ed-form-group {
+  margin: 15px auto;
+}
+
+.ed-modal-session-info-wrapper .ed-form-group > div {
+  display: inline-block;
+}
+
+.ed-modal-session-info-wrapper .ed-form-group > div.ed-col-middle {
+  color: #787878;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.ed-modal-session-info-wrapper .ed-form-group > div .ed-form-control {
+  border-radius: 0;
+  font-size: 32px;
+  font-weight: 500;
+  color: #0095cc;
+  border-bottom: 2px solid #d5d5d5;
+  padding: 0px 3px 0px 3px;
+  text-align: center;
+  width: 60px;
+  line-height: 30px;
+}
+
+.ed-modal-session-info-wrapper .ed-btn-wrapper {
+  margin-bottom: 15px;
 }
 
 html, body {

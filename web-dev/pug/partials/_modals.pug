@@ -1,0 +1,46 @@
+#modalMeetingInfo.ed-modal.modal.fade
+    .modal-backdrop
+        .modal-dialog.modal-sm
+            .modal-content
+                .modal-header.shadow
+                    h3.modal-title Meeting Info
+                    button.ed-icon-close(type="button" class="close" data-target="#modalSessionInfo" data-dismiss="modal") x
+                .modal-body
+                    .ed-modal-meeting-info-wrapper
+                        .ed-row
+                            .ed-col-left  Session Name
+                            .ed-col-right Sprout Testing
+                        .ed-row
+                            .ed-col-left  User ID
+                            .ed-col-right 650 865
+                        .ed-row
+                            .ed-col-left  Meeting ID
+                            .ed-col-right 8960
+                        .ed-row
+                            .ed-col-left  Schedule Date
+                            .ed-col-right 2018-09-02  18:16:00
+                        .ed-row
+                            .ed-col-left  Timezone
+                            .ed-col-right + 05:30 Asia / Kolkata
+
+
+
+#modalSessionInfo.ed-modal.modal.fade
+    .modal-backdrop
+        .modal-dialog.modal-sm
+            .modal-content
+                .modal-header
+                    button.ed-icon-close(type="button" class="close" data-target="#modalSessionInfo" data-dismiss="modal") x
+                .modal-body
+                    .ed-modal-session-info-wrapper
+                        figure
+                            img(src="../img/session-info-bg.png")
+                        h4.ed-title Your Session will Expire in 10 min
+                        .ed-form-group
+                            .ed-col-left
+                                input(type="text",value="02").ed-form-control
+                            .ed-col-middle :
+                            .ed-col-right
+                                input(type="text",value="02").ed-form-control
+                        .ed-btn-wrapper
+                            button.ed-btn Extend

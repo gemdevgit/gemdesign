@@ -45,7 +45,7 @@
     opacity: 1;
     display: block;
   }
-  &:after{
+  >.modal-backdrop{
     content: '';
     display: block;
     overflow: hidden;
@@ -56,7 +56,16 @@
     bottom: 0;
     background: rgba(0,0,0,.4);
     margin:auto;
-    z-index:1;
+    z-index:1;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // Fade for backdrop
+    &.fade { opacity: 0; }
+    &.fade.in {         
+      filter: alpha(opacity=50);
+      opacity: .5;
+    }
   }
 }
 .modal-open .modal {
@@ -68,7 +77,6 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px;
   z-index: 100;
 }
 
@@ -87,31 +95,16 @@
   box-shadow: 0 3px 9px rgba(0,0,0,.5);
 }
 
-// Modal background
-.modal-backdrop {
 
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  background-color: #000;
-  // Fade for backdrop
-  &.fade { opacity: 0; }
-  &.fade.in {         
-    filter: alpha(opacity=50);
-    opacity: .5;
-  }
-}
 
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
 
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
-
+  &.shadow{    
+      box-shadow: 0 7px 21px 5px rgba(221, 221, 221, 0.55);
+  }
 }
 // Close icon
 .modal-header .close {
@@ -128,7 +121,7 @@
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
-  padding: 15px;
+  padding: 25px 15px 15px 15px;
 }
 
 // Footer (for actions)
@@ -173,7 +166,6 @@
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     width: 710px;
-    margin: 30px auto;
   }
   .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
@@ -181,7 +173,12 @@
   }
 
 }
+@media (min-width: 450px){
+  .modal-dialog.modal-sm{ 
+      width:385px; 
 
+  }
+}
 @media (min-width: 992px) {
   .modal-lg { width:900px; }
 }

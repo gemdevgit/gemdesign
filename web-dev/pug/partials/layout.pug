@@ -48,7 +48,7 @@ html(lang='en')
                     header.ed-header
                         ul.list-inline
                             li.dropdown
-                                a(href="javascript:;").icon-session-info
+                                a(href="javascript:;",  data-toggle="modal", data-target="#modalMeetingInfo").icon-session-info
                                 .dropdown-menu.ed-right-block-dropdown
                                     h4.ed-title.text-center Session info
                                     .ed-timer-red(style="width:150px;height:150px;background:red;border-radius:50%;margin:15px auto;padding:10%;") Timer
@@ -79,7 +79,7 @@ html(lang='en')
                                         a(href="#") 30 min
                                     .text-center.ed-session-notice or  End Session
                             li.dropdown
-                                a(href="javascript:;").icon-session-timer
+                                a(href="javascript:;", data-toggle="modal", data-target="#modalSessionInfo").icon-session-timer
                                 .dropdown-menu.ed-right-block-dropdown
                                     h4.ed-title.text-center Personal timer
                                     .ed-timer-blue(style="width:150px;height:150px;background:blue;border-radius:50%;margin:15px auto;padding:10%;") Timer
@@ -227,6 +227,7 @@ html(lang='en')
                 .ed-copyright Powered by
                     img(src="../img/logo.png")
         include _device-checking
+        include _modals
         script(src="../assets/jquery/jquery-1.11.0.min.js")
         script(src="../assets/select2/js/select2.full.min.js")
         script(src="../js/main.js")
