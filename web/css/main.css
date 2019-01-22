@@ -102,31 +102,28 @@ body div ::-webkit-scrollbar {
 }
 
 .br-input {
-  background: rgba(0, 0, 0, 0.25);
   border: none;
-  color: #fff;
-  border-radius: 20px;
+  border-radius: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 400;
   padding: 11px 30px;
   outline: none;
-  box-shadow: 2px 3px 12px 0px rgba(10, 22, 30, 0.4);
 }
 
 .br-btn-outline {
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   padding: 10px 30px;
   box-shadow: 2px 3px 12px 0px rgba(10, 22, 30, 0.4);
 }
 
-.br-home {
+body {
   background-image: url("../img/landing-01.jpg");
   background-size: cover;
   background-position: center;
@@ -137,71 +134,62 @@ body div ::-webkit-scrollbar {
 .br-home-content-wrapper {
   margin: auto;
   text-align: center;
-  height: 175px;
+  height: 215px;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.br-home-content-wrapper .br-logo-wrapper {
+  opacity: .8;
 }
 
 .br-home-content-wrapper .br-welcome-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
-  font-size: 41px;
-  margin: auto  auto 30px auto;
+  font-size: 26px;
+  margin: 10px auto 30px auto;
   max-width: 500px;
 }
 
+.br-home-content-wrapper .br-start-conference {
+  width: 460px;
+  background: rgba(0, 0, 0, 0.4);
+  margin: 0 auto auto auto;
+  padding: 20px 30px;
+}
+
+.br-home-content-wrapper .br-start-conference .br-sub-title {
+  font-weight: 100;
+  font-size: 22px;
+  margin: 0 0 20px 0;
+}
+
+.br-home-content-wrapper .br-start-conference .br-btn-outline {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.br-home-content-wrapper .br-start-conference .br-btn-outline:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .br-home-content-wrapper .br-start-conference .br-input {
-  margin-right: 10px;
-  width: 450px;
-  max-width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.br-innerpage {
-  background-image: url("../img/meeting-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-
-.br-innerpage .br-browser-support {
-  color: #393939;
-}
-
-.br-innerpage .br-browser-support .br-icon {
-  color: #e8e8e8;
+.br-inner-home-content-wrapper {
+  height: 360px;
+  margin: auto;
+  text-align: center;
 }
 
 .br-inner-page-content {
   position: relative;
   min-height: 100vh;
-}
-
-.br-bg-left-btm {
-  background: url("../img/meeting-bg-left.png") no-repeat;
-  background-position: left bottom;
-  position: absolute;
-  top: 0;
-  right: 50%;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-  background-size: cover;
-}
-
-.br-bg-right-top {
-  background: url("../img/meeting-bg-right.png") no-repeat;
-  background-position: right top;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 50%;
-  z-index: 0;
-  background-size: cover;
 }
 
 .br-device-checking-wrapper {
@@ -224,11 +212,10 @@ body div ::-webkit-scrollbar {
   font-size: 46px;
   font-weight: 100;
   margin-bottom: 30px;
-  color: #414141;
 }
 
 .br-device-checking-wrapper .br-link {
-  color: #212121;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 19px;
   font-weight: 400;
 }
@@ -249,8 +236,9 @@ body div ::-webkit-scrollbar {
 
 .br-device-checking-wrapper .br-device-checking-area {
   display: inline-block;
-  background: #fff;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 0;
+  overflow: hidden;
   box-shadow: 2px 3px 12px 0px rgba(10, 22, 30, 0.4);
 }
 
@@ -259,7 +247,7 @@ body div ::-webkit-scrollbar {
   height: 255px;
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
+  border-radius: 0;
 }
 
 .br-device-checking-wrapper .br-footer > a {
@@ -408,7 +396,7 @@ body div ::-webkit-scrollbar {
   position: relative;
   overflow: hidden;
   margin: 11px;
-  border-radius: 15px;
+  border-radius: 0;
 }
 
 .br-confernce-user-lists .br-user-wrapper .br-title {
@@ -485,7 +473,7 @@ body div ::-webkit-scrollbar {
   max-height: 222px;
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 0;
 }
 
 .br-confernce-user-lists .br-user-wrapper:hover .br-overlay-wrapper, .br-confernce-user-lists .br-user-wrapper:hover .br-tools {
@@ -523,8 +511,8 @@ body div ::-webkit-scrollbar {
   width: 235px;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-align: stretch;
   align-items: stretch;
   position: fixed;
@@ -535,8 +523,6 @@ body div ::-webkit-scrollbar {
 }
 
 .br-confernce-user-lists.right .br-user-wrapper {
-  display: block;
-  width: auto;
   height: 24%;
 }
 
@@ -572,7 +558,7 @@ body div ::-webkit-scrollbar {
   background: rgba(105, 105, 105, 0.45);
   display: block;
   width: 590px;
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 5px;
 }
 
 .br-control-panel .br-control-list > li {
@@ -701,12 +687,12 @@ body div ::-webkit-scrollbar {
 }
 
 .br-chat-wrapper {
-  background: rgba(174, 174, 174, 0.61);
+  background: white;
   width: 295px;
   height: calc(100vh - 155px);
   padding: 0;
   opacity: 0;
-  border-radius: 20px 0 0 20px;
+  border-radius: 4px 0 0 4px;
   z-index: -1;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
@@ -731,7 +717,7 @@ body div ::-webkit-scrollbar {
 }
 
 .br-chat-wrapper .br-title {
-  color: #fff;
+  color: #484848;
   font-size: 23px;
   font-weight: 500;
   border-bottom: 1px solid #bdbdbd;
@@ -772,6 +758,8 @@ body div ::-webkit-scrollbar {
   -o-object-fit: cover;
   object-fit: cover;
   margin: 0;
+  box-sizing: border-box;
+  border: 3px solid #f4f4f4;
 }
 
 .br-chat-wrapper .br-msg-list > li .br-avatar > img {
@@ -784,49 +772,64 @@ body div ::-webkit-scrollbar {
 
 .br-chat-wrapper .br-msg-list > li .br-message-dtls {
   display: inline-block;
-  width: calc(100% - 40px);
-  color: #fff;
-  background: rgba(105, 105, 105, 0.6);
+  width: calc(100% - 50px);
+  margin-left: 10px;
+  color: #3c3b3b;
+  background: #f4f4f4;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 0 6px 6px 6px;
+  position: relative;
+}
+
+.br-chat-wrapper .br-msg-list > li .br-message-dtls:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -11px;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 15px solid #f4f4f4;
 }
 
 .br-chat-wrapper .br-msg-list > li .br-message-dtls .br-name {
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .br-chat-wrapper .br-msg-list > li .br-message-dtls .br-msg {
   font-size: 11px;
-  font-weight: 100;
+  font-weight: 300;
   font-family: 'Lato', sans-serif;
 }
 
 .br-chat-wrapper .br-submit-msg {
   position: absolute;
   top: auto;
-  right: 10px;
+  right: 20px;
   bottom: 10px;
-  left: 10px;
+  left: 20px;
 }
 
 .br-chat-wrapper .br-submit-msg > textarea {
-  color: #fff;
+  color: #3c3b3b;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 6px;
   border: none;
   resize: none;
-  background: rgba(105, 105, 105, 0.8);
+  background: #f4f4f4;
   margin-bottom: 10px;
 }
 
 .br-chat-wrapper .br-submit-msg .br-btn {
-  background: none;
+  background: #af79ff;
   color: #fff;
   font-size: 11px;
-  border-radius: 25px;
+  border-radius: 5px;
   padding: 8px 19px;
-  border: 1px solid #00ffff;
+  border: 1px solid #8348dc;
   float: right;
 }
 
@@ -849,7 +852,7 @@ body div ::-webkit-scrollbar {
 .br-invite-user-wrapper > .br-form {
   background: rgba(105, 105, 105, 0.6);
   padding: 10px 30px 9px 10px;
-  border-radius: 27px 0 0 27px;
+  border-radius: 6px 0 0 6px;
 }
 
 .br-invite-user-wrapper .form-control {
@@ -858,19 +861,19 @@ body div ::-webkit-scrollbar {
   font-size: 9px;
   color: #fff;
   margin-right: 10px;
-  border-radius: 25px;
+  border-radius: 6px;
   border: none;
   padding: 2px 15px;
-  background: rgba(105, 105, 105, 0.8);
+  background: rgba(255, 255, 255, 0.27);
 }
 
 .br-invite-user-wrapper .br-btn-copy {
-  background: none;
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   font-size: 11px;
-  border-radius: 25px;
+  border-radius: 6px;
   padding: 8px 19px;
-  border: 1px solid #00ffff;
+  border: 1px solid #fff;
 }
 
 html, body {
@@ -895,6 +898,10 @@ img {
   left: 0;
 }
 
+.br-page-header .br-logo-wrapper {
+  opacity: .8;
+}
+
 .br-pagefooter {
   padding: 0 30px;
   margin: auto;
@@ -907,7 +914,8 @@ img {
 
 .br-time-wrapper {
   font-weight: 300;
-  font-size: 50px;
+  font-size: 70px;
+  line-height: 50px;
 }
 
 .br-time-wrapper .br-format {
@@ -916,7 +924,8 @@ img {
 
 .br-date-wrapper {
   font-weight: 100;
-  font-size: 22px;
+  padding-left: 7px;
+  font-size: 24px;
 }
 
 .br-browser-support span {

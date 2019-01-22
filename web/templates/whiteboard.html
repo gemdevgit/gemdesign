@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>Device checking</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
@@ -10,12 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
   </head>
-  <body class="br-home">
-    <header class="br-page-header"> </header>
-    <main class="br-home-content-wrapper">
-      <div class="br-logo-wrapper text-center"><a href="home.html"><img src="../img/logo.png" alt="Gemteleversity"></a></div>
-      <h1 class="br-welcome-title">Lets your best work shine through.</h1><a class="btn br-btn-outline" href="home-invite.html">START CONFERENCE</a>
-    </main>
+  <body>
+    <header class="br-page-header row">
+      <div class="br-logo-wrapper col-sm-7"><a href="home.html"><img src="../img/logo.png" alt="Gemteleversity"></a></div>
+      <!--.br-browser-support.col-sm-5.text-rightspan AVAILABLE ON 
+i.br-icon.fa.fa-chrome
+i.br-icon.fa.fa-firefox
+
+-->
+    </header>
+    <main class="br-inner-page-content"></main>
     <footer class="br-pagefooter">
       <div class="row align-items-center">
         <div class="col-sm-6">
@@ -24,12 +28,31 @@
             <div class="br-date-wrapper">MON, 5 OCTOBER</div>
           </div>
         </div>
-        <!--.br-browser-support.col-sm-6.text-rightspan AVAILABLE ON 
-i.br-icon.fa.fa-chrome
-i.br-icon.fa.fa-firefox-->
       </div>
     </footer>
     <script src="../assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function()
+      {
+        $('.selectpicker').selectpicker();
+        $('a[data-toggle="action"]').on('click', function()
+        {
+          var target = $(this).data('target');
+          console.log(target)
+          if (target == "#screen")
+          {
+            $(target).toggleClass('active');
+            $('.br-confernce-user-lists').toggleClass('right');
+          }
+          else
+          {
+            $(target).toggleClass('active');
+          }
+        })
+      })
+    </script>
   </body>
 </html>

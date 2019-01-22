@@ -15,7 +15,7 @@
         background: rgba(105, 105, 105, 0.45);
         display: block;
         width: 590px;
-        @include border-radius(25px 25px 25px 25px);
+        @include border-radius(5px);
         >li{
             display: inline-block;
             width:80px;

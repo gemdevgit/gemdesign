@@ -9,10 +9,9 @@
         font-size: 46px;
         font-weight: 100;
         margin-bottom:30px;
-        color:#414141;
     }
     .br-link{
-        color:#212121;
+        color:rgba(255,255,255,.7);
         font-size: 19px;
         font-weight: 400;
         i{
@@ -30,15 +29,16 @@
     }
     .br-device-checking-area{
         display: inline-block;
-        background: #fff;
-        @include border-radius(8px);
+        background: rgba(255, 255, 255, 0.14);
+        @include border-radius(0);
+        overflow: hidden;
         @include box-shadow(2px 3px 12px 0px transparentize($clr-black,.6));
     }
     .br-video{
         width:365px;
         height: 255px;
         object-fit: cover;
-        @include border-radius(8px 8px 0  0);
+        @include border-radius(0);
     }
     .br-footer{
         >a{

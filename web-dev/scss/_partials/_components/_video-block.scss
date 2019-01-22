@@ -19,7 +19,7 @@
         position: relative;
         overflow: hidden;
         margin:11px;
-        @include border-radius(15px);
+        @include border-radius(0);
         .br-title{
             z-index: 2;
             font-size: 12px;
@@ -70,7 +70,7 @@
                 width: 100%;
                 max-height: 222px;
                 object-fit: cover;
-                @include border-radius(15px);
+                @include border-radius(0);
 
             }
         }
@@ -106,12 +106,10 @@
         
         width:235px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: stretch;
         @include position(fixed,70px,15px,45px,auto);
-        .br-user-wrapper{        
-            display: block;
-            width: auto;
+        .br-user-wrapper{     
             height: 24%;
         }
     }

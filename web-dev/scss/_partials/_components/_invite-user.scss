@@ -11,7 +11,7 @@
 
         background: rgba(105, 105, 105, 0.6);
         padding: 10px 30px 9px 10px;
-        @include border-radius(27px 0 0 27px);
+        @include border-radius(6px 0 0 6px);
     }
     .form-control{
         height: 35px;
@@ -19,17 +19,17 @@
         font-size: 9px;
         color: $clr-white;
         margin-right: 10px;
-        @include border-radius(25px);
+        @include border-radius(6px);
         border:none;
         padding: 2px 15px;
-        background: rgba(105, 105, 105, 0.8);
+        background: rgba(255, 255, 255, 0.27);
     }
     .br-btn-copy{
-        background: none;
+        background: rgba(0,0,0,.5);
         color:$clr-white;
         font-size: 11px;
-        @include border-radius(25px);
+        @include border-radius(6px);
         padding: 8px 19px;
-        border:1px solid #00ffff;
+        border:1px solid #fff;
     }
 }

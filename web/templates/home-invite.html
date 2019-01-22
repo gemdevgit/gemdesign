@@ -10,13 +10,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
   </head>
-  <body class="br-home" style="background-image:url(../img/landing-03.jpg)">
-    <header class="br-page-header">
-      <div class="br-logo-wrapper text-center text-sm-left"><a href="home.html"><img src="../img/logo.png" alt="Gemteleversity"></a></div>
-    </header>
-    <main class="br-home-content-wrapper">
+  <body class="br-home">
+    <header class="br-page-header"> </header>
+    <main class="br-home-content-wrapper br-inner-home-content-wrapper">
+      <div class="br-logo-wrapper text-center"><a href="home.html"><img src="../img/logo.png" alt="Gemteleversity"></a></div>
       <h1 class="br-welcome-title">Better meetings <br>are just the beginning</h1>
-      <form class="br-start-conference text-center" action="device-checking.html"><input class="br-input d-inline-block" type="text" placeholder="Your Name"><button class="btn br-btn-outline" type="submit">START CONFERENCE</button></form>
+      <div class="br-start-conference text-center">
+        <h4 class="br-sub-title">What's your name?</h4>
+        <form action="device-checking.html"><input class="br-input d-inline-block" type="text" placeholder="Your Name"><button class="btn br-btn-outline" type="submit">START CONFERENCE</button></form>
+      </div>
     </main>
     <footer class="br-pagefooter">
       <div class="row align-items-center">
@@ -26,7 +28,6 @@
             <div class="br-date-wrapper">MON, 5 OCTOBER</div>
           </div>
         </div>
-        <div class="br-browser-support col-sm-6 text-right"><span>AVAILABLE ON </span><i class="br-icon fa fa-chrome"></i><i class="br-icon fa fa-firefox"></i></div>
       </div>
     </footer>
     <script src="../assets/jquery/jquery-3.3.1.min.js"></script>

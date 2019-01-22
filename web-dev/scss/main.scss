@@ -20,6 +20,9 @@ img {
     padding: 30px 30px 0 30px;
     margin: auto;
     @include position(absolute,0,0,auto,0);
+    .br-logo-wrapper{
+        opacity: .8;
+    }
 }
 .br-pagefooter{
     
@@ -29,7 +32,8 @@ img {
 }
 .br-time-wrapper{
     font-weight: 300;
-    font-size: 50px;
+    font-size: 70px;
+    line-height: 50px;
     .br-time{
     }
     .br-format{
@@ -40,7 +44,8 @@ img {
 .br-date-wrapper{
     
     font-weight: 100;
-    font-size: 22px;
+    padding-left: 7px;
+    font-size: 24px;
 }
 .br-browser-support{
     span{

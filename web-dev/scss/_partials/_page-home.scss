@@ -1,5 +1,5 @@
 
-.br-home{
+body{
     background-image: url('../img/landing-01.jpg');
     background-size:cover;
     background-position: center;
@@ -9,20 +9,38 @@
 .br-home-content-wrapper{
     margin: auto;
     text-align: center;        
-    height: 175px;
+    height: 215px;
     @include position(absolute,0,0,0,0);
+    .br-logo-wrapper{
+        opacity: .8;
+    }
     .br-welcome-title{
         font-family: 'Montserrat', sans-serif;
         font-weight: 100;
-        font-size: 41px;
-        margin: auto  auto 30px auto ;
+        font-size: 26px;
+        margin: 10px auto 30px auto;
         max-width:500px;
     }
     .br-start-conference{
+        width: 460px;
+        background: rgba(0, 0, 0, 0.4);
+        margin: 0 auto auto auto;
+        padding: 20px 30px;
+        .br-sub-title{
+            font-weight: 100;
+            font-size: 22px;
+            margin: 0 0 20px 0;
+        }
+        .br-btn-outline{
+            background: rgba(0, 0, 0, 0.4);
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
         .br-input{
-            margin-right: 10px;
-            width:450px;
-            max-width:100%;
+            width: 100%;
+            margin-bottom: 20px;
         }
     }
 }
