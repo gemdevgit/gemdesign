@@ -1,0 +1,22 @@
+.ed-whiteboard-wrapper{
+    position: relative;
+    display: flex;
+    height: 100%;
+    .ed-tab-list{
+        list-style: none;
+        background: blue;
+        @include position(absolute,0,0,auto,35px);
+        li{
+            float: left;
+            cursor: pointer;
+        }
+    }
+    .ed-side-navbar{
+        
+        //@include position(absolute,0,auto,0,0);
+    }
+    .ed-board-nav-list{
+        background: pink;
+        @include position(absolute,0,auto,0,0);
+    }
+}

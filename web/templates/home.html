@@ -32,7 +32,44 @@
           </div>
           <div class="clearfix"></div>
         </header>
-        <main class="ed-content-area"></main>
+        <main class="ed-content-area">
+          <div class="ed-whiteboard-wrapper">
+            <div class="ed-top-navbar">
+              <ul class="ed-tab-list">
+                <li>Board 1<a href="javascript:;">x</a></li>
+                <li>Board 2<a href="javascript:;">x</a></li>
+                <li>Board 3<a href="javascript:;">x</a></li>
+                <li><a href="javascript:;">+</a></li>
+              </ul>
+            </div>
+            <div class="ed-side-navbar">
+              <ul class="ed-board-nav-list">
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a>
+                  <ul>
+                    <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                    <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                    <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                  </ul>
+                </li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+                <li><a class="icon-buzzer" href="javascript:;"></a></li>
+              </ul>
+            </div>
+            <div class="ed-white-board-content-area">Content will place hre</div>
+          </div>
+        </main>
       </div>
       <div class="ed-right-col">
         <div class="ed-video-wrapper">
@@ -41,12 +78,12 @@
               <li class="dropdown"><a class="icon-session-info" href="javascript:;" data-toggle="modal" data-target="#modalMeetingInfo"></a>
                 <div class="dropdown-menu ed-right-block-dropdown">
                   <h4 class="ed-title text-center">Session info</h4>
-                  <div class="ed-timer-red" style="width:150px;height:150px;background:red;border-radius:50%;margin:15px auto;padding:10%;">Timer<div class="d-n">
-                      <div class="clock-canvas" id="canvas-hours"></div>
-                      <div class="clock-canvas" id="canvas-minutes"></div>
-                      <div class="clock-canvas" id="canvas-seconds"></div>
-                      <div class="clock-canvas" id="canvas-days"></div>
-                      <div class="ed-timer-value"><span class="clock-hours"></span><span class="clock-minutes"></span><span class="clock-seconds"></span></div>
+                  <div class="ed-timer-wraper red">
+                    <div class="ed-timer p50"><span class="ed-time">20.15.14</span>
+                      <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"> </div>
+                      </div>
                     </div>
                   </div>
                   <div class="text-center">
@@ -74,12 +111,12 @@
               <li class="dropdown"><a class="icon-session-timer" href="javascript:;" data-toggle="modal" data-target="#modalSessionInfo"></a>
                 <div class="dropdown-menu ed-right-block-dropdown">
                   <h4 class="ed-title text-center">Personal timer</h4>
-                  <div class="ed-timer-blue" style="width:150px;height:150px;background:blue;border-radius:50%;margin:15px auto;padding:10%;">Timer<div class="d-n">
-                      <div class="clock-canvas" id="canvas-hours"></div>
-                      <div class="clock-canvas" id="canvas-minutes"></div>
-                      <div class="clock-canvas" id="canvas-seconds"></div>
-                      <div class="clock-canvas" id="canvas-days"></div>
-                      <div class="ed-timer-value"><span class="clock-hours"></span><span class="clock-minutes"></span><span class="clock-seconds"></span></div>
+                  <div class="ed-timer-wraper">
+                    <div class="ed-timer p50"><span class="ed-time">20.15.14</span>
+                      <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"> </div>
+                      </div>
                     </div>
                   </div>
                   <div class="text-center ed-notice">This timer is ONLY visible by you<br>No other preseters can see this<br>countdown.</div>

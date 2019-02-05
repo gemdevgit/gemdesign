@@ -51,16 +51,12 @@ html(lang='en')
                                 a(href="javascript:;",  data-toggle="modal", data-target="#modalMeetingInfo").icon-session-info
                                 .dropdown-menu.ed-right-block-dropdown
                                     h4.ed-title.text-center Session info
-                                    .ed-timer-red(style="width:150px;height:150px;background:red;border-radius:50%;margin:15px auto;padding:10%;") Timer
-                                        .d-n
-                                            #canvas-hours.clock-canvas
-                                            #canvas-minutes.clock-canvas
-                                            #canvas-seconds.clock-canvas
-                                            #canvas-days.clock-canvas
-                                            .ed-timer-value
-                                                span.clock-hours
-                                                span.clock-minutes
-                                                span.clock-seconds
+                                    .ed-timer-wraper.red
+                                        .ed-timer.p50
+                                            span.ed-time 20.15.14
+                                            .slice
+                                                .bar
+                                                .fill                                    
                                     .text-center
                                         .ed-session-title Pitch Like A Pro!
                                         .ed-author Dan Williams
@@ -82,16 +78,13 @@ html(lang='en')
                                 a(href="javascript:;", data-toggle="modal", data-target="#modalSessionInfo").icon-session-timer
                                 .dropdown-menu.ed-right-block-dropdown
                                     h4.ed-title.text-center Personal timer
-                                    .ed-timer-blue(style="width:150px;height:150px;background:blue;border-radius:50%;margin:15px auto;padding:10%;") Timer
-                                        .d-n
-                                            #canvas-hours.clock-canvas
-                                            #canvas-minutes.clock-canvas
-                                            #canvas-seconds.clock-canvas
-                                            #canvas-days.clock-canvas
-                                            .ed-timer-value
-                                                span.clock-hours
-                                                span.clock-minutes
-                                                span.clock-seconds
+                                    
+                                    .ed-timer-wraper
+                                        .ed-timer.p50
+                                            span.ed-time 20.15.14
+                                            .slice
+                                                .bar
+                                                .fill   
                                     .text-center.ed-notice
                                         | This timer is ONLY visible by you
                                         br

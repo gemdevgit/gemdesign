@@ -2,6 +2,7 @@
 @import '_utilities/_mixins';
 @import '_utilities/_variables';
 @import '_utilities/_helper';
+@import '_utilities/_circle';
 @import '_partials/_components';
 html,body{
     min-height:100%;
@@ -13,8 +14,8 @@ body {
 }
 .ed-main-wrapper{
     width:94%;
-    margin:3vh auto auto auto;
-    height: 97vh;
+    margin:5vh auto auto auto;
+    height: 95vh;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

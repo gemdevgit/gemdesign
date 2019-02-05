@@ -451,8 +451,546 @@ body div ::-webkit-scrollbar {
   border-bottom: 1px solid #ccc;
 }
 
+/****************************************************************
+ *
+ * CSS Percentage Circle
+ * Author: Andre Firchow
+ *
+*****************************************************************/
+.rect-auto, .ed-timer.p51 .slice, .ed-timer.p52 .slice, .ed-timer.p53 .slice, .ed-timer.p54 .slice, .ed-timer.p55 .slice, .ed-timer.p56 .slice, .ed-timer.p57 .slice, .ed-timer.p58 .slice, .ed-timer.p59 .slice, .ed-timer.p60 .slice, .ed-timer.p61 .slice, .ed-timer.p62 .slice, .ed-timer.p63 .slice, .ed-timer.p64 .slice, .ed-timer.p65 .slice, .ed-timer.p66 .slice, .ed-timer.p67 .slice, .ed-timer.p68 .slice, .ed-timer.p69 .slice, .ed-timer.p70 .slice, .ed-timer.p71 .slice, .ed-timer.p72 .slice, .ed-timer.p73 .slice, .ed-timer.p74 .slice, .ed-timer.p75 .slice, .ed-timer.p76 .slice, .ed-timer.p77 .slice, .ed-timer.p78 .slice, .ed-timer.p79 .slice, .ed-timer.p80 .slice, .ed-timer.p81 .slice, .ed-timer.p82 .slice, .ed-timer.p83 .slice, .ed-timer.p84 .slice, .ed-timer.p85 .slice, .ed-timer.p86 .slice, .ed-timer.p87 .slice, .ed-timer.p88 .slice, .ed-timer.p89 .slice, .ed-timer.p90 .slice, .ed-timer.p91 .slice, .ed-timer.p92 .slice, .ed-timer.p93 .slice, .ed-timer.p94 .slice, .ed-timer.p95 .slice, .ed-timer.p96 .slice, .ed-timer.p97 .slice, .ed-timer.p98 .slice, .ed-timer.p99 .slice, .ed-timer.p100 .slice {
+  clip: rect(auto, auto, auto, auto);
+}
+
+.pie, .ed-timer .bar, .ed-timer.p51 .fill, .ed-timer.p52 .fill, .ed-timer.p53 .fill, .ed-timer.p54 .fill, .ed-timer.p55 .fill, .ed-timer.p56 .fill, .ed-timer.p57 .fill, .ed-timer.p58 .fill, .ed-timer.p59 .fill, .ed-timer.p60 .fill, .ed-timer.p61 .fill, .ed-timer.p62 .fill, .ed-timer.p63 .fill, .ed-timer.p64 .fill, .ed-timer.p65 .fill, .ed-timer.p66 .fill, .ed-timer.p67 .fill, .ed-timer.p68 .fill, .ed-timer.p69 .fill, .ed-timer.p70 .fill, .ed-timer.p71 .fill, .ed-timer.p72 .fill, .ed-timer.p73 .fill, .ed-timer.p74 .fill, .ed-timer.p75 .fill, .ed-timer.p76 .fill, .ed-timer.p77 .fill, .ed-timer.p78 .fill, .ed-timer.p79 .fill, .ed-timer.p80 .fill, .ed-timer.p81 .fill, .ed-timer.p82 .fill, .ed-timer.p83 .fill, .ed-timer.p84 .fill, .ed-timer.p85 .fill, .ed-timer.p86 .fill, .ed-timer.p87 .fill, .ed-timer.p88 .fill, .ed-timer.p89 .fill, .ed-timer.p90 .fill, .ed-timer.p91 .fill, .ed-timer.p92 .fill, .ed-timer.p93 .fill, .ed-timer.p94 .fill, .ed-timer.p95 .fill, .ed-timer.p96 .fill, .ed-timer.p97 .fill, .ed-timer.p98 .fill, .ed-timer.p99 .fill, .ed-timer.p100 .fill {
+  position: absolute;
+  border: 0.08em solid #3ccfff;
+  width: 0.84em;
+  height: 0.84em;
+  clip: rect(0em, 0.5em, 1em, 0em);
+  border-radius: 50%;
+  transform: rotate(0deg);
+}
+
+.pie-fill, .ed-timer.p51 .bar:after, .ed-timer.p51 .fill, .ed-timer.p52 .bar:after, .ed-timer.p52 .fill, .ed-timer.p53 .bar:after, .ed-timer.p53 .fill, .ed-timer.p54 .bar:after, .ed-timer.p54 .fill, .ed-timer.p55 .bar:after, .ed-timer.p55 .fill, .ed-timer.p56 .bar:after, .ed-timer.p56 .fill, .ed-timer.p57 .bar:after, .ed-timer.p57 .fill, .ed-timer.p58 .bar:after, .ed-timer.p58 .fill, .ed-timer.p59 .bar:after, .ed-timer.p59 .fill, .ed-timer.p60 .bar:after, .ed-timer.p60 .fill, .ed-timer.p61 .bar:after, .ed-timer.p61 .fill, .ed-timer.p62 .bar:after, .ed-timer.p62 .fill, .ed-timer.p63 .bar:after, .ed-timer.p63 .fill, .ed-timer.p64 .bar:after, .ed-timer.p64 .fill, .ed-timer.p65 .bar:after, .ed-timer.p65 .fill, .ed-timer.p66 .bar:after, .ed-timer.p66 .fill, .ed-timer.p67 .bar:after, .ed-timer.p67 .fill, .ed-timer.p68 .bar:after, .ed-timer.p68 .fill, .ed-timer.p69 .bar:after, .ed-timer.p69 .fill, .ed-timer.p70 .bar:after, .ed-timer.p70 .fill, .ed-timer.p71 .bar:after, .ed-timer.p71 .fill, .ed-timer.p72 .bar:after, .ed-timer.p72 .fill, .ed-timer.p73 .bar:after, .ed-timer.p73 .fill, .ed-timer.p74 .bar:after, .ed-timer.p74 .fill, .ed-timer.p75 .bar:after, .ed-timer.p75 .fill, .ed-timer.p76 .bar:after, .ed-timer.p76 .fill, .ed-timer.p77 .bar:after, .ed-timer.p77 .fill, .ed-timer.p78 .bar:after, .ed-timer.p78 .fill, .ed-timer.p79 .bar:after, .ed-timer.p79 .fill, .ed-timer.p80 .bar:after, .ed-timer.p80 .fill, .ed-timer.p81 .bar:after, .ed-timer.p81 .fill, .ed-timer.p82 .bar:after, .ed-timer.p82 .fill, .ed-timer.p83 .bar:after, .ed-timer.p83 .fill, .ed-timer.p84 .bar:after, .ed-timer.p84 .fill, .ed-timer.p85 .bar:after, .ed-timer.p85 .fill, .ed-timer.p86 .bar:after, .ed-timer.p86 .fill, .ed-timer.p87 .bar:after, .ed-timer.p87 .fill, .ed-timer.p88 .bar:after, .ed-timer.p88 .fill, .ed-timer.p89 .bar:after, .ed-timer.p89 .fill, .ed-timer.p90 .bar:after, .ed-timer.p90 .fill, .ed-timer.p91 .bar:after, .ed-timer.p91 .fill, .ed-timer.p92 .bar:after, .ed-timer.p92 .fill, .ed-timer.p93 .bar:after, .ed-timer.p93 .fill, .ed-timer.p94 .bar:after, .ed-timer.p94 .fill, .ed-timer.p95 .bar:after, .ed-timer.p95 .fill, .ed-timer.p96 .bar:after, .ed-timer.p96 .fill, .ed-timer.p97 .bar:after, .ed-timer.p97 .fill, .ed-timer.p98 .bar:after, .ed-timer.p98 .fill, .ed-timer.p99 .bar:after, .ed-timer.p99 .fill, .ed-timer.p100 .bar:after, .ed-timer.p100 .fill {
+  transform: rotate(180deg);
+}
+
+.ed-timer {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  font-size: 141px;
+  box-shadow: 0 0 8px 4px #c5d3dd;
+}
+
+.ed-timer *, .ed-timer *:before, .ed-timer *:after {
+  box-sizing: content-box;
+}
+
+.ed-timer.center {
+  float: none;
+  margin: 0 auto;
+}
+
+.ed-timer.big {
+  font-size: 240px;
+}
+
+.ed-timer.small {
+  font-size: 80px;
+}
+
+.ed-timer:after {
+  position: absolute;
+  top: 0.05em;
+  left: 0.05em;
+  display: block;
+  content: " ";
+  border-radius: 50%;
+  background-color: #FFF;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.ed-timer .slice {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  clip: rect(0em, 1em, 1em, 0.5em);
+}
+
+.ed-timer.p1 .bar {
+  transform: rotate(3.6deg);
+}
+
+.ed-timer.p2 .bar {
+  transform: rotate(7.2deg);
+}
+
+.ed-timer.p3 .bar {
+  transform: rotate(10.8deg);
+}
+
+.ed-timer.p4 .bar {
+  transform: rotate(14.4deg);
+}
+
+.ed-timer.p5 .bar {
+  transform: rotate(18deg);
+}
+
+.ed-timer.p6 .bar {
+  transform: rotate(21.6deg);
+}
+
+.ed-timer.p7 .bar {
+  transform: rotate(25.2deg);
+}
+
+.ed-timer.p8 .bar {
+  transform: rotate(28.8deg);
+}
+
+.ed-timer.p9 .bar {
+  transform: rotate(32.4deg);
+}
+
+.ed-timer.p10 .bar {
+  transform: rotate(36deg);
+}
+
+.ed-timer.p11 .bar {
+  transform: rotate(39.6deg);
+}
+
+.ed-timer.p12 .bar {
+  transform: rotate(43.2deg);
+}
+
+.ed-timer.p13 .bar {
+  transform: rotate(46.8deg);
+}
+
+.ed-timer.p14 .bar {
+  transform: rotate(50.4deg);
+}
+
+.ed-timer.p15 .bar {
+  transform: rotate(54deg);
+}
+
+.ed-timer.p16 .bar {
+  transform: rotate(57.6deg);
+}
+
+.ed-timer.p17 .bar {
+  transform: rotate(61.2deg);
+}
+
+.ed-timer.p18 .bar {
+  transform: rotate(64.8deg);
+}
+
+.ed-timer.p19 .bar {
+  transform: rotate(68.4deg);
+}
+
+.ed-timer.p20 .bar {
+  transform: rotate(72deg);
+}
+
+.ed-timer.p21 .bar {
+  transform: rotate(75.6deg);
+}
+
+.ed-timer.p22 .bar {
+  transform: rotate(79.2deg);
+}
+
+.ed-timer.p23 .bar {
+  transform: rotate(82.8deg);
+}
+
+.ed-timer.p24 .bar {
+  transform: rotate(86.4deg);
+}
+
+.ed-timer.p25 .bar {
+  transform: rotate(90deg);
+}
+
+.ed-timer.p26 .bar {
+  transform: rotate(93.6deg);
+}
+
+.ed-timer.p27 .bar {
+  transform: rotate(97.2deg);
+}
+
+.ed-timer.p28 .bar {
+  transform: rotate(100.8deg);
+}
+
+.ed-timer.p29 .bar {
+  transform: rotate(104.4deg);
+}
+
+.ed-timer.p30 .bar {
+  transform: rotate(108deg);
+}
+
+.ed-timer.p31 .bar {
+  transform: rotate(111.6deg);
+}
+
+.ed-timer.p32 .bar {
+  transform: rotate(115.2deg);
+}
+
+.ed-timer.p33 .bar {
+  transform: rotate(118.8deg);
+}
+
+.ed-timer.p34 .bar {
+  transform: rotate(122.4deg);
+}
+
+.ed-timer.p35 .bar {
+  transform: rotate(126deg);
+}
+
+.ed-timer.p36 .bar {
+  transform: rotate(129.6deg);
+}
+
+.ed-timer.p37 .bar {
+  transform: rotate(133.2deg);
+}
+
+.ed-timer.p38 .bar {
+  transform: rotate(136.8deg);
+}
+
+.ed-timer.p39 .bar {
+  transform: rotate(140.4deg);
+}
+
+.ed-timer.p40 .bar {
+  transform: rotate(144deg);
+}
+
+.ed-timer.p41 .bar {
+  transform: rotate(147.6deg);
+}
+
+.ed-timer.p42 .bar {
+  transform: rotate(151.2deg);
+}
+
+.ed-timer.p43 .bar {
+  transform: rotate(154.8deg);
+}
+
+.ed-timer.p44 .bar {
+  transform: rotate(158.4deg);
+}
+
+.ed-timer.p45 .bar {
+  transform: rotate(162deg);
+}
+
+.ed-timer.p46 .bar {
+  transform: rotate(165.6deg);
+}
+
+.ed-timer.p47 .bar {
+  transform: rotate(169.2deg);
+}
+
+.ed-timer.p48 .bar {
+  transform: rotate(172.8deg);
+}
+
+.ed-timer.p49 .bar {
+  transform: rotate(176.4deg);
+}
+
+.ed-timer.p50 .bar {
+  transform: rotate(180deg);
+}
+
+.ed-timer.p51 .bar {
+  transform: rotate(183.6deg);
+}
+
+.ed-timer.p52 .bar {
+  transform: rotate(187.2deg);
+}
+
+.ed-timer.p53 .bar {
+  transform: rotate(190.8deg);
+}
+
+.ed-timer.p54 .bar {
+  transform: rotate(194.4deg);
+}
+
+.ed-timer.p55 .bar {
+  transform: rotate(198deg);
+}
+
+.ed-timer.p56 .bar {
+  transform: rotate(201.6deg);
+}
+
+.ed-timer.p57 .bar {
+  transform: rotate(205.2deg);
+}
+
+.ed-timer.p58 .bar {
+  transform: rotate(208.8deg);
+}
+
+.ed-timer.p59 .bar {
+  transform: rotate(212.4deg);
+}
+
+.ed-timer.p60 .bar {
+  transform: rotate(216deg);
+}
+
+.ed-timer.p61 .bar {
+  transform: rotate(219.6deg);
+}
+
+.ed-timer.p62 .bar {
+  transform: rotate(223.2deg);
+}
+
+.ed-timer.p63 .bar {
+  transform: rotate(226.8deg);
+}
+
+.ed-timer.p64 .bar {
+  transform: rotate(230.4deg);
+}
+
+.ed-timer.p65 .bar {
+  transform: rotate(234deg);
+}
+
+.ed-timer.p66 .bar {
+  transform: rotate(237.6deg);
+}
+
+.ed-timer.p67 .bar {
+  transform: rotate(241.2deg);
+}
+
+.ed-timer.p68 .bar {
+  transform: rotate(244.8deg);
+}
+
+.ed-timer.p69 .bar {
+  transform: rotate(248.4deg);
+}
+
+.ed-timer.p70 .bar {
+  transform: rotate(252deg);
+}
+
+.ed-timer.p71 .bar {
+  transform: rotate(255.6deg);
+}
+
+.ed-timer.p72 .bar {
+  transform: rotate(259.2deg);
+}
+
+.ed-timer.p73 .bar {
+  transform: rotate(262.8deg);
+}
+
+.ed-timer.p74 .bar {
+  transform: rotate(266.4deg);
+}
+
+.ed-timer.p75 .bar {
+  transform: rotate(270deg);
+}
+
+.ed-timer.p76 .bar {
+  transform: rotate(273.6deg);
+}
+
+.ed-timer.p77 .bar {
+  transform: rotate(277.2deg);
+}
+
+.ed-timer.p78 .bar {
+  transform: rotate(280.8deg);
+}
+
+.ed-timer.p79 .bar {
+  transform: rotate(284.4deg);
+}
+
+.ed-timer.p80 .bar {
+  transform: rotate(288deg);
+}
+
+.ed-timer.p81 .bar {
+  transform: rotate(291.6deg);
+}
+
+.ed-timer.p82 .bar {
+  transform: rotate(295.2deg);
+}
+
+.ed-timer.p83 .bar {
+  transform: rotate(298.8deg);
+}
+
+.ed-timer.p84 .bar {
+  transform: rotate(302.4deg);
+}
+
+.ed-timer.p85 .bar {
+  transform: rotate(306deg);
+}
+
+.ed-timer.p86 .bar {
+  transform: rotate(309.6deg);
+}
+
+.ed-timer.p87 .bar {
+  transform: rotate(313.2deg);
+}
+
+.ed-timer.p88 .bar {
+  transform: rotate(316.8deg);
+}
+
+.ed-timer.p89 .bar {
+  transform: rotate(320.4deg);
+}
+
+.ed-timer.p90 .bar {
+  transform: rotate(324deg);
+}
+
+.ed-timer.p91 .bar {
+  transform: rotate(327.6deg);
+}
+
+.ed-timer.p92 .bar {
+  transform: rotate(331.2deg);
+}
+
+.ed-timer.p93 .bar {
+  transform: rotate(334.8deg);
+}
+
+.ed-timer.p94 .bar {
+  transform: rotate(338.4deg);
+}
+
+.ed-timer.p95 .bar {
+  transform: rotate(342deg);
+}
+
+.ed-timer.p96 .bar {
+  transform: rotate(345.6deg);
+}
+
+.ed-timer.p97 .bar {
+  transform: rotate(349.2deg);
+}
+
+.ed-timer.p98 .bar {
+  transform: rotate(352.8deg);
+}
+
+.ed-timer.p99 .bar {
+  transform: rotate(356.4deg);
+}
+
+.ed-timer.p100 .bar {
+  transform: rotate(360deg);
+}
+
+.ed-timer:hover {
+  cursor: default;
+}
+
+.ed-timer-wraper {
+  padding: 15px;
+  background: #c8f2f6;
+  border-radius: 50%;
+  width: 171px;
+  height: 171px;
+  margin: 15px auto;
+}
+
+.ed-time {
+  font-size: 16px;
+  font-weight: 600;
+  color: #777777;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 14px;
+  margin: auto;
+  z-index: 1;
+  display: block;
+  white-space: nowrap;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.ed-timer-wraper.red {
+  background: #ffc6d7;
+}
+
+.ed-timer-wraper.red .ed-timer {
+  box-shadow: 0 0 8px 4px rgba(251, 157, 186, 0.48);
+}
+
+.ed-timer-wraper.red .bar,
+.ed-timer-wraper.red .fill {
+  border: 0.08em solid #fd014e;
+  position: absolute;
+  width: 0.84em;
+  height: 0.84em;
+  clip: rect(0em, 0.5em, 1em, 0em);
+  border-radius: 50%;
+}
+
+.ed-timer-wraper .bar:before {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 10px;
+  background: red;
+  position: absolute;
+}
+
 .ed-main-header .ed-logo-wrapper {
   float: left;
+  position: relative;
+  top: -10px;
 }
 
 .ed-main-header .ed-navbar-wrapper {
@@ -1250,6 +1788,37 @@ body div ::-webkit-scrollbar {
   margin-bottom: 15px;
 }
 
+.ed-whiteboard-wrapper {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.ed-whiteboard-wrapper .ed-tab-list {
+  list-style: none;
+  background: blue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 35px;
+}
+
+.ed-whiteboard-wrapper .ed-tab-list li {
+  float: left;
+  cursor: pointer;
+}
+
+.ed-whiteboard-wrapper .ed-board-nav-list {
+  background: pink;
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
 html, body {
   min-height: 100%;
 }
@@ -1261,8 +1830,8 @@ body {
 
 .ed-main-wrapper {
   width: 94%;
-  margin: 3vh auto auto auto;
-  height: 97vh;
+  margin: 5vh auto auto auto;
+  height: 95vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
