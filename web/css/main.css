@@ -1033,14 +1033,13 @@ body div ::-webkit-scrollbar {
 
 .ed-main-header .ed-navbar-wrapper > ul.ed-navbar-right::before {
   content: '';
-  display: none;
-  width: 40px;
+  display: block;
   height: 40px;
-  border-radius: 50%;
-  background-color: #f6f7fc;
+  background-color: #ffffff;
   position: absolute;
   left: 0;
-  bottom: 0;
+  right: 0;
+  top: 100%;
 }
 
 .ed-main-header .ed-navbar-wrapper > ul.ed-navbar-right li {
@@ -1800,17 +1799,55 @@ body div ::-webkit-scrollbar {
 
 .ed-whiteboard-wrapper .ed-tab-list {
   list-style: none;
-  background: blue;
   position: absolute;
   top: 0;
   right: 0;
   bottom: auto;
-  left: 35px;
+  left: 0;
 }
 
 .ed-whiteboard-wrapper .ed-tab-list li {
   float: left;
   cursor: pointer;
+  font-size: 11px;
+  font-weight: 300;
+  color: #dfdfdf;
+  padding: 6px 11px;
+  border-radius: 7px 0 0 0;
+  box-shadow: -5px 0px 4px 0px #e6e6e6;
+}
+
+.ed-whiteboard-wrapper .ed-tab-list li:first-child {
+  box-shadow: -3px 0px 3px 0px #e6e6e6;
+}
+
+.ed-whiteboard-wrapper .ed-tab-list li > a {
+  margin-left: 10px;
+  color: #dfdfdf;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+}
+
+.ed-whiteboard-wrapper .ed-tab-list li.ed-add {
+  padding: 4px 11px;
+}
+
+.ed-whiteboard-wrapper .ed-tab-list li.ed-add a {
+  font-size: 26px;
+  font-family: 'Lato', sans-serif;
+  line-height: 9px;
+  font-weight: 500;
+  position: relative;
+  left: -6px;
+  top: 3px;
+}
+
+.ed-whiteboard-wrapper .ed-tab-list li.active {
+  color: #6f6f6f;
+}
+
+.ed-whiteboard-wrapper .ed-tab-list li.active a {
+  color: #6f6f6f;
 }
 
 .ed-whiteboard-wrapper .ed-board-nav-list {
