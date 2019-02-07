@@ -31,9 +31,7 @@ body {
             border-radius: 10px;
             .ed-content-area{
                 border-radius:10px 0 10px 10px;
-                background: #fff;
                 height: calc(97vh - 150px);
-                @extend %box-shadow-common;
 
             }
         }

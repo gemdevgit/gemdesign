@@ -2,6 +2,10 @@
     position: relative;
     display: flex;
     height: 100%;
+    background: #fff;
+    margin:10px auto auto 30px;
+    border-radius: 10px 0 10px 10px;
+    @extend %box-shadow-common;
     .ed-tab-list{
         list-style: none;
         background: blue;
@@ -16,7 +20,87 @@
         //@include position(absolute,0,auto,0,0);
     }
     .ed-board-nav-list{
-        background: pink;
-        @include position(absolute,0,auto,0,0);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 5px;
+        background: #fff;
+        border-radius: 40px 0 0 37px;
+        @include box-shadow(-6px 0px 5px -3px #dddddd7d);
+        @include position(absolute,30px,auto,30px,-30px);
+        >li{
+            position: relative;
+            >a{
+                font-size: 11px;
+                color: #464a49;
+                width:25px;
+                height: 25px;
+                position: relative;
+                z-index: 2;
+                border-radius: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+            >ul{
+                @include position(absolute,0,auto,0,15px);
+                // display: none;
+                background: #fff;
+                display: none;
+                flex-direction: column;
+                border: 1px solid #0daee3;
+                white-space: nowrap;
+                vertical-align: middle;
+                border-radius: 0 13px 13px 0;
+                padding: 1px 10px 1px 10px;
+                >li{
+                    display: inline-block;
+                    vertical-align: middle;
+                    // &:after{
+                    //     content: '';
+                    //     display: inline-block;
+                    //     width: 0px;
+                    //     height: 100%;
+                    //     vertical-align: middle;
+                    // }
+                    >a{
+                        font-size: 11px;
+                        color: #464a49;
+                        width:21px;
+                        height: 21px;
+                        position: relative;
+                        z-index: 2;
+                        border-radius: 50%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover{
+                            color: #fff;
+                            background: #0daee3;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                >a{
+                    color: #fff;
+                    background: #0daee3;
+                }
+                >ul{
+                    display: block;
+                }
+            }
+            &.active{
+               
+                >a{
+                    color: #fff;
+                    background: #0daee3;
+                }
+            }
+        }
     }
 }
