@@ -10,7 +10,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video,textarea {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -188,6 +188,10 @@ body div ::-webkit-scrollbar {
     outline: none;
     padding: 9px 20px;
     font-weight: 500;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 1px 9px 1px #ddd;
+    }
     &:focus,&:active{
         box-shadow: none;
         outline: none;
@@ -199,6 +203,11 @@ body div ::-webkit-scrollbar {
         font-size: 10px;
         font-weight: 600;
     }
+    
+}
+.ed-btn-green{
+    background: #00d683;
+    color: #fff;
 }
 .text-red{
     color:#ff0030;

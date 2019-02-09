@@ -178,7 +178,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, textarea {
   margin: 0;
   padding: 0;
   border: 0;
@@ -351,6 +351,11 @@ body div ::-webkit-scrollbar {
   outline: none;
   padding: 9px 20px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.ed-btn:hover {
+  box-shadow: 0 1px 9px 1px #ddd;
 }
 
 .ed-btn:focus, .ed-btn:active {
@@ -364,6 +369,11 @@ body div ::-webkit-scrollbar {
   font-family: 'Lato', sans-serif;
   font-size: 10px;
   font-weight: 600;
+}
+
+.ed-btn-green {
+  background: #00d683;
+  color: #fff;
 }
 
 .text-red {
@@ -1785,6 +1795,80 @@ body div ::-webkit-scrollbar {
 
 .ed-modal-session-info-wrapper .ed-btn-wrapper {
   margin-bottom: 15px;
+}
+
+.ed-popup {
+  width: 320px;
+  height: 360px;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 7px 21px 5px rgba(221, 221, 221, 0.55);
+  position: absolute;
+  top: auto;
+  right: 385px;
+  bottom: 0;
+  left: auto;
+  z-index: 999;
+}
+
+.ed-popup.large {
+  width: 380px;
+  height: 444px;
+}
+
+.ed-popup .ed-title-wrapper {
+  cursor: move;
+  border-radius: 10px 10px 0 0;
+}
+
+.ed-popup #qa-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.ed-popup #qa-wrapper .ed-qa-wrapper .ed-aq-list {
+  max-height: 233px;
+  padding-bottom: 0;
+}
+
+.ed-popup #qa-wrapper .ed-qa-wrapper .ed-compose-chat {
+  padding-top: 0;
+}
+
+.ed-popup #qa-wrapper .ed-qa-wrapper .ed-compose-chat .ed-form-group {
+  border-top: 1px solid #f5f5f5;
+  padding-top: 10px;
+}
+
+.ed-popup #qa-wrapper .ed-qa-wrapper .ed-compose-chat .ed-input {
+  background: #f3f3f3;
+  font-size: 10px;
+  font-weight: 300;
+  color: #9e9e9e;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  resize: none;
+  height: 110px;
+}
+
+.ed-popup #qa-wrapper .ed-qa-wrapper .ed-compose-chat .ed-btn-wrapper {
+  margin: 8px auto 20px auto;
+  text-align: right;
+}
+
+.ed-popup #qa-wrapper .ed-qa-wrapper .ed-compose-chat .ed-btn-wrapper .ed-btn {
+  float: none;
+}
+
+.ed-popup #qa-wrapper .ed-qa-wrapper .ed-compose-chat .ed-btn-wrapper .ed-btn:first-of-type {
+  margin-right: 5px;
+}
+
+.ed-popup #chat-wrapper .ed-chat-wrapper .ed-chat-list {
+  max-height: 305px;
 }
 
 .ed-whiteboard-wrapper {

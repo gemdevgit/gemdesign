@@ -1,6 +1,10 @@
 (function() {
 
     $(window).on('load', function() {
+
+        $( ".ed-popup" ).draggable({
+            'containment':'body'
+        });
             $('[data-toggle="chat"]').on('click',function(){
                 var $this= $(this);
                 $('.ed-join,.ed-content').removeClass('active');
