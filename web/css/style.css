@@ -12149,6 +12149,10 @@ a#submit {
   }
 }
 
+.mk-readmore {
+  color: #0a161e;
+}
+
 /*--------------------------
 //Extends
 --------------------------------*/
@@ -12175,7 +12179,7 @@ a#submit {
     -ms-flex-direction: row;
     flex-direction: row;
     height: auto;
-    border-radius: 6px;
+    border-radius: 4px;
     box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.2);
   }
   .mk-skil-courses .course-card .card-header {
@@ -12190,7 +12194,7 @@ a#submit {
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
-    border-radius: 6px;
+    border-radius: 4px;
   }
   .mk-skil-courses .course-card .card-body {
     -ms-flex: 0 0 70%;
@@ -12218,6 +12222,63 @@ a#submit {
     right: 0;
     bottom: 0;
     left: auto;
+  }
+  .mk-my-course-list .course-tab-ul {
+    margin: auto;
+    border: none;
+    box-shadow: 0px 5px 7px -3px rgba(0, 0, 0, 0.2);
+  }
+  .mk-my-course-list .course-tab-ul > li {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+  }
+  .mk-my-course-list .course-tab-ul > li a {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .mk-my-course-list .course-tab-ul > li a:after {
+    display: none;
+  }
+  .mk-my-course-list .course-tab-ul > li a.active {
+    border-bottom: 2px solid #06a2f3 !important;
+  }
+  .mk-my-course-list .course-row .course-card {
+    height: auto;
+    border-radius: 4px;
+  }
+  .mk-my-course-list .course-row .card-header {
+    border-radius: 4px 4px 0 0;
+  }
+  .mk-my-course-list .course-row .card-header .card-img-top {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 120px;
+    -o-object-position: center;
+    object-position: center;
+    border-radius: 4px;
+  }
+  .mk-my-course-list .course-row .card-body h5 {
+    color: #6d7073;
+    white-space: normal;
+    margin-bottom: 15px;
+  }
+  .mk-my-course-list .course-row .card-body .progress-percent {
+    text-align: right;
+    padding: 0;
+  }
+  .mk-my-course-list .course-row .card-body .top-spacer {
+    padding-top: 0px;
+    padding-bottom: 15px;
+  }
+  .mk-my-course-list .course-row .card-footer .btn {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 6px;
+  }
+  .mk-my-course-list .course-row .card-footer .btn::after {
+    display: none;
   }
 }
 

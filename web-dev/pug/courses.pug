@@ -5,7 +5,7 @@ html
     link(rel='icon', type='image/png', href='./images/favicon.png')
     title Mediknit | My Courses
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-    link(href='https://fonts.googleapis.com/css?family=Raleway', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,500i,600,700', rel='stylesheet')
     link(rel='stylesheet', href='css/style.css')
   body
     section.top-bar
@@ -59,214 +59,60 @@ html
           .col.page-content
             ul.nav.nav-tabs.course-tab-ul(role='tablist')
               li.nav-item
-                a.nav-link.active(data-toggle='tab', href='#ongoing') ongoing(5)
+                a.nav-link.active(data-toggle='tab', href='#ongoing') ongoing (5)
               li.nav-item
-                a.nav-link(data-toggle='tab', href='#completed') completed(2)
+                a.nav-link(data-toggle='tab', href='#completed') completed (2)
               li.nav-item
-                a.nav-link(data-toggle='tab', href='#certificates') certificates(1)
+                a.nav-link(data-toggle='tab', href='#certificates') certificates (1)
             // Tab panes
             .tab-content.mk-tab-content
+            
+              mixin courses
+                .col-auto
+                  .card.course-card
+                    .card-header
+                      img.card-img-top(src='images/card-img.jpg', alt='Card image')
+                    .card-body
+                      .row
+                        .col-12
+                          h3 MASTERING PUBMED : BASICS
+                          h5  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore... 
+                            a(href="#").mk-readmore Show more
+                      .row
+                        .col-12
+                          span.card-progress Progress
+                          .progress-main
+                            .progress
+                              .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width:10%')
+                            span.progress-percent 10% Completed
+                      .row.top-spacer
+                        .col-12.grey-text You are on  
+                          br
+                          | Semister 1 > Module 2
+                        .col-12.f600 Understanding the Basics
+                      .row.grey-text
+                        .col-6.card-date.nrp Enrolled on : 7th Aug 2018
+                        .col-6.card-date.nlp.text-right Expires on : 7th Aug 2019
+                    .card-footer
+                      a.btn.btn-grad.mediBtn(href='courses-tree.html') resume
               #ongoing.container.tab-pane.active
                 br
                 .row.course-row
-                  .col-auto
-                    .card.course-card
-                      .card-header
-                        img.card-img-top(src='images/card-img.jpg', alt='Card image')
-                      .card-body
-                        .row
-                          .col-12
-                            h3 MASTERING PUBMED : BASICS
-                            h5 Accreditation Indian Podiatry Association
-                        .row
-                          .col-12
-                            span.card-progress Progress
-                            .progress-main
-                              .progress
-                                .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width:10%')
-                              span.progress-percent 10% Completed
-                        .row
-                          .col-6.card-date.nrp Enrolled on : 7th Aug 2018
-                          .col-6.card-date.nlp.text-right Expires on : 7th Aug 2019
-                        .row.top-spacer
-                          .col-12.grey-text You are on  Semister 1 > Module 2
-                          .col-12.f600 Understanding the Basics
-                      .card-footer
-                        a.btn.btn-grad.mediBtn(href='courses-tree.html') resume
-                  .col-auto
-                    .card.course-card
-                      .card-header
-                        img.card-img-top(src='images/card-img.jpg', alt='Card image')
-                      .card-body
-                        .row
-                          .col-12
-                            h3 MASTERING PUBMED : BASICS
-                            h5 Accreditation Indian Podiatry Association
-                        .row
-                          .col-12
-                            span.card-progress Progress
-                            .progress-main
-                              .progress
-                                .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width:10%')
-                              span.progress-percent 10% Completed
-                        .row
-                          .col-6.card-date.nrp Enrolled on : 7th Aug 2018
-                          .col-6.card-date.nlp.text-right Expires on : 7th Aug 2019
-                        .row.top-spacer
-                          .col-12.grey-text You are on  Semister 1 > Module 2
-                          .col-12.f600 Understanding the Basics
-                      .card-footer
-                        a.btn.btn-grad.mediBtn(href='#') resume
-                  .col-auto
-                    .card.course-card
-                      .card-header
-                        img.card-img-top(src='images/card-img.jpg', alt='Card image')
-                      .card-body
-                        .row
-                          .col-12
-                            h3 MASTERING PUBMED : BASICS
-                            h5 Accreditation Indian Podiatry Association
-                        .row
-                          .col-12
-                            span.card-progress Progress
-                            .progress-main
-                              .progress
-                                .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width:10%')
-                              span.progress-percent 10% Completed
-                        .row
-                          .col-6.card-date.nrp Enrolled on : 7th Aug 2018
-                          .col-6.card-date.nlp.text-right Expires on : 7th Aug 2019
-                        .row.top-spacer
-                          .col-12.grey-text You are on  Semister 1 > Module 2
-                          .col-12.f600 Understanding the Basics
-                      .card-footer
-                        a.btn.btn-grad.mediBtn(href='#') resume
-                  .col-auto
-                    .card.course-card
-                      .card-header
-                        img.card-img-top(src='images/card-img.jpg', alt='Card image')
-                      .card-body
-                        .row
-                          .col-12
-                            h3 MASTERING PUBMED : BASICS
-                            h5 Accreditation Indian Podiatry Association
-                        .row
-                          .col-12
-                            span.card-progress Progress
-                            .progress-main
-                              .progress
-                                .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width:10%')
-                              span.progress-percent 10% Completed
-                        .row
-                          .col-6.card-date.nrp Enrolled on : 7th Aug 2018
-                          .col-6.card-date.nlp.text-right Expires on : 7th Aug 2019
-                        .row.top-spacer
-                          .col-12.grey-text You are on  Semister 1 > Module 2
-                          .col-12.f600 Understanding the Basics
-                      .card-footer
-                        a.btn.btn-grad.mediBtn(href='#') resume
-                  .col-auto
-                    .card.course-card
-                      .card-header
-                        img.card-img-top(src='images/card-img.jpg', alt='Card image')
-                      .card-body
-                        .row
-                          .col-12
-                            h3 MASTERING PUBMED : BASICS
-                            h5 Accreditation Indian Podiatry Association
-                        .row
-                          .col-12
-                            span.card-progress Progress
-                            .progress-main
-                              .progress
-                                .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width:10%')
-                              span.progress-percent 10% Completed
-                        .row
-                          .col-6.card-date.nrp Enrolled on : 7th Aug 2018
-                          .col-6.card-date.nlp.text-right Expires on : 7th Aug 2019
-                        .row.top-spacer
-                          .col-12.grey-text You are on  Semister 1 > Module 2
-                          .col-12.f600 Understanding the Basics
-                      .card-footer
-                        a.btn.btn-grad.mediBtn(href='#') resume
+                  +courses
+                  +courses
+                  +courses
+                  +courses
+                  +courses
               #completed.container.tab-pane.fade
                 br
                 .row.course-row
-                  .col-auto
-                    .card.course-card
-                      .card-header
-                        img.card-img-top(src='images/card-img.jpg', alt='Card image')
-                      .card-body
-                        .row
-                          .col-12
-                            h3 MASTERING PUBMED : BASICS
-                            h5 Accreditation Indian Podiatry Association
-                        .row
-                          .col-12
-                            span.card-progress Progress
-                            .progress-main
-                              .progress
-                                .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width:10%')
-                              span.progress-percent 10% Completed
-                        .row
-                          .col-6.card-date.nrp Enrolled on : 7th Aug 2018
-                          .col-6.card-date.nlp.text-right Expires on : 7th Aug 2019
-                        .row.top-spacer
-                          .col-12.grey-text You are on  Semister 1 > Module 2
-                          .col-12.f600 Understanding the Basics
-                      .card-footer
-                        a.btn.btn-grad.mediBtn(href='#') resume
-                  .col-auto
-                    .card.course-card
-                      .card-header
-                        img.card-img-top(src='images/card-img.jpg', alt='Card image')
-                      .card-body
-                        .row
-                          .col-12
-                            h3 MASTERING PUBMED : BASICS
-                            h5 Accreditation Indian Podiatry Association
-                        .row
-                          .col-12
-                            span.card-progress Progress
-                            .progress-main
-                              .progress
-                                .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width:10%')
-                              span.progress-percent 10% Completed
-                        .row
-                          .col-6.card-date.nrp Enrolled on : 7th Aug 2018
-                          .col-6.card-date.nlp.text-right Expires on : 7th Aug 2019
-                        .row.top-spacer
-                          .col-12.grey-text You are on  Semister 1 > Module 2
-                          .col-12.f600 Understanding the Basics
-                      .card-footer
-                        a.btn.btn-grad.mediBtn(href='#') resume
+                
+                  +courses
+                  +courses
               #certificates.container.tab-pane.fade
                 br
-                .row.course-row
-                  .col-auto
-                    .card.course-card
-                      .card-header
-                        img.card-img-top(src='images/card-img.jpg', alt='Card image')
-                      .card-body
-                        .row
-                          .col-12
-                            h3 MASTERING PUBMED : BASICS
-                            h5 Accreditation Indian Podiatry Association
-                        .row
-                          .col-12
-                            span.card-progress Progress
-                            .progress-main
-                              .progress
-                                .progress-bar(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100', style='width:10%')
-                              span.progress-percent 10% Completed
-                        .row
-                          .col-6.card-date.nrp Enrolled on : 7th Aug 2018
-                          .col-6.card-date.nlp.text-right Expires on : 7th Aug 2019
-                        .row.top-spacer
-                          .col-12.grey-text You are on  Semister 1 > Module 2
-                          .col-12.f600 Understanding the Basics
-                      .card-footer
-                        a.btn.btn-grad.mediBtn(href='#') resume
+                .row.course-row                  
+                  +courses
     section.footer-group
       .container-fluid.inner-box
         .row
