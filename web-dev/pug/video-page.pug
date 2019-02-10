@@ -1,0 +1,443 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='icon', type='image/png', href='./images/favicon.png')
+    title Mediknit | My Videos
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    link(href='https://fonts.googleapis.com/css?family=Raleway', rel='stylesheet')
+    link(rel='stylesheet', href='css/style.css')
+    // page specific css starts here
+    // <link rel="stylesheet" href="css/skin/skin.css">
+    // page specific css ends here
+  body
+    section.top-bar
+      nav.navbar.navbar-expand-lg.mk-navbar
+        .container-fluid
+          a.navbar-brand(href='index.html')
+            img.mk-logo(src='images/logo.png', alt='logo')
+            img.mobile-logo(src='images/logo-mobile.png', alt='logo')
+            span.tagline Transforming Professional Medical Education
+          button.navbar-toggler.main-mobilemenu(type='button', data-toggle='collapse', data-target='#navbarTogglerDemo02', aria-controls='navbarTogglerDemo02', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+              img(src='images/menu.svg', width='26', height='26')
+          #navbarTogglerDemo02.collapse.navbar-collapse
+            ul.navbar-nav.mt-2.mt-lg-0.mk-menu
+              li.nav-item.mk-btn.active
+                a.nav-link.btn(href='courses.html') courses
+              li.nav-item
+                a.nav-link(href='#') channels
+              li.nav-item
+                a.nav-link(href='#') live
+              li.nav-item
+                a.nav-link(href='#') partners
+          ul.navbar-nav.mt-2.mt-lg-0.mk-menu.profile-menu
+            li.dropdown.topmenu.hidden-xs.profile-dropdown
+              a(href='#', style='display: inline-block;')
+                span.avatar S
+              a.dropdown-toggle.user-profile(data-toggle='dropdown', href='#')
+                span Surendar Surendar
+              ul.dropdown-menu.top-submenu
+                li
+                  a(href='#') Profile
+                li
+                  a(href='#') Settings
+                li
+                  a(href='#') Logout
+            li.nav-item.searchnv
+              a.nav-link.search-btn(href='#')
+                img(src='images/search.svg', width='32')
+          .search-box.search-col(style='display: none;')
+            input.searchTxt(type='text', name='searchTxt', placeholder='Type Your Search Here')
+    section.video-content
+      .container-fluid.inner-box
+        .row
+          .col.video-box
+            // the player
+            //
+              <div class="flowplayer" data-swf="flowplayer.swf" data-ratio="0.4167">
+              <video>
+              <source type="video/webm" src="video/bauhaus.mp4">
+              <source type="video/mp4" src="video/bauhaus.webm">
+              </video>
+              </div>
+            div(style='padding:55% 0 0 0;position:relative;')
+              iframe(src='https://player.vimeo.com/video/6383273', style='position:absolute;top:0;left:0;width:100%;height:100%;', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+            script(src='https://player.vimeo.com/api/player.js')
+    section.discussions-content
+      .container-fluid.inner-box.content-bg
+        .row.video-info-container
+          .col-md-8
+            .mk-navigator
+              a(href='#') Go Back
+            .mk-breadcrumb
+              a.next-crumb(href='#') Course
+              a.next-crumb(href='#') Semister 1
+              | Module 2
+            .article-head
+              h3 Live from GEM OT (20 March '18): Laparoscopic Gastrectomy
+            .row
+              .article-infos.col-12.col-sm-6.col-md-7.col-lg-7
+                span.art-border
+                  .article-author
+                    .article-author-left
+                      span.avatar P
+                    .article-author-right
+                      span.f600 dr parthasarathi ms
+                      .view-info Published on 28th April 2018 - 568 views
+              .article-rating.col-12.col-sm-6.col-md-5.col-lg-5
+                span.total-starrating
+                  img(src='images/bluestar.png', width='24')
+                  |  3/5
+                span.ratings
+                  a(href='#')
+                    img(src='images/greystar.png', width='24')
+                    |  Rate this
+            .module-tabs
+              ul.nav.nav-tabs.module-tab-ul(role='tablist')
+                li.nav-item.first
+                  a.nav-link.active(data-toggle='tab', href='#moduleOverview') Overview
+                li.nav-item
+                  a.nav-link(data-toggle='tab', href='#moduleKeywords') Keywords
+                li.nav-item
+                  a.nav-link(data-toggle='tab', href='#moduleChapter') chapter
+                li.nav-item.last
+                  a.nav-link(data-toggle='tab', href='#moduleResources') resources
+              .tab-content.module-content
+                #moduleOverview.module-tab.tab-pane.in.active
+                  p
+                    | The New York State Podiatric Medical Association (NYSPMA) is a tax-exempt not-for-profit, voluntary professional association uniting 3 of every 4 doctors of podiatric medicine (DPM's) in New York State. NYSPMA is the largest statewide component of the American Podiatric Medical Association (www.apma.org) and its affiliated national network of certifying boards and professional colleges. Established in 1895, we were the first organization of its kind in America.
+                  #moreContent.collapse
+                    p
+                      | The New York State Podiatric Medical Association supports excellence in the practice of podiatric medicine and surgery in creating awareness of the profession's role and value.Doctors of Podiatric Medicine are valued in New York State and nationally as part of the health care team and are respected for their consistent clinical excellence and key role in the changing health care delivery environment
+                  a.course-info-more(href='#', data-toggle='collapse', data-target='#moreContent')
+                    span.vm Show more
+                #moduleKeywords.tab-pane.module-tab.fade
+                  p
+                    | The New York State Podiatric Medical Association (NYSPMA) is a tax-exempt not-for-profit, voluntary professional association uniting 3 of every 4 doctors of podiatric medicine (DPM's) in New York State. NYSPMA is the largest statewide component of the American Podiatric Medical Association (www.apma.org) and its affiliated national network of certifying boards and professional colleges. Established in 1895, we were the first organization of its kind in America.
+                  #moreContent.collapse
+                    p
+                      | The New York State Podiatric Medical Association supports excellence in the practice of podiatric medicine and surgery in creating awareness of the profession's role and value.Doctors of Podiatric Medicine are valued in New York State and nationally as part of the health care team and are respected for their consistent clinical excellence and key role in the changing health care delivery environment
+                  a.course-info-more(href='#', data-toggle='collapse', data-target='#moreContent')
+                    span.vm Show more
+                #moduleChapter.tab-pane.module-tab.fade
+                  p
+                    | Medical technology companies are optimistic about the plan. “The National Health Stack approach looks at technology as an integral part of healthcare delivery,” said Prasad Kompalli, chief executive officer and co-founder of mfine, a company that has built a mobile application to connect doctors and patients.The app is powered by an artificial intelligence system to create “virtual hospitals”, that is, the app does not simply connect doctors and patients but also collects, structures and analyses the patient’s medical data to help the doctor diagnose and treat the patient.
+                  #moreContent.collapse
+                    p
+                      | Medical technology companies are optimistic about the plan. “The National Health Stack approach looks at technology as an integral part of healthcare delivery,” said Prasad Kompalli, chief executive officer and co-founder of mfine, a company that has built a mobile application to connect doctors and patients.The app is powered by an artificial intelligence system to create “virtual hospitals”, that is, the app does not simply connect doctors and patients but also collects, structures and analyses the patient’s medical data to help the doctor diagnose and treat the patient.
+                  a.course-info-more(href='#', data-toggle='collapse', data-target='#moreContent')
+                    span.vm Show more
+                #moduleResources.tab-pane.module-tab.fade
+                  p
+                    | The New York State Podiatric Medical Association (NYSPMA) is a tax-exempt not-for-profit, voluntary professional association uniting 3 of every 4 doctors of podiatric medicine (DPM's) in New York State. NYSPMA is the largest statewide component of the American Podiatric Medical Association (www.apma.org) and its affiliated national network of certifying boards and professional colleges. Established in 1895, we were the first organization of its kind in America.
+                  #moreContent.collapse
+                    p
+                      | The New York State Podiatric Medical Association supports excellence in the practice of podiatric medicine and surgery in creating awareness of the profession's role and value.Doctors of Podiatric Medicine are valued in New York State and nationally as part of the health care team and are respected for their consistent clinical excellence and key role in the changing health care delivery environment
+                  a.course-info-more(href='#', data-toggle='collapse', data-target='#moreContent')
+                    span.vm Show more
+            .qa-section
+              ul.nav.nav-tabs.course-tab-ul(role='tablist')
+                li.nav-item
+                  a.nav-link.active(data-toggle='tab', href='#discussions') 03 Discussions
+                li.nav-item
+                  a.nav-link(data-toggle='tab', href='#myQuestions') My Questions
+              .tab-content.mk-tab-content
+                #discussions.container.tab-pane.active
+                  .row.my-discussion
+                    .col
+                      .post-comment
+                        .avatar-box
+                          span.avatar P
+                        .comment-textbox
+                          textarea(rows='5', cols='100', placeholder='Put a comment or ask a question here!')
+                      .post-comment.mb20
+                        .avatar-box
+                        .comment-textbox
+                          a.btn-grad.mediBtn(href='#') post a question
+                          span.mid-txt or
+                          a.btn-grad.mediBtn(href='#') public comment
+                      ul.comment-list
+                        li
+                          .question-content
+                            .question-author
+                              .avatar P
+                              .question-time
+                                h3 Dr Parthasarathi
+                                span on 20th April 2018
+                            .question-info
+                              .question-actions
+                                span.q-title Question
+                                span.r-title
+                                  a.nav-link(href='#', data-toggle='modal', data-target='#replyAnswer') Reply
+                              .question-details
+                                span hey this is really great! what lens and cam did you guys use ?
+                          ul.reply-list
+                            li
+                              .question-content
+                                .question-author
+                                  .avatar P
+                                  .question-time
+                                    h3 Dr Parthasarathi
+                                    span on 20th April 2018
+                                .question-info
+                                  .question-actions
+                                    span.q-title Answer
+                                    span.r-title
+                                      a.nav-link(href='#', data-toggle='modal', data-target='#replyAnswer') Reply
+                                  .question-details
+                                    span
+                                      | Thank you! It was a combination Varicam 35 on the Century 150-600, Dragon and BMPC with Mini S4s.
+                            li
+                              .question-content
+                                .question-author
+                                  .avatar P
+                                  .question-time
+                                    h3 Dr Parthasarathi
+                                    span on 20th April 2018
+                                .question-info
+                                  .question-actions
+                                    span.q-title Answer
+                                    span.r-title Reply
+                                  .question-details
+                                    span
+                                      | Thank you! It was a combination Varicam 35 on the Century 150-600, Dragon and BMPC with Mini S4s.Thank you! It was a combination Varicam 35 on the Century 150-600, Dragon and BMPC with Mini S4s.Thank you! It was a combination Varicam 35 on the Century 150-600, Dragon and BMPC with Mini S4s.
+                        li
+                          .question-content
+                            .question-author
+                              .avatar P
+                              .question-time
+                                h3 Dr Parthasarathi
+                                span on 20th April 2018
+                            .question-info
+                              .question-actions
+                                span.r-title Reply
+                              .question-details
+                                span hey this is really great! what lens and cam did you guys use ?
+                        li
+                          .question-content
+                            .question-author
+                              .avatar P
+                              .question-time
+                                h3 Dr Parthasarathi
+                                span on 20th April 2018
+                            .question-info
+                              .question-actions
+                                span.r-title Reply
+                              .question-details
+                                span hey this is really great! what lens and cam did you guys use ?
+                #myQuestions.container.tab-pane.fade
+                  .row.my-discussion
+                    .col
+                      .post-comment
+                        .avatar-box
+                          span.avatar P
+                        .comment-textbox
+                          textarea(rows='5', cols='100', placeholder='Put a comment or ask a question here!')
+                      .post-comment.mb20
+                        .avatar-box
+                        .comment-textbox
+                          a.btn.btn-grad.mediBtn(href='#') post a question
+                          span.mid-txt or
+                          a.btn.btn-grad.mediBtn(href='#') public comment
+                      ul.comment-list
+                        li
+                          .question-content
+                            .question-author
+                              .avatar P
+                              .question-time
+                                h3 Dr Parthasarathi
+                                span on 20th April 2018
+                            .question-info
+                              .question-actions
+                                span.q-title Question
+                                span.r-title Reply
+                              .question-details
+                                span hey this is really great! what lens and cam did you guys use ?
+                          ul.reply-list
+                            li
+                              .question-content
+                                .question-author
+                                  .avatar P
+                                  .question-time
+                                    h3 Dr Parthasarathi
+                                    span on 20th April 2018
+                                .question-info
+                                  .question-actions
+                                    span.q-title Answer
+                                    span.r-title
+                                      a.nav-link(href='#', data-toggle='modal', data-target='#replyAnswer') Reply
+                                  .question-details
+                                    span
+                                      | Thank you! It was a combination Varicam 35 on the Century 150-600, Dragon and BMPC with Mini S4s.
+                            li
+                              .question-content
+                                .question-author
+                                  .avatar P
+                                  .question-time
+                                    h3 Dr Parthasarathi
+                                    span on 20th April 2018
+                                .question-info
+                                  .question-actions
+                                    span.q-title Answer
+                                    span.r-title Reply
+                                  .question-details
+                                    span
+                                      | Thank you! It was a combination Varicam 35 on the Century 150-600, Dragon and BMPC with Mini S4s.Thank you! It was a combination Varicam 35 on the Century 150-600, Dragon and BMPC with Mini S4s.Thank you! It was a combination Varicam 35 on the Century 150-600, Dragon and BMPC with Mini S4s.
+                        li
+                          .question-content
+                            .question-author
+                              .avatar P
+                              .question-time
+                                h3 Dr Parthasarathi
+                                span on 20th April 2018
+                            .question-info
+                              .question-actions
+                                span.r-title Reply
+                              .question-details
+                                span hey this is really great! what lens and cam did you guys use ?
+                        li
+                          .question-content
+                            .question-author
+                              .avatar P
+                              .question-time
+                                h3 Dr Parthasarathi
+                                span on 20th April 2018
+                            .question-info
+                              .question-actions
+                                span.r-title Reply
+                              .question-details
+                                span hey this is really great! what lens and cam did you guys use ?
+          .col-md-4.surgeon-block
+            h3 Surgeons
+            #doctorCarousel.carousel.doctor-carousel.slide(data-ride='carousel')
+              a.carousel-control-prev(href='#doctorCarousel', data-slide='prev')
+                img(src='images/arrow-left.svg')
+              a.carousel-control-next(href='#doctorCarousel', data-slide='next')
+                img(src='images/arrow-right.svg')
+              ul.carousel-indicators
+                li.active(data-target='#doctorCarousel', data-slide-to='0')
+                li(data-target='#doctorCarousel', data-slide-to='1')
+                li(data-target='#doctorCarousel', data-slide-to='2')
+              // The slideshow
+              .carousel-inner.doctor-inner
+                .carousel-item.active
+                  img(src='images/doctors/1.jpg', alt='Los Angeles', width='100%')
+                  p.doctor-name Dr C Palanivelu
+                  p.doctor-degree MS, MBBS, BDMS, BHMS
+                .carousel-item
+                  img(src='images/doctors/1.jpg', alt='Los Angeles', width='100%')
+                  p.doctor-name Dr C Palanivelu
+                  p.doctor-degree MS, MBBS, BDMS, BHMS
+                .carousel-item
+                  img(src='images/doctors/1.jpg', alt='Los Angeles', width='100%')
+                  p.doctor-name Dr C Palanivelu
+                  p.doctor-degree MS, MBBS, BDMS, BHMS
+              // Left and right controls
+    section.footer-group
+      .container-fluid.inner-box
+        .row
+          .col-12.col-md-6.col-lg-8.footer-left
+            .row
+              .col
+                ul.foot-menu
+                  li
+                    a(href='#') Home
+                  li
+                    a(href='#') Courses
+                  li
+                    a(href='#') Channels
+                  li
+                    a(href='#') Open Learning
+                  li
+                    a(href='#') Partner with us
+            .row
+              .col.col-md-4
+                img(src='images/mediknit-footlogo.png', width='150')
+              .col.col-md-8
+                ul.social-icons
+                  li
+                    a(href='#')
+                      svg(version='1.1', width='26px', height='26px', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 24 24', style='enable-background:new 0 0 24 24;', xml:space='preserve')
+                        g
+                          g
+                            circle#facebook(fill='#fff', cx='12', cy='12', r='12')
+                          g
+                            path(fill='#09a4f0', d='M15,12.5h-2.1v7.8H9.6v-7.8H8.1V9.7h1.5V7.9c0-1.3,0.6-3.3,3.3-3.3l2.4,0v2.7h-1.7c-0.3,0-0.7,0.1-0.7,0.8\
+                            v1.6h2.4L15,12.5z')
+                  li
+                    a(href='#')
+                      // ?xml version="1.0" encoding="utf-8"?
+                      // Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)
+                      svg(version='1.1', width='26px', height='26px', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 24 24', style='enable-background:new 0 0 24 24;', xml:space='preserve')
+                        g
+                          g
+                            circle#twitter(fill='#fff', cx='12', cy='12', r='12')
+                          g
+                            g
+                              path(fill='#09a4f0', d='M19.4,8.6c-0.5,0.2-1.1,0.4-1.6,0.5c0.6-0.4,1-0.9,1.3-1.6c-0.6,0.3-1.2,0.6-1.8,0.7\
+                              c-0.5-0.6-1.3-0.9-2.1-0.9c-1.6,0-2.9,1.3-2.9,2.9c0,0.2,0,0.4,0.1,0.7c-2.4-0.1-4.5-1.3-5.9-3C6.1,8.2,6,8.7,6,9.2\
+                              c0,1,0.5,1.9,1.3,2.4c-0.5,0-0.9-0.1-1.3-0.4c0,0,0,0,0,0c0,1.4,1,2.5,2.3,2.8c-0.2,0.1-0.5,0.1-0.8,0.1c-0.2,0-0.4,0-0.5-0.1\
+                              c0.4,1.1,1.4,2,2.7,2c-1,0.8-2.2,1.2-3.6,1.2c-0.2,0-0.5,0-0.7,0c1.3,0.8,2.8,1.3,4.4,1.3c5.3,0,8.2-4.4,8.2-8.2\
+                              c0-0.1,0-0.2,0-0.4C18.5,9.7,19,9.2,19.4,8.6L19.4,8.6z')
+                  li
+                    a(href='#')
+                      // ?xml version="1.0" encoding="utf-8"?
+                      svg(version='1.1', width='26px', height='26px', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 24 24', style='enable-background:new 0 0 24 24;', xml:space='preserve')
+                        g
+                          g
+                            circle#youtube(fill='#fff', cx='12', cy='12', r='12')
+                          g#Layer_x0020_1_2_
+                            g
+                              path(fill='#09a4f0', d='M18.7,7.4c-0.3-0.3-0.7-0.5-1.1-0.5c-0.9-0.1-1.8-0.2-2.8-0.2c-0.9,0-1.9,0-2.8,0c-0.9,0-1.9,0-2.8,0\
+                              c-0.9,0-1.9,0.1-2.8,0.2C6,6.9,5.6,7.1,5.3,7.4C5,7.7,4.8,8,4.7,8.5C4.6,9,4.5,9.6,4.5,10.2c0,0.6,0,1.2,0,1.8c0,0.6,0,1.2,0,1.8\
+                              c0,0.6,0.1,1.2,0.2,1.8C4.8,16,5,16.3,5.3,16.6c0.3,0.3,0.7,0.5,1.1,0.5c0.9,0.1,1.8,0.2,2.8,0.2c0.9,0,1.9,0,2.8,0\
+                              c0.9,0,1.9,0,2.8,0c0.9,0,1.9-0.1,2.8-0.2c0.4,0,0.8-0.2,1.1-0.5c0.3-0.3,0.5-0.6,0.6-1.1c0.1-0.6,0.2-1.2,0.2-1.8\
+                              c0-0.6,0-1.2,0-1.8h0v0h0c0-1.2,0-2.4-0.3-3.5C19.2,8,19,7.7,18.7,7.4L18.7,7.4z')
+                            g
+                              path(fill='#fff', d='M14.9,11.7c-0.9-0.4-1.7-0.9-2.6-1.3c-0.7-0.4-1.4-0.7-2.1-1.1L9.9,9.1v0.3v4.9v0.3l0.2-0.1\
+                              c0.8-0.4,1.6-0.8,2.4-1.2l2.4-1.2l0.3-0.1L14.9,11.7L14.9,11.7z')
+            .row.foot-texts
+              .col-12 © 2018 All rights reserved
+              .col-12
+                a(href='#') privacy policy
+                |  
+                a(href='#') Terms & conditions
+          .col-12.col-md-6.col-lg-4.footer-right
+            .subscribe-widget
+              h4.subscribe-head Subscribe to Updates
+              p.foot-texts Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              form
+                .input-group
+                  input.form-control.subscribe-input(type='text', placeholder='Email address')
+                  span.input-group-btn
+                    button.btn.btn-subscribe(type='button')
+                      | SUBSCRIBE
+    // The Signup Modal
+    #replyAnswer.modal.mk-modal.fade
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          // Modal Header
+          .modal-header.text-center
+            .modaltitle
+              h4.modal-title
+                span REPLY
+          // Modal body
+          .modal-body.reply-body
+            form(action='#')
+              .form-group.error-group
+                label(for='name') Your Comment
+                textarea#name.form-control(placeholder='Type our reply here')
+                label.validation-label Required Field
+              .form-group.text-center.custom-box
+                div(align='center')
+                  button.btn.btn-grad.mediBtn.modal-btn(type='submit') POST YOUR REPLY
+          // Modal footer
+          .modal-footer
+    script(src='js/jquery.min.js')
+    script(src='js/popper.min.js')
+    script(src='js/bootstrap.min.js')
+    // page specific js file starts here
+    // <script src="js/flowplayer.min.js"></script>
+    // page specific js file ends here
+    script(src='js/custom.js')

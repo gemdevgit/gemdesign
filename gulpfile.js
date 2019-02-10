@@ -43,7 +43,7 @@ gulp.task('pug', function() {
         .pipe(prettify({
             indent_size: 2
         }))
-        .pipe(gulp.dest('web/templates'))
+        .pipe(gulp.dest('web'))
         .pipe(browserSync.stream())
 });
 

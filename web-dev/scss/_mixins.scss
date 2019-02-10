@@ -1,0 +1,196 @@
+/*--------------------------
+//Extends
+--------------------------------*/
+
+//! usage  @extend %clearfix;
+//!
+//! Clearfix
+//! usage  @extend %clearfix;
+//!
+//!
+%clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+        height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+%titleGradient {
+    background: rgb(0, 174, 255);
+    background: -moz-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(22, 148, 215, 1) 49%, rgba(64, 213, 187, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 174, 255, 1) 0%, rgba(22, 148, 215, 1) 49%, rgba(64, 213, 187, 1) 100%);
+    background: linear-gradient(to right, rgba(0, 174, 255, 1) 0%, rgba(22, 148, 215, 1) 49%, rgba(64, 213, 187, 1) 100%);
+}
+
+
+/*--------------------------
+// Mixins
+--------------------------------*/
+
+//! ----------Mixins statements index----------
+//-@include border-radius(0);
+//! usage  @include bxsz-brdrbx;
+//! usage  @include bxsz-cntnbx;
+//! usage  @include break-hyphens;
+//! usage  @include box-shadow(none);
+//! usage  @include position(absolute,0,0,auto,0);
+//! usage  @include transition(color .3s ease);
+//! usage  @include transform(rotate(7deg));
+//! usage  @include transform-orgin();
+//! usage  @extend %box-shadow-common;
+//! usage  @include bp('min-wdith :768px') {}
+//! @include bpMin('768px')
+//! @include bpMax('768px')
+//! @include bpMinMax('768px','768px')
+//! @include aspect-ratio(16, 9);
+//! ----------Mixins statements----------
+//-@include border-radius(0);
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin bxsz-brdrbx {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//! usage  @include bxsz-cntnbx
+@mixin bxsz-cntnbx {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+//! usage  @include break-hyphens
+@mixin break-hyphens {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+//! usage  @include box-shadow(none)
+@mixin box-shadow($radius) {
+    -webkit-box-shadow: $radius;
+    -moz-box-shadow: $radius;
+    box-shadow: $radius;
+}
+
+@mixin border-bottom-1 {
+    border-bottom: 1px solid $clr-grey;
+}
+
+@mixin text-dec-ul {
+    text-decoration: underline;
+}
+
+//! Position
+//! usage  @include position(fixed,auto,0,-143px,0);
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+//!
+//! Transitions
+//! usage  @include transition(color .3s ease);
+//!
+//!
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+//! Transform
+//! usage  @include transform(rotate(7deg));
+//!
+//!
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+//! Transform
+//! usage  @include transform-orgin();
+//!
+//!
+@mixin transform-orgin($trans-orgin) {
+    -moz-transform-origin: $trans-orgin;
+    -o-transform-origin: $trans-orgin;
+    -ms-transform-origin: $trans-orgin;
+    -webkit-transform-origin: $trans-orgin;
+    transform-origin: $trans-orgin;
+}
+
+//!
+//! Box shadow
+//! usage  @extend %box-shadow-common;
+//!
+//!
+%box-shadow-common {
+    -webkit-box-shadow: 5px 5px rgba(57, 57, 57, 0.2);
+    -moz-box-shadow: 5px 5px rgba(57, 57, 57, 0.2);
+    box-shadow: 5px 5px rgba(57, 57, 57, 0.2);
+}
+
+//!
+//! Flexible bottom
+//! usage  @extend %clearfix;
+//!
+//!
+@mixin flexible-top($elementHeight) {
+    top: ($elementHeight / (-2));
+}
+
+//! ----------Mixins breakpoints----------
+//!
+//!
+//! usage  @include bp('min-wdith :768px') {}
+//!
+//!
+@mixin bp($point) {
+    @media only screen and ($point) {
+        @content;
+    }
+}
+
+//! @include bpMin('768px')
+@mixin bpMin($point) {
+    @media only screen and (min-width: $point) {
+        @content;
+    }
+}
+
+//! @include bpMax('768px')
+@mixin bpMax($point) {
+    @media only screen and (max-width: $point) {
+        @content;
+    }
+}
+
+//! @include bpMinMax('768px','768px')
+@mixin bpMinMax($point1, $point2) {
+    @media only screen and (min-width: $point1) and (max-width: $point2) {
+        @content;
+    }
+}
