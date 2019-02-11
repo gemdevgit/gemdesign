@@ -56,7 +56,7 @@ gulp.task('browserSync', function() {
             baseDir: 'web',
             directory: true
         },
-        ghostMode: false,
+        ghostMode: true,
     })
 })
 gulp.task('watch', ['browserSync', 'sass', 'pug'], function() {

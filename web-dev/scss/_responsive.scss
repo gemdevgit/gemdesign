@@ -1,9 +1,66 @@
+.mk-res-nav{
+    
+  height: 100%;
+  width: 250px;
+  max-width: 80%;
+  z-index: 9999;
+  @include position(fixed, 0, 0,0, auto); 
+  background-color: #fff;
+  width: 300px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  .mk-nav-content{
+      display: flex;
+      background: #fff;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.2);
+      .mk-close-sidebar{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 17px;
+      }
+      .mk-top-block{
+          .avatar{              
+            font-size: 15px;
+            top: 0;
+            width: 40px;
+            height: 40px;    
+            line-height: 30px;
+            box-shadow: 1px 2px 6px -1px #40D5BB;
+          }
+          .mk-user-name{
+              margin:15px auto 5px auto;
+              font-size: 15px;
+              color: #0a161e;
+          }
+          .mk-user-email{
+              color: #6d7073;
+              font-size: 12px;
+              
+          }
+      }
+      .mk-menu{
+          flex-direction: column;
+          >li{
+              display: block;
+          }
+      }
+  }
+  &:after{
+      content: '';
+      display: block;
+      background: rgba(0,0,0,0.5);
+      @include position(fixed, 0, 0,0, 0); 
+  }
+}
+@include bpMax('991px'){
 
-
-
-
-
-
+}
 /*Homepage design updates */
 @include bpMax('575px'){
     .mk-skil-courses{
@@ -11,6 +68,8 @@
             border: none;
             color: #555657;
             font-size: 19px;
+            min-width: 0;
+            max-width: calc(100% - 65px);
         }
         .mk-link{
             color: #aaacad;
@@ -29,7 +88,8 @@
                 -ms-flex: 0 0 30%;
                 flex: 0 0 30%;
                 max-width: 30%;
-                padding-bottom: 15px;
+                padding: 10px 15px 10px 10px;
+                border-radius: 4px;
                 .card-img-top {
                     height: 100%;
                     object-fit: cover;
@@ -44,6 +104,7 @@
                 max-width: 70%;
                 padding-bottom: 70px;
                 padding-left: 0;
+                position: relative;
                 h5{
                     display: none;
                 }
@@ -51,11 +112,16 @@
                     
                     width: auto;
                     padding-left: 0;
-                    @include position(absolute, auto,auto,24px, 30%);
+                    @include position(absolute, auto,auto,24px, 0);
                 }
                 .mk-img{
                     width:auto ;
-                    @include position(absolute, auto, 0,0, auto);
+                    max-width: calc(100% - 80px);
+                    @include position(absolute, auto, 0,0, auto); 
+                    .accredition-img{
+                        max-width: 100%;
+                    }
+
                 }
             }
         }
@@ -112,6 +178,7 @@
                 }
             }
             .card-footer{
+                border-radius: 0 0 4px 4px;
                 .btn{
                     width:100%;
                     text-align: center;
