@@ -12,13 +12,13 @@ html
       nav.navbar.navbar-expand-lg.mk-navbar
         .container-fluid
           a.navbar-brand(href='index.html')
-            img.mk-logo(src='images/logo.png', alt='logo')
-            img.mobile-logo(src='images/logo-mobile.png', alt='logo')
+            img.mk-logo(src='images/logo.png' alt='logo')
+            img.mobile-logo(src='images/logo-mobile.png' alt='logo')
             span.tagline Transforming Professional Medical Education
-          button.navbar-toggler.main-mobilemenu(type='button', data-toggle='collapse', data-target='#navbarTogglerDemo02', aria-controls='navbarTogglerDemo02', aria-expanded='false', aria-label='Toggle navigation')
+          button.res_nav_btn.navbar-toggler.main-mobilemenu(type='button' data-target='#navbarTogglerDemo02')
             span.navbar-toggler-icon
-              img(src='images/menu.svg', width='26', height='26')
-          #navbarTogglerDemo02.collapse.navbar-collapse
+              img(src='images/menu.svg' width='26' height='26')
+          .collapse.navbar-collapse
             ul.navbar-nav.mt-2.mt-lg-0.mk-menu
               li.nav-item.mk-btn.active
                 a.nav-link(href='courses.html') courses
@@ -28,11 +28,41 @@ html
                 a.nav-link(href='#') live
               li.nav-item
                 a.nav-link(href='partners.html') partners
+          #navbarTogglerDemo02.mk-res-nav
+            .mk-nav-content
+              a.mk-close-sidebar.res_nav_btn(href='javascript:;' data-target='#navbarTogglerDemo02') X
+              .mk-top-block
+                a.d-inline-block(href='#')
+                  span.avatar S
+                h5.mk-user-name Surendar Surendar
+                p.mk-user-email surendar.p@gmail.com
+                ul.nav-menu
+                  li
+                    a(href='#') 
+                      i.fa.fa-home.mk-icon
+                      span MY COURSES
+                  li
+                    a(href='#') 
+                      i.fa.fa-home.mk-icon
+                      span PROFILE
+                  li
+                    a(href='#') 
+                      i.fa.fa-home.mk-icon
+                      span CHANGE PASSWORD
+              ul.navbar-nav.mk-menu.nav-menu
+                li.nav-item.mk-btn.active
+                  a.nav-link(href='courses.html') courses
+                li.nav-item
+                  a.nav-link(href='channels.html') channels
+                li.nav-item
+                  a.nav-link(href='#') live
+                li.nav-item
+                  a.nav-link(href='partners.html') partners
           ul.navbar-nav.mt-2.mt-lg-0.mk-menu.profile-menu
             li.dropdown.topmenu.hidden-xs.profile-dropdown
-              a(href='#', style='display: inline-block;')
+              a(href='#' style='display: inline-block;')
                 span.avatar S
-              a.dropdown-toggle.user-profile(data-toggle='dropdown', href='#')
+              a.dropdown-toggle.user-profile(data-toggle='dropdown' href='#')
                 span Surendar Surendar
               ul.dropdown-menu.top-submenu
                 li
@@ -43,9 +73,10 @@ html
                   a(href='#') Logout
             li.nav-item.searchnv
               a.nav-link.search-btn(href='#')
-                img(src='images/search.svg', width='32')
+                img(src='images/search.svg' width='32')
           .search-box.search-col(style='display: none;')
-            input.searchTxt(type='text', name='searchTxt', placeholder='Type Your Search Here')
+            input.searchTxt(type='text' name='searchTxt' placeholder='Type Your Search Here')
+
     section.header-banner
       .container-fluid.inner-box
         .row
@@ -66,7 +97,7 @@ html
                 a.nav-link(data-toggle='tab', href='#certificates') certificates (1)
             // Tab panes
             .tab-content.mk-tab-content
-            
+
               mixin courses
                 .col-auto
                   .card.course-card
@@ -106,7 +137,7 @@ html
               #completed.container.tab-pane.fade
                 br
                 .row.course-row
-                
+
                   +courses
                   +courses
               #certificates.container.tab-pane.fade

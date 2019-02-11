@@ -2,7 +2,7 @@ $(document).ready(function(){
     $('.search-btn').on('click',function(){
         $('.search-box').slideToggle();
     })
-    $('body').on('click','#nav_btn',function(){
+    $('body').on('click','.res_nav_btn',function(){
         $($(this).attr('data-target')).toggleClass('open')
     })
     $('input.searchTxt').focus(function() {
