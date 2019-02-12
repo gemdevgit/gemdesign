@@ -12159,7 +12159,23 @@ a#submit {
 /*--------------------------
 // Mixins
 --------------------------------*/
+.mk-res-nav {
+  display: none;
+}
+
 @media only screen and (max-width: 991px) {
+  .mk-navbar .mk-menu.profile-menu .profile-dropdown {
+    display: none;
+  }
+  .mk-navbar .tagline {
+    display: none;
+  }
+  .main-mobilemenu {
+    right: 0px;
+  }
+  li.nav-item.searchnv {
+    right: 40px;
+  }
   .mk-res-nav {
     height: 100%;
     max-width: 80%;
@@ -12173,6 +12189,7 @@ a#submit {
     width: 0;
     overflow-x: hidden;
     transition: 0.5s;
+    display: block;
   }
   .mk-res-nav .mk-nav-content {
     display: -ms-flexbox;
@@ -12233,10 +12250,12 @@ a#submit {
     /* Opera 11.10+ */
     /* IE10+ */
     background: linear-gradient(to right, #00AEFF 0%, #1A98D3 50%, #40D5BB 100%);
-    padding-left: 5px;
   }
   .mk-res-nav .mk-nav-content .nav-menu li.active > a, .mk-res-nav .mk-nav-content .nav-menu li:hover > a {
     color: #fff;
+  }
+  .mk-res-nav .mk-nav-content .nav-menu li:hover {
+    padding-left: 5px;
   }
   .mk-res-nav .mk-nav-content .nav-menu a {
     color: #0a161e;
@@ -12423,6 +12442,31 @@ a#submit {
     border-radius: 6px;
   }
   .mk-my-course-list .course-row .card-footer .btn::after {
+    display: none;
+  }
+  .search-col {
+    width: auto;
+    right: 5px;
+    left: 5px;
+    top: 64px;
+  }
+  .course-maininfo .course-info-right h4 {
+    margin-bottom: 20px;
+    max-width: none;
+  }
+  .course-maininfo .course-info-right .faculty-list {
+    height: auto !important;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .course-maininfo .course-info-right .faculty-list .list-group-item {
+    -ms-flex: 50%;
+    flex: 50%;
+  }
+  .course-maininfo .course-info-right .faculty-list .list-group-item .info-img {
+    display: none;
+  }
+  .course-maininfo .course-info-right .faculty-list .list-group-item .info-desc p {
     display: none;
   }
 }
