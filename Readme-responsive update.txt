@@ -11,3 +11,5 @@ Courses.html
 * Skill course design issue fixed.
 
 * navbar design added in course.html
+==========================
+*course tree html update
