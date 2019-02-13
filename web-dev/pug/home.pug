@@ -6,31 +6,187 @@ html(lang='en')
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='stylesheet', href='../assets/bootstrap/css/bootstrap.min.css')
-        link(rel='stylesheet', href='../assets/bootstrap-select/css/bootstrap-select.min.css')
-        link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
-        link(href="https://fonts.googleapis.com/css?family=Lato:100,300|Montserrat:100,300,400,500" rel="stylesheet" )
+        link(href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700" rel="stylesheet" )
         link(rel='stylesheet', href="../css/main.css")
     body.br-home
-        header.br-page-header
-            .br-logo-wrapper.text-center.text-sm-left
-                a(href="home.html")
-                    img(src="../img/logo.png" alt="Gemteleversity")   
+        header.fr-page-header
+            .container
+                .fr-nav-wrapper
+                    .fr-logo-wrapper
+                        a(href="#").fr-logo
+                            img(src="../img/logo.png")
+                    nav.navbar.navbar-expand-lg.fr-nav
+                        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                            span.navbar-toggler-icon
+                        #navbarSupportedContent.collapse.navbar-collapse
+                            ul.navbar-nav.mr-auto
+                                li.nav-item
+                                    a.nav-link(href='#') About us                        
+                                li.nav-item
+                                    a.nav-link(href='#') Features
+                                li.nav-item
+                                    a.nav-link(href='#') Contact Us
+                .fr-welcome-note-wrapper.col-sm-6
+                    h1.fr-welcome-title 
+                        small immersive
+                        | VISUAL INTERACTION
+                    .fr-note Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    a(href="#").btn.btn-outline.fr-btn READ MORE
 
-        main.br-home-content-wrapper
-            h1.br-welcome-title Lets your best   work shine through.
-            a(href="home-invite.html").btn.br-btn-outline START CONFERENCE
-        footer.br-pagefooter
-            .row.align-items-center
-                .col-sm-6
-                    .br-date-time-wrapper
-                        .br-time-wrapper
-                            span.br-time   10:35 
-                            span.br-format am
-                        .br-date-wrapper
-                            | MON, 5 OCTOBER
-                .br-browser-support.col-sm-6.text-right
-                    span AVAILABLE ON 
-                    i.br-icon.fa.fa-chrome
-                    i.br-icon.fa.fa-firefox
+
+            
+        section.fr-why.fr-block
+            .container
+                h2.fr-block-title 
+                    small Why 
+                    | FutureRoom
+                .row
+                    .col-sm-4
+                        .fr-box
+                            img(src="../img/ico-book.png").fr-img-1 
+                            h3.fr-block-title Transform e-Learning 
+                                br
+                                | Experience
+                            .fr-desc The FutureRoom brings the future of learning forward and revolutionize the teaching scenario of your institution to an advanced level.
+                    .col-sm-4
+                        .fr-box
+                            img(src="../img/ico-training.png").fr-img-1 
+                            h3.fr-block-title High Level of
+                                br
+                                | Interaction
+                            .fr-desc FutureRoom provides high level of interaction without geographical concerns and helps in expanding student knowledge base from anywhere anytime.
+                    .col-sm-4
+                        .fr-box
+                            img(src="../img/ico-erp.png").fr-img-1 
+                            h3.fr-block-title World-Class 
+                                br
+                                | Experience
+                            .fr-desc FutureRoom provides more than just education. Upgrade your institution with FutureRoom and increase student engagements &amp; enrollments.
+            
+        section.fr-what.fr-block
+            .row.no-gutters
+                .col-sm-6.fr-left-block
+                    img(src="../img/preview-thumb.png")
+                .col-sm-6.fr-right-block 
+                    h3.fr-block-title What is FutureRoom
+                    h2.fr-content-title Transform the digital learning
+                        br
+                        | experience with FutureRoom
+                    .fr-desc Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+        section.fr-offr.fr-block
+            .container
+                h2.fr-block-title 
+                    small What We 
+                    | Offer
+                .row
+                    .col-sm-4.fr-box-wrapper
+                        .fr-box
+                            .fr-bg(style="background-image:url('../img/ico-hd.png')")
+                            img(src="../img/ico-hd.png") 
+                            h3.fr-block-title High Defenition AV 
+                                br
+                                | Conference
+                            .fr-desc The FutureRoom brings the future of learning forward and revolutionize the teaching scenario of your institution to an advanced level.
+                    .col-sm-4.fr-box-wrapper
+                        .fr-box
+                            .fr-bg(style="background-image:url('../img/ico-ai.png')")
+                            img(src="../img/ico-ai.png") 
+                            h3.fr-block-title AI
+                                br
+                                | Based Analytics
+                            .fr-desc The FutureRoom brings the future of learning forward and revolutionize the teaching scenario of your institution to an advanced level.
+                    .col-sm-4.fr-box-wrapper
+                        .fr-box
+                            .fr-bg(style="background-image:url('../img/ico-ad.png')")
+                            img(src="../img/ico-ad.png") 
+                            h3.fr-block-title Multimedia
+                                br
+                                | Content Sharing
+                            .fr-desc The FutureRoom brings the future of learning forward and revolutionize the teaching scenario of your institution to an advanced level.
+                    .col-sm-4.fr-box-wrapper
+                        .fr-box
+                            .fr-bg(style="background-image:url('../img/ico-trans.png')")
+                            img(src="../img/ico-trans.png") 
+                            h3.fr-block-title Language
+                                br
+                                | Translation
+                            .fr-desc The FutureRoom brings the future of learning forward and revolutionize the teaching scenario of your institution to an advanced level.
+                    .col-sm-4.fr-box-wrapper
+                        .fr-box
+                            .fr-bg(style="background-image:url('../img/ico-pres.png')")
+                            img(src="../img/ico-pres.png") 
+                            h3.fr-block-title BreakOut 
+                                br
+                                | Rooms
+                            .fr-desc The FutureRoom brings the future of learning forward and revolutionize the teaching scenario of your institution to an advanced level.
+                    .col-sm-4.fr-box-wrapper
+                        .fr-box
+                            .fr-bg(style="background-image:url('../img/ico-polling.png')")
+                            img(src="../img/ico-polling.png") 
+                            h3.fr-block-title Polls and 
+                                br
+                                | Surveys
+                            .fr-desc The FutureRoom brings the future of learning forward and revolutionize the teaching scenario of your institution to an advanced level.
+
+
+        footer.fr-page-footer
+                .container
+                    .fr-subscribe-wrapper.text-left
+                        .row
+                            .col-sm-6
+                                h2.fr-block-title 
+                                    span Subscribe and Stay Tuned
+                                    img(src="../img/ico-msg.png")
+                                p.fr-dtls Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
+                            .col-sm-6
+                                form.form-inline(action='#')
+                                    input.form-control(type='email', placeholder='Email address')
+                                    button.btn(type='submit')
+                                        img(src="../img/ico-send.png")
+                    .row
+                        .col-sm-4
+                            .fr-logo-wrapper
+                                a(href="#")
+                                    img(src="../img/logo-white.png")
+                            p.text-justify FutureRoom an online course selling platform, is a product of Enfin Technologies Pvt Ltd. The company was founded in 2009 and has a remarkable track record in producing software in Edu-tech and Real Time Communication. Enfin combined both its competencies and made a product which is not only technologically far ahead of its competitors but also versatile and extremely helpful in creating value to traditional and new entrepreneurs 
+                        .fr-address-wrapper.col-sm-4
+                            h3.fr-block-title Contact Us
+                            .fr-row
+                                i.fr-icon.fr-map
+                                span.fr-dtls Enfin Technologies Pvt. Ltd.
+                                    br
+                                    | C-24, -2 Floor,
+                                    br
+                                    | Thejaswani Building,
+                                    br
+                                    | Technopark Campus, Trivandrum, 695581,
+                                    br
+                                    | Kerala, India.
+                            .fr-row
+                                i.fr-icon.fr-mail
+                                span.fr-dtls sales@ofabee.com
+                            .fr-row
+                                i.fr-icon.fr-phone
+                                span.fr-dtls  +91 80-8609-5030
+                        .fr-contact-wrapper.col-sm-4
+                            h3.fr-block-title Write to us
+                            form(action='/action_page.php')
+                                .form-group
+                                    input.form-control(type='email', placeholder="Email address")
+                                .form-group
+                                    input.form-control(type='text', placeholder="Name")
+                                .form-group
+                                    textarea.form-control(placeholder="Message")
+                                button.btn.btn-light(type='submit') SEND
+
+
+                .fr-copyright-wrapper
+                    .container.d-flex.justify-content-between
+                        a(href="#") Privacy Policy
+                        span © 2019 FutureRoom. A VENTURE OF Enfin Technologies Pvt. Ltd. All Rights Reserved.
+                        a(href="#") Tearms &amp; Condition
+                        
+
+
         script(src="../assets/jquery/jquery-3.3.1.min.js")
         script(src='../assets/bootstrap/js/bootstrap.min.js')
