@@ -1,7 +1,13 @@
-.mk-res-nav {
+.mk-res-nav,
+.mk-res-navigator{
     display: none;
 }
+
 @include bpMax('991px') {
+        body{
+
+            padding-top: 60px;
+        }
     .mk-navbar .mk-menu.profile-menu .profile-dropdown{
         display: none;
     }
@@ -144,7 +150,9 @@
             }
         }
     }
-    
+    .video-box{
+        padding: 0;
+    }
 }
 
 /*Homepage design updates */
@@ -172,9 +180,9 @@
             border-radius: 4px;
             box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.2);
             .card-header {
-                -ms-flex: 0 0 30%;
-                flex: 0 0 30%;
-                max-width: 30%;
+                -ms-flex: 0 0 40%;
+                flex: 0 0 40%;
+                max-width: 40%;
                 padding: 10px 15px 10px 10px;
                 border-radius: 4px;
                 .card-img-top {
@@ -185,9 +193,9 @@
                 }
             }
             .card-body {
-                -ms-flex: 0 0 70%;
-                flex: 0 0 70%;
-                max-width: 70%;
+                -ms-flex: 0 0 60%;
+                flex: 0 0 60%;
+                max-width: 60%;
                 padding-bottom: 70px;
                 padding-left: 0;
                 position: relative;
@@ -289,9 +297,13 @@
             }
             .faculty-list{
                 height: auto !important;
+                display: -ms-flexbox;
                 display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
                 .list-group-item{
                     flex: 50%;
+                    max-width: 50%;
                     .info-img{
                         display: none;
                     }
@@ -303,5 +315,201 @@
                 }
             }
         } 
+    }
+    .accordion{
+        .card-header{
+            
+            &:after{
+                right: 10px !important;
+                z-index: 1;
+    
+            }
+            h4{        
+                padding-right: 62px;
+            }
+            .progress-main{                
+                padding-right: 62px;
+            }
+        }
+    } 
+    .course-resume{
+        background: url(../images/play-big.png) no-repeat;
+        text-indent: -1000px;
+        background-size: 50px;
+        min-width: 0;
+        width: 50px;
+        height: 50px;
+        box-shadow: none;
+        top: 15px;
+        margin: auto;
+        right: 30px;
+        &::after{
+            display: none;
+        }
+    }
+    .accordion-list{
+        li{
+            position: relative;
+            padding-left: 25px;
+            border: none;
+            padding-bottom: 25px;
+            .lesson-details{
+                &::before{
+                    display: block;
+                    left: -25px;
+                    z-index: 1;
+                    top: 29px;
+                }
+                &::after{
+                    display: block;
+                    left: -20px;
+                    height: auto;
+                    bottom: -100px;
+                    margin: auto;
+                    top: 33px;
+                }
+                +.lesson-status{    
+                    padding: 2px 5px;
+                    background: #d4d4d4;
+                    color: #fff;
+                    width: auto;
+                }
+                &.past{
+                    +.lesson-status{ 
+                        background: #555657;
+                    }
+                }
+                &.current{
+                    +.lesson-status{ 
+                        background: #3db6f6;
+                    }
+                }
+            }
+            
+            .lesson-content{
+                h3{
+                    padding-right: 30px;
+                }
+                p{
+                    display: none;
+                }
+            }
+            .lesson-timer{
+                display: none;
+
+            }
+            .lesson-action{
+                @include position(absolute, 25px,0,auto,auto);
+                width: 25px;
+                height: 25px;
+                display: block;
+            }
+            .module-lesson{
+                display: block;
+                clear: left;
+
+            }
+        } 
+    } 
+    .video-content{
+        margin-bottom: 30px;
+        .mk-res-navigator{
+            display: block;
+            .mk-navigator{                
+                @include position(absolute, 25px,auto,auto,0);
+                >a{
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    &::before{
+
+                        background: url('../images/long-back-white.png') no-repeat;
+                        background-size: 16px 20px;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                }
+            }
+            .module-tab-ul{
+                @include position(absolute, auto,-15px,-35px,-15px);
+                display: flex;
+                flex-direction: row;
+                width: auto;
+                box-shadow: -0.5px 0.5px 6px rgba(0, 0, 0, 0.16);
+                background: #fff;
+                margin:auto;
+                justify-content: space-around;
+                >li{
+                    width:auto;
+                    a{
+
+                        background: none !important;
+                        border:none;
+                        &.show{
+                            color: #495057 !important;
+                            border-bottom: 3px solid #06a2f3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .discussions-content{
+        .content-bg{
+            padding:0;
+        }
+        .video-info-container{
+            .mk-navigator,.mk-breadcrumb,.module-tabs{
+                display: none;
+            }
+            .article-head h3{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+@include bpMax('360px') {
+    .mk-skil-courses{
+        .course-card{
+            .card-header{
+
+                flex: 0 0 45%;
+                max-width: 45%;
+            }
+            .card-body{
+
+                flex: 0 0 55%;
+                max-width: 55%;
+            }
+        } 
+    } 
+    .mk-my-course-list{
+        .course-tab-ul{
+            > li{
+                a{
+                    font-size: 12px;
+                }
+            }
+        } 
+    } 
+    .course-maininfo{ 
+        .course-info-right{ 
+            .faculty-list{ 
+                .list-group-item{
+                    flex: 100%;
+                    max-width:100%;
+                }
+            }
+        }
+    }
+    .discussions-content{
+        .video-info-container{
+            .article-head h3{
+                font-size: 16px;
+            }
+        }
     }
 }

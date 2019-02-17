@@ -12159,11 +12159,15 @@ a#submit {
 /*--------------------------
 // Mixins
 --------------------------------*/
-.mk-res-nav {
+.mk-res-nav,
+.mk-res-navigator {
   display: none;
 }
 
 @media only screen and (max-width: 991px) {
+  body {
+    padding-top: 60px;
+  }
   .mk-navbar .mk-menu.profile-menu .profile-dropdown {
     display: none;
   }
@@ -12310,6 +12314,9 @@ a#submit {
   .mk-res-nav.open:after {
     left: 0;
   }
+  .video-box {
+    padding: 0;
+  }
 }
 
 /*Homepage design updates */
@@ -12338,9 +12345,9 @@ a#submit {
     box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.2);
   }
   .mk-skil-courses .course-card .card-header {
-    -ms-flex: 0 0 30%;
-    flex: 0 0 30%;
-    max-width: 30%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
     padding: 10px 15px 10px 10px;
     border-radius: 4px;
   }
@@ -12353,9 +12360,9 @@ a#submit {
     border-radius: 4px;
   }
   .mk-skil-courses .course-card .card-body {
-    -ms-flex: 0 0 70%;
-    flex: 0 0 70%;
-    max-width: 70%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%;
     padding-bottom: 70px;
     padding-left: 0;
     position: relative;
@@ -12458,16 +12465,186 @@ a#submit {
     height: auto !important;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .course-maininfo .course-info-right .faculty-list .list-group-item {
     -ms-flex: 50%;
     flex: 50%;
+    max-width: 50%;
   }
   .course-maininfo .course-info-right .faculty-list .list-group-item .info-img {
     display: none;
   }
   .course-maininfo .course-info-right .faculty-list .list-group-item .info-desc p {
     display: none;
+  }
+  .accordion .card-header:after {
+    right: 10px !important;
+    z-index: 1;
+  }
+  .accordion .card-header h4 {
+    padding-right: 62px;
+  }
+  .accordion .card-header .progress-main {
+    padding-right: 62px;
+  }
+  .course-resume {
+    background: url(../images/play-big.png) no-repeat;
+    text-indent: -1000px;
+    background-size: 50px;
+    min-width: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+    top: 15px;
+    margin: auto;
+    right: 30px;
+  }
+  .course-resume::after {
+    display: none;
+  }
+  .accordion-list li {
+    position: relative;
+    padding-left: 25px;
+    border: none;
+    padding-bottom: 25px;
+  }
+  .accordion-list li .lesson-details::before {
+    display: block;
+    left: -25px;
+    z-index: 1;
+    top: 29px;
+  }
+  .accordion-list li .lesson-details::after {
+    display: block;
+    left: -20px;
+    height: auto;
+    bottom: -100px;
+    margin: auto;
+    top: 33px;
+  }
+  .accordion-list li .lesson-details + .lesson-status {
+    padding: 2px 5px;
+    background: #d4d4d4;
+    color: #fff;
+    width: auto;
+  }
+  .accordion-list li .lesson-details.past + .lesson-status {
+    background: #555657;
+  }
+  .accordion-list li .lesson-details.current + .lesson-status {
+    background: #3db6f6;
+  }
+  .accordion-list li .lesson-content h3 {
+    padding-right: 30px;
+  }
+  .accordion-list li .lesson-content p {
+    display: none;
+  }
+  .accordion-list li .lesson-timer {
+    display: none;
+  }
+  .accordion-list li .lesson-action {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: 25px;
+    height: 25px;
+    display: block;
+  }
+  .accordion-list li .module-lesson {
+    display: block;
+    clear: left;
+  }
+  .video-content {
+    margin-bottom: 30px;
+  }
+  .video-content .mk-res-navigator {
+    display: block;
+  }
+  .video-content .mk-res-navigator .mk-navigator {
+    position: absolute;
+    top: 25px;
+    right: auto;
+    bottom: auto;
+    left: 0;
+  }
+  .video-content .mk-res-navigator .mk-navigator > a {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  .video-content .mk-res-navigator .mk-navigator > a::before {
+    background: url("../images/long-back-white.png") no-repeat;
+    background-size: 16px 20px;
+    width: 20px;
+    height: 20px;
+  }
+  .video-content .mk-res-navigator .module-tab-ul {
+    position: absolute;
+    top: auto;
+    right: -15px;
+    bottom: -35px;
+    left: -15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: auto;
+    box-shadow: -0.5px 0.5px 6px rgba(0, 0, 0, 0.16);
+    background: #fff;
+    margin: auto;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  .video-content .mk-res-navigator .module-tab-ul > li {
+    width: auto;
+  }
+  .video-content .mk-res-navigator .module-tab-ul > li a {
+    background: none !important;
+    border: none;
+  }
+  .video-content .mk-res-navigator .module-tab-ul > li a.show {
+    color: #495057 !important;
+    border-bottom: 3px solid #06a2f3;
+  }
+  .discussions-content .content-bg {
+    padding: 0;
+  }
+  .discussions-content .video-info-container .mk-navigator, .discussions-content .video-info-container .mk-breadcrumb, .discussions-content .video-info-container .module-tabs {
+    display: none;
+  }
+  .discussions-content .video-info-container .article-head h3 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .mk-skil-courses .course-card .card-header {
+    -ms-flex: 0 0 45%;
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+  .mk-skil-courses .course-card .card-body {
+    -ms-flex: 0 0 55%;
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+  .mk-my-course-list .course-tab-ul > li a {
+    font-size: 12px;
+  }
+  .course-maininfo .course-info-right .faculty-list .list-group-item {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .discussions-content .video-info-container .article-head h3 {
+    font-size: 16px;
   }
 }
 
